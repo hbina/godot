@@ -120,7 +120,7 @@ struct ClassAPI {
 };
 
 static String get_type_name(const PropertyInfo &info) {
-	if (info.type == Variant::INT && (info.usage & PROPERTY_USAGE_CLASS_IS_ENUM)) {
+	if (info.type == Variant::Type::INT && (info.usage & PROPERTY_USAGE_CLASS_IS_ENUM)) {
 		return String("enum.") + String(info.class_name).replace(".", "::");
 	}
 	if (info.class_name != StringName()) {
@@ -129,10 +129,10 @@ static String get_type_name(const PropertyInfo &info) {
 	if (info.hint == PROPERTY_HINT_RESOURCE_TYPE) {
 		return info.hint_string;
 	}
-	if (info.type == Variant::NIL && (info.usage & PROPERTY_USAGE_NIL_IS_VARIANT)) {
+	if (info.type == Variant::Type::NIL && (info.usage & PROPERTY_USAGE_NIL_IS_VARIANT)) {
 		return "Variant";
 	}
-	if (info.type == Variant::NIL) {
+	if (info.type == Variant::Type::NIL) {
 		return "void";
 	}
 	return Variant::get_type_name(info.type);
@@ -353,9 +353,9 @@ List<ClassAPI> generate_c_api_classes() {
 						arg_name = arg_info.name.get_slice(":", 0);
 					} else if (arg_info.hint == PROPERTY_HINT_RESOURCE_TYPE) {
 						arg_type = arg_info.hint_string;
-					} else if (arg_info.type == Variant::NIL) {
+					} else if (arg_info.type == Variant::Type::NIL) {
 						arg_type = "Variant";
-					} else if (arg_info.type == Variant::OBJECT) {
+					} else if (arg_info.type == Variant::Type::OBJECT) {
 						arg_type = arg_info.class_name;
 						if (arg_type == "") {
 							arg_type = Variant::get_type_name(arg_info.type);

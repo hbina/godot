@@ -135,8 +135,8 @@ bool ImageTexture::_get(const StringName &p_name, Variant &r_ret) const {
 }
 
 void ImageTexture::_get_property_list(List<PropertyInfo> *p_list) const {
-	p_list->push_back(PropertyInfo(Variant::OBJECT, "image", PROPERTY_HINT_RESOURCE_TYPE, "Image", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_RESOURCE_NOT_PERSISTENT));
-	p_list->push_back(PropertyInfo(Variant::VECTOR2, "size", PROPERTY_HINT_NONE, ""));
+	p_list->push_back(PropertyInfo(Variant::Type::OBJECT, "image", PROPERTY_HINT_RESOURCE_TYPE, "Image", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_RESOURCE_NOT_PERSISTENT));
+	p_list->push_back(PropertyInfo(Variant::Type::VECTOR2, "size", PROPERTY_HINT_NONE, ""));
 }
 
 void ImageTexture::_reload_hook(const RID &p_hook) {
@@ -747,7 +747,7 @@ void StreamTexture2D::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("load", "path"), &StreamTexture2D::load);
 	ClassDB::bind_method(D_METHOD("get_load_path"), &StreamTexture2D::get_load_path);
 
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "load_path", PROPERTY_HINT_FILE, "*.stex"), "load", "get_load_path");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::STRING, "load_path", PROPERTY_HINT_FILE, "*.stex"), "load", "get_load_path");
 }
 
 StreamTexture2D::StreamTexture2D() {
@@ -894,10 +894,10 @@ void AtlasTexture::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_filter_clip", "enable"), &AtlasTexture::set_filter_clip);
 	ClassDB::bind_method(D_METHOD("has_filter_clip"), &AtlasTexture::has_filter_clip);
 
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "atlas", PROPERTY_HINT_RESOURCE_TYPE, "Texture2D"), "set_atlas", "get_atlas");
-	ADD_PROPERTY(PropertyInfo(Variant::RECT2, "region"), "set_region", "get_region");
-	ADD_PROPERTY(PropertyInfo(Variant::RECT2, "margin"), "set_margin", "get_margin");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "filter_clip"), "set_filter_clip", "has_filter_clip");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "atlas", PROPERTY_HINT_RESOURCE_TYPE, "Texture2D"), "set_atlas", "get_atlas");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::RECT2, "region"), "set_region", "get_region");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::RECT2, "margin"), "set_margin", "get_margin");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "filter_clip"), "set_filter_clip", "has_filter_clip");
 }
 
 void AtlasTexture::draw(RID p_canvas_item, const Point2 &p_pos, const Color &p_modulate, bool p_transpose, const Ref<Texture2D> &p_normal_map, const Ref<Texture2D> &p_specular_map, const Color &p_specular_color_shininess, RS::CanvasItemTextureFilter p_texture_filter, RS::CanvasItemTextureRepeat p_texture_repeat) const {
@@ -1141,9 +1141,9 @@ void MeshTexture::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_base_texture", "texture"), &MeshTexture::set_base_texture);
 	ClassDB::bind_method(D_METHOD("get_base_texture"), &MeshTexture::get_base_texture);
 
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "mesh", PROPERTY_HINT_RESOURCE_TYPE, "Mesh"), "set_mesh", "get_mesh");
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "base_texture", PROPERTY_HINT_RESOURCE_TYPE, "Texture2D"), "set_base_texture", "get_base_texture");
-	ADD_PROPERTY(PropertyInfo(Variant::VECTOR2, "image_size", PROPERTY_HINT_RANGE, "0,16384,1"), "set_image_size", "get_image_size");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "mesh", PROPERTY_HINT_RESOURCE_TYPE, "Mesh"), "set_mesh", "get_mesh");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "base_texture", PROPERTY_HINT_RESOURCE_TYPE, "Texture2D"), "set_base_texture", "get_base_texture");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::VECTOR2, "image_size", PROPERTY_HINT_RANGE, "0,16384,1"), "set_image_size", "get_image_size");
 }
 
 MeshTexture::MeshTexture() {
@@ -1262,7 +1262,7 @@ void LargeTexture::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("_set_data", "data"), &LargeTexture::_set_data);
 	ClassDB::bind_method(D_METHOD("_get_data"), &LargeTexture::_get_data);
 
-	ADD_PROPERTY(PropertyInfo(Variant::ARRAY, "_data", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_data", "_get_data");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::ARRAY, "_data", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_data", "_get_data");
 }
 
 void LargeTexture::draw(RID p_canvas_item, const Point2 &p_pos, const Color &p_modulate, bool p_transpose, const Ref<Texture2D> &p_normal_map, const Ref<Texture2D> &p_specular_map, const Color &p_specular_color_shininess, RS::CanvasItemTextureFilter p_texture_filter, RS::CanvasItemTextureRepeat p_texture_repeat) const {
@@ -1338,8 +1338,8 @@ void CurveTexture::_bind_methods() {
 
 	ClassDB::bind_method(D_METHOD("_update"), &CurveTexture::_update);
 
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "width", PROPERTY_HINT_RANGE, "32,4096"), "set_width", "get_width");
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "curve", PROPERTY_HINT_RESOURCE_TYPE, "Curve"), "set_curve", "get_curve");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "width", PROPERTY_HINT_RANGE, "32,4096"), "set_width", "get_width");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "curve", PROPERTY_HINT_RESOURCE_TYPE, "Curve"), "set_curve", "get_curve");
 }
 
 void CurveTexture::set_width(int p_width) {
@@ -1462,8 +1462,8 @@ void GradientTexture::_bind_methods() {
 
 	ClassDB::bind_method(D_METHOD("_update"), &GradientTexture::_update);
 
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "gradient", PROPERTY_HINT_RESOURCE_TYPE, "Gradient"), "set_gradient", "get_gradient");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "width", PROPERTY_HINT_RANGE, "1,2048,1,or_greater"), "set_width", "get_width");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "gradient", PROPERTY_HINT_RESOURCE_TYPE, "Gradient"), "set_gradient", "get_gradient");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "width", PROPERTY_HINT_RANGE, "1,2048,1,or_greater"), "set_width", "get_width");
 }
 
 void GradientTexture::set_gradient(Ref<Gradient> p_gradient) {
@@ -1552,7 +1552,7 @@ void ProxyTexture::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_base", "base"), &ProxyTexture::set_base);
 	ClassDB::bind_method(D_METHOD("get_base"), &ProxyTexture::get_base);
 
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "base", PROPERTY_HINT_RESOURCE_TYPE, "Texture2D"), "set_base", "get_base");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "base", PROPERTY_HINT_RESOURCE_TYPE, "Texture2D"), "set_base", "get_base");
 }
 
 void ProxyTexture::set_base(const Ref<Texture2D> &p_texture) {
@@ -1839,15 +1839,15 @@ void AnimatedTexture::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_frame_delay", "frame", "delay"), &AnimatedTexture::set_frame_delay);
 	ClassDB::bind_method(D_METHOD("get_frame_delay", "frame"), &AnimatedTexture::get_frame_delay);
 
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "frames", PROPERTY_HINT_RANGE, "1," + itos(MAX_FRAMES), PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_UPDATE_ALL_IF_MODIFIED), "set_frames", "get_frames");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "current_frame", PROPERTY_HINT_NONE, "", 0), "set_current_frame", "get_current_frame");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "pause"), "set_pause", "get_pause");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "oneshot"), "set_oneshot", "get_oneshot");
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "fps", PROPERTY_HINT_RANGE, "0,1024,0.1"), "set_fps", "get_fps");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "frames", PROPERTY_HINT_RANGE, "1," + itos(MAX_FRAMES), PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_UPDATE_ALL_IF_MODIFIED), "set_frames", "get_frames");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "current_frame", PROPERTY_HINT_NONE, "", 0), "set_current_frame", "get_current_frame");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "pause"), "set_pause", "get_pause");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "oneshot"), "set_oneshot", "get_oneshot");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "fps", PROPERTY_HINT_RANGE, "0,1024,0.1"), "set_fps", "get_fps");
 
 	for (int i = 0; i < MAX_FRAMES; i++) {
-		ADD_PROPERTYI(PropertyInfo(Variant::OBJECT, "frame_" + itos(i) + "/texture", PROPERTY_HINT_RESOURCE_TYPE, "Texture2D", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_INTERNAL), "set_frame_texture", "get_frame_texture", i);
-		ADD_PROPERTYI(PropertyInfo(Variant::FLOAT, "frame_" + itos(i) + "/delay_sec", PROPERTY_HINT_RANGE, "0.0,16.0,0.01", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_INTERNAL), "set_frame_delay", "get_frame_delay", i);
+		ADD_PROPERTYI(PropertyInfo(Variant::Type::OBJECT, "frame_" + itos(i) + "/texture", PROPERTY_HINT_RESOURCE_TYPE, "Texture2D", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_INTERNAL), "set_frame_texture", "get_frame_texture", i);
+		ADD_PROPERTYI(PropertyInfo(Variant::Type::FLOAT, "frame_" + itos(i) + "/delay_sec", PROPERTY_HINT_RANGE, "0.0,16.0,0.01", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_INTERNAL), "set_frame_delay", "get_frame_delay", i);
 	}
 
 	BIND_CONSTANT(MAX_FRAMES);
@@ -2023,7 +2023,7 @@ void ImageTextureLayered::_bind_methods() {
 
 	ClassDB::bind_method(D_METHOD("_get_images"), &ImageTextureLayered::_get_images);
 
-	ADD_PROPERTY(PropertyInfo(Variant::ARRAY, "_images", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_INTERNAL), "create_from_images", "_get_images");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::ARRAY, "_images", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_INTERNAL), "create_from_images", "_get_images");
 }
 
 ImageTextureLayered::ImageTextureLayered(LayeredType p_layered_type) {
@@ -2195,7 +2195,7 @@ void StreamTextureLayered::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("load", "path"), &StreamTextureLayered::load);
 	ClassDB::bind_method(D_METHOD("get_load_path"), &StreamTextureLayered::get_load_path);
 
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "load_path", PROPERTY_HINT_FILE, "*.stex"), "load", "get_load_path");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::STRING, "load_path", PROPERTY_HINT_FILE, "*.stex"), "load", "get_load_path");
 }
 
 StreamTextureLayered::StreamTextureLayered(LayeredType p_type) {
@@ -2281,9 +2281,9 @@ void CameraTexture::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_camera_active", "active"), &CameraTexture::set_camera_active);
 	ClassDB::bind_method(D_METHOD("get_camera_active"), &CameraTexture::get_camera_active);
 
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "camera_feed_id"), "set_camera_feed_id", "get_camera_feed_id");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "which_feed"), "set_which_feed", "get_which_feed");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "camera_is_active"), "set_camera_active", "get_camera_active");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "camera_feed_id"), "set_camera_feed_id", "get_camera_feed_id");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "which_feed"), "set_which_feed", "get_which_feed");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "camera_is_active"), "set_camera_active", "get_camera_active");
 }
 
 int CameraTexture::get_width() const {

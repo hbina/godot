@@ -732,7 +732,7 @@ int GDScriptCompiler::_parse_expression(CodeGen &codegen, const GDScriptParser::
 						index = codegen.get_name_map_pos(static_cast<GDScriptParser::IdentifierNode *>(on->arguments[1])->name);
 
 					} else {
-						if (on->arguments[1]->type == GDScriptParser::Node::TYPE_CONSTANT && static_cast<const GDScriptParser::ConstantNode *>(on->arguments[1])->value.get_type() == Variant::STRING) {
+						if (on->arguments[1]->type == GDScriptParser::Node::TYPE_CONSTANT && static_cast<const GDScriptParser::ConstantNode *>(on->arguments[1])->value.get_type() == Variant::Type::STRING) {
 							//also, somehow, named (speed up anyway)
 							StringName name = static_cast<const GDScriptParser::ConstantNode *>(on->arguments[1])->value;
 							index = codegen.get_name_map_pos(name);
@@ -1732,7 +1732,7 @@ Error GDScriptCompiler::_parse_function(GDScript *p_script, const GDScriptParser
 		gdfunc->return_type = GDScriptDataType();
 		gdfunc->return_type.has_type = true;
 		gdfunc->return_type.kind = GDScriptDataType::BUILTIN;
-		gdfunc->return_type.builtin_type = Variant::NIL;
+		gdfunc->return_type.builtin_type = Variant::Type::NIL;
 	}
 
 #ifdef TOOLS_ENABLED
@@ -1942,7 +1942,7 @@ Error GDScriptCompiler::_parse_class_level(GDScript *p_script, const GDScriptPar
 		prop_info.name = name;
 		PropertyInfo export_info = p_class->variables[i]._export;
 
-		if (export_info.type != Variant::NIL) {
+		if (export_info.type != Variant::Type::NIL) {
 			if (!minfo.data_type.has_type) {
 				prop_info.type = export_info.type;
 				prop_info.class_name = export_info.class_name;
@@ -1951,7 +1951,7 @@ Error GDScriptCompiler::_parse_class_level(GDScript *p_script, const GDScriptPar
 			prop_info.hint_string = export_info.hint_string;
 			prop_info.usage = export_info.usage;
 #ifdef TOOLS_ENABLED
-			if (p_class->variables[i].default_value.get_type() != Variant::NIL) {
+			if (p_class->variables[i].default_value.get_type() != Variant::Type::NIL) {
 				p_script->member_default_values[name] = p_class->variables[i].default_value;
 			}
 #endif

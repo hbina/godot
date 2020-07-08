@@ -598,8 +598,8 @@ void EditorExportPlugin::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("add_ios_cpp_code", "code"), &EditorExportPlugin::add_ios_cpp_code);
 	ClassDB::bind_method(D_METHOD("skip"), &EditorExportPlugin::skip);
 
-	BIND_VMETHOD(MethodInfo("_export_file", PropertyInfo(Variant::STRING, "path"), PropertyInfo(Variant::STRING, "type"), PropertyInfo(Variant::PACKED_STRING_ARRAY, "features")));
-	BIND_VMETHOD(MethodInfo("_export_begin", PropertyInfo(Variant::PACKED_STRING_ARRAY, "features"), PropertyInfo(Variant::BOOL, "is_debug"), PropertyInfo(Variant::STRING, "path"), PropertyInfo(Variant::INT, "flags")));
+	BIND_VMETHOD(MethodInfo("_export_file", PropertyInfo(Variant::Type::STRING, "path"), PropertyInfo(Variant::Type::STRING, "type"), PropertyInfo(Variant::Type::PACKED_STRING_ARRAY, "features")));
+	BIND_VMETHOD(MethodInfo("_export_begin", PropertyInfo(Variant::Type::PACKED_STRING_ARRAY, "features"), PropertyInfo(Variant::Type::BOOL, "is_debug"), PropertyInfo(Variant::Type::STRING, "path"), PropertyInfo(Variant::Type::INT, "flags")));
 	BIND_VMETHOD(MethodInfo("_export_end"));
 }
 
@@ -1446,15 +1446,15 @@ void EditorExportPlatformPC::get_preset_features(const Ref<EditorExportPreset> &
 }
 
 void EditorExportPlatformPC::get_export_options(List<ExportOption> *r_options) {
-	r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "texture_format/bptc"), false));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "texture_format/s3tc"), true));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "texture_format/etc"), false));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "texture_format/etc2"), false));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "texture_format/no_bptc_fallbacks"), true));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "binary_format/64_bits"), true));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "binary_format/embed_pck"), false));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "custom_template/release", PROPERTY_HINT_GLOBAL_FILE), ""));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "custom_template/debug", PROPERTY_HINT_GLOBAL_FILE), ""));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::BOOL, "texture_format/bptc"), false));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::BOOL, "texture_format/s3tc"), true));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::BOOL, "texture_format/etc"), false));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::BOOL, "texture_format/etc2"), false));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::BOOL, "texture_format/no_bptc_fallbacks"), true));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::BOOL, "binary_format/64_bits"), true));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::BOOL, "binary_format/embed_pck"), false));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "custom_template/release", PROPERTY_HINT_GLOBAL_FILE), ""));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "custom_template/debug", PROPERTY_HINT_GLOBAL_FILE), ""));
 }
 
 String EditorExportPlatformPC::get_name() const {

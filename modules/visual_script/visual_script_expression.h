@@ -42,7 +42,7 @@ class VisualScriptExpression : public VisualScriptNode {
 		Variant::Type type;
 		String name;
 
-		Input() { type = Variant::NIL; }
+		Input() { type = Variant::Type::NIL; }
 	};
 
 	Vector<Input> inputs;

@@ -1900,7 +1900,7 @@ ProjectSettingsEditor::ProjectSettingsEditor(EditorData *p_data) {
 	add_prop_bar->add_child(type);
 
 	// Start at 1 to avoid adding "Nil" as an option
-	for (int i = 1; i < Variant::VARIANT_MAX; i++) {
+	for (int i = 1; i < Variant::Type::VARIANT_MAX; i++) {
 		type->add_item(Variant::get_type_name(Variant::Type(i)));
 	}
 

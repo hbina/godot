@@ -53,7 +53,7 @@ void Panel::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_mode", "mode"), &Panel::set_mode);
 	ClassDB::bind_method(D_METHOD("get_mode"), &Panel::get_mode);
 
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "mode", PROPERTY_HINT_ENUM, "Background,Foreground"), "set_mode", "get_mode");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "mode", PROPERTY_HINT_ENUM, "Background,Foreground"), "set_mode", "get_mode");
 
 	BIND_ENUM_CONSTANT(MODE_BACKGROUND);
 	BIND_ENUM_CONSTANT(MODE_FOREGROUND);

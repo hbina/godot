@@ -509,14 +509,14 @@ void HTTPRequest::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_download_chunk_size"), &HTTPRequest::set_download_chunk_size);
 	ClassDB::bind_method(D_METHOD("get_download_chunk_size"), &HTTPRequest::get_download_chunk_size);
 
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "download_file", PROPERTY_HINT_FILE), "set_download_file", "get_download_file");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "download_chunk_size", PROPERTY_HINT_RANGE, "256,16777216"), "set_download_chunk_size", "get_download_chunk_size");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "use_threads"), "set_use_threads", "is_using_threads");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "body_size_limit", PROPERTY_HINT_RANGE, "-1,2000000000"), "set_body_size_limit", "get_body_size_limit");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "max_redirects", PROPERTY_HINT_RANGE, "-1,64"), "set_max_redirects", "get_max_redirects");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "timeout", PROPERTY_HINT_RANGE, "0,86400"), "set_timeout", "get_timeout");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::STRING, "download_file", PROPERTY_HINT_FILE), "set_download_file", "get_download_file");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "download_chunk_size", PROPERTY_HINT_RANGE, "256,16777216"), "set_download_chunk_size", "get_download_chunk_size");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "use_threads"), "set_use_threads", "is_using_threads");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "body_size_limit", PROPERTY_HINT_RANGE, "-1,2000000000"), "set_body_size_limit", "get_body_size_limit");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "max_redirects", PROPERTY_HINT_RANGE, "-1,64"), "set_max_redirects", "get_max_redirects");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "timeout", PROPERTY_HINT_RANGE, "0,86400"), "set_timeout", "get_timeout");
 
-	ADD_SIGNAL(MethodInfo("request_completed", PropertyInfo(Variant::INT, "result"), PropertyInfo(Variant::INT, "response_code"), PropertyInfo(Variant::PACKED_STRING_ARRAY, "headers"), PropertyInfo(Variant::PACKED_BYTE_ARRAY, "body")));
+	ADD_SIGNAL(MethodInfo("request_completed", PropertyInfo(Variant::Type::INT, "result"), PropertyInfo(Variant::Type::INT, "response_code"), PropertyInfo(Variant::Type::PACKED_STRING_ARRAY, "headers"), PropertyInfo(Variant::Type::PACKED_BYTE_ARRAY, "body")));
 
 	BIND_ENUM_CONSTANT(RESULT_SUCCESS);
 	//BIND_ENUM_CONSTANT( RESULT_NO_BODY );

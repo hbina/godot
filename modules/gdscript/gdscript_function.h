@@ -54,7 +54,7 @@ struct GDScriptDataType {
 	Kind kind = UNINITIALIZED;
 
 	bool has_type = false;
-	Variant::Type builtin_type = Variant::NIL;
+	Variant::Type builtin_type = Variant::Type::NIL;
 	StringName native_type;
 	Ref<Script> script_type;
 
@@ -75,10 +75,10 @@ struct GDScriptDataType {
 				return valid;
 			} break;
 			case NATIVE: {
-				if (p_variant.get_type() == Variant::NIL) {
+				if (p_variant.get_type() == Variant::Type::NIL) {
 					return true;
 				}
-				if (p_variant.get_type() != Variant::OBJECT) {
+				if (p_variant.get_type() != Variant::Type::OBJECT) {
 					return false;
 				}
 
@@ -98,10 +98,10 @@ struct GDScriptDataType {
 			} break;
 			case SCRIPT:
 			case GDSCRIPT: {
-				if (p_variant.get_type() == Variant::NIL) {
+				if (p_variant.get_type() == Variant::Type::NIL) {
 					return true;
 				}
-				if (p_variant.get_type() != Variant::OBJECT) {
+				if (p_variant.get_type() != Variant::Type::OBJECT) {
 					return false;
 				}
 
@@ -135,17 +135,17 @@ struct GDScriptDataType {
 					info.type = builtin_type;
 				} break;
 				case NATIVE: {
-					info.type = Variant::OBJECT;
+					info.type = Variant::Type::OBJECT;
 					info.class_name = native_type;
 				} break;
 				case SCRIPT:
 				case GDSCRIPT: {
-					info.type = Variant::OBJECT;
+					info.type = Variant::Type::OBJECT;
 					info.class_name = script_type->get_instance_base_type();
 				} break;
 			}
 		} else {
-			info.type = Variant::NIL;
+			info.type = Variant::Type::NIL;
 			info.usage |= PROPERTY_USAGE_NIL_IS_VARIANT;
 		}
 		return info;

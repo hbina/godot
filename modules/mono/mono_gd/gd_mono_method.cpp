@@ -254,7 +254,7 @@ const MethodInfo &GDMonoMethod::get_method_info() {
 
 		bool nil_is_variant = false;
 		method_info.return_val = PropertyInfo(GDMonoMarshal::managed_to_variant_type(return_type, &nil_is_variant), "");
-		if (method_info.return_val.type == Variant::NIL && nil_is_variant) {
+		if (method_info.return_val.type == Variant::Type::NIL && nil_is_variant) {
 			method_info.return_val.usage |= PROPERTY_USAGE_NIL_IS_VARIANT;
 		}
 
@@ -264,7 +264,7 @@ const MethodInfo &GDMonoMethod::get_method_info() {
 		for (int i = 0; i < params_count; ++i) {
 			nil_is_variant = false;
 			PropertyInfo arg_info = PropertyInfo(GDMonoMarshal::managed_to_variant_type(param_types[i], &nil_is_variant), names[i]);
-			if (arg_info.type == Variant::NIL && nil_is_variant) {
+			if (arg_info.type == Variant::Type::NIL && nil_is_variant) {
 				arg_info.usage |= PROPERTY_USAGE_NIL_IS_VARIANT;
 			}
 

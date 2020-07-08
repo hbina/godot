@@ -499,7 +499,7 @@ void Node::rpc(const StringName &p_method, VARIANT_ARG_DECLARE) {
 
 	int argc = 0;
 	for (int i = 0; i < VARIANT_ARG_MAX; i++) {
-		if (argptr[i]->get_type() == Variant::NIL) {
+		if (argptr[i]->get_type() == Variant::Type::NIL) {
 			break;
 		}
 		argc++;
@@ -513,7 +513,7 @@ void Node::rpc_id(int p_peer_id, const StringName &p_method, VARIANT_ARG_DECLARE
 
 	int argc = 0;
 	for (int i = 0; i < VARIANT_ARG_MAX; i++) {
-		if (argptr[i]->get_type() == Variant::NIL) {
+		if (argptr[i]->get_type() == Variant::Type::NIL) {
 			break;
 		}
 		argc++;
@@ -527,7 +527,7 @@ void Node::rpc_unreliable(const StringName &p_method, VARIANT_ARG_DECLARE) {
 
 	int argc = 0;
 	for (int i = 0; i < VARIANT_ARG_MAX; i++) {
-		if (argptr[i]->get_type() == Variant::NIL) {
+		if (argptr[i]->get_type() == Variant::Type::NIL) {
 			break;
 		}
 		argc++;
@@ -541,7 +541,7 @@ void Node::rpc_unreliable_id(int p_peer_id, const StringName &p_method, VARIANT_
 
 	int argc = 0;
 	for (int i = 0; i < VARIANT_ARG_MAX; i++) {
-		if (argptr[i]->get_type() == Variant::NIL) {
+		if (argptr[i]->get_type() == Variant::Type::NIL) {
 			break;
 		}
 		argc++;
@@ -557,10 +557,10 @@ Variant Node::_rpc_bind(const Variant **p_args, int p_argcount, Callable::CallEr
 		return Variant();
 	}
 
-	if (p_args[0]->get_type() != Variant::STRING) {
+	if (p_args[0]->get_type() != Variant::Type::STRING) {
 		r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 		r_error.argument = 0;
-		r_error.expected = Variant::STRING;
+		r_error.expected = Variant::Type::STRING;
 		return Variant();
 	}
 
@@ -579,17 +579,17 @@ Variant Node::_rpc_id_bind(const Variant **p_args, int p_argcount, Callable::Cal
 		return Variant();
 	}
 
-	if (p_args[0]->get_type() != Variant::INT) {
+	if (p_args[0]->get_type() != Variant::Type::INT) {
 		r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 		r_error.argument = 0;
-		r_error.expected = Variant::INT;
+		r_error.expected = Variant::Type::INT;
 		return Variant();
 	}
 
-	if (p_args[1]->get_type() != Variant::STRING) {
+	if (p_args[1]->get_type() != Variant::Type::STRING) {
 		r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 		r_error.argument = 1;
-		r_error.expected = Variant::STRING;
+		r_error.expected = Variant::Type::STRING;
 		return Variant();
 	}
 
@@ -609,10 +609,10 @@ Variant Node::_rpc_unreliable_bind(const Variant **p_args, int p_argcount, Calla
 		return Variant();
 	}
 
-	if (p_args[0]->get_type() != Variant::STRING) {
+	if (p_args[0]->get_type() != Variant::Type::STRING) {
 		r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 		r_error.argument = 0;
-		r_error.expected = Variant::STRING;
+		r_error.expected = Variant::Type::STRING;
 		return Variant();
 	}
 
@@ -631,17 +631,17 @@ Variant Node::_rpc_unreliable_id_bind(const Variant **p_args, int p_argcount, Ca
 		return Variant();
 	}
 
-	if (p_args[0]->get_type() != Variant::INT) {
+	if (p_args[0]->get_type() != Variant::Type::INT) {
 		r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 		r_error.argument = 0;
-		r_error.expected = Variant::INT;
+		r_error.expected = Variant::Type::INT;
 		return Variant();
 	}
 
-	if (p_args[1]->get_type() != Variant::STRING) {
+	if (p_args[1]->get_type() != Variant::Type::STRING) {
 		r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 		r_error.argument = 1;
-		r_error.expected = Variant::STRING;
+		r_error.expected = Variant::Type::STRING;
 		return Variant();
 	}
 
@@ -2438,31 +2438,31 @@ void Node::_replace_connections_target(Node *p_new_target) {
 Vector<Variant> Node::make_binds(VARIANT_ARG_DECLARE) {
 	Vector<Variant> ret;
 
-	if (p_arg1.get_type() == Variant::NIL) {
+	if (p_arg1.get_type() == Variant::Type::NIL) {
 		return ret;
 	} else {
 		ret.push_back(p_arg1);
 	}
 
-	if (p_arg2.get_type() == Variant::NIL) {
+	if (p_arg2.get_type() == Variant::Type::NIL) {
 		return ret;
 	} else {
 		ret.push_back(p_arg2);
 	}
 
-	if (p_arg3.get_type() == Variant::NIL) {
+	if (p_arg3.get_type() == Variant::Type::NIL) {
 		return ret;
 	} else {
 		ret.push_back(p_arg3);
 	}
 
-	if (p_arg4.get_type() == Variant::NIL) {
+	if (p_arg4.get_type() == Variant::Type::NIL) {
 		return ret;
 	} else {
 		ret.push_back(p_arg4);
 	}
 
-	if (p_arg5.get_type() == Variant::NIL) {
+	if (p_arg5.get_type() == Variant::Type::NIL) {
 		return ret;
 	} else {
 		ret.push_back(p_arg5);
@@ -2519,7 +2519,7 @@ Node *Node::get_node_and_resource(const NodePath &p_path, RES &r_res, Vector<Str
 		for (; j < p_path.get_subname_count() - (int)p_last_is_property; j++) {
 			Variant new_res_v = j == 0 ? node->get(p_path.get_subname(j)) : r_res->get(p_path.get_subname(j));
 
-			if (new_res_v.get_type() == Variant::NIL) { // Found nothing on that path
+			if (new_res_v.get_type() == Variant::Type::NIL) { // Found nothing on that path
 				return nullptr;
 			}
 
@@ -2709,9 +2709,9 @@ void Node::request_ready() {
 
 void Node::_bind_methods() {
 	GLOBAL_DEF("node/name_num_separator", 0);
-	ProjectSettings::get_singleton()->set_custom_property_info("node/name_num_separator", PropertyInfo(Variant::INT, "node/name_num_separator", PROPERTY_HINT_ENUM, "None,Space,Underscore,Dash"));
+	ProjectSettings::get_singleton()->set_custom_property_info("node/name_num_separator", PropertyInfo(Variant::Type::INT, "node/name_num_separator", PROPERTY_HINT_ENUM, "None,Space,Underscore,Dash"));
 	GLOBAL_DEF("node/name_casing", NAME_CASING_PASCAL_CASE);
-	ProjectSettings::get_singleton()->set_custom_property_info("node/name_casing", PropertyInfo(Variant::INT, "node/name_casing", PROPERTY_HINT_ENUM, "PascalCase,camelCase,snake_case"));
+	ProjectSettings::get_singleton()->set_custom_property_info("node/name_casing", PropertyInfo(Variant::Type::INT, "node/name_casing", PROPERTY_HINT_ENUM, "PascalCase,camelCase,snake_case"));
 
 	ClassDB::bind_method(D_METHOD("add_sibling", "sibling", "legible_unique_name"), &Node::add_sibling, DEFVAL(false));
 
@@ -2807,23 +2807,23 @@ void Node::_bind_methods() {
 
 	ClassDB::bind_method(D_METHOD("_set_editor_description", "editor_description"), &Node::set_editor_description);
 	ClassDB::bind_method(D_METHOD("_get_editor_description"), &Node::get_editor_description);
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "editor_description", PROPERTY_HINT_MULTILINE_TEXT, "", PROPERTY_USAGE_EDITOR | PROPERTY_USAGE_INTERNAL), "_set_editor_description", "_get_editor_description");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::STRING, "editor_description", PROPERTY_HINT_MULTILINE_TEXT, "", PROPERTY_USAGE_EDITOR | PROPERTY_USAGE_INTERNAL), "_set_editor_description", "_get_editor_description");
 
 	ClassDB::bind_method(D_METHOD("_set_import_path", "import_path"), &Node::set_import_path);
 	ClassDB::bind_method(D_METHOD("_get_import_path"), &Node::get_import_path);
-	ADD_PROPERTY(PropertyInfo(Variant::NODE_PATH, "_import_path", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_import_path", "_get_import_path");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::NODE_PATH, "_import_path", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_import_path", "_get_import_path");
 
 	{
 		MethodInfo mi;
 
-		mi.arguments.push_back(PropertyInfo(Variant::STRING_NAME, "method"));
+		mi.arguments.push_back(PropertyInfo(Variant::Type::STRING_NAME, "method"));
 
 		mi.name = "rpc";
 		ClassDB::bind_vararg_method(METHOD_FLAGS_DEFAULT, "rpc", &Node::_rpc_bind, mi);
 		mi.name = "rpc_unreliable";
 		ClassDB::bind_vararg_method(METHOD_FLAGS_DEFAULT, "rpc_unreliable", &Node::_rpc_unreliable_bind, mi);
 
-		mi.arguments.push_front(PropertyInfo(Variant::INT, "peer_id"));
+		mi.arguments.push_front(PropertyInfo(Variant::Type::INT, "peer_id"));
 
 		mi.name = "rpc_id";
 		ClassDB::bind_vararg_method(METHOD_FLAGS_DEFAULT, "rpc_id", &Node::_rpc_id_bind, mi);
@@ -2888,24 +2888,24 @@ void Node::_bind_methods() {
 	ADD_SIGNAL(MethodInfo("tree_exited"));
 
 	ADD_GROUP("Pause", "pause_");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "pause_mode", PROPERTY_HINT_ENUM, "Inherit,Stop,Process"), "set_pause_mode", "get_pause_mode");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "pause_mode", PROPERTY_HINT_ENUM, "Inherit,Stop,Process"), "set_pause_mode", "get_pause_mode");
 
-	ADD_PROPERTY(PropertyInfo(Variant::STRING_NAME, "name", PROPERTY_HINT_NONE, "", 0), "set_name", "get_name");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "filename", PROPERTY_HINT_NONE, "", 0), "set_filename", "get_filename");
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "owner", PROPERTY_HINT_RESOURCE_TYPE, "Node", 0), "set_owner", "get_owner");
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "multiplayer", PROPERTY_HINT_RESOURCE_TYPE, "MultiplayerAPI", 0), "", "get_multiplayer");
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "custom_multiplayer", PROPERTY_HINT_RESOURCE_TYPE, "MultiplayerAPI", 0), "set_custom_multiplayer", "get_custom_multiplayer");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "process_priority"), "set_process_priority", "get_process_priority");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::STRING_NAME, "name", PROPERTY_HINT_NONE, "", 0), "set_name", "get_name");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::STRING, "filename", PROPERTY_HINT_NONE, "", 0), "set_filename", "get_filename");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "owner", PROPERTY_HINT_RESOURCE_TYPE, "Node", 0), "set_owner", "get_owner");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "multiplayer", PROPERTY_HINT_RESOURCE_TYPE, "MultiplayerAPI", 0), "", "get_multiplayer");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "custom_multiplayer", PROPERTY_HINT_RESOURCE_TYPE, "MultiplayerAPI", 0), "set_custom_multiplayer", "get_custom_multiplayer");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "process_priority"), "set_process_priority", "get_process_priority");
 
-	BIND_VMETHOD(MethodInfo("_process", PropertyInfo(Variant::FLOAT, "delta")));
-	BIND_VMETHOD(MethodInfo("_physics_process", PropertyInfo(Variant::FLOAT, "delta")));
+	BIND_VMETHOD(MethodInfo("_process", PropertyInfo(Variant::Type::FLOAT, "delta")));
+	BIND_VMETHOD(MethodInfo("_physics_process", PropertyInfo(Variant::Type::FLOAT, "delta")));
 	BIND_VMETHOD(MethodInfo("_enter_tree"));
 	BIND_VMETHOD(MethodInfo("_exit_tree"));
 	BIND_VMETHOD(MethodInfo("_ready"));
-	BIND_VMETHOD(MethodInfo("_input", PropertyInfo(Variant::OBJECT, "event", PROPERTY_HINT_RESOURCE_TYPE, "InputEvent")));
-	BIND_VMETHOD(MethodInfo("_unhandled_input", PropertyInfo(Variant::OBJECT, "event", PROPERTY_HINT_RESOURCE_TYPE, "InputEvent")));
-	BIND_VMETHOD(MethodInfo("_unhandled_key_input", PropertyInfo(Variant::OBJECT, "event", PROPERTY_HINT_RESOURCE_TYPE, "InputEventKey")));
-	BIND_VMETHOD(MethodInfo(Variant::STRING, "_get_configuration_warning"));
+	BIND_VMETHOD(MethodInfo("_input", PropertyInfo(Variant::Type::OBJECT, "event", PROPERTY_HINT_RESOURCE_TYPE, "InputEvent")));
+	BIND_VMETHOD(MethodInfo("_unhandled_input", PropertyInfo(Variant::Type::OBJECT, "event", PROPERTY_HINT_RESOURCE_TYPE, "InputEvent")));
+	BIND_VMETHOD(MethodInfo("_unhandled_key_input", PropertyInfo(Variant::Type::OBJECT, "event", PROPERTY_HINT_RESOURCE_TYPE, "InputEventKey")));
+	BIND_VMETHOD(MethodInfo(Variant::Type::STRING, "_get_configuration_warning"));
 }
 
 String Node::_get_name_num_separator() {

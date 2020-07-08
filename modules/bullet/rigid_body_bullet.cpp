@@ -356,7 +356,7 @@ void RigidBodyBullet::dispatch_callbacks() {
 			const Variant *vp[2] = { &variantBodyDirect, &force_integration_callback->udata };
 
 			Callable::CallError responseCallError;
-			int argc = (force_integration_callback->udata.get_type() == Variant::NIL) ? 1 : 2;
+			int argc = (force_integration_callback->udata.get_type() == Variant::Type::NIL) ? 1 : 2;
 			obj->call(force_integration_callback->method, vp, argc, responseCallError);
 		}
 	}

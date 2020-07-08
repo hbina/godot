@@ -131,11 +131,11 @@ String WorldEnvironment::get_configuration_warning() const {
 void WorldEnvironment::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_environment", "env"), &WorldEnvironment::set_environment);
 	ClassDB::bind_method(D_METHOD("get_environment"), &WorldEnvironment::get_environment);
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "environment", PROPERTY_HINT_RESOURCE_TYPE, "Environment"), "set_environment", "get_environment");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "environment", PROPERTY_HINT_RESOURCE_TYPE, "Environment"), "set_environment", "get_environment");
 
 	ClassDB::bind_method(D_METHOD("set_camera_effects", "env"), &WorldEnvironment::set_camera_effects);
 	ClassDB::bind_method(D_METHOD("get_camera_effects"), &WorldEnvironment::get_camera_effects);
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "camera_effects", PROPERTY_HINT_RESOURCE_TYPE, "CameraEffects"), "set_camera_effects", "get_camera_effects");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "camera_effects", PROPERTY_HINT_RESOURCE_TYPE, "CameraEffects"), "set_camera_effects", "get_camera_effects");
 }
 
 WorldEnvironment::WorldEnvironment() {

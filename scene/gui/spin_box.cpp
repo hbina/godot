@@ -60,7 +60,7 @@ void SpinBox::_text_entered(const String &p_string) {
 	}
 
 	Variant value = expr->execute(Array(), nullptr, false);
-	if (value.get_type() != Variant::NIL) {
+	if (value.get_type() != Variant::Type::NIL) {
 		set_value(value);
 		_value_changed(0);
 	}
@@ -250,10 +250,10 @@ void SpinBox::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("apply"), &SpinBox::apply);
 	ClassDB::bind_method(D_METHOD("get_line_edit"), &SpinBox::get_line_edit);
 
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "align", PROPERTY_HINT_ENUM, "Left,Center,Right,Fill"), "set_align", "get_align");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "editable"), "set_editable", "is_editable");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "prefix"), "set_prefix", "get_prefix");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "suffix"), "set_suffix", "get_suffix");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "align", PROPERTY_HINT_ENUM, "Left,Center,Right,Fill"), "set_align", "get_align");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "editable"), "set_editable", "is_editable");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::STRING, "prefix"), "set_prefix", "get_prefix");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::STRING, "suffix"), "set_suffix", "get_suffix");
 }
 
 SpinBox::SpinBox() {

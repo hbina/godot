@@ -75,14 +75,14 @@ String ResourceImporterWAV::get_preset_name(int p_idx) const {
 }
 
 void ResourceImporterWAV::get_import_options(List<ImportOption> *r_options, int p_preset) const {
-	r_options->push_back(ImportOption(PropertyInfo(Variant::BOOL, "force/8_bit"), false));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::BOOL, "force/mono"), false));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::BOOL, "force/max_rate", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_UPDATE_ALL_IF_MODIFIED), false));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::FLOAT, "force/max_rate_hz", PROPERTY_HINT_EXP_RANGE, "11025,192000,1"), 44100));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::BOOL, "edit/trim"), false));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::BOOL, "edit/normalize"), false));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::BOOL, "edit/loop"), false));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::INT, "compress/mode", PROPERTY_HINT_ENUM, "Disabled,RAM (Ima-ADPCM)"), 0));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::BOOL, "force/8_bit"), false));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::BOOL, "force/mono"), false));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::BOOL, "force/max_rate", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_UPDATE_ALL_IF_MODIFIED), false));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::FLOAT, "force/max_rate_hz", PROPERTY_HINT_EXP_RANGE, "11025,192000,1"), 44100));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::BOOL, "edit/trim"), false));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::BOOL, "edit/normalize"), false));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::BOOL, "edit/loop"), false));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::INT, "compress/mode", PROPERTY_HINT_ENUM, "Disabled,RAM (Ima-ADPCM)"), 0));
 }
 
 Error ResourceImporterWAV::import(const String &p_source_file, const String &p_save_path, const Map<StringName, Variant> &p_options, List<String> *r_platform_variants, List<String> *r_gen_files, Variant *r_metadata) {

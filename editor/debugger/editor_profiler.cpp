@@ -581,7 +581,7 @@ void EditorProfiler::_combo_changed(int) {
 }
 
 void EditorProfiler::_bind_methods() {
-	ADD_SIGNAL(MethodInfo("enable_profiling", PropertyInfo(Variant::BOOL, "enable")));
+	ADD_SIGNAL(MethodInfo("enable_profiling", PropertyInfo(Variant::Type::BOOL, "enable")));
 	ADD_SIGNAL(MethodInfo("break_request"));
 }
 

@@ -966,9 +966,9 @@ struct CompletionItem {
 		}
 		if (p_dict.has("documentation")) {
 			Variant doc = p_dict["documentation"];
-			if (doc.get_type() == Variant::STRING) {
+			if (doc.get_type() == Variant::Type::STRING) {
 				documentation.value = doc;
-			} else if (doc.get_type() == Variant::DICTIONARY) {
+			} else if (doc.get_type() == Variant::Type::DICTIONARY) {
 				Dictionary v = doc;
 				documentation.value = v["value"];
 			}

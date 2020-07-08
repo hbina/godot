@@ -33,26 +33,26 @@
 	</Type>
 
 	<Type Name="Variant">
-		<DisplayString Condition="type == Variant::NIL">nil</DisplayString>
-		<DisplayString Condition="type == Variant::BOOL">{_data._bool}</DisplayString>
-		<DisplayString Condition="type == Variant::INT">{_data._int}</DisplayString>
+		<DisplayString Condition="type == Variant::Type::NIL">nil</DisplayString>
+		<DisplayString Condition="type == Variant::Type::BOOL">{_data._bool}</DisplayString>
+		<DisplayString Condition="type == Variant::Type::INT">{_data._int}</DisplayString>
 		<DisplayString Condition="type == Variant::REAL">{_data._real}</DisplayString>
-		<DisplayString Condition="type == Variant::TRANSFORM2D">{_data._transform2d}</DisplayString>
-		<DisplayString Condition="type == Variant::AABB">{_data._aabb}</DisplayString>
-		<DisplayString Condition="type == Variant::BASIS">{_data._basis}</DisplayString>
-		<DisplayString Condition="type == Variant::TRANSFORM">{_data._transform}</DisplayString>
-		<DisplayString Condition="type == Variant::STRING">{*(String *)_data._mem}</DisplayString>
-		<DisplayString Condition="type == Variant::VECTOR2">{*(Vector2 *)_data._mem}</DisplayString>
-		<DisplayString Condition="type == Variant::RECT2">{*(Rect2 *)_data._mem}</DisplayString>
-		<DisplayString Condition="type == Variant::VECTOR3">{*(Vector3 *)_data._mem}</DisplayString>
-		<DisplayString Condition="type == Variant::PLANE">{*(Plane *)_data._mem}</DisplayString>
-		<DisplayString Condition="type == Variant::QUAT">{*(Quat *)_data._mem}</DisplayString>
-		<DisplayString Condition="type == Variant::COLOR">{*(Color *)_data._mem}</DisplayString>
-		<DisplayString Condition="type == Variant::NODE_PATH">{*(NodePath *)_data._mem}</DisplayString>
-		<DisplayString Condition="type == Variant::_RID">{*(RID *)_data._mem}</DisplayString>
-		<DisplayString Condition="type == Variant::OBJECT">{*(Object *)_data._mem}</DisplayString>
-		<DisplayString Condition="type == Variant::DICTIONARY">{*(Dictionary *)_data._mem}</DisplayString>
-		<DisplayString Condition="type == Variant::ARRAY">{*(Array *)_data._mem}</DisplayString>
+		<DisplayString Condition="type == Variant::Type::TRANSFORM2D">{_data._transform2d}</DisplayString>
+		<DisplayString Condition="type == Variant::Type::AABB">{_data._aabb}</DisplayString>
+		<DisplayString Condition="type == Variant::Type::BASIS">{_data._basis}</DisplayString>
+		<DisplayString Condition="type == Variant::Type::TRANSFORM">{_data._transform}</DisplayString>
+		<DisplayString Condition="type == Variant::Type::STRING">{*(String *)_data._mem}</DisplayString>
+		<DisplayString Condition="type == Variant::Type::VECTOR2">{*(Vector2 *)_data._mem}</DisplayString>
+		<DisplayString Condition="type == Variant::Type::RECT2">{*(Rect2 *)_data._mem}</DisplayString>
+		<DisplayString Condition="type == Variant::Type::VECTOR3">{*(Vector3 *)_data._mem}</DisplayString>
+		<DisplayString Condition="type == Variant::Type::PLANE">{*(Plane *)_data._mem}</DisplayString>
+		<DisplayString Condition="type == Variant::Type::QUAT">{*(Quat *)_data._mem}</DisplayString>
+		<DisplayString Condition="type == Variant::Type::COLOR">{*(Color *)_data._mem}</DisplayString>
+		<DisplayString Condition="type == Variant::Type::NODE_PATH">{*(NodePath *)_data._mem}</DisplayString>
+		<DisplayString Condition="type == Variant::Type::_RID">{*(RID *)_data._mem}</DisplayString>
+		<DisplayString Condition="type == Variant::Type::OBJECT">{*(Object *)_data._mem}</DisplayString>
+		<DisplayString Condition="type == Variant::Type::DICTIONARY">{*(Dictionary *)_data._mem}</DisplayString>
+		<DisplayString Condition="type == Variant::Type::ARRAY">{*(Array *)_data._mem}</DisplayString>
 		<DisplayString Condition="type == Variant::POOL_BYTE_ARRAY">{*(PoolByteArray *)_data._mem}</DisplayString>
 		<DisplayString Condition="type == Variant::POOL_INT_ARRAY">{*(PoolIntArray *)_data._mem}</DisplayString>
 		<DisplayString Condition="type == Variant::POOL_REAL_ARRAY">{*(PoolRealArray *)_data._mem}</DisplayString>
@@ -61,28 +61,28 @@
 		<DisplayString Condition="type == Variant::POOL_VECTOR3_ARRAY">{*(PoolVector3Array *)_data._mem}</DisplayString>
 		<DisplayString Condition="type == Variant::POOL_COLOR_ARRAY">{*(PoolColorArray *)_data._mem}</DisplayString>
 
-		<StringView Condition="type == Variant::STRING &amp;&amp; ((String *)(_data._mem))->_cowdata._ptr">((String *)(_data._mem))->_cowdata._ptr,su</StringView>
+		<StringView Condition="type == Variant::Type::STRING &amp;&amp; ((String *)(_data._mem))->_cowdata._ptr">((String *)(_data._mem))->_cowdata._ptr,su</StringView>
 		
 		<Expand>
-			<Item Name="[value]" Condition="type == Variant::BOOL">_data._bool</Item>
-			<Item Name="[value]" Condition="type == Variant::INT">_data._int</Item>
+			<Item Name="[value]" Condition="type == Variant::Type::BOOL">_data._bool</Item>
+			<Item Name="[value]" Condition="type == Variant::Type::INT">_data._int</Item>
 			<Item Name="[value]" Condition="type == Variant::REAL">_data._real</Item>
-			<Item Name="[value]" Condition="type == Variant::TRANSFORM2D">_data._transform2d</Item>
-			<Item Name="[value]" Condition="type == Variant::AABB">_data._aabb</Item>
-			<Item Name="[value]" Condition="type == Variant::BASIS">_data._basis</Item>
-			<Item Name="[value]" Condition="type == Variant::TRANSFORM">_data._transform</Item>
-			<Item Name="[value]" Condition="type == Variant::STRING">*(String *)_data._mem</Item>
-			<Item Name="[value]" Condition="type == Variant::VECTOR2">*(Vector2 *)_data._mem</Item>
-			<Item Name="[value]" Condition="type == Variant::RECT2">*(Rect2 *)_data._mem</Item>
-			<Item Name="[value]" Condition="type == Variant::VECTOR3">*(Vector3 *)_data._mem</Item>
-			<Item Name="[value]" Condition="type == Variant::PLANE">*(Plane *)_data._mem</Item>
-			<Item Name="[value]" Condition="type == Variant::QUAT">*(Quat *)_data._mem</Item>
-			<Item Name="[value]" Condition="type == Variant::COLOR">*(Color *)_data._mem</Item>
-			<Item Name="[value]" Condition="type == Variant::NODE_PATH">*(NodePath *)_data._mem</Item>
-			<Item Name="[value]" Condition="type == Variant::_RID">*(RID *)_data._mem</Item>
-			<Item Name="[value]" Condition="type == Variant::OBJECT">*(Object *)_data._mem</Item>
-			<Item Name="[value]" Condition="type == Variant::DICTIONARY">*(Dictionary *)_data._mem</Item>
-			<Item Name="[value]" Condition="type == Variant::ARRAY">*(Array *)_data._mem</Item>
+			<Item Name="[value]" Condition="type == Variant::Type::TRANSFORM2D">_data._transform2d</Item>
+			<Item Name="[value]" Condition="type == Variant::Type::AABB">_data._aabb</Item>
+			<Item Name="[value]" Condition="type == Variant::Type::BASIS">_data._basis</Item>
+			<Item Name="[value]" Condition="type == Variant::Type::TRANSFORM">_data._transform</Item>
+			<Item Name="[value]" Condition="type == Variant::Type::STRING">*(String *)_data._mem</Item>
+			<Item Name="[value]" Condition="type == Variant::Type::VECTOR2">*(Vector2 *)_data._mem</Item>
+			<Item Name="[value]" Condition="type == Variant::Type::RECT2">*(Rect2 *)_data._mem</Item>
+			<Item Name="[value]" Condition="type == Variant::Type::VECTOR3">*(Vector3 *)_data._mem</Item>
+			<Item Name="[value]" Condition="type == Variant::Type::PLANE">*(Plane *)_data._mem</Item>
+			<Item Name="[value]" Condition="type == Variant::Type::QUAT">*(Quat *)_data._mem</Item>
+			<Item Name="[value]" Condition="type == Variant::Type::COLOR">*(Color *)_data._mem</Item>
+			<Item Name="[value]" Condition="type == Variant::Type::NODE_PATH">*(NodePath *)_data._mem</Item>
+			<Item Name="[value]" Condition="type == Variant::Type::_RID">*(RID *)_data._mem</Item>
+			<Item Name="[value]" Condition="type == Variant::Type::OBJECT">*(Object *)_data._mem</Item>
+			<Item Name="[value]" Condition="type == Variant::Type::DICTIONARY">*(Dictionary *)_data._mem</Item>
+			<Item Name="[value]" Condition="type == Variant::Type::ARRAY">*(Array *)_data._mem</Item>
 			<Item Name="[value]" Condition="type == Variant::POOL_BYTE_ARRAY">*(PoolByteArray *)_data._mem</Item>
 			<Item Name="[value]" Condition="type == Variant::POOL_INT_ARRAY">*(PoolIntArray *)_data._mem</Item>
 			<Item Name="[value]" Condition="type == Variant::POOL_REAL_ARRAY">*(PoolRealArray *)_data._mem</Item>

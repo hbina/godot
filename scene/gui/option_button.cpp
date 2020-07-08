@@ -315,11 +315,11 @@ void OptionButton::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("_set_items"), &OptionButton::_set_items);
 	ClassDB::bind_method(D_METHOD("_get_items"), &OptionButton::_get_items);
 
-	ADD_PROPERTY(PropertyInfo(Variant::ARRAY, "items", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_items", "_get_items");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::ARRAY, "items", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_items", "_get_items");
 	// "selected" property must come after "items", otherwise GH-10213 occurs.
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "selected"), "_select_int", "get_selected");
-	ADD_SIGNAL(MethodInfo("item_selected", PropertyInfo(Variant::INT, "index")));
-	ADD_SIGNAL(MethodInfo("item_focused", PropertyInfo(Variant::INT, "index")));
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "selected"), "_select_int", "get_selected");
+	ADD_SIGNAL(MethodInfo("item_selected", PropertyInfo(Variant::Type::INT, "index")));
+	ADD_SIGNAL(MethodInfo("item_focused", PropertyInfo(Variant::Type::INT, "index")));
 }
 
 OptionButton::OptionButton() {

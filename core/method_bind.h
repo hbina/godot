@@ -97,7 +97,7 @@ struct VariantCaster<const T &> {
 			return m_enum(*reinterpret_cast<const int *>(p_ptr));            \
 		}                                                                    \
 		_FORCE_INLINE_ static void encode(m_enum p_val, const void *p_ptr) { \
-			*(int *)p_ptr = p_val;                                           \
+			*(int *)p_ptr = static_cast<int>(p_val);                         \
 		}                                                                    \
 	};
 
@@ -149,19 +149,19 @@ struct VariantObjectClassChecker<Control *> {
 				!VariantObjectClassChecker<P##m_arg>::check(*p_args[m_arg - 1])) {  \
 			r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;       \
 			r_error.argument = m_arg - 1;                                           \
-			r_error.expected = argtype;                                             \
+			r_error.expected = static_cast<int>(argtype);                           \
 			return Variant();                                                       \
 		}                                                                           \
 	}
 
-#define CHECK_NOARG(m_arg)                             \
-	{                                                  \
-		if (p_arg##m_arg.get_type() != Variant::NIL) { \
-			if (r_argerror) {                          \
-				*r_argerror = (m_arg - 1);             \
-			}                                          \
-			return CALL_ERROR_EXTRA_ARGUMENT;          \
-		}                                              \
+#define CHECK_NOARG(m_arg)                                   \
+	{                                                        \
+		if (p_arg##m_arg.get_type() != Variant::Type::NIL) { \
+			if (r_argerror) {                                \
+				*r_argerror = (m_arg - 1);                   \
+			}                                                \
+			return CALL_ERROR_EXTRA_ARGUMENT;                \
+		}                                                    \
 	}
 
 // some helpers
@@ -251,7 +251,7 @@ public:
 #ifdef DEBUG_METHODS_ENABLED
 
 	_FORCE_INLINE_ Variant::Type get_argument_type(int p_argument) const {
-		ERR_FAIL_COND_V(p_argument < -1 || p_argument > argument_count, Variant::NIL);
+		ERR_FAIL_COND_V(p_argument < -1 || p_argument > argument_count, Variant::Type::NIL);
 		return argument_types[p_argument + 1];
 	}
 
@@ -309,7 +309,7 @@ public:
 		} else if (p_arg < arguments.arguments.size()) {
 			return arguments.arguments[p_arg];
 		} else {
-			return PropertyInfo(Variant::NIL, "arg_" + itos(p_arg), PROPERTY_HINT_NONE, String(), PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_NIL_IS_VARIANT);
+			return PropertyInfo(Variant::Type::NIL, "arg_" + itos(p_arg), PROPERTY_HINT_NONE, String(), PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_NIL_IS_VARIANT);
 		}
 	}
 
@@ -324,7 +324,7 @@ public:
 #else
 
 	virtual Variant::Type _gen_argument_type(int p_arg) const {
-		return Variant::NIL;
+		return Variant::Type::NIL;
 	}
 
 #endif

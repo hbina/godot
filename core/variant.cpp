@@ -42,15 +42,15 @@
 
 String Variant::get_type_name(Variant::Type p_type) {
 	switch (p_type) {
-		case NIL: {
+		case Variant::Type::NIL: {
 			return "Nil";
 		} break;
 
 		// atomic types
-		case BOOL: {
+		case Variant::Type::BOOL: {
 			return "bool";
 		} break;
-		case INT: {
+		case Variant::Type::INT: {
 			return "int";
 
 		} break;
@@ -185,11 +185,11 @@ bool Variant::can_convert(Variant::Type p_type_from, Variant::Type p_type_to) {
 	if (p_type_from == p_type_to) {
 		return true;
 	}
-	if (p_type_to == NIL && p_type_from != NIL) { //nil can convert to anything
+	if (p_type_to == Variant::Type::NIL && p_type_from != Variant::Type::NIL) { //nil can convert to anything
 		return true;
 	}
 
-	if (p_type_from == NIL) {
+	if (p_type_from == Variant::Type::NIL) {
 		return (p_type_to == OBJECT);
 	}
 
@@ -197,9 +197,9 @@ bool Variant::can_convert(Variant::Type p_type_from, Variant::Type p_type_to) {
 	const Type *invalid_types = nullptr;
 
 	switch (p_type_to) {
-		case BOOL: {
+		case Variant::Type::BOOL: {
 			static const Type valid[] = {
-				INT,
+				Variant::Type::INT,
 				FLOAT,
 				STRING,
 				NIL,
@@ -207,9 +207,9 @@ bool Variant::can_convert(Variant::Type p_type_from, Variant::Type p_type_to) {
 
 			valid_types = valid;
 		} break;
-		case INT: {
+		case Variant::Type::INT: {
 			static const Type valid[] = {
-				BOOL,
+				Variant::Type::BOOL,
 				FLOAT,
 				STRING,
 				NIL,
@@ -220,8 +220,8 @@ bool Variant::can_convert(Variant::Type p_type_from, Variant::Type p_type_to) {
 		} break;
 		case FLOAT: {
 			static const Type valid[] = {
-				BOOL,
-				INT,
+				Variant::Type::BOOL,
+				Variant::Type::INT,
 				STRING,
 				NIL,
 			};
@@ -334,7 +334,7 @@ bool Variant::can_convert(Variant::Type p_type_from, Variant::Type p_type_to) {
 		case COLOR: {
 			static const Type valid[] = {
 				STRING,
-				INT,
+				Variant::Type::INT,
 				NIL,
 			};
 
@@ -466,7 +466,7 @@ bool Variant::can_convert(Variant::Type p_type_from, Variant::Type p_type_to) {
 
 	if (valid_types) {
 		int i = 0;
-		while (valid_types[i] != NIL) {
+		while (valid_types[i] != Variant::Type::NIL) {
 			if (p_type_from == valid_types[i]) {
 				return true;
 			}
@@ -475,7 +475,7 @@ bool Variant::can_convert(Variant::Type p_type_from, Variant::Type p_type_to) {
 
 	} else if (invalid_types) {
 		int i = 0;
-		while (invalid_types[i] != NIL) {
+		while (invalid_types[i] != Variant::Type::NIL) {
 			if (p_type_from == invalid_types[i]) {
 				return false;
 			}
@@ -492,20 +492,20 @@ bool Variant::can_convert_strict(Variant::Type p_type_from, Variant::Type p_type
 	if (p_type_from == p_type_to) {
 		return true;
 	}
-	if (p_type_to == NIL && p_type_from != NIL) { //nil can convert to anything
+	if (p_type_to == Variant::Type::NIL && p_type_from != Variant::Type::NIL) { //nil can convert to anything
 		return true;
 	}
 
-	if (p_type_from == NIL) {
+	if (p_type_from == Variant::Type::NIL) {
 		return (p_type_to == OBJECT);
 	}
 
 	const Type *valid_types = nullptr;
 
 	switch (p_type_to) {
-		case BOOL: {
+		case Variant::Type::BOOL: {
 			static const Type valid[] = {
-				INT,
+				Variant::Type::INT,
 				FLOAT,
 				//STRING,
 				NIL,
@@ -513,9 +513,9 @@ bool Variant::can_convert_strict(Variant::Type p_type_from, Variant::Type p_type
 
 			valid_types = valid;
 		} break;
-		case INT: {
+		case Variant::Type::INT: {
 			static const Type valid[] = {
-				BOOL,
+				Variant::Type::BOOL,
 				FLOAT,
 				//STRING,
 				NIL,
@@ -526,8 +526,8 @@ bool Variant::can_convert_strict(Variant::Type p_type_from, Variant::Type p_type
 		} break;
 		case FLOAT: {
 			static const Type valid[] = {
-				BOOL,
-				INT,
+				Variant::Type::BOOL,
+				Variant::Type::INT,
 				//STRING,
 				NIL,
 			};
@@ -641,7 +641,7 @@ bool Variant::can_convert_strict(Variant::Type p_type_from, Variant::Type p_type
 		case COLOR: {
 			static const Type valid[] = {
 				STRING,
-				INT,
+				Variant::Type::INT,
 				NIL,
 			};
 
@@ -773,7 +773,7 @@ bool Variant::can_convert_strict(Variant::Type p_type_from, Variant::Type p_type
 
 	if (valid_types) {
 		int i = 0;
-		while (valid_types[i] != NIL) {
+		while (valid_types[i] != Variant::Type::NIL) {
 			if (p_type_from == valid_types[i]) {
 				return true;
 			}
@@ -816,15 +816,15 @@ bool Variant::operator<(const Variant &p_variant) const {
 
 bool Variant::is_zero() const {
 	switch (type) {
-		case NIL: {
+		case Variant::Type::NIL: {
 			return true;
 		} break;
 
 		// atomic types
-		case BOOL: {
+		case Variant::Type::BOOL: {
 			return !(_data._bool);
 		} break;
-		case INT: {
+		case Variant::Type::INT: {
 			return _data._int == 0;
 
 		} break;
@@ -966,15 +966,15 @@ bool Variant::is_zero() const {
 
 bool Variant::is_one() const {
 	switch (type) {
-		case NIL: {
+		case Variant::Type::NIL: {
 			return true;
 		} break;
 
 		// atomic types
-		case BOOL: {
+		case Variant::Type::BOOL: {
 			return _data._bool;
 		} break;
-		case INT: {
+		case Variant::Type::INT: {
 			return _data._int == 1;
 
 		} break;
@@ -1033,9 +1033,9 @@ bool Variant::is_null() const {
 
 void Variant::reference(const Variant &p_variant) {
 	switch (type) {
-		case NIL:
-		case BOOL:
-		case INT:
+		case Variant::Type::NIL:
+		case Variant::Type::BOOL:
+		case Variant::Type::INT:
 		case FLOAT:
 			break;
 		default:
@@ -1045,15 +1045,15 @@ void Variant::reference(const Variant &p_variant) {
 	type = p_variant.type;
 
 	switch (p_variant.type) {
-		case NIL: {
+		case Variant::Type::NIL: {
 			// none
 		} break;
 
 		// atomic types
-		case BOOL: {
+		case Variant::Type::BOOL: {
 			_data._bool = p_variant._data._bool;
 		} break;
-		case INT: {
+		case Variant::Type::INT: {
 			_data._int = p_variant._data._int;
 		} break;
 		case FLOAT: {
@@ -1222,12 +1222,12 @@ void Variant::reference(const Variant &p_variant) {
 
 void Variant::zero() {
 	switch (type) {
-		case NIL:
+		case Variant::Type::NIL:
 			break;
-		case BOOL:
+		case Variant::Type::BOOL:
 			this->_data._bool = false;
 			break;
-		case INT:
+		case Variant::Type::INT:
 			this->_data._int = 0;
 			break;
 		case FLOAT:
@@ -1359,16 +1359,16 @@ void Variant::clear() {
 		} /* not needed */
 	}
 
-	type = NIL;
+	type = Variant::Type::NIL;
 }
 
 Variant::operator signed int() const {
 	switch (type) {
-		case NIL:
+		case Variant::Type::NIL:
 			return 0;
-		case BOOL:
+		case Variant::Type::BOOL:
 			return _data._bool ? 1 : 0;
-		case INT:
+		case Variant::Type::INT:
 			return _data._int;
 		case FLOAT:
 			return _data._float;
@@ -1382,11 +1382,11 @@ Variant::operator signed int() const {
 
 Variant::operator unsigned int() const {
 	switch (type) {
-		case NIL:
+		case Variant::Type::NIL:
 			return 0;
-		case BOOL:
+		case Variant::Type::BOOL:
 			return _data._bool ? 1 : 0;
-		case INT:
+		case Variant::Type::INT:
 			return _data._int;
 		case FLOAT:
 			return _data._float;
@@ -1400,11 +1400,11 @@ Variant::operator unsigned int() const {
 
 Variant::operator int64_t() const {
 	switch (type) {
-		case NIL:
+		case Variant::Type::NIL:
 			return 0;
-		case BOOL:
+		case Variant::Type::BOOL:
 			return _data._bool ? 1 : 0;
-		case INT:
+		case Variant::Type::INT:
 			return _data._int;
 		case FLOAT:
 			return _data._float;
@@ -1418,11 +1418,11 @@ Variant::operator int64_t() const {
 
 Variant::operator uint64_t() const {
 	switch (type) {
-		case NIL:
+		case Variant::Type::NIL:
 			return 0;
-		case BOOL:
+		case Variant::Type::BOOL:
 			return _data._bool ? 1 : 0;
-		case INT:
+		case Variant::Type::INT:
 			return _data._int;
 		case FLOAT:
 			return _data._float;
@@ -1435,7 +1435,7 @@ Variant::operator uint64_t() const {
 }
 
 Variant::operator ObjectID() const {
-	if (type == INT) {
+	if (type == Variant::Type::INT) {
 		return ObjectID(_data._int);
 	} else if (type == OBJECT) {
 		return _get_obj().id;
@@ -1447,11 +1447,11 @@ Variant::operator ObjectID() const {
 #ifdef NEED_LONG_INT
 Variant::operator signed long() const {
 	switch (type) {
-		case NIL:
+		case Variant::Type::NIL:
 			return 0;
-		case BOOL:
+		case Variant::Type::BOOL:
 			return _data._bool ? 1 : 0;
-		case INT:
+		case Variant::Type::INT:
 			return _data._int;
 		case FLOAT:
 			return _data._real;
@@ -1467,11 +1467,11 @@ Variant::operator signed long() const {
 
 Variant::operator unsigned long() const {
 	switch (type) {
-		case NIL:
+		case Variant::Type::NIL:
 			return 0;
-		case BOOL:
+		case Variant::Type::BOOL:
 			return _data._bool ? 1 : 0;
-		case INT:
+		case Variant::Type::INT:
 			return _data._int;
 		case FLOAT:
 			return _data._real;
@@ -1488,11 +1488,11 @@ Variant::operator unsigned long() const {
 
 Variant::operator signed short() const {
 	switch (type) {
-		case NIL:
+		case Variant::Type::NIL:
 			return 0;
-		case BOOL:
+		case Variant::Type::BOOL:
 			return _data._bool ? 1 : 0;
-		case INT:
+		case Variant::Type::INT:
 			return _data._int;
 		case FLOAT:
 			return _data._float;
@@ -1506,11 +1506,11 @@ Variant::operator signed short() const {
 
 Variant::operator unsigned short() const {
 	switch (type) {
-		case NIL:
+		case Variant::Type::NIL:
 			return 0;
-		case BOOL:
+		case Variant::Type::BOOL:
 			return _data._bool ? 1 : 0;
-		case INT:
+		case Variant::Type::INT:
 			return _data._int;
 		case FLOAT:
 			return _data._float;
@@ -1524,11 +1524,11 @@ Variant::operator unsigned short() const {
 
 Variant::operator signed char() const {
 	switch (type) {
-		case NIL:
+		case Variant::Type::NIL:
 			return 0;
-		case BOOL:
+		case Variant::Type::BOOL:
 			return _data._bool ? 1 : 0;
-		case INT:
+		case Variant::Type::INT:
 			return _data._int;
 		case FLOAT:
 			return _data._float;
@@ -1542,11 +1542,11 @@ Variant::operator signed char() const {
 
 Variant::operator unsigned char() const {
 	switch (type) {
-		case NIL:
+		case Variant::Type::NIL:
 			return 0;
-		case BOOL:
+		case Variant::Type::BOOL:
 			return _data._bool ? 1 : 0;
-		case INT:
+		case Variant::Type::INT:
 			return _data._int;
 		case FLOAT:
 			return _data._float;
@@ -1564,11 +1564,11 @@ Variant::operator CharType() const {
 
 Variant::operator float() const {
 	switch (type) {
-		case NIL:
+		case Variant::Type::NIL:
 			return 0;
-		case BOOL:
+		case Variant::Type::BOOL:
 			return _data._bool ? 1.0 : 0.0;
-		case INT:
+		case Variant::Type::INT:
 			return (float)_data._int;
 		case FLOAT:
 			return _data._float;
@@ -1582,11 +1582,11 @@ Variant::operator float() const {
 
 Variant::operator double() const {
 	switch (type) {
-		case NIL:
+		case Variant::Type::NIL:
 			return 0;
-		case BOOL:
+		case Variant::Type::BOOL:
 			return _data._bool ? 1.0 : 0.0;
-		case INT:
+		case Variant::Type::INT:
 			return (double)_data._int;
 		case FLOAT:
 			return _data._float;
@@ -1625,11 +1625,11 @@ Variant::operator String() const {
 
 String Variant::stringify(List<const void *> &stack) const {
 	switch (type) {
-		case NIL:
+		case Variant::Type::NIL:
 			return "Null";
-		case BOOL:
+		case Variant::Type::BOOL:
 			return _data._bool ? "True" : "False";
-		case INT:
+		case Variant::Type::INT:
 			return itos(_data._int);
 		case FLOAT:
 			return rtos(_data._float);
@@ -2024,7 +2024,7 @@ Variant::operator Color() const {
 		return *reinterpret_cast<const Color *>(_data._mem);
 	} else if (type == STRING) {
 		return Color::html(operator String());
-	} else if (type == INT) {
+	} else if (type == Variant::Type::INT) {
 		return Color::hex(operator int());
 	} else {
 		return Color();
@@ -2054,7 +2054,7 @@ Variant::operator RID() const {
 #endif
 		Callable::CallError ce;
 		Variant ret = _get_obj().obj->call(CoreStringNames::get_singleton()->get_rid, nullptr, 0, ce);
-		if (ce.error == Callable::CallError::CALL_OK && ret.get_type() == Variant::_RID) {
+		if (ce.error == Callable::CallError::CALL_OK && ret.get_type() == Variant::Type::_RID) {
 			return ret;
 		}
 		return RID();
@@ -2145,34 +2145,34 @@ inline DA _convert_array(const SA &p_array) {
 template <class DA>
 inline DA _convert_array_from_variant(const Variant &p_variant) {
 	switch (p_variant.get_type()) {
-		case Variant::ARRAY: {
+		case Variant::Type::ARRAY: {
 			return _convert_array<DA, Array>(p_variant.operator Array());
 		}
-		case Variant::PACKED_BYTE_ARRAY: {
+		case Variant::Type::PACKED_BYTE_ARRAY: {
 			return _convert_array<DA, Vector<uint8_t>>(p_variant.operator Vector<uint8_t>());
 		}
-		case Variant::PACKED_INT32_ARRAY: {
+		case Variant::Type::PACKED_INT32_ARRAY: {
 			return _convert_array<DA, Vector<int32_t>>(p_variant.operator Vector<int32_t>());
 		}
-		case Variant::PACKED_INT64_ARRAY: {
+		case Variant::Type::PACKED_INT64_ARRAY: {
 			return _convert_array<DA, Vector<int64_t>>(p_variant.operator Vector<int64_t>());
 		}
-		case Variant::PACKED_FLOAT32_ARRAY: {
+		case Variant::Type::PACKED_FLOAT32_ARRAY: {
 			return _convert_array<DA, Vector<float>>(p_variant.operator Vector<float>());
 		}
-		case Variant::PACKED_FLOAT64_ARRAY: {
+		case Variant::Type::PACKED_FLOAT64_ARRAY: {
 			return _convert_array<DA, Vector<double>>(p_variant.operator Vector<double>());
 		}
-		case Variant::PACKED_STRING_ARRAY: {
+		case Variant::Type::PACKED_STRING_ARRAY: {
 			return _convert_array<DA, Vector<String>>(p_variant.operator Vector<String>());
 		}
-		case Variant::PACKED_VECTOR2_ARRAY: {
+		case Variant::Type::PACKED_VECTOR2_ARRAY: {
 			return _convert_array<DA, Vector<Vector2>>(p_variant.operator Vector<Vector2>());
 		}
-		case Variant::PACKED_VECTOR3_ARRAY: {
+		case Variant::Type::PACKED_VECTOR3_ARRAY: {
 			return _convert_array<DA, Vector<Vector3>>(p_variant.operator Vector<Vector3>());
 		}
-		case Variant::PACKED_COLOR_ARRAY: {
+		case Variant::Type::PACKED_COLOR_ARRAY: {
 			return _convert_array<DA, Vector<Color>>(p_variant.operator Vector<Color>());
 		}
 		default: {
@@ -2358,60 +2358,65 @@ Variant::operator IP_Address() const {
 }
 
 Variant::Variant(bool p_bool) {
-	type = BOOL;
+	type = Variant::Type::Variant::Type::BOOL;
 	_data._bool = p_bool;
 }
 
 Variant::Variant(signed int p_int) {
-	type = INT;
+	type = Variant::Type::Variant::Type::INT;
 	_data._int = p_int;
 }
 
 Variant::Variant(unsigned int p_int) {
-	type = INT;
+	type = Variant::Type::Variant::Type::INT;
 	_data._int = p_int;
+}
+
+Variant::Variant(Variant::Type p_int) {
+	type = Variant::Type::Variant::Type::INT;
+	_data._int = static_cast<int>(p_int);
 }
 
 #ifdef NEED_LONG_INT
 
 Variant::Variant(signed long p_int) {
-	type = INT;
+	type = Variant::Type::Variant::Type::INT;
 	_data._int = p_int;
 }
 
 Variant::Variant(unsigned long p_int) {
-	type = INT;
+	type = Variant::Type::Variant::Type::INT;
 	_data._int = p_int;
 }
 #endif
 
 Variant::Variant(int64_t p_int) {
-	type = INT;
+	type = Variant::Type::Variant::Type::INT;
 	_data._int = p_int;
 }
 
 Variant::Variant(uint64_t p_int) {
-	type = INT;
+	type = Variant::Type::Variant::Type::INT;
 	_data._int = p_int;
 }
 
 Variant::Variant(signed short p_short) {
-	type = INT;
+	type = Variant::Type::Variant::Type::INT;
 	_data._int = p_short;
 }
 
 Variant::Variant(unsigned short p_short) {
-	type = INT;
+	type = Variant::Type::Variant::Type::INT;
 	_data._int = p_short;
 }
 
 Variant::Variant(signed char p_char) {
-	type = INT;
+	type = Variant::Type::Variant::Type::INT;
 	_data._int = p_char;
 }
 
 Variant::Variant(unsigned char p_char) {
-	type = INT;
+	type = Variant::Type::Variant::Type::INT;
 	_data._int = p_char;
 }
 
@@ -2426,107 +2431,107 @@ Variant::Variant(double p_double) {
 }
 
 Variant::Variant(const ObjectID &p_id) {
-	type = INT;
+	type = Variant::Type::Variant::Type::INT;
 	_data._int = p_id;
 }
 
 Variant::Variant(const StringName &p_string) {
-	type = STRING_NAME;
+	type = Variant::Type::STRING_NAME;
 	memnew_placement(_data._mem, StringName(p_string));
 }
 
 Variant::Variant(const String &p_string) {
-	type = STRING;
+	type = Variant::Type::STRING;
 	memnew_placement(_data._mem, String(p_string));
 }
 
 Variant::Variant(const char *const p_cstring) {
-	type = STRING;
+	type = Variant::Type::STRING;
 	memnew_placement(_data._mem, String((const char *)p_cstring));
 }
 
 Variant::Variant(const CharType *p_wstring) {
-	type = STRING;
+	type = Variant::Type::STRING;
 	memnew_placement(_data._mem, String(p_wstring));
 }
 
 Variant::Variant(const Vector3 &p_vector3) {
-	type = VECTOR3;
+	type = Variant::Type::VECTOR3;
 	memnew_placement(_data._mem, Vector3(p_vector3));
 }
 
 Variant::Variant(const Vector3i &p_vector3i) {
-	type = VECTOR3I;
+	type = Variant::Type::VECTOR3I;
 	memnew_placement(_data._mem, Vector3i(p_vector3i));
 }
 
 Variant::Variant(const Vector2 &p_vector2) {
-	type = VECTOR2;
+	type = Variant::Type::VECTOR2;
 	memnew_placement(_data._mem, Vector2(p_vector2));
 }
 
 Variant::Variant(const Vector2i &p_vector2i) {
-	type = VECTOR2I;
+	type = Variant::Type::VECTOR2I;
 	memnew_placement(_data._mem, Vector2i(p_vector2i));
 }
 
 Variant::Variant(const Rect2 &p_rect2) {
-	type = RECT2;
+	type = Variant::Type::RECT2;
 	memnew_placement(_data._mem, Rect2(p_rect2));
 }
 
 Variant::Variant(const Rect2i &p_rect2i) {
-	type = RECT2I;
+	type = Variant::Type::RECT2I;
 	memnew_placement(_data._mem, Rect2i(p_rect2i));
 }
 
 Variant::Variant(const Plane &p_plane) {
-	type = PLANE;
+	type = Variant::Type::PLANE;
 	memnew_placement(_data._mem, Plane(p_plane));
 }
 
 Variant::Variant(const ::AABB &p_aabb) {
-	type = AABB;
+	type = Variant::Type::AABB;
 	_data._aabb = memnew(::AABB(p_aabb));
 }
 
 Variant::Variant(const Basis &p_matrix) {
-	type = BASIS;
+	type = Variant::Type::BASIS;
 	_data._basis = memnew(Basis(p_matrix));
 }
 
 Variant::Variant(const Quat &p_quat) {
-	type = QUAT;
+	type = Variant::Type::QUAT;
 	memnew_placement(_data._mem, Quat(p_quat));
 }
 
 Variant::Variant(const Transform &p_transform) {
-	type = TRANSFORM;
+	type = Variant::Type::TRANSFORM;
 	_data._transform = memnew(Transform(p_transform));
 }
 
 Variant::Variant(const Transform2D &p_transform) {
-	type = TRANSFORM2D;
+	type = Variant::Type::TRANSFORM2D;
 	_data._transform2d = memnew(Transform2D(p_transform));
 }
 
 Variant::Variant(const Color &p_color) {
-	type = COLOR;
+	type = Variant::Type::COLOR;
 	memnew_placement(_data._mem, Color(p_color));
 }
 
 Variant::Variant(const NodePath &p_node_path) {
-	type = NODE_PATH;
+	type = Variant::Type::NODE_PATH;
 	memnew_placement(_data._mem, NodePath(p_node_path));
 }
 
 Variant::Variant(const RID &p_rid) {
-	type = _RID;
+	type = Variant::Type::_RID;
 	memnew_placement(_data._mem, RID(p_rid));
 }
 
 Variant::Variant(const Object *p_object) {
-	type = OBJECT;
+	type = Variant::Type::OBJECT;
 
 	memnew_placement(_data._mem, ObjData);
 
@@ -2549,27 +2554,27 @@ Variant::Variant(const Object *p_object) {
 }
 
 Variant::Variant(const Callable &p_callable) {
-	type = CALLABLE;
+	type = Variant::Type::CALLABLE;
 	memnew_placement(_data._mem, Callable(p_callable));
 }
 
 Variant::Variant(const Signal &p_callable) {
-	type = SIGNAL;
+	type = Variant::Type::SIGNAL;
 	memnew_placement(_data._mem, Signal(p_callable));
 }
 
 Variant::Variant(const Dictionary &p_dictionary) {
-	type = DICTIONARY;
+	type = Variant::Type::DICTIONARY;
 	memnew_placement(_data._mem, Dictionary(p_dictionary));
 }
 
 Variant::Variant(const Array &p_array) {
-	type = ARRAY;
+	type = Variant::Type::ARRAY;
 	memnew_placement(_data._mem, Array(p_array));
 }
 
 Variant::Variant(const Vector<Plane> &p_array) {
-	type = ARRAY;
+	type = Variant::Type::ARRAY;
 
 	Array *plane_array = memnew_placement(_data._mem, Array);
 
@@ -2581,7 +2586,7 @@ Variant::Variant(const Vector<Plane> &p_array) {
 }
 
 Variant::Variant(const Vector<RID> &p_array) {
-	type = ARRAY;
+	type = Variant::Type::ARRAY;
 
 	Array *rid_array = memnew_placement(_data._mem, Array);
 
@@ -2593,48 +2598,48 @@ Variant::Variant(const Vector<RID> &p_array) {
 }
 
 Variant::Variant(const Vector<uint8_t> &p_byte_array) {
-	type = PACKED_BYTE_ARRAY;
+	type = Variant::Type::PACKED_BYTE_ARRAY;
 
 	_data.packed_array = PackedArrayRef<uint8_t>::create(p_byte_array);
 }
 
 Variant::Variant(const Vector<int32_t> &p_int32_array) {
-	type = PACKED_INT32_ARRAY;
+	type = Variant::Type::PACKED_INT32_ARRAY;
 	_data.packed_array = PackedArrayRef<int32_t>::create(p_int32_array);
 }
 
 Variant::Variant(const Vector<int64_t> &p_int64_array) {
-	type = PACKED_INT64_ARRAY;
+	type = Variant::Type::PACKED_INT64_ARRAY;
 	_data.packed_array = PackedArrayRef<int64_t>::create(p_int64_array);
 }
 
 Variant::Variant(const Vector<float> &p_float32_array) {
-	type = PACKED_FLOAT32_ARRAY;
+	type = Variant::Type::PACKED_FLOAT32_ARRAY;
 	_data.packed_array = PackedArrayRef<float>::create(p_float32_array);
 }
 
 Variant::Variant(const Vector<double> &p_float64_array) {
-	type = PACKED_FLOAT64_ARRAY;
+	type = Variant::Type::PACKED_FLOAT64_ARRAY;
 	_data.packed_array = PackedArrayRef<double>::create(p_float64_array);
 }
 
 Variant::Variant(const Vector<String> &p_string_array) {
-	type = PACKED_STRING_ARRAY;
+	type = Variant::Type::PACKED_STRING_ARRAY;
 	_data.packed_array = PackedArrayRef<String>::create(p_string_array);
 }
 
 Variant::Variant(const Vector<Vector3> &p_vector3_array) {
-	type = PACKED_VECTOR3_ARRAY;
+	type = Variant::Type::PACKED_VECTOR3_ARRAY;
 	_data.packed_array = PackedArrayRef<Vector3>::create(p_vector3_array);
 }
 
 Variant::Variant(const Vector<Vector2> &p_vector2_array) {
-	type = PACKED_VECTOR2_ARRAY;
+	type = Variant::Type::PACKED_VECTOR2_ARRAY;
 	_data.packed_array = PackedArrayRef<Vector2>::create(p_vector2_array);
 }
 
 Variant::Variant(const Vector<Color> &p_color_array) {
-	type = PACKED_COLOR_ARRAY;
+	type = Variant::Type::PACKED_COLOR_ARRAY;
 	_data.packed_array = PackedArrayRef<Color>::create(p_color_array);
 }
 
@@ -2654,14 +2659,14 @@ Variant::Variant(const Vector<Face3> &p_face_array) {
 		}
 	}
 
-	type = NIL;
+	type = Variant::Type::NIL;
 
 	*this = vertices;
 }
 
 /* helpers */
 Variant::Variant(const Vector<Variant> &p_array) {
-	type = NIL;
+	type = Variant::Type::NIL;
 	Array arr;
 	arr.resize(p_array.size());
 	for (int i = 0; i < p_array.size(); i++) {
@@ -2671,7 +2676,7 @@ Variant::Variant(const Vector<Variant> &p_array) {
 }
 
 Variant::Variant(const Vector<StringName> &p_array) {
-	type = NIL;
+	type = Variant::Type::NIL;
 	Vector<String> v;
 	int len = p_array.size();
 	v.resize(len);
@@ -2692,15 +2697,15 @@ void Variant::operator=(const Variant &p_variant) {
 	}
 
 	switch (p_variant.type) {
-		case NIL: {
+		case Variant::Type::NIL: {
 			// none
 		} break;
 
 		// atomic types
-		case BOOL: {
+		case Variant::Type::BOOL: {
 			_data._bool = p_variant._data._bool;
 		} break;
-		case INT: {
+		case Variant::Type::INT: {
 			_data._int = p_variant._data._int;
 		} break;
 		case FLOAT: {
@@ -2842,13 +2847,13 @@ Variant::Variant(const Variant &p_variant) {
 
 uint32_t Variant::hash() const {
 	switch (type) {
-		case NIL: {
+		case Variant::Type::NIL: {
 			return 0;
 		} break;
-		case BOOL: {
+		case Variant::Type::BOOL: {
 			return _data._bool ? 1 : 0;
 		} break;
-		case INT: {
+		case Variant::Type::INT: {
 			return _data._int;
 		} break;
 		case FLOAT: {
@@ -3393,7 +3398,7 @@ Variant Variant::call(const StringName &p_method, VARIANT_ARG_DECLARE) {
 	VARIANT_ARGPTRS;
 	int argc = 0;
 	for (int i = 0; i < VARIANT_ARG_MAX; i++) {
-		if (argptr[i]->get_type() == Variant::NIL) {
+		if (argptr[i]->get_type() == Variant::Type::NIL) {
 			break;
 		}
 		argc++;
@@ -3492,19 +3497,19 @@ String Variant::get_callable_error_text(const Callable &p_callable, const Varian
 
 String vformat(const String &p_text, const Variant &p1, const Variant &p2, const Variant &p3, const Variant &p4, const Variant &p5) {
 	Array args;
-	if (p1.get_type() != Variant::NIL) {
+	if (p1.get_type() != Variant::Type::NIL) {
 		args.push_back(p1);
 
-		if (p2.get_type() != Variant::NIL) {
+		if (p2.get_type() != Variant::Type::NIL) {
 			args.push_back(p2);
 
-			if (p3.get_type() != Variant::NIL) {
+			if (p3.get_type() != Variant::Type::NIL) {
 				args.push_back(p3);
 
-				if (p4.get_type() != Variant::NIL) {
+				if (p4.get_type() != Variant::Type::NIL) {
 					args.push_back(p4);
 
-					if (p5.get_type() != Variant::NIL) {
+					if (p5.get_type() != Variant::Type::NIL) {
 						args.push_back(p5);
 					}
 				}

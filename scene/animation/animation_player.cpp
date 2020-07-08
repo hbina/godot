@@ -152,9 +152,9 @@ void AnimationPlayer::_get_property_list(List<PropertyInfo> *p_list) const {
 	List<PropertyInfo> anim_names;
 
 	for (Map<StringName, AnimationData>::Element *E = animation_set.front(); E; E = E->next()) {
-		anim_names.push_back(PropertyInfo(Variant::OBJECT, "anims/" + String(E->key()), PROPERTY_HINT_RESOURCE_TYPE, "Animation", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL | PROPERTY_USAGE_DO_NOT_SHARE_ON_DUPLICATE));
+		anim_names.push_back(PropertyInfo(Variant::Type::OBJECT, "anims/" + String(E->key()), PROPERTY_HINT_RESOURCE_TYPE, "Animation", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL | PROPERTY_USAGE_DO_NOT_SHARE_ON_DUPLICATE));
 		if (E->get().next != StringName()) {
-			anim_names.push_back(PropertyInfo(Variant::STRING, "next/" + String(E->key()), PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
+			anim_names.push_back(PropertyInfo(Variant::Type::STRING, "next/" + String(E->key()), PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
 		}
 	}
 
@@ -164,7 +164,7 @@ void AnimationPlayer::_get_property_list(List<PropertyInfo> *p_list) const {
 		p_list->push_back(E->get());
 	}
 
-	p_list->push_back(PropertyInfo(Variant::ARRAY, "blend_times", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
+	p_list->push_back(PropertyInfo(Variant::Type::ARRAY, "blend_times", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
 }
 
 void AnimationPlayer::advance(float p_time) {
@@ -448,7 +448,7 @@ void AnimationPlayer::_animation_process_animation(AnimationData *p_anim, float 
 
 					//thanks to trigger mode, this should be solved now..
 					/*
-					if (p_delta==0 && value.get_type()==Variant::STRING)
+					if (p_delta==0 && value.get_type()==Variant::Type::STRING)
 						continue; // doing this with strings is messy, should find another way
 					*/
 					if (pa->accum_pass != accum_pass) {
@@ -479,7 +479,7 @@ void AnimationPlayer::_animation_process_animation(AnimationData *p_anim, float 
 							} break;
 							case SP_NODE2D_POS: {
 #ifdef DEBUG_ENABLED
-								if (value.get_type() != Variant::VECTOR2) {
+								if (value.get_type() != Variant::Type::VECTOR2) {
 									ERR_PRINT("Position key at time " + rtos(p_time) + " in Animation Track '" + String(pa->owner->path) + "' not of type Vector2(). Animation '" + a->get_name() + "' at node '" + get_path() + "'.");
 								}
 #endif
@@ -496,7 +496,7 @@ void AnimationPlayer::_animation_process_animation(AnimationData *p_anim, float 
 							} break;
 							case SP_NODE2D_SCALE: {
 #ifdef DEBUG_ENABLED
-								if (value.get_type() != Variant::VECTOR2) {
+								if (value.get_type() != Variant::Type::VECTOR2) {
 									ERR_PRINT("Scale key at time " + rtos(p_time) + " in Animation Track '" + String(pa->owner->path) + "' not of type Vector2()." + a->get_name() + "' at node '" + get_path() + "'.");
 								}
 #endif
@@ -861,7 +861,7 @@ void AnimationPlayer::_animation_update_transforms() {
 			} break;
 			case SP_NODE2D_POS: {
 #ifdef DEBUG_ENABLED
-				if (pa->value_accum.get_type() != Variant::VECTOR2) {
+				if (pa->value_accum.get_type() != Variant::Type::VECTOR2) {
 					ERR_PRINT("Position key at time " + rtos(playback.current.pos) + " in Animation '" + get_current_animation() + "' at Node '" + get_path() + "', Track '" + String(pa->owner->path) + "' not of type Vector2()");
 				}
 #endif
@@ -878,7 +878,7 @@ void AnimationPlayer::_animation_update_transforms() {
 			} break;
 			case SP_NODE2D_SCALE: {
 #ifdef DEBUG_ENABLED
-				if (pa->value_accum.get_type() != Variant::VECTOR2) {
+				if (pa->value_accum.get_type() != Variant::Type::VECTOR2) {
 					ERR_PRINT("Scale key at time " + rtos(playback.current.pos) + " in Animation '" + get_current_animation() + "' at Node '" + get_path() + "', Track '" + String(pa->owner->path) + "' not of type Vector2()");
 				}
 #endif
@@ -1598,23 +1598,23 @@ void AnimationPlayer::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("seek", "seconds", "update"), &AnimationPlayer::seek, DEFVAL(false));
 	ClassDB::bind_method(D_METHOD("advance", "delta"), &AnimationPlayer::advance);
 
-	ADD_PROPERTY(PropertyInfo(Variant::NODE_PATH, "root_node"), "set_root", "get_root");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING_NAME, "current_animation", PROPERTY_HINT_ENUM, "", PROPERTY_USAGE_EDITOR | PROPERTY_USAGE_ANIMATE_AS_TRIGGER), "set_current_animation", "get_current_animation");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING_NAME, "assigned_animation", PROPERTY_HINT_NONE, "", 0), "set_assigned_animation", "get_assigned_animation");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING_NAME, "autoplay", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR), "set_autoplay", "get_autoplay");
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "current_animation_length", PROPERTY_HINT_NONE, "", 0), "", "get_current_animation_length");
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "current_animation_position", PROPERTY_HINT_NONE, "", 0), "", "get_current_animation_position");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::NODE_PATH, "root_node"), "set_root", "get_root");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::STRING_NAME, "current_animation", PROPERTY_HINT_ENUM, "", PROPERTY_USAGE_EDITOR | PROPERTY_USAGE_ANIMATE_AS_TRIGGER), "set_current_animation", "get_current_animation");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::STRING_NAME, "assigned_animation", PROPERTY_HINT_NONE, "", 0), "set_assigned_animation", "get_assigned_animation");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::STRING_NAME, "autoplay", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR), "set_autoplay", "get_autoplay");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "current_animation_length", PROPERTY_HINT_NONE, "", 0), "", "get_current_animation_length");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "current_animation_position", PROPERTY_HINT_NONE, "", 0), "", "get_current_animation_position");
 
 	ADD_GROUP("Playback Options", "playback_");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "playback_process_mode", PROPERTY_HINT_ENUM, "Physics,Idle,Manual"), "set_animation_process_mode", "get_animation_process_mode");
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "playback_default_blend_time", PROPERTY_HINT_RANGE, "0,4096,0.01"), "set_default_blend_time", "get_default_blend_time");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "playback_active", PROPERTY_HINT_NONE, "", 0), "set_active", "is_active");
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "playback_speed", PROPERTY_HINT_RANGE, "-64,64,0.01"), "set_speed_scale", "get_speed_scale");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "method_call_mode", PROPERTY_HINT_ENUM, "Deferred,Immediate"), "set_method_call_mode", "get_method_call_mode");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "playback_process_mode", PROPERTY_HINT_ENUM, "Physics,Idle,Manual"), "set_animation_process_mode", "get_animation_process_mode");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "playback_default_blend_time", PROPERTY_HINT_RANGE, "0,4096,0.01"), "set_default_blend_time", "get_default_blend_time");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "playback_active", PROPERTY_HINT_NONE, "", 0), "set_active", "is_active");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "playback_speed", PROPERTY_HINT_RANGE, "-64,64,0.01"), "set_speed_scale", "get_speed_scale");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "method_call_mode", PROPERTY_HINT_ENUM, "Deferred,Immediate"), "set_method_call_mode", "get_method_call_mode");
 
-	ADD_SIGNAL(MethodInfo("animation_finished", PropertyInfo(Variant::STRING_NAME, "anim_name")));
-	ADD_SIGNAL(MethodInfo("animation_changed", PropertyInfo(Variant::STRING_NAME, "old_name"), PropertyInfo(Variant::STRING_NAME, "new_name")));
-	ADD_SIGNAL(MethodInfo("animation_started", PropertyInfo(Variant::STRING_NAME, "anim_name")));
+	ADD_SIGNAL(MethodInfo("animation_finished", PropertyInfo(Variant::Type::STRING_NAME, "anim_name")));
+	ADD_SIGNAL(MethodInfo("animation_changed", PropertyInfo(Variant::Type::STRING_NAME, "old_name"), PropertyInfo(Variant::Type::STRING_NAME, "new_name")));
+	ADD_SIGNAL(MethodInfo("animation_started", PropertyInfo(Variant::Type::STRING_NAME, "anim_name")));
 	ADD_SIGNAL(MethodInfo("caches_cleared"));
 
 	BIND_ENUM_CONSTANT(ANIMATION_PROCESS_PHYSICS);

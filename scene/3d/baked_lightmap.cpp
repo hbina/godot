@@ -203,10 +203,10 @@ void BakedLightmapData::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("_set_probe_data", "data"), &BakedLightmapData::_set_probe_data);
 	ClassDB::bind_method(D_METHOD("_get_probe_data"), &BakedLightmapData::_get_probe_data);
 
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "light_texture", PROPERTY_HINT_RESOURCE_TYPE, "TextureLayered"), "set_light_texture", "get_light_texture");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "uses_spherical_harmonics", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "set_uses_spherical_harmonics", "is_using_spherical_harmonics");
-	ADD_PROPERTY(PropertyInfo(Variant::ARRAY, "user_data", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_user_data", "_get_user_data");
-	ADD_PROPERTY(PropertyInfo(Variant::DICTIONARY, "probe_data", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_probe_data", "_get_probe_data");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "light_texture", PROPERTY_HINT_RESOURCE_TYPE, "TextureLayered"), "set_light_texture", "get_light_texture");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "uses_spherical_harmonics", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "set_uses_spherical_harmonics", "is_using_spherical_harmonics");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::ARRAY, "user_data", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_user_data", "_get_user_data");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::DICTIONARY, "probe_data", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_probe_data", "_get_probe_data");
 }
 
 BakedLightmapData::BakedLightmapData() {
@@ -1423,22 +1423,22 @@ void BakedLightmap::_bind_methods() {
 	//	ClassDB::bind_method(D_METHOD("bake", "from_node"), &BakedLightmap::bake, DEFVAL(Variant()));
 
 	ADD_GROUP("Tweaks", "");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "quality", PROPERTY_HINT_ENUM, "Low,Medium,High,Ultra"), "set_bake_quality", "get_bake_quality");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "bounces", PROPERTY_HINT_RANGE, "0,16,1"), "set_bounces", "get_bounces");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "directional"), "set_directional", "is_directional");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "interior"), "set_interior", "is_interior");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "use_denoiser"), "set_use_denoiser", "is_using_denoiser");
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "bias", PROPERTY_HINT_RANGE, "0.00001,0.1,0.00001,or_greater"), "set_bias", "get_bias");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "max_texture_size"), "set_max_texture_size", "get_max_texture_size");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "quality", PROPERTY_HINT_ENUM, "Low,Medium,High,Ultra"), "set_bake_quality", "get_bake_quality");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "bounces", PROPERTY_HINT_RANGE, "0,16,1"), "set_bounces", "get_bounces");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "directional"), "set_directional", "is_directional");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "interior"), "set_interior", "is_interior");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "use_denoiser"), "set_use_denoiser", "is_using_denoiser");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "bias", PROPERTY_HINT_RANGE, "0.00001,0.1,0.00001,or_greater"), "set_bias", "get_bias");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "max_texture_size"), "set_max_texture_size", "get_max_texture_size");
 	ADD_GROUP("Environment", "environment_");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "environment_mode", PROPERTY_HINT_ENUM, "Disabled,Scene,Custom Sky,Custom Color"), "set_environment_mode", "get_environment_mode");
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "environment_custom_sky", PROPERTY_HINT_RESOURCE_TYPE, "Sky"), "set_environment_custom_sky", "get_environment_custom_sky");
-	ADD_PROPERTY(PropertyInfo(Variant::COLOR, "environment_custom_color", PROPERTY_HINT_COLOR_NO_ALPHA), "set_environment_custom_color", "get_environment_custom_color");
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "environment_custom_energy", PROPERTY_HINT_RANGE, "0,64,0.01"), "set_environment_custom_energy", "get_environment_custom_energy");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "environment_mode", PROPERTY_HINT_ENUM, "Disabled,Scene,Custom Sky,Custom Color"), "set_environment_mode", "get_environment_mode");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "environment_custom_sky", PROPERTY_HINT_RESOURCE_TYPE, "Sky"), "set_environment_custom_sky", "get_environment_custom_sky");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::COLOR, "environment_custom_color", PROPERTY_HINT_COLOR_NO_ALPHA), "set_environment_custom_color", "get_environment_custom_color");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "environment_custom_energy", PROPERTY_HINT_RANGE, "0,64,0.01"), "set_environment_custom_energy", "get_environment_custom_energy");
 	ADD_GROUP("Gen Probes", "generate_probes_");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "generate_probes_subdiv", PROPERTY_HINT_ENUM, "Disabled,4,8,16,32"), "set_generate_probes", "get_generate_probes");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "generate_probes_subdiv", PROPERTY_HINT_ENUM, "Disabled,4,8,16,32"), "set_generate_probes", "get_generate_probes");
 	ADD_GROUP("Data", "");
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "light_data", PROPERTY_HINT_RESOURCE_TYPE, "BakedLightmapData"), "set_light_data", "get_light_data");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "light_data", PROPERTY_HINT_RESOURCE_TYPE, "BakedLightmapData"), "set_light_data", "get_light_data");
 
 	BIND_ENUM_CONSTANT(BAKE_QUALITY_LOW);
 	BIND_ENUM_CONSTANT(BAKE_QUALITY_MEDIUM);

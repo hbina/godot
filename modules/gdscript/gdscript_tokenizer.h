@@ -199,7 +199,7 @@ class GDScriptTokenizerText : public GDScriptTokenizer {
 		TokenData() {
 			type = TK_EMPTY;
 			line = col = 0;
-			vtype = Variant::NIL;
+			vtype = Variant::Type::NIL;
 		}
 	};
 

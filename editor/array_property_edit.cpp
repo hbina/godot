@@ -103,10 +103,10 @@ bool ArrayPropertyEdit::_set(const StringName &p_name, const Variant &p_value) {
 				Variant init;
 				Callable::CallError ce;
 				Variant::Type new_type = subtype;
-				if (new_type == Variant::NIL && size) {
+				if (new_type == Variant::Type::NIL && size) {
 					new_type = arr.get(size - 1).get_type();
 				}
-				if (new_type != Variant::NIL) {
+				if (new_type != Variant::Type::NIL) {
 					init = Variant::construct(new_type, nullptr, 0, ce);
 					for (int i = size; i < newsize; i++) {
 						ur->add_do_method(this, "_set_value", i, init);
@@ -134,7 +134,7 @@ bool ArrayPropertyEdit::_set(const StringName &p_name, const Variant &p_value) {
 			Variant arr = get_array();
 
 			Variant value = arr.get(idx);
-			if (value.get_type() != type && type >= 0 && type < Variant::VARIANT_MAX) {
+			if (value.get_type() != type && type >= 0 && type < Variant::Type::VARIANT_MAX) {
 				Callable::CallError ce;
 				Variant new_value = Variant::construct(Variant::Type(type), nullptr, 0, ce);
 				UndoRedo *ur = EditorNode::get_undo_redo();
@@ -198,7 +198,7 @@ bool ArrayPropertyEdit::_get(const StringName &p_name, Variant &r_ret) const {
 			bool valid;
 			r_ret = arr.get(idx, &valid);
 
-			if (r_ret.get_type() == Variant::OBJECT && Object::cast_to<EncodedObjectAsID>(r_ret)) {
+			if (r_ret.get_type() == Variant::Type::OBJECT && Object::cast_to<EncodedObjectAsID>(r_ret)) {
 				r_ret = Object::cast_to<EncodedObjectAsID>(r_ret)->get_object_id();
 			}
 
@@ -213,10 +213,10 @@ void ArrayPropertyEdit::_get_property_list(List<PropertyInfo> *p_list) const {
 	Variant arr = get_array();
 	int size = arr.call("size");
 
-	p_list->push_back(PropertyInfo(Variant::INT, "array/size", PROPERTY_HINT_RANGE, "0,100000,1"));
+	p_list->push_back(PropertyInfo(Variant::Type::INT, "array/size", PROPERTY_HINT_RANGE, "0,100000,1"));
 	int pages = size / ITEMS_PER_PAGE;
 	if (pages > 0) {
-		p_list->push_back(PropertyInfo(Variant::INT, "array/page", PROPERTY_HINT_RANGE, "0," + itos(pages) + ",1"));
+		p_list->push_back(PropertyInfo(Variant::Type::INT, "array/page", PROPERTY_HINT_RANGE, "0," + itos(pages) + ",1"));
 	}
 
 	int offset = page * ITEMS_PER_PAGE;
@@ -225,24 +225,24 @@ void ArrayPropertyEdit::_get_property_list(List<PropertyInfo> *p_list) const {
 
 	for (int i = 0; i < items; i++) {
 		Variant v = arr.get(i + offset);
-		bool is_typed = arr.get_type() != Variant::ARRAY || subtype != Variant::NIL;
+		bool is_typed = arr.get_type() != Variant::Type::ARRAY || subtype != Variant::Type::NIL;
 
 		if (!is_typed) {
-			p_list->push_back(PropertyInfo(Variant::INT, "indices/" + itos(i + offset) + "_type", PROPERTY_HINT_ENUM, vtypes));
+			p_list->push_back(PropertyInfo(Variant::Type::INT, "indices/" + itos(i + offset) + "_type", PROPERTY_HINT_ENUM, vtypes));
 		}
 
-		if (v.get_type() == Variant::OBJECT && Object::cast_to<EncodedObjectAsID>(v)) {
-			p_list->push_back(PropertyInfo(Variant::INT, "indices/" + itos(i + offset), PROPERTY_HINT_OBJECT_ID, "Object"));
+		if (v.get_type() == Variant::Type::OBJECT && Object::cast_to<EncodedObjectAsID>(v)) {
+			p_list->push_back(PropertyInfo(Variant::Type::INT, "indices/" + itos(i + offset), PROPERTY_HINT_OBJECT_ID, "Object"));
 			continue;
 		}
 
-		if (is_typed || v.get_type() != Variant::NIL) {
+		if (is_typed || v.get_type() != Variant::Type::NIL) {
 			PropertyInfo pi(v.get_type(), "indices/" + itos(i + offset));
-			if (subtype != Variant::NIL) {
+			if (subtype != Variant::Type::NIL) {
 				pi.type = Variant::Type(subtype);
 				pi.hint = PropertyHint(subtype_hint);
 				pi.hint_string = subtype_hint_string;
-			} else if (v.get_type() == Variant::OBJECT) {
+			} else if (v.get_type() == Variant::Type::OBJECT) {
 				pi.hint = PROPERTY_HINT_RESOURCE_TYPE;
 				pi.hint_string = "Resource";
 			}
@@ -293,14 +293,14 @@ void ArrayPropertyEdit::_bind_methods() {
 
 ArrayPropertyEdit::ArrayPropertyEdit() {
 	page = 0;
-	for (int i = 0; i < Variant::VARIANT_MAX; i++) {
+	for (int i = 0; i < Variant::Type::VARIANT_MAX; i++) {
 		if (i > 0) {
 			vtypes += ",";
 		}
 		vtypes += Variant::get_type_name(Variant::Type(i));
 	}
-	default_type = Variant::NIL;
-	subtype = Variant::NIL;
+	default_type = Variant::Type::NIL;
+	subtype = Variant::Type::NIL;
 	subtype_hint = PROPERTY_HINT_NONE;
 	subtype_hint_string = "";
 }

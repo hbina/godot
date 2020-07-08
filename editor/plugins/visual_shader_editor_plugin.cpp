@@ -55,7 +55,7 @@ Control *VisualShaderNodePlugin::create_editor(const Ref<Resource> &p_parent_res
 }
 
 void VisualShaderNodePlugin::_bind_methods() {
-	BIND_VMETHOD(MethodInfo(Variant::OBJECT, "create_editor", PropertyInfo(Variant::OBJECT, "parent_resource", PROPERTY_HINT_RESOURCE_TYPE, "Resource"), PropertyInfo(Variant::OBJECT, "for_node", PROPERTY_HINT_RESOURCE_TYPE, "VisualShaderNode")));
+	BIND_VMETHOD(MethodInfo(Variant::Type::OBJECT, "create_editor", PropertyInfo(Variant::Type::OBJECT, "parent_resource", PROPERTY_HINT_RESOURCE_TYPE, "Resource"), PropertyInfo(Variant::Type::OBJECT, "for_node", PROPERTY_HINT_RESOURCE_TYPE, "VisualShaderNode")));
 }
 
 ///////////////////
@@ -656,24 +656,24 @@ void VisualShaderEditor::_update_graph() {
 				default_value = vsnode->get_input_port_default_value(i);
 			}
 
-			if (default_value.get_type() != Variant::NIL) { // only a label
+			if (default_value.get_type() != Variant::Type::NIL) { // only a label
 				Button *button = memnew(Button);
 				hb->add_child(button);
 				button->connect("pressed", callable_mp(this, &VisualShaderEditor::_edit_port_default_input), varray(button, nodes[n_i], i));
 
 				switch (default_value.get_type()) {
-					case Variant::COLOR: {
+					case Variant::Type::COLOR: {
 						button->set_custom_minimum_size(Size2(30, 0) * EDSCALE);
 						button->connect("draw", callable_mp(this, &VisualShaderEditor::_draw_color_over_button), varray(button, default_value));
 					} break;
-					case Variant::BOOL: {
+					case Variant::Type::BOOL: {
 						button->set_text(((bool)default_value) ? "true" : "false");
 					} break;
-					case Variant::INT:
-					case Variant::FLOAT: {
+					case Variant::Type::INT:
+					case Variant::Type::FLOAT: {
 						button->set_text(String::num(default_value, 4));
 					} break;
-					case Variant::VECTOR3: {
+					case Variant::Type::VECTOR3: {
 						Vector3 v = default_value;
 						button->set_text(String::num(v.x, 3) + "," + String::num(v.y, 3) + "," + String::num(v.z, 3));
 					} break;
@@ -2173,7 +2173,7 @@ void VisualShaderEditor::drop_data_fw(const Point2 &p_point, const Variant &p_da
 			saved_node_pos_dirty = true;
 			_add_node(idx, add_options[idx].sub_func);
 		} else if (d.has("files")) {
-			if (d["files"].get_type() == Variant::PACKED_STRING_ARRAY) {
+			if (d["files"].get_type() == Variant::Type::PACKED_STRING_ARRAY) {
 				int j = 0;
 				PackedStringArray arr = d["files"];
 				for (int i = 0; i < arr.size(); i++) {
@@ -2985,7 +2985,7 @@ public:
 		undo_redo->add_do_property(node.ptr(), p_property, p_value);
 		undo_redo->add_undo_property(node.ptr(), p_property, node->get(p_property));
 
-		if (p_value.get_type() == Variant::OBJECT) {
+		if (p_value.get_type() == Variant::Type::OBJECT) {
 			RES prev_res = node->get(p_property);
 			RES curr_res = p_value;
 
@@ -3240,7 +3240,7 @@ void EditorInspectorShaderModePlugin::parse_begin(Object *p_object) {
 }
 
 bool EditorInspectorShaderModePlugin::parse_property(Object *p_object, Variant::Type p_type, const String &p_path, PropertyHint p_hint, const String &p_hint_text, int p_usage, bool p_wide) {
-	if (p_path == "mode" && p_object->is_class("VisualShader") && p_type == Variant::INT) {
+	if (p_path == "mode" && p_object->is_class("VisualShader") && p_type == Variant::Type::INT) {
 		EditorPropertyShaderMode *editor = memnew(EditorPropertyShaderMode);
 		Vector<String> options = p_hint_text.split(",");
 		editor->setup(options);

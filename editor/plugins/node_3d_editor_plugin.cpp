@@ -3419,8 +3419,8 @@ void Node3DEditorViewport::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("can_drop_data_fw"), &Node3DEditorViewport::can_drop_data_fw);
 	ClassDB::bind_method(D_METHOD("drop_data_fw"), &Node3DEditorViewport::drop_data_fw);
 
-	ADD_SIGNAL(MethodInfo("toggle_maximize_view", PropertyInfo(Variant::OBJECT, "viewport")));
-	ADD_SIGNAL(MethodInfo("clicked", PropertyInfo(Variant::OBJECT, "viewport")));
+	ADD_SIGNAL(MethodInfo("toggle_maximize_view", PropertyInfo(Variant::Type::OBJECT, "viewport")));
+	ADD_SIGNAL(MethodInfo("clicked", PropertyInfo(Variant::Type::OBJECT, "viewport")));
 }
 
 void Node3DEditorViewport::reset() {
@@ -6377,9 +6377,9 @@ Node3DEditor::Node3DEditor(EditorNode *p_editor) {
 	add_to_group("_spatial_editor_group");
 
 	EDITOR_DEF("editors/3d/manipulator_gizmo_size", 80);
-	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(Variant::INT, "editors/3d/manipulator_gizmo_size", PROPERTY_HINT_RANGE, "16,1024,1"));
+	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(Variant::Type::INT, "editors/3d/manipulator_gizmo_size", PROPERTY_HINT_RANGE, "16,1024,1"));
 	EDITOR_DEF("editors/3d/manipulator_gizmo_opacity", 0.4);
-	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(Variant::FLOAT, "editors/3d/manipulator_gizmo_opacity", PROPERTY_HINT_RANGE, "0,1,0.01"));
+	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(Variant::Type::FLOAT, "editors/3d/manipulator_gizmo_opacity", PROPERTY_HINT_RANGE, "0,1,0.01"));
 	EDITOR_DEF("editors/3d/navigation/show_viewport_rotation_gizmo", true);
 
 	over_gizmo_handle = -1;
@@ -6680,10 +6680,10 @@ Ref<EditorNode3DGizmo> EditorNode3DGizmoPlugin::get_gizmo(Node3D *p_spatial) {
 }
 
 void EditorNode3DGizmoPlugin::_bind_methods() {
-#define GIZMO_REF PropertyInfo(Variant::OBJECT, "gizmo", PROPERTY_HINT_RESOURCE_TYPE, "EditorNode3DGizmo")
+#define GIZMO_REF PropertyInfo(Variant::Type::OBJECT, "gizmo", PROPERTY_HINT_RESOURCE_TYPE, "EditorNode3DGizmo")
 
-	BIND_VMETHOD(MethodInfo(Variant::BOOL, "has_gizmo", PropertyInfo(Variant::OBJECT, "spatial", PROPERTY_HINT_RESOURCE_TYPE, "Node3D")));
-	BIND_VMETHOD(MethodInfo(GIZMO_REF, "create_gizmo", PropertyInfo(Variant::OBJECT, "spatial", PROPERTY_HINT_RESOURCE_TYPE, "Node3D")));
+	BIND_VMETHOD(MethodInfo(Variant::Type::BOOL, "has_gizmo", PropertyInfo(Variant::Type::OBJECT, "spatial", PROPERTY_HINT_RESOURCE_TYPE, "Node3D")));
+	BIND_VMETHOD(MethodInfo(GIZMO_REF, "create_gizmo", PropertyInfo(Variant::Type::OBJECT, "spatial", PROPERTY_HINT_RESOURCE_TYPE, "Node3D")));
 
 	ClassDB::bind_method(D_METHOD("create_material", "name", "color", "billboard", "on_top", "use_vertex_color"), &EditorNode3DGizmoPlugin::create_material, DEFVAL(false), DEFVAL(false), DEFVAL(false));
 	ClassDB::bind_method(D_METHOD("create_icon_material", "name", "texture", "on_top", "color"), &EditorNode3DGizmoPlugin::create_icon_material, DEFVAL(false), DEFVAL(Color(1, 1, 1, 1)));
@@ -6692,24 +6692,24 @@ void EditorNode3DGizmoPlugin::_bind_methods() {
 
 	ClassDB::bind_method(D_METHOD("get_material", "name", "gizmo"), &EditorNode3DGizmoPlugin::get_material); //, DEFVAL(Ref<EditorNode3DGizmo>()));
 
-	BIND_VMETHOD(MethodInfo(Variant::STRING, "get_name"));
-	BIND_VMETHOD(MethodInfo(Variant::STRING, "get_priority"));
-	BIND_VMETHOD(MethodInfo(Variant::BOOL, "can_be_hidden"));
-	BIND_VMETHOD(MethodInfo(Variant::BOOL, "is_selectable_when_hidden"));
+	BIND_VMETHOD(MethodInfo(Variant::Type::STRING, "get_name"));
+	BIND_VMETHOD(MethodInfo(Variant::Type::STRING, "get_priority"));
+	BIND_VMETHOD(MethodInfo(Variant::Type::BOOL, "can_be_hidden"));
+	BIND_VMETHOD(MethodInfo(Variant::Type::BOOL, "is_selectable_when_hidden"));
 
 	BIND_VMETHOD(MethodInfo("redraw", GIZMO_REF));
-	BIND_VMETHOD(MethodInfo(Variant::STRING, "get_handle_name", GIZMO_REF, PropertyInfo(Variant::INT, "index")));
+	BIND_VMETHOD(MethodInfo(Variant::Type::STRING, "get_handle_name", GIZMO_REF, PropertyInfo(Variant::Type::INT, "index")));
 
-	MethodInfo hvget(Variant::NIL, "get_handle_value", GIZMO_REF, PropertyInfo(Variant::INT, "index"));
+	MethodInfo hvget(Variant::Type::NIL, "get_handle_value", GIZMO_REF, PropertyInfo(Variant::Type::INT, "index"));
 	hvget.return_val.usage |= PROPERTY_USAGE_NIL_IS_VARIANT;
 	BIND_VMETHOD(hvget);
 
-	BIND_VMETHOD(MethodInfo("set_handle", GIZMO_REF, PropertyInfo(Variant::INT, "index"), PropertyInfo(Variant::OBJECT, "camera", PROPERTY_HINT_RESOURCE_TYPE, "Camera3D"), PropertyInfo(Variant::VECTOR2, "point")));
-	MethodInfo cm = MethodInfo("commit_handle", GIZMO_REF, PropertyInfo(Variant::INT, "index"), PropertyInfo(Variant::NIL, "restore"), PropertyInfo(Variant::BOOL, "cancel"));
+	BIND_VMETHOD(MethodInfo("set_handle", GIZMO_REF, PropertyInfo(Variant::Type::INT, "index"), PropertyInfo(Variant::Type::OBJECT, "camera", PROPERTY_HINT_RESOURCE_TYPE, "Camera3D"), PropertyInfo(Variant::Type::VECTOR2, "point")));
+	MethodInfo cm = MethodInfo("commit_handle", GIZMO_REF, PropertyInfo(Variant::Type::INT, "index"), PropertyInfo(Variant::Type::NIL, "restore"), PropertyInfo(Variant::Type::BOOL, "cancel"));
 	cm.default_arguments.push_back(false);
 	BIND_VMETHOD(cm);
 
-	BIND_VMETHOD(MethodInfo(Variant::BOOL, "is_handle_highlighted", GIZMO_REF, PropertyInfo(Variant::INT, "index")));
+	BIND_VMETHOD(MethodInfo(Variant::Type::BOOL, "is_handle_highlighted", GIZMO_REF, PropertyInfo(Variant::Type::INT, "index")));
 
 #undef GIZMO_REF
 }

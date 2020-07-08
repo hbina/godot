@@ -3500,49 +3500,49 @@ bool TilesetEditorContext::_get(const StringName &p_name, Variant &r_ret) const 
 
 void TilesetEditorContext::_get_property_list(List<PropertyInfo> *p_list) const {
 	if (snap_options_visible) {
-		p_list->push_back(PropertyInfo(Variant::NIL, "Snap Options", PROPERTY_HINT_NONE, "options_", PROPERTY_USAGE_GROUP));
-		p_list->push_back(PropertyInfo(Variant::VECTOR2, "options_offset"));
-		p_list->push_back(PropertyInfo(Variant::VECTOR2, "options_step"));
-		p_list->push_back(PropertyInfo(Variant::VECTOR2, "options_separation"));
+		p_list->push_back(PropertyInfo(Variant::Type::NIL, "Snap Options", PROPERTY_HINT_NONE, "options_", PROPERTY_USAGE_GROUP));
+		p_list->push_back(PropertyInfo(Variant::Type::VECTOR2, "options_offset"));
+		p_list->push_back(PropertyInfo(Variant::Type::VECTOR2, "options_step"));
+		p_list->push_back(PropertyInfo(Variant::Type::VECTOR2, "options_separation"));
 	}
 	if (tileset_editor->get_current_tile() >= 0 && !tileset.is_null()) {
 		int id = tileset_editor->get_current_tile();
-		p_list->push_back(PropertyInfo(Variant::NIL, "Selected Tile", PROPERTY_HINT_NONE, "tile_", PROPERTY_USAGE_GROUP));
-		p_list->push_back(PropertyInfo(Variant::STRING, "tile_name"));
-		p_list->push_back(PropertyInfo(Variant::OBJECT, "tile_normal_map", PROPERTY_HINT_RESOURCE_TYPE, "Texture2D"));
-		p_list->push_back(PropertyInfo(Variant::VECTOR2, "tile_tex_offset"));
-		p_list->push_back(PropertyInfo(Variant::OBJECT, "tile_material", PROPERTY_HINT_RESOURCE_TYPE, "ShaderMaterial"));
-		p_list->push_back(PropertyInfo(Variant::COLOR, "tile_modulate"));
-		p_list->push_back(PropertyInfo(Variant::INT, "tile_tile_mode", PROPERTY_HINT_ENUM, "SINGLE_TILE,AUTO_TILE,ATLAS_TILE"));
+		p_list->push_back(PropertyInfo(Variant::Type::NIL, "Selected Tile", PROPERTY_HINT_NONE, "tile_", PROPERTY_USAGE_GROUP));
+		p_list->push_back(PropertyInfo(Variant::Type::STRING, "tile_name"));
+		p_list->push_back(PropertyInfo(Variant::Type::OBJECT, "tile_normal_map", PROPERTY_HINT_RESOURCE_TYPE, "Texture2D"));
+		p_list->push_back(PropertyInfo(Variant::Type::VECTOR2, "tile_tex_offset"));
+		p_list->push_back(PropertyInfo(Variant::Type::OBJECT, "tile_material", PROPERTY_HINT_RESOURCE_TYPE, "ShaderMaterial"));
+		p_list->push_back(PropertyInfo(Variant::Type::COLOR, "tile_modulate"));
+		p_list->push_back(PropertyInfo(Variant::Type::INT, "tile_tile_mode", PROPERTY_HINT_ENUM, "SINGLE_TILE,AUTO_TILE,ATLAS_TILE"));
 		if (tileset->tile_get_tile_mode(id) == TileSet::AUTO_TILE) {
-			p_list->push_back(PropertyInfo(Variant::INT, "tile_autotile_bitmask_mode", PROPERTY_HINT_ENUM, "2X2,3X3 (minimal),3X3"));
-			p_list->push_back(PropertyInfo(Variant::VECTOR2, "tile_subtile_size"));
-			p_list->push_back(PropertyInfo(Variant::INT, "tile_subtile_spacing", PROPERTY_HINT_RANGE, "0, 256, 1"));
+			p_list->push_back(PropertyInfo(Variant::Type::INT, "tile_autotile_bitmask_mode", PROPERTY_HINT_ENUM, "2X2,3X3 (minimal),3X3"));
+			p_list->push_back(PropertyInfo(Variant::Type::VECTOR2, "tile_subtile_size"));
+			p_list->push_back(PropertyInfo(Variant::Type::INT, "tile_subtile_spacing", PROPERTY_HINT_RANGE, "0, 256, 1"));
 		} else if (tileset->tile_get_tile_mode(id) == TileSet::ATLAS_TILE) {
-			p_list->push_back(PropertyInfo(Variant::VECTOR2, "tile_subtile_size"));
-			p_list->push_back(PropertyInfo(Variant::INT, "tile_subtile_spacing", PROPERTY_HINT_RANGE, "0, 256, 1"));
+			p_list->push_back(PropertyInfo(Variant::Type::VECTOR2, "tile_subtile_size"));
+			p_list->push_back(PropertyInfo(Variant::Type::INT, "tile_subtile_spacing", PROPERTY_HINT_RANGE, "0, 256, 1"));
 		}
-		p_list->push_back(PropertyInfo(Variant::VECTOR2, "tile_occluder_offset"));
-		p_list->push_back(PropertyInfo(Variant::VECTOR2, "tile_navigation_offset"));
-		p_list->push_back(PropertyInfo(Variant::VECTOR2, "tile_shape_offset", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_EDITOR));
-		p_list->push_back(PropertyInfo(Variant::VECTOR2, "tile_shape_transform", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_EDITOR));
-		p_list->push_back(PropertyInfo(Variant::INT, "tile_z_index", PROPERTY_HINT_RANGE, itos(RS::CANVAS_ITEM_Z_MIN) + "," + itos(RS::CANVAS_ITEM_Z_MAX) + ",1"));
+		p_list->push_back(PropertyInfo(Variant::Type::VECTOR2, "tile_occluder_offset"));
+		p_list->push_back(PropertyInfo(Variant::Type::VECTOR2, "tile_navigation_offset"));
+		p_list->push_back(PropertyInfo(Variant::Type::VECTOR2, "tile_shape_offset", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_EDITOR));
+		p_list->push_back(PropertyInfo(Variant::Type::VECTOR2, "tile_shape_transform", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_EDITOR));
+		p_list->push_back(PropertyInfo(Variant::Type::INT, "tile_z_index", PROPERTY_HINT_RANGE, itos(RS::CANVAS_ITEM_Z_MIN) + "," + itos(RS::CANVAS_ITEM_Z_MAX) + ",1"));
 	}
 	if (tileset_editor->edit_mode == TileSetEditor::EDITMODE_COLLISION && tileset_editor->edited_collision_shape.is_valid()) {
-		p_list->push_back(PropertyInfo(Variant::OBJECT, "selected_collision", PROPERTY_HINT_RESOURCE_TYPE, tileset_editor->edited_collision_shape->get_class()));
+		p_list->push_back(PropertyInfo(Variant::Type::OBJECT, "selected_collision", PROPERTY_HINT_RESOURCE_TYPE, tileset_editor->edited_collision_shape->get_class()));
 		if (tileset_editor->edited_collision_shape.is_valid()) {
-			p_list->push_back(PropertyInfo(Variant::BOOL, "selected_collision_one_way", PROPERTY_HINT_NONE));
-			p_list->push_back(PropertyInfo(Variant::FLOAT, "selected_collision_one_way_margin", PROPERTY_HINT_NONE));
+			p_list->push_back(PropertyInfo(Variant::Type::BOOL, "selected_collision_one_way", PROPERTY_HINT_NONE));
+			p_list->push_back(PropertyInfo(Variant::Type::FLOAT, "selected_collision_one_way_margin", PROPERTY_HINT_NONE));
 		}
 	}
 	if (tileset_editor->edit_mode == TileSetEditor::EDITMODE_NAVIGATION && tileset_editor->edited_navigation_shape.is_valid()) {
-		p_list->push_back(PropertyInfo(Variant::OBJECT, "selected_navigation", PROPERTY_HINT_RESOURCE_TYPE, tileset_editor->edited_navigation_shape->get_class()));
+		p_list->push_back(PropertyInfo(Variant::Type::OBJECT, "selected_navigation", PROPERTY_HINT_RESOURCE_TYPE, tileset_editor->edited_navigation_shape->get_class()));
 	}
 	if (tileset_editor->edit_mode == TileSetEditor::EDITMODE_OCCLUSION && tileset_editor->edited_occlusion_shape.is_valid()) {
-		p_list->push_back(PropertyInfo(Variant::OBJECT, "selected_occlusion", PROPERTY_HINT_RESOURCE_TYPE, tileset_editor->edited_occlusion_shape->get_class()));
+		p_list->push_back(PropertyInfo(Variant::Type::OBJECT, "selected_occlusion", PROPERTY_HINT_RESOURCE_TYPE, tileset_editor->edited_occlusion_shape->get_class()));
 	}
 	if (!tileset.is_null()) {
-		p_list->push_back(PropertyInfo(Variant::OBJECT, "tileset_script", PROPERTY_HINT_RESOURCE_TYPE, "Script"));
+		p_list->push_back(PropertyInfo(Variant::Type::OBJECT, "tileset_script", PROPERTY_HINT_RESOURCE_TYPE, "Script"));
 	}
 }
 

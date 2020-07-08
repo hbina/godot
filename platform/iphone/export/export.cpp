@@ -202,68 +202,68 @@ static const LoadingScreenInfo loading_screen_infos[] = {
 };
 
 void EditorExportPlatformIOS::get_export_options(List<ExportOption> *r_options) {
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "custom_template/debug", PROPERTY_HINT_GLOBAL_FILE, "*.zip"), ""));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "custom_template/release", PROPERTY_HINT_GLOBAL_FILE, "*.zip"), ""));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "custom_template/debug", PROPERTY_HINT_GLOBAL_FILE, "*.zip"), ""));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "custom_template/release", PROPERTY_HINT_GLOBAL_FILE, "*.zip"), ""));
 
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "application/app_store_team_id"), ""));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "application/app_store_team_id"), ""));
 
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "application/provisioning_profile_uuid_debug"), ""));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "application/code_sign_identity_debug", PROPERTY_HINT_PLACEHOLDER_TEXT, "iPhone Developer"), "iPhone Developer"));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::INT, "application/export_method_debug", PROPERTY_HINT_ENUM, "App Store,Development,Ad-Hoc,Enterprise"), 1));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "application/provisioning_profile_uuid_debug"), ""));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "application/code_sign_identity_debug", PROPERTY_HINT_PLACEHOLDER_TEXT, "iPhone Developer"), "iPhone Developer"));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::INT, "application/export_method_debug", PROPERTY_HINT_ENUM, "App Store,Development,Ad-Hoc,Enterprise"), 1));
 
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "application/provisioning_profile_uuid_release"), ""));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "application/code_sign_identity_release", PROPERTY_HINT_PLACEHOLDER_TEXT, "iPhone Distribution"), ""));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::INT, "application/export_method_release", PROPERTY_HINT_ENUM, "App Store,Development,Ad-Hoc,Enterprise"), 0));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "application/provisioning_profile_uuid_release"), ""));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "application/code_sign_identity_release", PROPERTY_HINT_PLACEHOLDER_TEXT, "iPhone Distribution"), ""));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::INT, "application/export_method_release", PROPERTY_HINT_ENUM, "App Store,Development,Ad-Hoc,Enterprise"), 0));
 
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "application/name", PROPERTY_HINT_PLACEHOLDER_TEXT, "Game Name"), ""));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "application/info"), "Made with Godot Engine"));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "application/bundle_identifier", PROPERTY_HINT_PLACEHOLDER_TEXT, "com.example.game"), ""));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "application/signature"), ""));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "application/short_version"), "1.0"));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "application/version"), "1.0"));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "application/copyright"), ""));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "application/name", PROPERTY_HINT_PLACEHOLDER_TEXT, "Game Name"), ""));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "application/info"), "Made with Godot Engine"));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "application/bundle_identifier", PROPERTY_HINT_PLACEHOLDER_TEXT, "com.example.game"), ""));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "application/signature"), ""));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "application/short_version"), "1.0"));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "application/version"), "1.0"));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "application/copyright"), ""));
 
-	r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "capabilities/arkit"), false));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "capabilities/camera"), false));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::BOOL, "capabilities/arkit"), false));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::BOOL, "capabilities/camera"), false));
 
-	r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "capabilities/access_wifi"), false));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "capabilities/game_center"), true));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "capabilities/in_app_purchases"), false));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "capabilities/push_notifications"), false));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::BOOL, "capabilities/access_wifi"), false));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::BOOL, "capabilities/game_center"), true));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::BOOL, "capabilities/in_app_purchases"), false));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::BOOL, "capabilities/push_notifications"), false));
 
-	r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "user_data/accessible_from_files_app"), false));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "user_data/accessible_from_itunes_sharing"), false));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::BOOL, "user_data/accessible_from_files_app"), false));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::BOOL, "user_data/accessible_from_itunes_sharing"), false));
 
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "privacy/camera_usage_description", PROPERTY_HINT_PLACEHOLDER_TEXT, "Provide a message if you need to use the camera"), ""));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "privacy/microphone_usage_description", PROPERTY_HINT_PLACEHOLDER_TEXT, "Provide a message if you need to use the microphone"), ""));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "privacy/photolibrary_usage_description", PROPERTY_HINT_PLACEHOLDER_TEXT, "Provide a message if you need access to the photo library"), ""));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "privacy/camera_usage_description", PROPERTY_HINT_PLACEHOLDER_TEXT, "Provide a message if you need to use the camera"), ""));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "privacy/microphone_usage_description", PROPERTY_HINT_PLACEHOLDER_TEXT, "Provide a message if you need to use the microphone"), ""));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "privacy/photolibrary_usage_description", PROPERTY_HINT_PLACEHOLDER_TEXT, "Provide a message if you need access to the photo library"), ""));
 
-	r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "orientation/portrait"), true));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "orientation/landscape_left"), true));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "orientation/landscape_right"), true));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "orientation/portrait_upside_down"), true));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::BOOL, "orientation/portrait"), true));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::BOOL, "orientation/landscape_left"), true));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::BOOL, "orientation/landscape_right"), true));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::BOOL, "orientation/portrait_upside_down"), true));
 
-	r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "icons/generate_missing"), false));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::BOOL, "icons/generate_missing"), false));
 
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "required_icons/iphone_120x120", PROPERTY_HINT_FILE, "*.png"), "")); // Home screen on iPhone/iPod Touch with retina display
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "required_icons/ipad_76x76", PROPERTY_HINT_FILE, "*.png"), "")); // Home screen on iPad
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "required_icons/app_store_1024x1024", PROPERTY_HINT_FILE, "*.png"), "")); // App Store
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "required_icons/iphone_120x120", PROPERTY_HINT_FILE, "*.png"), "")); // Home screen on iPhone/iPod Touch with retina display
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "required_icons/ipad_76x76", PROPERTY_HINT_FILE, "*.png"), "")); // Home screen on iPad
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "required_icons/app_store_1024x1024", PROPERTY_HINT_FILE, "*.png"), "")); // App Store
 
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "optional_icons/iphone_180x180", PROPERTY_HINT_FILE, "*.png"), "")); // Home screen on iPhone with retina HD display
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "optional_icons/ipad_152x152", PROPERTY_HINT_FILE, "*.png"), "")); // Home screen on iPad with retina display
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "optional_icons/ipad_167x167", PROPERTY_HINT_FILE, "*.png"), "")); // Home screen on iPad Pro
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "optional_icons/spotlight_40x40", PROPERTY_HINT_FILE, "*.png"), "")); // Spotlight
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "optional_icons/spotlight_80x80", PROPERTY_HINT_FILE, "*.png"), "")); // Spotlight on devices with retina display
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "optional_icons/iphone_180x180", PROPERTY_HINT_FILE, "*.png"), "")); // Home screen on iPhone with retina HD display
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "optional_icons/ipad_152x152", PROPERTY_HINT_FILE, "*.png"), "")); // Home screen on iPad with retina display
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "optional_icons/ipad_167x167", PROPERTY_HINT_FILE, "*.png"), "")); // Home screen on iPad Pro
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "optional_icons/spotlight_40x40", PROPERTY_HINT_FILE, "*.png"), "")); // Spotlight
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "optional_icons/spotlight_80x80", PROPERTY_HINT_FILE, "*.png"), "")); // Spotlight on devices with retina display
 
-	r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "launch_screens/generate_missing"), false));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::BOOL, "launch_screens/generate_missing"), false));
 
 	for (uint64_t i = 0; i < sizeof(loading_screen_infos) / sizeof(loading_screen_infos[0]); ++i) {
-		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, loading_screen_infos[i].preset_key, PROPERTY_HINT_FILE, "*.png"), ""));
+		r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, loading_screen_infos[i].preset_key, PROPERTY_HINT_FILE, "*.png"), ""));
 	}
 
 	Vector<ExportArchitecture> architectures = _get_supported_architectures();
 	for (int i = 0; i < architectures.size(); ++i) {
-		r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "architectures/" + architectures[i].name), architectures[i].is_default));
+		r_options->push_back(ExportOption(PropertyInfo(Variant::Type::BOOL, "architectures/" + architectures[i].name), architectures[i].is_default));
 	}
 }
 

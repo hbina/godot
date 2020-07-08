@@ -1405,7 +1405,7 @@ String ResourceFormatSaverTextInstance::_write_resource(const RES &res) {
 
 void ResourceFormatSaverTextInstance::_find_resources(const Variant &p_variant, bool p_main) {
 	switch (p_variant.get_type()) {
-		case Variant::OBJECT: {
+		case Variant::Type::OBJECT: {
 			RES res = p_variant;
 
 			if (res.is_null() || external_resources.has(res)) {
@@ -1461,7 +1461,7 @@ void ResourceFormatSaverTextInstance::_find_resources(const Variant &p_variant, 
 			saved_resources.push_back(res);
 
 		} break;
-		case Variant::ARRAY: {
+		case Variant::Type::ARRAY: {
 			Array varray = p_variant;
 			int len = varray.size();
 			for (int i = 0; i < len; i++) {
@@ -1470,7 +1470,7 @@ void ResourceFormatSaverTextInstance::_find_resources(const Variant &p_variant, 
 			}
 
 		} break;
-		case Variant::DICTIONARY: {
+		case Variant::Type::DICTIONARY: {
 			Dictionary d = p_variant;
 			List<Variant> keys;
 			d.get_key_list(&keys);
@@ -1675,11 +1675,11 @@ Error ResourceFormatSaverTextInstance::save(const String &p_path, const RES &p_r
 				}
 				Variant default_value = ClassDB::class_get_default_property_value(res->get_class(), name);
 
-				if (default_value.get_type() != Variant::NIL && bool(Variant::evaluate(Variant::OP_EQUAL, value, default_value))) {
+				if (default_value.get_type() != Variant::Type::NIL && bool(Variant::evaluate(Variant::OP_EQUAL, value, default_value))) {
 					continue;
 				}
 
-				if (PE->get().type == Variant::OBJECT && value.is_zero() && !(PE->get().usage & PROPERTY_USAGE_STORE_IF_NULL)) {
+				if (PE->get().type == Variant::Type::OBJECT && value.is_zero() && !(PE->get().usage & PROPERTY_USAGE_STORE_IF_NULL)) {
 					continue;
 				}
 

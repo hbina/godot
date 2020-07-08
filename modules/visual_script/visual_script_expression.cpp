@@ -132,18 +132,18 @@ bool VisualScriptExpression::_get(const StringName &p_name, Variant &r_ret) cons
 
 void VisualScriptExpression::_get_property_list(List<PropertyInfo> *p_list) const {
 	String argt = "Any";
-	for (int i = 1; i < Variant::VARIANT_MAX; i++) {
+	for (int i = 1; i < Variant::Type::VARIANT_MAX; i++) {
 		argt += "," + Variant::get_type_name(Variant::Type(i));
 	}
 
-	p_list->push_back(PropertyInfo(Variant::STRING, "expression", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR));
-	p_list->push_back(PropertyInfo(Variant::INT, "out_type", PROPERTY_HINT_ENUM, argt));
-	p_list->push_back(PropertyInfo(Variant::INT, "input_count", PROPERTY_HINT_RANGE, "0,64,1"));
-	p_list->push_back(PropertyInfo(Variant::BOOL, "sequenced"));
+	p_list->push_back(PropertyInfo(Variant::Type::STRING, "expression", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR));
+	p_list->push_back(PropertyInfo(Variant::Type::INT, "out_type", PROPERTY_HINT_ENUM, argt));
+	p_list->push_back(PropertyInfo(Variant::Type::INT, "input_count", PROPERTY_HINT_RANGE, "0,64,1"));
+	p_list->push_back(PropertyInfo(Variant::Type::BOOL, "sequenced"));
 
 	for (int i = 0; i < inputs.size(); i++) {
-		p_list->push_back(PropertyInfo(Variant::INT, "input_" + itos(i) + "/type", PROPERTY_HINT_ENUM, argt));
-		p_list->push_back(PropertyInfo(Variant::STRING, "input_" + itos(i) + "/name"));
+		p_list->push_back(PropertyInfo(Variant::Type::INT, "input_" + itos(i) + "/type", PROPERTY_HINT_ENUM, argt));
+		p_list->push_back(PropertyInfo(Variant::Type::STRING, "input_" + itos(i) + "/name"));
 	}
 }
 
@@ -539,7 +539,7 @@ Error VisualScriptExpression::_get_token(Token &r_token) {
 					} else if (id == "self") {
 						r_token.type = TK_SELF;
 					} else {
-						for (int i = 0; i < Variant::VARIANT_MAX; i++) {
+						for (int i = 0; i < Variant::Type::VARIANT_MAX; i++) {
 							if (id == Variant::get_type_name(Variant::Type(i))) {
 								r_token.type = TK_BASIC_TYPE;
 								r_token.value = i;
@@ -1488,7 +1488,7 @@ public:
 		}
 
 #ifdef DEBUG_ENABLED
-		if (!error && expression->output_type != Variant::NIL && !Variant::can_convert_strict(p_outputs[0]->get_type(), expression->output_type)) {
+		if (!error && expression->output_type != Variant::Type::NIL && !Variant::can_convert_strict(p_outputs[0]->get_type(), expression->output_type)) {
 			r_error_str += "Can't convert expression result from " + Variant::get_type_name(p_outputs[0]->get_type()) + " to " + Variant::get_type_name(expression->output_type) + ".";
 			r_error.error = Callable::CallError::CALL_ERROR_INVALID_METHOD;
 		}
@@ -1507,7 +1507,7 @@ VisualScriptNodeInstance *VisualScriptExpression::instance(VisualScriptInstance 
 }
 
 VisualScriptExpression::VisualScriptExpression() {
-	output_type = Variant::NIL;
+	output_type = Variant::Type::NIL;
 	expression_dirty = true;
 	error_set = true;
 	root = nullptr;

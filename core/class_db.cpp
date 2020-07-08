@@ -861,7 +861,7 @@ void ClassDB::add_property_group(StringName p_class, const String &p_name, const
 	ClassInfo *type = classes.getptr(p_class);
 	ERR_FAIL_COND(!type);
 
-	type->property_list.push_back(PropertyInfo(Variant::NIL, p_name, PROPERTY_HINT_NONE, p_prefix, PROPERTY_USAGE_GROUP));
+	type->property_list.push_back(PropertyInfo(Variant::Type::NIL, p_name, PROPERTY_HINT_NONE, p_prefix, PROPERTY_USAGE_GROUP));
 }
 
 void ClassDB::add_property_subgroup(StringName p_class, const String &p_name, const String &p_prefix) {
@@ -869,7 +869,7 @@ void ClassDB::add_property_subgroup(StringName p_class, const String &p_name, co
 	ClassInfo *type = classes.getptr(p_class);
 	ERR_FAIL_COND(!type);
 
-	type->property_list.push_back(PropertyInfo(Variant::NIL, p_name, PROPERTY_HINT_NONE, p_prefix, PROPERTY_USAGE_SUBGROUP));
+	type->property_list.push_back(PropertyInfo(Variant::Type::NIL, p_name, PROPERTY_HINT_NONE, p_prefix, PROPERTY_USAGE_SUBGROUP));
 }
 
 void ClassDB::add_property(StringName p_class, const PropertyInfo &p_pinfo, const StringName &p_setter, const StringName &p_getter, int p_index) {
@@ -1096,7 +1096,7 @@ Variant::Type ClassDB::get_property_type(const StringName &p_class, const String
 		*r_is_valid = false;
 	}
 
-	return Variant::NIL;
+	return Variant::Type::NIL;
 }
 
 StringName ClassDB::get_property_setter(StringName p_class, const StringName &p_property) {
@@ -1394,7 +1394,7 @@ Variant ClassDB::class_get_default_property_value(const StringName &p_class, con
 	// (like Path2D's `curve` used to have), but that's not a good practice.
 	// Instead, those properties should use PROPERTY_USAGE_EDITOR_INSTANTIATE_OBJECT
 	// to be auto-instantiated when created in the editor.
-	if (var.get_type() == Variant::OBJECT) {
+	if (var.get_type() == Variant::Type::OBJECT) {
 		Object *obj = var.get_validated_object();
 		if (obj) {
 			WARN_PRINT(vformat("Instantiated %s used as default value for %s's \"%s\" property.", obj->get_class(), p_class, p_property));

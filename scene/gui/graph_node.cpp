@@ -108,12 +108,12 @@ void GraphNode::_get_property_list(List<PropertyInfo> *p_list) const {
 
 		String base = "slot/" + itos(idx) + "/";
 
-		p_list->push_back(PropertyInfo(Variant::BOOL, base + "left_enabled"));
-		p_list->push_back(PropertyInfo(Variant::INT, base + "left_type"));
-		p_list->push_back(PropertyInfo(Variant::COLOR, base + "left_color"));
-		p_list->push_back(PropertyInfo(Variant::BOOL, base + "right_enabled"));
-		p_list->push_back(PropertyInfo(Variant::INT, base + "right_type"));
-		p_list->push_back(PropertyInfo(Variant::COLOR, base + "right_color"));
+		p_list->push_back(PropertyInfo(Variant::Type::BOOL, base + "left_enabled"));
+		p_list->push_back(PropertyInfo(Variant::Type::INT, base + "left_type"));
+		p_list->push_back(PropertyInfo(Variant::Type::COLOR, base + "left_color"));
+		p_list->push_back(PropertyInfo(Variant::Type::BOOL, base + "right_enabled"));
+		p_list->push_back(PropertyInfo(Variant::Type::INT, base + "right_type"));
+		p_list->push_back(PropertyInfo(Variant::Type::COLOR, base + "right_color"));
 
 		idx++;
 	}
@@ -700,19 +700,19 @@ void GraphNode::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_overlay", "overlay"), &GraphNode::set_overlay);
 	ClassDB::bind_method(D_METHOD("get_overlay"), &GraphNode::get_overlay);
 
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "title"), "set_title", "get_title");
-	ADD_PROPERTY(PropertyInfo(Variant::VECTOR2, "offset"), "set_offset", "get_offset");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "show_close"), "set_show_close_button", "is_close_button_visible");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "resizable"), "set_resizable", "is_resizable");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "selected"), "set_selected", "is_selected");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "comment"), "set_comment", "is_comment");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "overlay", PROPERTY_HINT_ENUM, "Disabled,Breakpoint,Position"), "set_overlay", "get_overlay");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::STRING, "title"), "set_title", "get_title");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::VECTOR2, "offset"), "set_offset", "get_offset");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "show_close"), "set_show_close_button", "is_close_button_visible");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "resizable"), "set_resizable", "is_resizable");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "selected"), "set_selected", "is_selected");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "comment"), "set_comment", "is_comment");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "overlay", PROPERTY_HINT_ENUM, "Disabled,Breakpoint,Position"), "set_overlay", "get_overlay");
 
 	ADD_SIGNAL(MethodInfo("offset_changed"));
-	ADD_SIGNAL(MethodInfo("dragged", PropertyInfo(Variant::VECTOR2, "from"), PropertyInfo(Variant::VECTOR2, "to")));
+	ADD_SIGNAL(MethodInfo("dragged", PropertyInfo(Variant::Type::VECTOR2, "from"), PropertyInfo(Variant::Type::VECTOR2, "to")));
 	ADD_SIGNAL(MethodInfo("raise_request"));
 	ADD_SIGNAL(MethodInfo("close_request"));
-	ADD_SIGNAL(MethodInfo("resize_request", PropertyInfo(Variant::VECTOR2, "new_minsize")));
+	ADD_SIGNAL(MethodInfo("resize_request", PropertyInfo(Variant::Type::VECTOR2, "new_minsize")));
 
 	BIND_ENUM_CONSTANT(OVERLAY_DISABLED);
 	BIND_ENUM_CONSTANT(OVERLAY_BREAKPOINT);

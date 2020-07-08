@@ -1067,7 +1067,7 @@ void EditorNode::_get_scene_metadata(const String &p_file) {
 	Dictionary md;
 	for (List<String>::Element *E = esl.front(); E; E = E->next()) {
 		Variant st = cf->get_value("editor_states", E->get());
-		if (st.get_type() != Variant::NIL) {
+		if (st.get_type() != Variant::Type::NIL) {
 			md[E->get()] = st;
 		}
 	}
@@ -1146,7 +1146,7 @@ bool EditorNode::_find_and_save_edited_subresources(Object *obj, Map<RES, bool> 
 		}
 
 		switch (E->get().type) {
-			case Variant::OBJECT: {
+			case Variant::Type::OBJECT: {
 				RES res = obj->get(E->get().name);
 
 				if (_find_and_save_resource(res, processed, flags)) {
@@ -1154,7 +1154,7 @@ bool EditorNode::_find_and_save_edited_subresources(Object *obj, Map<RES, bool> 
 				}
 
 			} break;
-			case Variant::ARRAY: {
+			case Variant::Type::ARRAY: {
 				Array varray = obj->get(E->get().name);
 				int len = varray.size();
 				for (int i = 0; i < len; i++) {
@@ -1166,7 +1166,7 @@ bool EditorNode::_find_and_save_edited_subresources(Object *obj, Map<RES, bool> 
 				}
 
 			} break;
-			case Variant::DICTIONARY: {
+			case Variant::Type::DICTIONARY: {
 				Dictionary d = obj->get(E->get().name);
 				List<Variant> keys;
 				d.get_key_list(&keys);
@@ -1323,7 +1323,7 @@ static bool _find_edited_resources(const Ref<Resource> &p_resource, Set<Ref<Reso
 	p_resource->get_property_list(&plist);
 
 	for (List<PropertyInfo>::Element *E = plist.front(); E; E = E->next()) {
-		if (E->get().type == Variant::OBJECT && E->get().usage & PROPERTY_USAGE_STORAGE && !(E->get().usage & PROPERTY_USAGE_RESOURCE_NOT_PERSISTENT)) {
+		if (E->get().type == Variant::Type::OBJECT && E->get().usage & PROPERTY_USAGE_STORAGE && !(E->get().usage & PROPERTY_USAGE_RESOURCE_NOT_PERSISTENT)) {
 			RES res = p_resource->get(E->get().name);
 			if (res.is_null()) {
 				continue;
@@ -5412,8 +5412,8 @@ void EditorNode::_bind_methods() {
 	ADD_SIGNAL(MethodInfo("pause_pressed"));
 	ADD_SIGNAL(MethodInfo("stop_pressed"));
 	ADD_SIGNAL(MethodInfo("request_help_search"));
-	ADD_SIGNAL(MethodInfo("script_add_function_request", PropertyInfo(Variant::OBJECT, "obj"), PropertyInfo(Variant::STRING, "function"), PropertyInfo(Variant::PACKED_STRING_ARRAY, "args")));
-	ADD_SIGNAL(MethodInfo("resource_saved", PropertyInfo(Variant::OBJECT, "obj")));
+	ADD_SIGNAL(MethodInfo("script_add_function_request", PropertyInfo(Variant::Type::OBJECT, "obj"), PropertyInfo(Variant::Type::STRING, "function"), PropertyInfo(Variant::Type::PACKED_STRING_ARRAY, "args")));
+	ADD_SIGNAL(MethodInfo("resource_saved", PropertyInfo(Variant::Type::OBJECT, "obj")));
 }
 
 static Node *_resource_get_edited_scene() {
@@ -5731,7 +5731,7 @@ EditorNode::EditorNode() {
 	EDITOR_DEF_RST("interface/scene_tabs/show_thumbnail_on_hover", true);
 	EDITOR_DEF_RST("interface/inspector/capitalize_properties", true);
 	EDITOR_DEF_RST("interface/inspector/default_float_step", 0.001);
-	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(Variant::FLOAT, "interface/inspector/default_float_step", PROPERTY_HINT_RANGE, "0,1,0"));
+	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(Variant::Type::FLOAT, "interface/inspector/default_float_step", PROPERTY_HINT_RANGE, "0,1,0"));
 	EDITOR_DEF_RST("interface/inspector/disable_folding", false);
 	EDITOR_DEF_RST("interface/inspector/auto_unfold_foreign_scenes", true);
 	EDITOR_DEF("interface/inspector/horizontal_vector2_editing", false);
@@ -5739,7 +5739,7 @@ EditorNode::EditorNode() {
 	EDITOR_DEF("interface/inspector/open_resources_in_current_inspector", true);
 	EDITOR_DEF("interface/inspector/resources_to_open_in_new_inspector", "StandardMaterial3D,ORMMaterial3D,Script,MeshLibrary,TileSet");
 	EDITOR_DEF("interface/inspector/default_color_picker_mode", 0);
-	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(Variant::INT, "interface/inspector/default_color_picker_mode", PROPERTY_HINT_ENUM, "RGB,HSV,RAW", PROPERTY_USAGE_DEFAULT));
+	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(Variant::Type::INT, "interface/inspector/default_color_picker_mode", PROPERTY_HINT_ENUM, "RGB,HSV,RAW", PROPERTY_USAGE_DEFAULT));
 	EDITOR_DEF("run/auto_save/save_before_running", true);
 
 	theme_base = memnew(Control);

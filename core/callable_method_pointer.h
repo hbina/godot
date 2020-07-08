@@ -78,7 +78,7 @@ struct VariantCasterAndValidate {
 		if (!Variant::can_convert_strict(p_args[p_arg_idx]->get_type(), argtype)) {
 			r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 			r_error.argument = p_arg_idx;
-			r_error.expected = argtype;
+			r_error.expected = static_cast<int>(argtype);
 		}
 
 		return VariantCaster<T>::cast(*p_args[p_arg_idx]);
@@ -106,7 +106,7 @@ struct VariantCasterAndValidate<const T &> {
 		if (!Variant::can_convert_strict(p_args[p_arg_idx]->get_type(), argtype)) {
 			r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 			r_error.argument = p_arg_idx;
-			r_error.expected = argtype;
+			r_error.expected = static_cast<int>(argtype);
 		}
 
 		return VariantCaster<T>::cast(*p_args[p_arg_idx]);

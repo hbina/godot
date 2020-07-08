@@ -75,11 +75,11 @@ void NativeScript::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("get_signal_documentation", "signal_name"), &NativeScript::get_signal_documentation);
 	ClassDB::bind_method(D_METHOD("get_property_documentation", "path"), &NativeScript::get_property_documentation);
 
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "class_name"), "set_class_name", "get_class_name");
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "library", PROPERTY_HINT_RESOURCE_TYPE, "GDNativeLibrary"), "set_library", "get_library");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::STRING, "class_name"), "set_class_name", "get_class_name");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "library", PROPERTY_HINT_RESOURCE_TYPE, "GDNativeLibrary"), "set_library", "get_library");
 	ADD_GROUP("Script Class", "script_class_");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "script_class_name"), "set_script_class_name", "get_script_class_name");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "script_class_icon_path", PROPERTY_HINT_FILE), "set_script_class_icon_path", "get_script_class_icon_path");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::STRING, "script_class_name"), "set_script_class_name", "get_script_class_name");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::STRING, "script_class_icon_path", PROPERTY_HINT_FILE), "set_script_class_icon_path", "get_script_class_icon_path");
 
 	ClassDB::bind_vararg_method(METHOD_FLAGS_DEFAULT, "new", &NativeScript::_new, MethodInfo("new"));
 }
@@ -856,7 +856,7 @@ bool NativeScriptInstance::get(const StringName &p_name, Variant &r_ret) const {
 					(godot_variant **)args);
 			r_ret = *(Variant *)&result;
 			godot_variant_destroy(&result);
-			if (r_ret.get_type() != Variant::NIL) {
+			if (r_ret.get_type() != Variant::Type::NIL) {
 				return true;
 			}
 		}
@@ -883,7 +883,7 @@ void NativeScriptInstance::get_property_list(List<PropertyInfo> *p_properties) c
 			Variant res = *(Variant *)&result;
 			godot_variant_destroy(&result);
 
-			ERR_FAIL_COND_MSG(res.get_type() != Variant::ARRAY, "_get_property_list must return an array of dictionaries.");
+			ERR_FAIL_COND_MSG(res.get_type() != Variant::Type::ARRAY, "_get_property_list must return an array of dictionaries.");
 
 			Array arr = res;
 			for (int i = 0; i < arr.size(); i++) {
@@ -895,7 +895,7 @@ void NativeScriptInstance::get_property_list(List<PropertyInfo> *p_properties) c
 				PropertyInfo info;
 
 				info.type = Variant::Type(d["type"].operator int64_t());
-				ERR_CONTINUE(info.type < 0 || info.type >= Variant::VARIANT_MAX);
+				ERR_CONTINUE(info.type < 0 || info.type >= Variant::Type::VARIANT_MAX);
 
 				info.name = d["name"];
 				ERR_CONTINUE(info.name == "");
@@ -933,7 +933,7 @@ Variant::Type NativeScriptInstance::get_property_type(const StringName &p_name, 
 
 		script_data = script_data->base_data;
 	}
-	return Variant::NIL;
+	return Variant::Type::NIL;
 }
 
 void NativeScriptInstance::get_method_list(List<MethodInfo> *p_list) const {
@@ -999,7 +999,7 @@ String NativeScriptInstance::to_string(bool *r_valid) {
 		Callable::CallError ce;
 		Variant ret = call(CoreStringNames::get_singleton()->_to_string, nullptr, 0, ce);
 		if (ce.error == Callable::CallError::CALL_OK) {
-			if (ret.get_type() != Variant::STRING) {
+			if (ret.get_type() != Variant::Type::STRING) {
 				if (r_valid) {
 					*r_valid = false;
 				}

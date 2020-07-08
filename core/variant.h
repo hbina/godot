@@ -70,7 +70,7 @@ typedef Vector<Color> PackedColorArray;
 class Variant {
 public:
 	// If this changes the table in variant_op must be updated
-	enum Type {
+	enum class Type {
 		NIL,
 
 		// atomic types
@@ -123,7 +123,7 @@ private:
 	// Variant takes 20 bytes when real_t is float, and 36 if double
 	// it only allocates extra memory for aabb/matrix.
 
-	Type type = NIL;
+	Type type = Variant::Type::NIL;
 
 	struct ObjData {
 		ObjectID id;
@@ -218,11 +218,27 @@ public:
 
 	bool is_ref() const;
 	_FORCE_INLINE_ bool is_num() const {
-		return type == INT || type == FLOAT;
+		return type == Variant::Type::INT || type == Variant::Type::FLOAT;
 	}
 	_FORCE_INLINE_ bool is_array() const {
-		return type >= ARRAY;
+		switch (type) {
+			case Variant::Type::PACKED_BYTE_ARRAY:
+			case Variant::Type::PACKED_INT32_ARRAY:
+			case Variant::Type::PACKED_INT64_ARRAY:
+			case Variant::Type::PACKED_FLOAT32_ARRAY:
+			case Variant::Type::PACKED_FLOAT64_ARRAY:
+			case Variant::Type::PACKED_STRING_ARRAY:
+			case Variant::Type::PACKED_VECTOR2_ARRAY:
+			case Variant::Type::PACKED_VECTOR3_ARRAY:
+			case Variant::Type::PACKED_COLOR_ARRAY: {
+				return true;
+				default: {
+					return false;
+				}
+			}
+		}
 	}
+
 	bool is_shared() const;
 	bool is_zero() const;
 	bool is_one() const;
@@ -304,6 +320,7 @@ public:
 
 	Variant(bool p_bool);
 	Variant(signed int p_int); // real one
+	Variant(Variant::Type p_int);
 	Variant(unsigned int p_int);
 #ifdef NEED_LONG_INT
 	Variant(signed long p_long); // real one
@@ -471,7 +488,7 @@ public:
 	Variant(const Variant &p_variant);
 	_FORCE_INLINE_ Variant() {}
 	_FORCE_INLINE_ ~Variant() {
-		if (type != Variant::NIL) {
+		if (type != Variant::Type::NIL) {
 			clear();
 		}
 	}

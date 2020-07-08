@@ -100,31 +100,31 @@ public:
 		Variant ret;
 
 		switch (E->get().ret_type) {
-			case Variant::NIL: {
+			case Variant::Type::NIL: {
 				env->CallVoidMethodA(instance, E->get().method, v);
 			} break;
-			case Variant::BOOL: {
+			case Variant::Type::BOOL: {
 				ret = env->CallBooleanMethodA(instance, E->get().method, v) == JNI_TRUE;
 			} break;
-			case Variant::INT: {
+			case Variant::Type::INT: {
 				ret = env->CallIntMethodA(instance, E->get().method, v);
 			} break;
-			case Variant::FLOAT: {
+			case Variant::Type::FLOAT: {
 				ret = env->CallFloatMethodA(instance, E->get().method, v);
 			} break;
-			case Variant::STRING: {
+			case Variant::Type::STRING: {
 				jobject o = env->CallObjectMethodA(instance, E->get().method, v);
 				ret = jstring_to_string((jstring)o, env);
 				env->DeleteLocalRef(o);
 			} break;
-			case Variant::PACKED_STRING_ARRAY: {
+			case Variant::Type::PACKED_STRING_ARRAY: {
 				jobjectArray arr = (jobjectArray)env->CallObjectMethodA(instance, E->get().method, v);
 
 				ret = _jobject_to_variant(env, arr);
 
 				env->DeleteLocalRef(arr);
 			} break;
-			case Variant::PACKED_INT32_ARRAY: {
+			case Variant::Type::PACKED_INT32_ARRAY: {
 				jintArray arr = (jintArray)env->CallObjectMethodA(instance, E->get().method, v);
 
 				int fCount = env->GetArrayLength(arr);
@@ -136,7 +136,7 @@ public:
 				ret = sarr;
 				env->DeleteLocalRef(arr);
 			} break;
-			case Variant::PACKED_FLOAT32_ARRAY: {
+			case Variant::Type::PACKED_FLOAT32_ARRAY: {
 				jfloatArray arr = (jfloatArray)env->CallObjectMethodA(instance, E->get().method, v);
 
 				int fCount = env->GetArrayLength(arr);
@@ -152,7 +152,7 @@ public:
 #ifndef _MSC_VER
 #warning This is missing 64 bits arrays, I have no idea how to do it in JNI
 #endif
-			case Variant::DICTIONARY: {
+			case Variant::Type::DICTIONARY: {
 				jobject obj = env->CallObjectMethodA(instance, E->get().method, v);
 				ret = _jobject_to_variant(env, obj);
 				env->DeleteLocalRef(obj);

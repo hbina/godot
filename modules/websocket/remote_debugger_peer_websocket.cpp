@@ -60,7 +60,7 @@ void RemoteDebuggerPeerWebSocket::poll() {
 		Variant var;
 		Error err = ws_peer->get_var(var);
 		ERR_CONTINUE(err != OK);
-		ERR_CONTINUE(var.get_type() != Variant::ARRAY);
+		ERR_CONTINUE(var.get_type() != Variant::Type::ARRAY);
 		in_queue.push_back(var);
 	}
 

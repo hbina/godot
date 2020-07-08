@@ -363,13 +363,13 @@ void EditorPropertyMember::_property_select() {
 	String current = get_edited_object()->get(get_edited_property());
 
 	if (hint == MEMBER_METHOD_OF_VARIANT_TYPE) {
-		Variant::Type type = Variant::NIL;
-		for (int i = 0; i < Variant::VARIANT_MAX; i++) {
+		Variant::Type type = Variant::Type::NIL;
+		for (int i = 0; i < Variant::Type::VARIANT_MAX; i++) {
 			if (hint_text == Variant::get_type_name(Variant::Type(i))) {
 				type = Variant::Type(i);
 			}
 		}
-		if (type != Variant::NIL) {
+		if (type != Variant::Type::NIL) {
 			selector->select_method_from_basic_type(type, current);
 		}
 
@@ -389,18 +389,18 @@ void EditorPropertyMember::_property_select() {
 		}
 
 	} else if (hint == MEMBER_PROPERTY_OF_VARIANT_TYPE) {
-		Variant::Type type = Variant::NIL;
+		Variant::Type type = Variant::Type::NIL;
 		String tname = hint_text;
 		if (tname.find(".") != -1) {
 			tname = tname.get_slice(".", 0);
 		}
-		for (int i = 0; i < Variant::VARIANT_MAX; i++) {
+		for (int i = 0; i < Variant::Type::VARIANT_MAX; i++) {
 			if (tname == Variant::get_type_name(Variant::Type(i))) {
 				type = Variant::Type(Variant::Type(i));
 			}
 		}
 
-		if (type != Variant::NIL) {
+		if (type != Variant::Type::NIL) {
 			selector->select_property_from_basic_type(type, current);
 		}
 
@@ -681,7 +681,7 @@ public:
 
 	static void _bind_methods() {
 		ClassDB::bind_method(D_METHOD("_gui_input"), &EditorPropertyLayersGrid::_gui_input);
-		ADD_SIGNAL(MethodInfo("flag_changed", PropertyInfo(Variant::INT, "flag")));
+		ADD_SIGNAL(MethodInfo("flag_changed", PropertyInfo(Variant::Type::INT, "flag")));
 	}
 
 	EditorPropertyLayersGrid() {
@@ -3134,15 +3134,15 @@ bool EditorInspectorDefaultPlugin::parse_property(Object *p_object, Variant::Typ
 
 	switch (p_type) {
 		// atomic types
-		case Variant::NIL: {
+		case Variant::Type::NIL: {
 			EditorPropertyNil *editor = memnew(EditorPropertyNil);
 			add_property_editor(p_path, editor);
 		} break;
-		case Variant::BOOL: {
+		case Variant::Type::BOOL: {
 			EditorPropertyCheck *editor = memnew(EditorPropertyCheck);
 			add_property_editor(p_path, editor);
 		} break;
-		case Variant::INT: {
+		case Variant::Type::INT: {
 			if (p_hint == PROPERTY_HINT_ENUM) {
 				EditorPropertyEnum *editor = memnew(EditorPropertyEnum);
 				Vector<String> options = p_hint_text.split(",");
@@ -3212,7 +3212,7 @@ bool EditorInspectorDefaultPlugin::parse_property(Object *p_object, Variant::Typ
 				add_property_editor(p_path, editor);
 			}
 		} break;
-		case Variant::FLOAT: {
+		case Variant::Type::FLOAT: {
 			if (p_hint == PROPERTY_HINT_EXP_EASING) {
 				EditorPropertyEasing *editor = memnew(EditorPropertyEasing);
 				bool full = true;
@@ -3264,7 +3264,7 @@ bool EditorInspectorDefaultPlugin::parse_property(Object *p_object, Variant::Typ
 				add_property_editor(p_path, editor);
 			}
 		} break;
-		case Variant::STRING: {
+		case Variant::Type::STRING: {
 			if (p_hint == PROPERTY_HINT_ENUM) {
 				EditorPropertyTextEnum *editor = memnew(EditorPropertyTextEnum);
 				Vector<String> options = p_hint_text.split(",");
@@ -3338,7 +3338,7 @@ bool EditorInspectorDefaultPlugin::parse_property(Object *p_object, Variant::Typ
 
 			// math types
 
-		case Variant::VECTOR2: {
+		case Variant::Type::VECTOR2: {
 			EditorPropertyVector2 *editor = memnew(EditorPropertyVector2(p_wide));
 			double min = -65535, max = 65535, step = default_float_step;
 			bool hide_slider = true;
@@ -3356,7 +3356,7 @@ bool EditorInspectorDefaultPlugin::parse_property(Object *p_object, Variant::Typ
 			add_property_editor(p_path, editor);
 
 		} break;
-		case Variant::VECTOR2I: {
+		case Variant::Type::VECTOR2I: {
 			EditorPropertyVector2i *editor = memnew(EditorPropertyVector2i(p_wide));
 			int min = -65535, max = 65535;
 			bool hide_slider = true;
@@ -3371,7 +3371,7 @@ bool EditorInspectorDefaultPlugin::parse_property(Object *p_object, Variant::Typ
 			add_property_editor(p_path, editor);
 
 		} break;
-		case Variant::RECT2: {
+		case Variant::Type::RECT2: {
 			EditorPropertyRect2 *editor = memnew(EditorPropertyRect2(p_wide));
 			double min = -65535, max = 65535, step = default_float_step;
 			bool hide_slider = true;
@@ -3388,7 +3388,7 @@ bool EditorInspectorDefaultPlugin::parse_property(Object *p_object, Variant::Typ
 			editor->setup(min, max, step, hide_slider);
 			add_property_editor(p_path, editor);
 		} break;
-		case Variant::RECT2I: {
+		case Variant::Type::RECT2I: {
 			EditorPropertyRect2i *editor = memnew(EditorPropertyRect2i(p_wide));
 			int min = -65535, max = 65535;
 			bool hide_slider = true;
@@ -3402,7 +3402,7 @@ bool EditorInspectorDefaultPlugin::parse_property(Object *p_object, Variant::Typ
 			editor->setup(min, max, hide_slider);
 			add_property_editor(p_path, editor);
 		} break;
-		case Variant::VECTOR3: {
+		case Variant::Type::VECTOR3: {
 			EditorPropertyVector3 *editor = memnew(EditorPropertyVector3(p_wide));
 			double min = -65535, max = 65535, step = default_float_step;
 			bool hide_slider = true;
@@ -3420,7 +3420,7 @@ bool EditorInspectorDefaultPlugin::parse_property(Object *p_object, Variant::Typ
 			add_property_editor(p_path, editor);
 
 		} break;
-		case Variant::VECTOR3I: {
+		case Variant::Type::VECTOR3I: {
 			EditorPropertyVector3i *editor = memnew(EditorPropertyVector3i(p_wide));
 			int min = -65535, max = 65535;
 			bool hide_slider = true;
@@ -3436,7 +3436,7 @@ bool EditorInspectorDefaultPlugin::parse_property(Object *p_object, Variant::Typ
 			add_property_editor(p_path, editor);
 
 		} break;
-		case Variant::TRANSFORM2D: {
+		case Variant::Type::TRANSFORM2D: {
 			EditorPropertyTransform2D *editor = memnew(EditorPropertyTransform2D);
 			double min = -65535, max = 65535, step = default_float_step;
 			bool hide_slider = true;
@@ -3454,7 +3454,7 @@ bool EditorInspectorDefaultPlugin::parse_property(Object *p_object, Variant::Typ
 			add_property_editor(p_path, editor);
 
 		} break;
-		case Variant::PLANE: {
+		case Variant::Type::PLANE: {
 			EditorPropertyPlane *editor = memnew(EditorPropertyPlane(p_wide));
 			double min = -65535, max = 65535, step = default_float_step;
 			bool hide_slider = true;
@@ -3471,7 +3471,7 @@ bool EditorInspectorDefaultPlugin::parse_property(Object *p_object, Variant::Typ
 			editor->setup(min, max, step, hide_slider);
 			add_property_editor(p_path, editor);
 		} break;
-		case Variant::QUAT: {
+		case Variant::Type::QUAT: {
 			EditorPropertyQuat *editor = memnew(EditorPropertyQuat);
 			double min = -65535, max = 65535, step = default_float_step;
 			bool hide_slider = true;
@@ -3488,7 +3488,7 @@ bool EditorInspectorDefaultPlugin::parse_property(Object *p_object, Variant::Typ
 			editor->setup(min, max, step, hide_slider);
 			add_property_editor(p_path, editor);
 		} break;
-		case Variant::AABB: {
+		case Variant::Type::AABB: {
 			EditorPropertyAABB *editor = memnew(EditorPropertyAABB);
 			double min = -65535, max = 65535, step = default_float_step;
 			bool hide_slider = true;
@@ -3505,7 +3505,7 @@ bool EditorInspectorDefaultPlugin::parse_property(Object *p_object, Variant::Typ
 			editor->setup(min, max, step, hide_slider);
 			add_property_editor(p_path, editor);
 		} break;
-		case Variant::BASIS: {
+		case Variant::Type::BASIS: {
 			EditorPropertyBasis *editor = memnew(EditorPropertyBasis);
 			double min = -65535, max = 65535, step = default_float_step;
 			bool hide_slider = true;
@@ -3522,7 +3522,7 @@ bool EditorInspectorDefaultPlugin::parse_property(Object *p_object, Variant::Typ
 			editor->setup(min, max, step, hide_slider);
 			add_property_editor(p_path, editor);
 		} break;
-		case Variant::TRANSFORM: {
+		case Variant::Type::TRANSFORM: {
 			EditorPropertyTransform *editor = memnew(EditorPropertyTransform);
 			double min = -65535, max = 65535, step = default_float_step;
 			bool hide_slider = true;
@@ -3542,12 +3542,12 @@ bool EditorInspectorDefaultPlugin::parse_property(Object *p_object, Variant::Typ
 		} break;
 
 		// misc types
-		case Variant::COLOR: {
+		case Variant::Type::COLOR: {
 			EditorPropertyColor *editor = memnew(EditorPropertyColor);
 			editor->setup(p_hint != PROPERTY_HINT_COLOR_NO_ALPHA);
 			add_property_editor(p_path, editor);
 		} break;
-		case Variant::STRING_NAME: {
+		case Variant::Type::STRING_NAME: {
 			if (p_hint == PROPERTY_HINT_ENUM) {
 				EditorPropertyTextEnum *editor = memnew(EditorPropertyTextEnum);
 				Vector<String> options = p_hint_text.split(",");
@@ -3562,7 +3562,7 @@ bool EditorInspectorDefaultPlugin::parse_property(Object *p_object, Variant::Typ
 				add_property_editor(p_path, editor);
 			}
 		} break;
-		case Variant::NODE_PATH: {
+		case Variant::Type::NODE_PATH: {
 			EditorPropertyNodePath *editor = memnew(EditorPropertyNodePath);
 			if (p_hint == PROPERTY_HINT_NODE_PATH_TO_EDITED_NODE && p_hint_text != String()) {
 				editor->setup(p_hint_text, Vector<StringName>(), (p_usage & PROPERTY_USAGE_NODE_PATH_FROM_SCENE_ROOT));
@@ -3575,11 +3575,11 @@ bool EditorInspectorDefaultPlugin::parse_property(Object *p_object, Variant::Typ
 			add_property_editor(p_path, editor);
 
 		} break;
-		case Variant::_RID: {
+		case Variant::Type::_RID: {
 			EditorPropertyRID *editor = memnew(EditorPropertyRID);
 			add_property_editor(p_path, editor);
 		} break;
-		case Variant::OBJECT: {
+		case Variant::Type::OBJECT: {
 			EditorPropertyResource *editor = memnew(EditorPropertyResource);
 			editor->setup(p_hint == PROPERTY_HINT_RESOURCE_TYPE ? p_hint_text : "Resource");
 
@@ -3599,58 +3599,58 @@ bool EditorInspectorDefaultPlugin::parse_property(Object *p_object, Variant::Typ
 			add_property_editor(p_path, editor);
 
 		} break;
-		case Variant::DICTIONARY: {
+		case Variant::Type::DICTIONARY: {
 			EditorPropertyDictionary *editor = memnew(EditorPropertyDictionary);
 			add_property_editor(p_path, editor);
 		} break;
-		case Variant::ARRAY: {
+		case Variant::Type::ARRAY: {
 			EditorPropertyArray *editor = memnew(EditorPropertyArray);
-			editor->setup(Variant::ARRAY, p_hint_text);
+			editor->setup(Variant::Type::ARRAY, p_hint_text);
 			add_property_editor(p_path, editor);
 		} break;
-		case Variant::PACKED_BYTE_ARRAY: {
+		case Variant::Type::PACKED_BYTE_ARRAY: {
 			EditorPropertyArray *editor = memnew(EditorPropertyArray);
-			editor->setup(Variant::PACKED_BYTE_ARRAY);
+			editor->setup(Variant::Type::PACKED_BYTE_ARRAY);
 			add_property_editor(p_path, editor);
 		} break;
-		case Variant::PACKED_INT32_ARRAY: {
+		case Variant::Type::PACKED_INT32_ARRAY: {
 			EditorPropertyArray *editor = memnew(EditorPropertyArray);
-			editor->setup(Variant::PACKED_INT32_ARRAY);
+			editor->setup(Variant::Type::PACKED_INT32_ARRAY);
 			add_property_editor(p_path, editor);
 		} break;
-		case Variant::PACKED_INT64_ARRAY: {
+		case Variant::Type::PACKED_INT64_ARRAY: {
 			EditorPropertyArray *editor = memnew(EditorPropertyArray);
-			editor->setup(Variant::PACKED_INT64_ARRAY);
+			editor->setup(Variant::Type::PACKED_INT64_ARRAY);
 			add_property_editor(p_path, editor);
 		} break;
-		case Variant::PACKED_FLOAT32_ARRAY: {
+		case Variant::Type::PACKED_FLOAT32_ARRAY: {
 			EditorPropertyArray *editor = memnew(EditorPropertyArray);
-			editor->setup(Variant::PACKED_FLOAT32_ARRAY);
+			editor->setup(Variant::Type::PACKED_FLOAT32_ARRAY);
 			add_property_editor(p_path, editor);
 		} break;
-		case Variant::PACKED_FLOAT64_ARRAY: {
+		case Variant::Type::PACKED_FLOAT64_ARRAY: {
 			EditorPropertyArray *editor = memnew(EditorPropertyArray);
-			editor->setup(Variant::PACKED_FLOAT64_ARRAY);
+			editor->setup(Variant::Type::PACKED_FLOAT64_ARRAY);
 			add_property_editor(p_path, editor);
 		} break;
-		case Variant::PACKED_STRING_ARRAY: {
+		case Variant::Type::PACKED_STRING_ARRAY: {
 			EditorPropertyArray *editor = memnew(EditorPropertyArray);
-			editor->setup(Variant::PACKED_STRING_ARRAY);
+			editor->setup(Variant::Type::PACKED_STRING_ARRAY);
 			add_property_editor(p_path, editor);
 		} break;
-		case Variant::PACKED_VECTOR2_ARRAY: {
+		case Variant::Type::PACKED_VECTOR2_ARRAY: {
 			EditorPropertyArray *editor = memnew(EditorPropertyArray);
-			editor->setup(Variant::PACKED_VECTOR2_ARRAY);
+			editor->setup(Variant::Type::PACKED_VECTOR2_ARRAY);
 			add_property_editor(p_path, editor);
 		} break;
-		case Variant::PACKED_VECTOR3_ARRAY: {
+		case Variant::Type::PACKED_VECTOR3_ARRAY: {
 			EditorPropertyArray *editor = memnew(EditorPropertyArray);
-			editor->setup(Variant::PACKED_VECTOR3_ARRAY);
+			editor->setup(Variant::Type::PACKED_VECTOR3_ARRAY);
 			add_property_editor(p_path, editor);
 		} break;
-		case Variant::PACKED_COLOR_ARRAY: {
+		case Variant::Type::PACKED_COLOR_ARRAY: {
 			EditorPropertyArray *editor = memnew(EditorPropertyArray);
-			editor->setup(Variant::PACKED_COLOR_ARRAY);
+			editor->setup(Variant::Type::PACKED_COLOR_ARRAY);
 			add_property_editor(p_path, editor);
 		} break;
 		default: {

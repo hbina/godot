@@ -395,10 +395,10 @@ void ScriptEditorDebugger::_parse_message(const String &p_msg, const Array &p_da
 	} else if (p_msg == "output") {
 		ERR_FAIL_COND(p_data.size() != 2);
 
-		ERR_FAIL_COND(p_data[0].get_type() != Variant::PACKED_STRING_ARRAY);
+		ERR_FAIL_COND(p_data[0].get_type() != Variant::Type::PACKED_STRING_ARRAY);
 		Vector<String> output_strings = p_data[0];
 
-		ERR_FAIL_COND(p_data[1].get_type() != Variant::PACKED_INT32_ARRAY);
+		ERR_FAIL_COND(p_data[1].get_type() != Variant::Type::PACKED_INT32_ARRAY);
 		Vector<int> output_types = p_data[1];
 
 		ERR_FAIL_COND(output_strings.size() != output_types.size());
@@ -695,7 +695,7 @@ void ScriptEditorDebugger::_parse_message(const String &p_msg, const Array &p_da
 		Vector<StringName> monitors;
 		monitors.resize(p_data.size());
 		for (int i = 0; i < p_data.size(); i++) {
-			ERR_FAIL_COND(p_data[i].get_type() != Variant::STRING_NAME);
+			ERR_FAIL_COND(p_data[i].get_type() != Variant::Type::STRING_NAME);
 			monitors.set(i, p_data[i]);
 		}
 		performance_profiler->update_monitors(monitors);
@@ -783,7 +783,7 @@ void ScriptEditorDebugger::_notification(int p_what) {
 
 			while (peer.is_valid() && peer->has_message()) {
 				Array arr = peer->get_message();
-				if (arr.size() != 2 || arr[0].get_type() != Variant::STRING || arr[1].get_type() != Variant::ARRAY) {
+				if (arr.size() != 2 || arr[0].get_type() != Variant::Type::STRING || arr[1].get_type() != Variant::Type::ARRAY) {
 					_stop_and_notify();
 					ERR_FAIL_MSG("Invalid message format received from peer");
 				}
@@ -1000,7 +1000,7 @@ void ScriptEditorDebugger::_method_changed(Object *p_base, const StringName &p_n
 
 	for (int i = 0; i < VARIANT_ARG_MAX; i++) {
 		//no pointers, sorry
-		if (argptr[i] && (argptr[i]->get_type() == Variant::OBJECT || argptr[i]->get_type() == Variant::_RID)) {
+		if (argptr[i] && (argptr[i]->get_type() == Variant::Type::OBJECT || argptr[i]->get_type() == Variant::Type::_RID)) {
 			return;
 		}
 	}
@@ -1397,14 +1397,14 @@ void ScriptEditorDebugger::_bind_methods() {
 
 	ADD_SIGNAL(MethodInfo("stopped"));
 	ADD_SIGNAL(MethodInfo("stop_requested"));
-	ADD_SIGNAL(MethodInfo("stack_frame_selected", PropertyInfo(Variant::INT, "frame")));
-	ADD_SIGNAL(MethodInfo("error_selected", PropertyInfo(Variant::INT, "error")));
-	ADD_SIGNAL(MethodInfo("set_execution", PropertyInfo("script"), PropertyInfo(Variant::INT, "line")));
+	ADD_SIGNAL(MethodInfo("stack_frame_selected", PropertyInfo(Variant::Type::INT, "frame")));
+	ADD_SIGNAL(MethodInfo("error_selected", PropertyInfo(Variant::Type::INT, "error")));
+	ADD_SIGNAL(MethodInfo("set_execution", PropertyInfo("script"), PropertyInfo(Variant::Type::INT, "line")));
 	ADD_SIGNAL(MethodInfo("clear_execution", PropertyInfo("script")));
-	ADD_SIGNAL(MethodInfo("breaked", PropertyInfo(Variant::BOOL, "reallydid"), PropertyInfo(Variant::BOOL, "can_debug")));
-	ADD_SIGNAL(MethodInfo("remote_object_requested", PropertyInfo(Variant::INT, "id")));
-	ADD_SIGNAL(MethodInfo("remote_object_updated", PropertyInfo(Variant::INT, "id")));
-	ADD_SIGNAL(MethodInfo("remote_object_property_updated", PropertyInfo(Variant::INT, "id"), PropertyInfo(Variant::STRING, "property")));
+	ADD_SIGNAL(MethodInfo("breaked", PropertyInfo(Variant::Type::BOOL, "reallydid"), PropertyInfo(Variant::Type::BOOL, "can_debug")));
+	ADD_SIGNAL(MethodInfo("remote_object_requested", PropertyInfo(Variant::Type::INT, "id")));
+	ADD_SIGNAL(MethodInfo("remote_object_updated", PropertyInfo(Variant::Type::INT, "id")));
+	ADD_SIGNAL(MethodInfo("remote_object_property_updated", PropertyInfo(Variant::Type::INT, "id"), PropertyInfo(Variant::Type::STRING, "property")));
 	ADD_SIGNAL(MethodInfo("remote_tree_updated"));
 }
 

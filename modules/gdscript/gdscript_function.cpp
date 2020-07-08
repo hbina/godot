@@ -130,7 +130,7 @@ Variant *GDScriptFunction::_get_variant(int p_address, GDScriptInstance *p_insta
 static String _get_var_type(const Variant *p_var) {
 	String basestr;
 
-	if (p_var->get_type() == Variant::OBJECT) {
+	if (p_var->get_type() == Variant::Type::OBJECT) {
 		bool was_freed;
 		Object *bobj = p_var->get_validated_object_with_check(was_freed);
 		if (!bobj) {
@@ -162,7 +162,7 @@ String GDScriptFunction::_get_call_error(const Callable::CallError &p_err, const
 		int errorarg = p_err.argument;
 		// Handle the Object to Object case separately as we don't have further class details.
 #ifdef DEBUG_ENABLED
-		if (p_err.expected == Variant::OBJECT && argptrs[errorarg]->get_type() == p_err.expected) {
+		if (p_err.expected == Variant::Type::OBJECT && argptrs[errorarg]->get_type() == p_err.expected) {
 			err_text = "Invalid type in " + p_where + ". The Object-derived class of argument " + itos(errorarg + 1) + " (" + _get_var_type(argptrs[errorarg]) + ") is not a subclass of the expected argument class.";
 		} else
 #endif // DEBUG_ENABLED
@@ -323,7 +323,7 @@ Variant GDScriptFunction::call(GDScriptInstance *p_instance, const Variant **p_a
 					if (!argument_types[i].is_type(*p_args[i], true)) {
 						r_err.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 						r_err.argument = i;
-						r_err.expected = argument_types[i].kind == GDScriptDataType::BUILTIN ? argument_types[i].builtin_type : Variant::OBJECT;
+						r_err.expected = argument_types[i].kind == GDScriptDataType::BUILTIN ? argument_types[i].builtin_type : Variant::Type::OBJECT;
 						return Variant();
 					}
 					if (argument_types[i].kind == GDScriptDataType::BUILTIN) {
@@ -442,7 +442,7 @@ Variant GDScriptFunction::call(GDScriptInstance *p_instance, const Variant **p_a
 #endif
 #ifdef DEBUG_ENABLED
 				if (!valid) {
-					if (ret.get_type() == Variant::STRING) {
+					if (ret.get_type() == Variant::Type::STRING) {
 						//return a string when invalid with the error
 						err_text = ret;
 						err_text += " in operator '" + Variant::get_operator_name(op) + "'.";
@@ -465,14 +465,14 @@ Variant GDScriptFunction::call(GDScriptInstance *p_instance, const Variant **p_a
 				GET_VARIANT_PTR(dst, 3);
 
 #ifdef DEBUG_ENABLED
-				if (b->get_type() != Variant::OBJECT || b->operator Object *() == nullptr) {
+				if (b->get_type() != Variant::Type::OBJECT || b->operator Object *() == nullptr) {
 					err_text = "Right operand of 'is' is not a class.";
 					OPCODE_BREAK;
 				}
 #endif
 
 				bool extends_ok = false;
-				if (a->get_type() == Variant::OBJECT && a->operator Object *() != nullptr) {
+				if (a->get_type() == Variant::Type::OBJECT && a->operator Object *() != nullptr) {
 #ifdef DEBUG_ENABLED
 					bool was_freed;
 					Object *obj_A = a->get_validated_object_with_check(was_freed);
@@ -539,7 +539,7 @@ Variant GDScriptFunction::call(GDScriptInstance *p_instance, const Variant **p_a
 				Variant::Type var_type = (Variant::Type)_code_ptr[ip + 2];
 				GET_VARIANT_PTR(dst, 3);
 
-				GD_ERR_BREAK(var_type < 0 || var_type >= Variant::VARIANT_MAX);
+				GD_ERR_BREAK(var_type < 0 || var_type >= Variant::Type::VARIANT_MAX);
 
 				*dst = value->get_type() == var_type;
 				ip += 4;
@@ -744,7 +744,7 @@ Variant GDScriptFunction::call(GDScriptInstance *p_instance, const Variant **p_a
 				GET_VARIANT_PTR(src, 3);
 
 				Variant::Type var_type = (Variant::Type)_code_ptr[ip + 1];
-				GD_ERR_BREAK(var_type < 0 || var_type >= Variant::VARIANT_MAX);
+				GD_ERR_BREAK(var_type < 0 || var_type >= Variant::Type::VARIANT_MAX);
 
 				if (src->get_type() != var_type) {
 #ifdef DEBUG_ENABLED
@@ -776,7 +776,7 @@ Variant GDScriptFunction::call(GDScriptInstance *p_instance, const Variant **p_a
 				GET_VARIANT_PTR(type, 1);
 				GDScriptNativeClass *nc = Object::cast_to<GDScriptNativeClass>(type->operator Object *());
 				GD_ERR_BREAK(!nc);
-				if (src->get_type() != Variant::OBJECT && src->get_type() != Variant::NIL) {
+				if (src->get_type() != Variant::Type::OBJECT && src->get_type() != Variant::Type::NIL) {
 					err_text = "Trying to assign value of type '" + Variant::get_type_name(src->get_type()) +
 							   "' to a variable of type '" + nc->get_name() + "'.";
 					OPCODE_BREAK;
@@ -806,12 +806,12 @@ Variant GDScriptFunction::call(GDScriptInstance *p_instance, const Variant **p_a
 
 				GD_ERR_BREAK(!base_type);
 
-				if (src->get_type() != Variant::OBJECT && src->get_type() != Variant::NIL) {
+				if (src->get_type() != Variant::Type::OBJECT && src->get_type() != Variant::Type::NIL) {
 					err_text = "Trying to assign a non-object value to a variable of type '" + base_type->get_path().get_file() + "'.";
 					OPCODE_BREAK;
 				}
 
-				if (src->get_type() != Variant::NIL && src->operator Object *() != nullptr) {
+				if (src->get_type() != Variant::Type::NIL && src->operator Object *() != nullptr) {
 					ScriptInstance *scr_inst = src->operator Object *()->get_script_instance();
 					if (!scr_inst) {
 						err_text = "Trying to assign value of type '" + src->operator Object *()->get_class_name() +
@@ -850,7 +850,7 @@ Variant GDScriptFunction::call(GDScriptInstance *p_instance, const Variant **p_a
 				GET_VARIANT_PTR(src, 2);
 				GET_VARIANT_PTR(dst, 3);
 
-				GD_ERR_BREAK(to_type < 0 || to_type >= Variant::VARIANT_MAX);
+				GD_ERR_BREAK(to_type < 0 || to_type >= Variant::Type::VARIANT_MAX);
 
 				Callable::CallError err;
 				*dst = Variant::construct(to_type, (const Variant **)&src, 1, err);
@@ -876,7 +876,7 @@ Variant GDScriptFunction::call(GDScriptInstance *p_instance, const Variant **p_a
 				GD_ERR_BREAK(!nc);
 
 #ifdef DEBUG_ENABLED
-				if (src->get_type() != Variant::OBJECT && src->get_type() != Variant::NIL) {
+				if (src->get_type() != Variant::Type::OBJECT && src->get_type() != Variant::Type::NIL) {
 					err_text = "Invalid cast: can't convert a non-object value to an object type.";
 					OPCODE_BREAK;
 				}
@@ -904,7 +904,7 @@ Variant GDScriptFunction::call(GDScriptInstance *p_instance, const Variant **p_a
 				GD_ERR_BREAK(!base_type);
 
 #ifdef DEBUG_ENABLED
-				if (src->get_type() != Variant::OBJECT && src->get_type() != Variant::NIL) {
+				if (src->get_type() != Variant::Type::OBJECT && src->get_type() != Variant::Type::NIL) {
 					err_text = "Trying to assign a non-object value to a variable of type '" + base_type->get_path().get_file() + "'.";
 					OPCODE_BREAK;
 				}
@@ -912,7 +912,7 @@ Variant GDScriptFunction::call(GDScriptInstance *p_instance, const Variant **p_a
 
 				bool valid = false;
 
-				if (src->get_type() != Variant::NIL && src->operator Object *() != nullptr) {
+				if (src->get_type() != Variant::Type::NIL && src->operator Object *() != nullptr) {
 					ScriptInstance *scr_inst = src->operator Object *()->get_script_instance();
 
 					if (scr_inst) {
@@ -1064,7 +1064,7 @@ Variant GDScriptFunction::call(GDScriptInstance *p_instance, const Variant **p_a
 							if (base->is_ref()) {
 								err_text = "Attempted to free a reference.";
 								OPCODE_BREAK;
-							} else if (base->get_type() == Variant::OBJECT) {
+							} else if (base->get_type() == Variant::Type::OBJECT) {
 								err_text = "Attempted to free a locked object (calling or emitting).";
 								OPCODE_BREAK;
 							}
@@ -1105,7 +1105,7 @@ Variant GDScriptFunction::call(GDScriptInstance *p_instance, const Variant **p_a
 #ifdef DEBUG_ENABLED
 				if (err.error != Callable::CallError::CALL_OK) {
 					String methodstr = GDScriptFunctions::get_func_name(func);
-					if (dst->get_type() == Variant::STRING) {
+					if (dst->get_type() == Variant::Type::STRING) {
 						//call provided error string
 						err_text = "Error calling built-in function '" + methodstr + "': " + String(*dst);
 					} else {
@@ -1241,11 +1241,11 @@ Variant GDScriptFunction::call(GDScriptInstance *p_instance, const Variant **p_a
 					GET_VARIANT_PTR(argname, 2);
 
 #ifdef DEBUG_ENABLED
-					if (argobj->get_type() != Variant::OBJECT) {
+					if (argobj->get_type() != Variant::Type::OBJECT) {
 						err_text = "First argument of yield() not of type object.";
 						OPCODE_BREAK;
 					}
-					if (argname->get_type() != Variant::STRING) {
+					if (argname->get_type() != Variant::Type::STRING) {
 						err_text = "Second argument of yield() not a string (for signal name).";
 						OPCODE_BREAK;
 					}
@@ -1751,7 +1751,7 @@ Variant GDScriptFunctionState::_signal_callback(const Variant **p_args, int p_ar
 	if (self.is_null()) {
 		r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 		r_error.argument = p_argcount - 1;
-		r_error.expected = Variant::OBJECT;
+		r_error.expected = Variant::Type::OBJECT;
 		return Variant();
 	}
 
@@ -1854,7 +1854,7 @@ void GDScriptFunctionState::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("is_valid", "extended_check"), &GDScriptFunctionState::is_valid, DEFVAL(false));
 	ClassDB::bind_vararg_method(METHOD_FLAGS_DEFAULT, "_signal_callback", &GDScriptFunctionState::_signal_callback, MethodInfo("_signal_callback"));
 
-	ADD_SIGNAL(MethodInfo("completed", PropertyInfo(Variant::NIL, "result", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NIL_IS_VARIANT)));
+	ADD_SIGNAL(MethodInfo("completed", PropertyInfo(Variant::Type::NIL, "result", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NIL_IS_VARIANT)));
 }
 
 GDScriptFunctionState::GDScriptFunctionState() :

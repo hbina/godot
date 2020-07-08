@@ -157,7 +157,7 @@ Ref<Resource> Resource::duplicate_for_local_scene(Node *p_for_scene, Map<Ref<Res
 			continue;
 		}
 		Variant p = get(E->get().name);
-		if (p.get_type() == Variant::OBJECT) {
+		if (p.get_type() == Variant::Type::OBJECT) {
 			RES sr = p;
 			if (sr.is_valid()) {
 				if (sr->is_local_to_scene()) {
@@ -191,7 +191,7 @@ void Resource::configure_for_local_scene(Node *p_for_scene, Map<Ref<Resource>, R
 			continue;
 		}
 		Variant p = get(E->get().name);
-		if (p.get_type() == Variant::OBJECT) {
+		if (p.get_type() == Variant::Type::OBJECT) {
 			RES sr = p;
 			if (sr.is_valid()) {
 				if (sr->is_local_to_scene()) {
@@ -218,9 +218,9 @@ Ref<Resource> Resource::duplicate(bool p_subresources) const {
 		}
 		Variant p = get(E->get().name);
 
-		if ((p.get_type() == Variant::DICTIONARY || p.get_type() == Variant::ARRAY)) {
+		if ((p.get_type() == Variant::Type::DICTIONARY || p.get_type() == Variant::Type::ARRAY)) {
 			r->set(E->get().name, p.duplicate(p_subresources));
-		} else if (p.get_type() == Variant::OBJECT && (p_subresources || (E->get().usage & PROPERTY_USAGE_DO_NOT_SHARE_ON_DUPLICATE))) {
+		} else if (p.get_type() == Variant::Type::OBJECT && (p_subresources || (E->get().usage & PROPERTY_USAGE_DO_NOT_SHARE_ON_DUPLICATE))) {
 			RES sr = p;
 			if (sr.is_valid()) {
 				r->set(E->get().name, sr->duplicate(p_subresources));
@@ -271,7 +271,7 @@ uint32_t Resource::hash_edited_version() const {
 	get_property_list(&plist);
 
 	for (List<PropertyInfo>::Element *E = plist.front(); E; E = E->next()) {
-		if (E->get().usage & PROPERTY_USAGE_STORAGE && E->get().type == Variant::OBJECT && E->get().hint == PROPERTY_HINT_RESOURCE_TYPE) {
+		if (E->get().usage & PROPERTY_USAGE_STORAGE && E->get().type == Variant::Type::OBJECT && E->get().hint == PROPERTY_HINT_RESOURCE_TYPE) {
 			RES res = get(E->get().name);
 			if (res.is_valid()) {
 				hash = hash_djb2_one_32(res->hash_edited_version(), hash);
@@ -392,9 +392,9 @@ void Resource::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("duplicate", "subresources"), &Resource::duplicate, DEFVAL(false));
 	ADD_SIGNAL(MethodInfo("changed"));
 	ADD_GROUP("Resource", "resource_");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "resource_local_to_scene"), "set_local_to_scene", "is_local_to_scene");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "resource_path", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_EDITOR), "set_path", "get_path");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING_NAME, "resource_name"), "set_name", "get_name");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "resource_local_to_scene"), "set_local_to_scene", "is_local_to_scene");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::STRING, "resource_path", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_EDITOR), "set_path", "get_path");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::STRING_NAME, "resource_name"), "set_name", "get_name");
 
 	BIND_VMETHOD(MethodInfo("_setup_local_to_scene"));
 }

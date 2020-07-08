@@ -843,13 +843,13 @@ void NetworkedMultiplayerENet::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_server_relay_enabled", "enabled"), &NetworkedMultiplayerENet::set_server_relay_enabled);
 	ClassDB::bind_method(D_METHOD("is_server_relay_enabled"), &NetworkedMultiplayerENet::is_server_relay_enabled);
 
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "compression_mode", PROPERTY_HINT_ENUM, "None,Range Coder,FastLZ,ZLib,ZStd"), "set_compression_mode", "get_compression_mode");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "transfer_channel"), "set_transfer_channel", "get_transfer_channel");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "channel_count"), "set_channel_count", "get_channel_count");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "always_ordered"), "set_always_ordered", "is_always_ordered");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "server_relay"), "set_server_relay_enabled", "is_server_relay_enabled");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "dtls_verify"), "set_dtls_verify_enabled", "is_dtls_verify_enabled");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "use_dtls"), "set_dtls_enabled", "is_dtls_enabled");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "compression_mode", PROPERTY_HINT_ENUM, "None,Range Coder,FastLZ,ZLib,ZStd"), "set_compression_mode", "get_compression_mode");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "transfer_channel"), "set_transfer_channel", "get_transfer_channel");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "channel_count"), "set_channel_count", "get_channel_count");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "always_ordered"), "set_always_ordered", "is_always_ordered");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "server_relay"), "set_server_relay_enabled", "is_server_relay_enabled");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "dtls_verify"), "set_dtls_verify_enabled", "is_dtls_verify_enabled");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "use_dtls"), "set_dtls_enabled", "is_dtls_enabled");
 
 	BIND_ENUM_CONSTANT(COMPRESS_NONE);
 	BIND_ENUM_CONSTANT(COMPRESS_RANGE_CODER);

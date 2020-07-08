@@ -808,18 +808,18 @@ void FileDialog::_bind_methods() {
 
 	ClassDB::bind_method(D_METHOD("invalidate"), &FileDialog::invalidate);
 
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "mode_overrides_title"), "set_mode_overrides_title", "is_mode_overriding_title");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "file_mode", PROPERTY_HINT_ENUM, "Open File,Open Files,Open Folder,Open Any,Save"), "set_file_mode", "get_file_mode");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "access", PROPERTY_HINT_ENUM, "Resources,User data,File system"), "set_access", "get_access");
-	ADD_PROPERTY(PropertyInfo(Variant::PACKED_STRING_ARRAY, "filters"), "set_filters", "get_filters");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "show_hidden_files"), "set_show_hidden_files", "is_showing_hidden_files");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "current_dir"), "set_current_dir", "get_current_dir");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "current_file"), "set_current_file", "get_current_file");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "current_path"), "set_current_path", "get_current_path");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "mode_overrides_title"), "set_mode_overrides_title", "is_mode_overriding_title");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "file_mode", PROPERTY_HINT_ENUM, "Open File,Open Files,Open Folder,Open Any,Save"), "set_file_mode", "get_file_mode");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "access", PROPERTY_HINT_ENUM, "Resources,User data,File system"), "set_access", "get_access");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::PACKED_STRING_ARRAY, "filters"), "set_filters", "get_filters");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "show_hidden_files"), "set_show_hidden_files", "is_showing_hidden_files");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::STRING, "current_dir"), "set_current_dir", "get_current_dir");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::STRING, "current_file"), "set_current_file", "get_current_file");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::STRING, "current_path"), "set_current_path", "get_current_path");
 
-	ADD_SIGNAL(MethodInfo("file_selected", PropertyInfo(Variant::STRING, "path")));
-	ADD_SIGNAL(MethodInfo("files_selected", PropertyInfo(Variant::PACKED_STRING_ARRAY, "paths")));
-	ADD_SIGNAL(MethodInfo("dir_selected", PropertyInfo(Variant::STRING, "dir")));
+	ADD_SIGNAL(MethodInfo("file_selected", PropertyInfo(Variant::Type::STRING, "path")));
+	ADD_SIGNAL(MethodInfo("files_selected", PropertyInfo(Variant::Type::PACKED_STRING_ARRAY, "paths")));
+	ADD_SIGNAL(MethodInfo("dir_selected", PropertyInfo(Variant::Type::STRING, "dir")));
 
 	BIND_ENUM_CONSTANT(FILE_MODE_OPEN_FILE);
 	BIND_ENUM_CONSTANT(FILE_MODE_OPEN_FILES);

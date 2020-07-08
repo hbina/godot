@@ -65,7 +65,7 @@ bool ShaderGlobalsOverride::_set(const StringName &p_name, const Variant &p_valu
 			if (active) {
 				RS::get_singleton()->global_variable_set_override(*r, p_value);
 			}
-			o->in_use = p_value.get_type() != Variant::NIL;
+			o->in_use = p_value.get_type() != Variant::Type::NIL;
 			return true;
 		}
 	}
@@ -97,100 +97,100 @@ void ShaderGlobalsOverride::_get_property_list(List<PropertyInfo> *p_list) const
 
 		switch (RS::get_singleton()->global_variable_get_type(variables[i])) {
 			case RS::GLOBAL_VAR_TYPE_BOOL: {
-				pinfo.type = Variant::BOOL;
+				pinfo.type = Variant::Type::BOOL;
 			} break;
 			case RS::GLOBAL_VAR_TYPE_BVEC2: {
-				pinfo.type = Variant::INT;
+				pinfo.type = Variant::Type::INT;
 				pinfo.hint = PROPERTY_HINT_FLAGS;
 				pinfo.hint_string = "x,y";
 			} break;
 			case RS::GLOBAL_VAR_TYPE_BVEC3: {
-				pinfo.type = Variant::INT;
+				pinfo.type = Variant::Type::INT;
 				pinfo.hint = PROPERTY_HINT_FLAGS;
 				pinfo.hint_string = "x,y,z";
 			} break;
 			case RS::GLOBAL_VAR_TYPE_BVEC4: {
-				pinfo.type = Variant::INT;
+				pinfo.type = Variant::Type::INT;
 				pinfo.hint = PROPERTY_HINT_FLAGS;
 				pinfo.hint_string = "x,y,z,w";
 			} break;
 			case RS::GLOBAL_VAR_TYPE_INT: {
-				pinfo.type = Variant::INT;
+				pinfo.type = Variant::Type::INT;
 			} break;
 			case RS::GLOBAL_VAR_TYPE_IVEC2: {
-				pinfo.type = Variant::VECTOR2I;
+				pinfo.type = Variant::Type::VECTOR2I;
 			} break;
 			case RS::GLOBAL_VAR_TYPE_IVEC3: {
-				pinfo.type = Variant::VECTOR3I;
+				pinfo.type = Variant::Type::VECTOR3I;
 			} break;
 			case RS::GLOBAL_VAR_TYPE_IVEC4: {
-				pinfo.type = Variant::PACKED_INT32_ARRAY;
+				pinfo.type = Variant::Type::PACKED_INT32_ARRAY;
 			} break;
 			case RS::GLOBAL_VAR_TYPE_RECT2I: {
-				pinfo.type = Variant::RECT2I;
+				pinfo.type = Variant::Type::RECT2I;
 			} break;
 			case RS::GLOBAL_VAR_TYPE_UINT: {
-				pinfo.type = Variant::INT;
+				pinfo.type = Variant::Type::INT;
 			} break;
 			case RS::GLOBAL_VAR_TYPE_UVEC2: {
-				pinfo.type = Variant::VECTOR2I;
+				pinfo.type = Variant::Type::VECTOR2I;
 			} break;
 			case RS::GLOBAL_VAR_TYPE_UVEC3: {
-				pinfo.type = Variant::VECTOR3I;
+				pinfo.type = Variant::Type::VECTOR3I;
 			} break;
 			case RS::GLOBAL_VAR_TYPE_UVEC4: {
-				pinfo.type = Variant::PACKED_INT32_ARRAY;
+				pinfo.type = Variant::Type::PACKED_INT32_ARRAY;
 			} break;
 			case RS::GLOBAL_VAR_TYPE_FLOAT: {
-				pinfo.type = Variant::FLOAT;
+				pinfo.type = Variant::Type::FLOAT;
 			} break;
 			case RS::GLOBAL_VAR_TYPE_VEC2: {
-				pinfo.type = Variant::VECTOR2;
+				pinfo.type = Variant::Type::VECTOR2;
 			} break;
 			case RS::GLOBAL_VAR_TYPE_VEC3: {
-				pinfo.type = Variant::VECTOR3;
+				pinfo.type = Variant::Type::VECTOR3;
 			} break;
 			case RS::GLOBAL_VAR_TYPE_VEC4: {
-				pinfo.type = Variant::PLANE;
+				pinfo.type = Variant::Type::PLANE;
 			} break;
 			case RS::GLOBAL_VAR_TYPE_RECT2: {
-				pinfo.type = Variant::RECT2;
+				pinfo.type = Variant::Type::RECT2;
 			} break;
 			case RS::GLOBAL_VAR_TYPE_COLOR: {
-				pinfo.type = Variant::COLOR;
+				pinfo.type = Variant::Type::COLOR;
 			} break;
 			case RS::GLOBAL_VAR_TYPE_MAT2: {
-				pinfo.type = Variant::PACKED_INT32_ARRAY;
+				pinfo.type = Variant::Type::PACKED_INT32_ARRAY;
 			} break;
 			case RS::GLOBAL_VAR_TYPE_MAT3: {
-				pinfo.type = Variant::BASIS;
+				pinfo.type = Variant::Type::BASIS;
 			} break;
 			case RS::GLOBAL_VAR_TYPE_TRANSFORM_2D: {
-				pinfo.type = Variant::TRANSFORM2D;
+				pinfo.type = Variant::Type::TRANSFORM2D;
 			} break;
 			case RS::GLOBAL_VAR_TYPE_TRANSFORM: {
-				pinfo.type = Variant::TRANSFORM;
+				pinfo.type = Variant::Type::TRANSFORM;
 			} break;
 			case RS::GLOBAL_VAR_TYPE_MAT4: {
-				pinfo.type = Variant::PACKED_INT32_ARRAY;
+				pinfo.type = Variant::Type::PACKED_INT32_ARRAY;
 			} break;
 			case RS::GLOBAL_VAR_TYPE_SAMPLER2D: {
-				pinfo.type = Variant::OBJECT;
+				pinfo.type = Variant::Type::OBJECT;
 				pinfo.hint = PROPERTY_HINT_RESOURCE_TYPE;
 				pinfo.hint_string = "Texture2D";
 			} break;
 			case RS::GLOBAL_VAR_TYPE_SAMPLER2DARRAY: {
-				pinfo.type = Variant::OBJECT;
+				pinfo.type = Variant::Type::OBJECT;
 				pinfo.hint = PROPERTY_HINT_RESOURCE_TYPE;
 				pinfo.hint_string = "Texture2DArray";
 			} break;
 			case RS::GLOBAL_VAR_TYPE_SAMPLER3D: {
-				pinfo.type = Variant::OBJECT;
+				pinfo.type = Variant::Type::OBJECT;
 				pinfo.hint = PROPERTY_HINT_RESOURCE_TYPE;
 				pinfo.hint_string = "Texture3D";
 			} break;
 			case RS::GLOBAL_VAR_TYPE_SAMPLERCUBE: {
-				pinfo.type = Variant::OBJECT;
+				pinfo.type = Variant::Type::OBJECT;
 				pinfo.hint = PROPERTY_HINT_RESOURCE_TYPE;
 				pinfo.hint_string = "Cubemap";
 			} break;
@@ -207,7 +207,7 @@ void ShaderGlobalsOverride::_get_property_list(List<PropertyInfo> *p_list) const
 		}
 
 		Override *o = overrides.getptr(variables[i]);
-		if (o->in_use && o->override.get_type() != Variant::NIL) {
+		if (o->in_use && o->override.get_type() != Variant::Type::NIL) {
 			pinfo.usage |= PROPERTY_USAGE_CHECKED;
 			pinfo.usage |= PROPERTY_USAGE_STORAGE;
 		}
@@ -227,7 +227,7 @@ void ShaderGlobalsOverride::_activate() {
 		const StringName *K = nullptr;
 		while ((K = overrides.next(K))) {
 			Override *o = overrides.getptr(*K);
-			if (o->in_use && o->override.get_type() != Variant::NIL) {
+			if (o->in_use && o->override.get_type() != Variant::Type::NIL) {
 				RS::get_singleton()->global_variable_set_override(*K, o->override);
 			}
 		}

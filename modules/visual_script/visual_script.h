@@ -94,7 +94,7 @@ public:
 		Ref<Script> script;
 
 		TypeGuess() {
-			type = Variant::NIL;
+			type = Variant::Type::NIL;
 		}
 	};
 

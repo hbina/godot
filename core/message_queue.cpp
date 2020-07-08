@@ -50,7 +50,7 @@ Error MessageQueue::push_call(ObjectID p_id, const StringName &p_method, VARIANT
 	int argc = 0;
 
 	for (int i = 0; i < VARIANT_ARG_MAX; i++) {
-		if (argptr[i]->get_type() == Variant::NIL) {
+		if (argptr[i]->get_type() == Variant::Type::NIL) {
 			break;
 		}
 		argc++;
@@ -161,7 +161,7 @@ Error MessageQueue::push_callable(const Callable &p_callable, VARIANT_ARG_DECLAR
 	int argc = 0;
 
 	for (int i = 0; i < VARIANT_ARG_MAX; i++) {
-		if (argptr[i]->get_type() == Variant::NIL) {
+		if (argptr[i]->get_type() == Variant::Type::NIL) {
 			break;
 		}
 		argc++;
@@ -344,7 +344,7 @@ MessageQueue::MessageQueue() {
 	singleton = this;
 
 	buffer_size = GLOBAL_DEF_RST("memory/limits/message_queue/max_size_kb", DEFAULT_QUEUE_SIZE_KB);
-	ProjectSettings::get_singleton()->set_custom_property_info("memory/limits/message_queue/max_size_kb", PropertyInfo(Variant::INT, "memory/limits/message_queue/max_size_kb", PROPERTY_HINT_RANGE, "1024,4096,1,or_greater"));
+	ProjectSettings::get_singleton()->set_custom_property_info("memory/limits/message_queue/max_size_kb", PropertyInfo(Variant::Type::INT, "memory/limits/message_queue/max_size_kb", PROPERTY_HINT_RANGE, "1024,4096,1,or_greater"));
 	buffer_size *= 1024;
 	buffer = memnew_arr(uint8_t, buffer_size);
 }

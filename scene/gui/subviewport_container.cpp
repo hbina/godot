@@ -198,8 +198,8 @@ void SubViewportContainer::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_stretch_shrink", "amount"), &SubViewportContainer::set_stretch_shrink);
 	ClassDB::bind_method(D_METHOD("get_stretch_shrink"), &SubViewportContainer::get_stretch_shrink);
 
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "stretch"), "set_stretch", "is_stretch_enabled");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "stretch_shrink"), "set_stretch_shrink", "get_stretch_shrink");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "stretch"), "set_stretch", "is_stretch_enabled");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "stretch_shrink"), "set_stretch_shrink", "get_stretch_shrink");
 }
 
 SubViewportContainer::SubViewportContainer() {

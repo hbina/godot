@@ -211,7 +211,7 @@ Node *SceneState::instance(GenEditState p_edit_state) const {
 					} else {
 						Variant value = props[nprops[j].value];
 
-						if (value.get_type() == Variant::OBJECT) {
+						if (value.get_type() == Variant::Type::OBJECT) {
 							//handle resources that are local to scene by duplicating them if needed
 							Ref<Resource> res = value;
 							if (res.is_valid()) {
@@ -480,7 +480,7 @@ Error SceneState::_parse_node(Node *p_owner, Node *p_node, int p_parent_idx, Map
 		bool isdefault = false;
 		Variant default_value = ClassDB::class_get_default_property_value(type, name);
 
-		if (default_value.get_type() != Variant::NIL) {
+		if (default_value.get_type() != Variant::Type::NIL) {
 			isdefault = bool(Variant::evaluate(Variant::OP_EQUAL, value, default_value));
 		}
 
@@ -521,7 +521,7 @@ Error SceneState::_parse_node(Node *p_owner, Node *p_node, int p_parent_idx, Map
 
 			if (exists) {
 				//check if already exists and did not change
-				if (value.get_type() == Variant::FLOAT && original.get_type() == Variant::FLOAT) {
+				if (value.get_type() == Variant::Type::FLOAT && original.get_type() == Variant::Type::FLOAT) {
 					//this must be done because, as some scenes save as text, there might be a tiny difference in floats due to numerical error
 					float a = value;
 					float b = original;
@@ -1681,7 +1681,7 @@ void PackedScene::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("_get_bundled_scene"), &PackedScene::_get_bundled_scene);
 	ClassDB::bind_method(D_METHOD("get_state"), &PackedScene::get_state);
 
-	ADD_PROPERTY(PropertyInfo(Variant::DICTIONARY, "_bundled"), "_set_bundled_scene", "_get_bundled_scene");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::DICTIONARY, "_bundled"), "_set_bundled_scene", "_get_bundled_scene");
 
 	BIND_ENUM_CONSTANT(GEN_EDIT_STATE_DISABLED);
 	BIND_ENUM_CONSTANT(GEN_EDIT_STATE_INSTANCE);

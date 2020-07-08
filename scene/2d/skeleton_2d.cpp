@@ -90,8 +90,8 @@ void Bone2D::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_default_length", "default_length"), &Bone2D::set_default_length);
 	ClassDB::bind_method(D_METHOD("get_default_length"), &Bone2D::get_default_length);
 
-	ADD_PROPERTY(PropertyInfo(Variant::TRANSFORM2D, "rest"), "set_rest", "get_rest");
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "default_length", PROPERTY_HINT_RANGE, "1,1024,1"), "set_default_length", "get_default_length");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::TRANSFORM2D, "rest"), "set_rest", "get_rest");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "default_length", PROPERTY_HINT_RANGE, "1,1024,1"), "set_default_length", "get_default_length");
 }
 
 void Bone2D::set_rest(const Transform2D &p_rest) {

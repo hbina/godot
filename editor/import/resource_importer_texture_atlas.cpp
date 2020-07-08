@@ -72,8 +72,8 @@ String ResourceImporterTextureAtlas::get_preset_name(int p_idx) const {
 }
 
 void ResourceImporterTextureAtlas::get_import_options(List<ImportOption> *r_options, int p_preset) const {
-	r_options->push_back(ImportOption(PropertyInfo(Variant::STRING, "atlas_file", PROPERTY_HINT_SAVE_FILE, "*.png"), ""));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::INT, "import_mode", PROPERTY_HINT_ENUM, "Region,Mesh2D"), 0));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::STRING, "atlas_file", PROPERTY_HINT_SAVE_FILE, "*.png"), ""));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::INT, "import_mode", PROPERTY_HINT_ENUM, "Region,Mesh2D"), 0));
 }
 
 String ResourceImporterTextureAtlas::get_option_group_file() const {

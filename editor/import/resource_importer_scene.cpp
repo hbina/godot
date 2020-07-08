@@ -97,13 +97,13 @@ void EditorSceneImporter::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("import_scene_from_other_importer", "path", "flags", "bake_fps"), &EditorSceneImporter::import_scene_from_other_importer);
 	ClassDB::bind_method(D_METHOD("import_animation_from_other_importer", "path", "flags", "bake_fps"), &EditorSceneImporter::import_animation_from_other_importer);
 
-	BIND_VMETHOD(MethodInfo(Variant::INT, "_get_import_flags"));
-	BIND_VMETHOD(MethodInfo(Variant::ARRAY, "_get_extensions"));
+	BIND_VMETHOD(MethodInfo(Variant::Type::INT, "_get_import_flags"));
+	BIND_VMETHOD(MethodInfo(Variant::Type::ARRAY, "_get_extensions"));
 
-	MethodInfo mi = MethodInfo(Variant::OBJECT, "_import_scene", PropertyInfo(Variant::STRING, "path"), PropertyInfo(Variant::INT, "flags"), PropertyInfo(Variant::INT, "bake_fps"));
+	MethodInfo mi = MethodInfo(Variant::Type::OBJECT, "_import_scene", PropertyInfo(Variant::Type::STRING, "path"), PropertyInfo(Variant::Type::INT, "flags"), PropertyInfo(Variant::Type::INT, "bake_fps"));
 	mi.return_val.class_name = "Node";
 	BIND_VMETHOD(mi);
-	mi = MethodInfo(Variant::OBJECT, "_import_animation", PropertyInfo(Variant::STRING, "path"), PropertyInfo(Variant::INT, "flags"), PropertyInfo(Variant::INT, "bake_fps"));
+	mi = MethodInfo(Variant::Type::OBJECT, "_import_animation", PropertyInfo(Variant::Type::STRING, "path"), PropertyInfo(Variant::Type::INT, "flags"), PropertyInfo(Variant::Type::INT, "bake_fps"));
 	mi.return_val.class_name = "Animation";
 	BIND_VMETHOD(mi);
 
@@ -121,7 +121,7 @@ void EditorSceneImporter::_bind_methods() {
 
 /////////////////////////////////
 void EditorScenePostImport::_bind_methods() {
-	BIND_VMETHOD(MethodInfo(Variant::OBJECT, "post_import", PropertyInfo(Variant::OBJECT, "scene")));
+	BIND_VMETHOD(MethodInfo(Variant::Type::OBJECT, "post_import", PropertyInfo(Variant::Type::OBJECT, "scene")));
 	ClassDB::bind_method(D_METHOD("get_source_folder"), &EditorScenePostImport::get_source_folder);
 	ClassDB::bind_method(D_METHOD("get_source_file"), &EditorScenePostImport::get_source_file);
 }
@@ -980,7 +980,7 @@ void ResourceImporterScene::_make_external_resources(Node *p_node, const String 
 	p_node->get_property_list(&pi);
 
 	for (List<PropertyInfo>::Element *E = pi.front(); E; E = E->next()) {
-		if (E->get().type == Variant::OBJECT) {
+		if (E->get().type == Variant::Type::OBJECT) {
 			Ref<Material> mat = p_node->get(E->get().name);
 
 			if (p_make_materials && mat.is_valid() && mat->get_name() != "") {
@@ -1094,8 +1094,8 @@ void ResourceImporterScene::_make_external_resources(Node *p_node, const String 
 }
 
 void ResourceImporterScene::get_import_options(List<ImportOption> *r_options, int p_preset) const {
-	r_options->push_back(ImportOption(PropertyInfo(Variant::STRING, "nodes/root_type", PROPERTY_HINT_TYPE_STRING, "Node"), "Node3D"));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::STRING, "nodes/root_name"), "Scene Root"));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::STRING, "nodes/root_type", PROPERTY_HINT_TYPE_STRING, "Node"), "Node3D"));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::STRING, "nodes/root_name"), "Scene Root"));
 
 	List<String> script_extentions;
 	ResourceLoader::get_recognized_extensions_for_type("Script", &script_extentions);
@@ -1114,35 +1114,35 @@ void ResourceImporterScene::get_import_options(List<ImportOption> *r_options, in
 	bool scenes_out = p_preset == PRESET_MULTIPLE_SCENES || p_preset == PRESET_MULTIPLE_SCENES_AND_MATERIALS;
 	bool animations_out = p_preset == PRESET_SEPARATE_ANIMATIONS || p_preset == PRESET_SEPARATE_MESHES_AND_ANIMATIONS || p_preset == PRESET_SEPARATE_MATERIALS_AND_ANIMATIONS || p_preset == PRESET_SEPARATE_MESHES_MATERIALS_AND_ANIMATIONS;
 
-	r_options->push_back(ImportOption(PropertyInfo(Variant::FLOAT, "nodes/root_scale", PROPERTY_HINT_RANGE, "0.001,1000,0.001"), 1.0));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::STRING, "nodes/custom_script", PROPERTY_HINT_FILE, script_ext_hint), ""));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::INT, "nodes/storage", PROPERTY_HINT_ENUM, "Single Scene,Instanced Sub-Scenes"), scenes_out ? 1 : 0));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::INT, "materials/location", PROPERTY_HINT_ENUM, "Node,Mesh"), (meshes_out || materials_out) ? 1 : 0));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::INT, "materials/storage", PROPERTY_HINT_ENUM, "Built-In,Files (.material),Files (.tres)", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_UPDATE_ALL_IF_MODIFIED), materials_out ? 1 : 0));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::BOOL, "materials/keep_on_reimport"), materials_out));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::BOOL, "meshes/compress"), true));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::BOOL, "meshes/ensure_tangents"), true));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::INT, "meshes/storage", PROPERTY_HINT_ENUM, "Built-In,Files (.mesh),Files (.tres)"), meshes_out ? 1 : 0));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::INT, "meshes/light_baking", PROPERTY_HINT_ENUM, "Disabled,Enable,Gen Lightmaps", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_UPDATE_ALL_IF_MODIFIED), 0));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::FLOAT, "meshes/lightmap_texel_size", PROPERTY_HINT_RANGE, "0.001,100,0.001"), 0.1));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::BOOL, "skins/use_named_skins"), true));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::BOOL, "external_files/store_in_subdir"), false));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::BOOL, "animation/import", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_UPDATE_ALL_IF_MODIFIED), true));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::FLOAT, "animation/fps", PROPERTY_HINT_RANGE, "1,120,1"), 15));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::STRING, "animation/filter_script", PROPERTY_HINT_MULTILINE_TEXT), ""));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::INT, "animation/storage", PROPERTY_HINT_ENUM, "Built-In,Files (.anim),Files (.tres)", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_UPDATE_ALL_IF_MODIFIED), animations_out));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::BOOL, "animation/keep_custom_tracks"), animations_out));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::BOOL, "animation/optimizer/enabled", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_UPDATE_ALL_IF_MODIFIED), true));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::FLOAT, "animation/optimizer/max_linear_error"), 0.05));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::FLOAT, "animation/optimizer/max_angular_error"), 0.01));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::FLOAT, "animation/optimizer/max_angle"), 22));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::BOOL, "animation/optimizer/remove_unused_tracks"), true));
-	r_options->push_back(ImportOption(PropertyInfo(Variant::INT, "animation/clips/amount", PROPERTY_HINT_RANGE, "0,256,1", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_UPDATE_ALL_IF_MODIFIED), 0));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::FLOAT, "nodes/root_scale", PROPERTY_HINT_RANGE, "0.001,1000,0.001"), 1.0));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::STRING, "nodes/custom_script", PROPERTY_HINT_FILE, script_ext_hint), ""));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::INT, "nodes/storage", PROPERTY_HINT_ENUM, "Single Scene,Instanced Sub-Scenes"), scenes_out ? 1 : 0));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::INT, "materials/location", PROPERTY_HINT_ENUM, "Node,Mesh"), (meshes_out || materials_out) ? 1 : 0));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::INT, "materials/storage", PROPERTY_HINT_ENUM, "Built-In,Files (.material),Files (.tres)", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_UPDATE_ALL_IF_MODIFIED), materials_out ? 1 : 0));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::BOOL, "materials/keep_on_reimport"), materials_out));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::BOOL, "meshes/compress"), true));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::BOOL, "meshes/ensure_tangents"), true));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::INT, "meshes/storage", PROPERTY_HINT_ENUM, "Built-In,Files (.mesh),Files (.tres)"), meshes_out ? 1 : 0));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::INT, "meshes/light_baking", PROPERTY_HINT_ENUM, "Disabled,Enable,Gen Lightmaps", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_UPDATE_ALL_IF_MODIFIED), 0));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::FLOAT, "meshes/lightmap_texel_size", PROPERTY_HINT_RANGE, "0.001,100,0.001"), 0.1));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::BOOL, "skins/use_named_skins"), true));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::BOOL, "external_files/store_in_subdir"), false));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::BOOL, "animation/import", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_UPDATE_ALL_IF_MODIFIED), true));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::FLOAT, "animation/fps", PROPERTY_HINT_RANGE, "1,120,1"), 15));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::STRING, "animation/filter_script", PROPERTY_HINT_MULTILINE_TEXT), ""));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::INT, "animation/storage", PROPERTY_HINT_ENUM, "Built-In,Files (.anim),Files (.tres)", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_UPDATE_ALL_IF_MODIFIED), animations_out));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::BOOL, "animation/keep_custom_tracks"), animations_out));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::BOOL, "animation/optimizer/enabled", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_UPDATE_ALL_IF_MODIFIED), true));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::FLOAT, "animation/optimizer/max_linear_error"), 0.05));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::FLOAT, "animation/optimizer/max_angular_error"), 0.01));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::FLOAT, "animation/optimizer/max_angle"), 22));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::BOOL, "animation/optimizer/remove_unused_tracks"), true));
+	r_options->push_back(ImportOption(PropertyInfo(Variant::Type::INT, "animation/clips/amount", PROPERTY_HINT_RANGE, "0,256,1", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_UPDATE_ALL_IF_MODIFIED), 0));
 	for (int i = 0; i < 256; i++) {
-		r_options->push_back(ImportOption(PropertyInfo(Variant::STRING, "animation/clip_" + itos(i + 1) + "/name"), ""));
-		r_options->push_back(ImportOption(PropertyInfo(Variant::INT, "animation/clip_" + itos(i + 1) + "/start_frame"), 0));
-		r_options->push_back(ImportOption(PropertyInfo(Variant::INT, "animation/clip_" + itos(i + 1) + "/end_frame"), 0));
-		r_options->push_back(ImportOption(PropertyInfo(Variant::BOOL, "animation/clip_" + itos(i + 1) + "/loops"), false));
+		r_options->push_back(ImportOption(PropertyInfo(Variant::Type::STRING, "animation/clip_" + itos(i + 1) + "/name"), ""));
+		r_options->push_back(ImportOption(PropertyInfo(Variant::Type::INT, "animation/clip_" + itos(i + 1) + "/start_frame"), 0));
+		r_options->push_back(ImportOption(PropertyInfo(Variant::Type::INT, "animation/clip_" + itos(i + 1) + "/end_frame"), 0));
+		r_options->push_back(ImportOption(PropertyInfo(Variant::Type::BOOL, "animation/clip_" + itos(i + 1) + "/loops"), false));
 	}
 }
 

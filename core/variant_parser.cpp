@@ -1398,16 +1398,16 @@ static String rtosfix(double p_value) {
 
 Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_string_func, void *p_store_string_ud, EncodeResourceFunc p_encode_res_func, void *p_encode_res_ud) {
 	switch (p_variant.get_type()) {
-		case Variant::NIL: {
+		case Variant::Type::NIL: {
 			p_store_string_func(p_store_string_ud, "null");
 		} break;
-		case Variant::BOOL: {
+		case Variant::Type::BOOL: {
 			p_store_string_func(p_store_string_ud, p_variant.operator bool() ? "true" : "false");
 		} break;
-		case Variant::INT: {
+		case Variant::Type::INT: {
 			p_store_string_func(p_store_string_ud, itos(p_variant.operator int64_t()));
 		} break;
-		case Variant::FLOAT: {
+		case Variant::Type::FLOAT: {
 			String s = rtosfix(p_variant.operator real_t());
 			if (s != "inf" && s != "nan") {
 				if (s.find(".") == -1 && s.find("e") == -1) {
@@ -1416,54 +1416,54 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 			}
 			p_store_string_func(p_store_string_ud, s);
 		} break;
-		case Variant::STRING: {
+		case Variant::Type::STRING: {
 			String str = p_variant;
 
 			str = "\"" + str.c_escape_multiline() + "\"";
 			p_store_string_func(p_store_string_ud, str);
 		} break;
-		case Variant::VECTOR2: {
+		case Variant::Type::VECTOR2: {
 			Vector2 v = p_variant;
 			p_store_string_func(p_store_string_ud, "Vector2( " + rtosfix(v.x) + ", " + rtosfix(v.y) + " )");
 		} break;
-		case Variant::VECTOR2I: {
+		case Variant::Type::VECTOR2I: {
 			Vector2i v = p_variant;
 			p_store_string_func(p_store_string_ud, "Vector2i( " + itos(v.x) + ", " + itos(v.y) + " )");
 		} break;
-		case Variant::RECT2: {
+		case Variant::Type::RECT2: {
 			Rect2 aabb = p_variant;
 			p_store_string_func(p_store_string_ud, "Rect2( " + rtosfix(aabb.position.x) + ", " + rtosfix(aabb.position.y) + ", " + rtosfix(aabb.size.x) + ", " + rtosfix(aabb.size.y) + " )");
 
 		} break;
-		case Variant::RECT2I: {
+		case Variant::Type::RECT2I: {
 			Rect2i aabb = p_variant;
 			p_store_string_func(p_store_string_ud, "Rect2i( " + itos(aabb.position.x) + ", " + itos(aabb.position.y) + ", " + itos(aabb.size.x) + ", " + itos(aabb.size.y) + " )");
 
 		} break;
-		case Variant::VECTOR3: {
+		case Variant::Type::VECTOR3: {
 			Vector3 v = p_variant;
 			p_store_string_func(p_store_string_ud, "Vector3( " + rtosfix(v.x) + ", " + rtosfix(v.y) + ", " + rtosfix(v.z) + " )");
 		} break;
-		case Variant::VECTOR3I: {
+		case Variant::Type::VECTOR3I: {
 			Vector3i v = p_variant;
 			p_store_string_func(p_store_string_ud, "Vector3i( " + itos(v.x) + ", " + itos(v.y) + ", " + itos(v.z) + " )");
 		} break;
-		case Variant::PLANE: {
+		case Variant::Type::PLANE: {
 			Plane p = p_variant;
 			p_store_string_func(p_store_string_ud, "Plane( " + rtosfix(p.normal.x) + ", " + rtosfix(p.normal.y) + ", " + rtosfix(p.normal.z) + ", " + rtosfix(p.d) + " )");
 
 		} break;
-		case Variant::AABB: {
+		case Variant::Type::AABB: {
 			AABB aabb = p_variant;
 			p_store_string_func(p_store_string_ud, "AABB( " + rtosfix(aabb.position.x) + ", " + rtosfix(aabb.position.y) + ", " + rtosfix(aabb.position.z) + ", " + rtosfix(aabb.size.x) + ", " + rtosfix(aabb.size.y) + ", " + rtosfix(aabb.size.z) + " )");
 
 		} break;
-		case Variant::QUAT: {
+		case Variant::Type::QUAT: {
 			Quat quat = p_variant;
 			p_store_string_func(p_store_string_ud, "Quat( " + rtosfix(quat.x) + ", " + rtosfix(quat.y) + ", " + rtosfix(quat.z) + ", " + rtosfix(quat.w) + " )");
 
 		} break;
-		case Variant::TRANSFORM2D: {
+		case Variant::Type::TRANSFORM2D: {
 			String s = "Transform2D( ";
 			Transform2D m3 = p_variant;
 			for (int i = 0; i < 3; i++) {
@@ -1478,7 +1478,7 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 			p_store_string_func(p_store_string_ud, s + " )");
 
 		} break;
-		case Variant::BASIS: {
+		case Variant::Type::BASIS: {
 			String s = "Basis( ";
 			Basis m3 = p_variant;
 			for (int i = 0; i < 3; i++) {
@@ -1493,7 +1493,7 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 			p_store_string_func(p_store_string_ud, s + " )");
 
 		} break;
-		case Variant::TRANSFORM: {
+		case Variant::Type::TRANSFORM: {
 			String s = "Transform( ";
 			Transform t = p_variant;
 			Basis &m3 = t.basis;
@@ -1512,19 +1512,19 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 		} break;
 
 		// misc types
-		case Variant::COLOR: {
+		case Variant::Type::COLOR: {
 			Color c = p_variant;
 			p_store_string_func(p_store_string_ud, "Color( " + rtosfix(c.r) + ", " + rtosfix(c.g) + ", " + rtosfix(c.b) + ", " + rtosfix(c.a) + " )");
 
 		} break;
-		case Variant::STRING_NAME: {
+		case Variant::Type::STRING_NAME: {
 			String str = p_variant;
 
 			str = "@\"" + str.c_escape() + "\"";
 			p_store_string_func(p_store_string_ud, str);
 
 		} break;
-		case Variant::NODE_PATH: {
+		case Variant::Type::NODE_PATH: {
 			String str = p_variant;
 
 			str = "NodePath(\"" + str.c_escape() + "\")";
@@ -1532,7 +1532,7 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 
 		} break;
 
-		case Variant::OBJECT: {
+		case Variant::Type::OBJECT: {
 			Object *obj = p_variant;
 
 			if (!obj) {
@@ -1590,7 +1590,7 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 
 		} break;
 
-		case Variant::DICTIONARY: {
+		case Variant::Type::DICTIONARY: {
 			Dictionary dict = p_variant;
 
 			List<Variant> keys;
@@ -1614,7 +1614,7 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 			p_store_string_func(p_store_string_ud, "\n}");
 
 		} break;
-		case Variant::ARRAY: {
+		case Variant::Type::ARRAY: {
 			p_store_string_func(p_store_string_ud, "[ ");
 			Array array = p_variant;
 			int len = array.size();
@@ -1628,7 +1628,7 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 
 		} break;
 
-		case Variant::PACKED_BYTE_ARRAY: {
+		case Variant::Type::PACKED_BYTE_ARRAY: {
 			p_store_string_func(p_store_string_ud, "PackedByteArray( ");
 			String s;
 			Vector<uint8_t> data = p_variant;
@@ -1646,7 +1646,7 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 			p_store_string_func(p_store_string_ud, " )");
 
 		} break;
-		case Variant::PACKED_INT32_ARRAY: {
+		case Variant::Type::PACKED_INT32_ARRAY: {
 			p_store_string_func(p_store_string_ud, "PackedInt32Array( ");
 			Vector<int32_t> data = p_variant;
 			int32_t len = data.size();
@@ -1663,7 +1663,7 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 			p_store_string_func(p_store_string_ud, " )");
 
 		} break;
-		case Variant::PACKED_INT64_ARRAY: {
+		case Variant::Type::PACKED_INT64_ARRAY: {
 			p_store_string_func(p_store_string_ud, "PackedInt64Array( ");
 			Vector<int64_t> data = p_variant;
 			int64_t len = data.size();
@@ -1680,7 +1680,7 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 			p_store_string_func(p_store_string_ud, " )");
 
 		} break;
-		case Variant::PACKED_FLOAT32_ARRAY: {
+		case Variant::Type::PACKED_FLOAT32_ARRAY: {
 			p_store_string_func(p_store_string_ud, "PackedFloat32Array( ");
 			Vector<float> data = p_variant;
 			int len = data.size();
@@ -1696,7 +1696,7 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 			p_store_string_func(p_store_string_ud, " )");
 
 		} break;
-		case Variant::PACKED_FLOAT64_ARRAY: {
+		case Variant::Type::PACKED_FLOAT64_ARRAY: {
 			p_store_string_func(p_store_string_ud, "PackedFloat64Array( ");
 			Vector<double> data = p_variant;
 			int len = data.size();
@@ -1712,7 +1712,7 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 			p_store_string_func(p_store_string_ud, " )");
 
 		} break;
-		case Variant::PACKED_STRING_ARRAY: {
+		case Variant::Type::PACKED_STRING_ARRAY: {
 			p_store_string_func(p_store_string_ud, "PackedStringArray( ");
 			Vector<String> data = p_variant;
 			int len = data.size();
@@ -1732,7 +1732,7 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 			p_store_string_func(p_store_string_ud, " )");
 
 		} break;
-		case Variant::PACKED_VECTOR2_ARRAY: {
+		case Variant::Type::PACKED_VECTOR2_ARRAY: {
 			p_store_string_func(p_store_string_ud, "PackedVector2Array( ");
 			Vector<Vector2> data = p_variant;
 			int len = data.size();
@@ -1748,7 +1748,7 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 			p_store_string_func(p_store_string_ud, " )");
 
 		} break;
-		case Variant::PACKED_VECTOR3_ARRAY: {
+		case Variant::Type::PACKED_VECTOR3_ARRAY: {
 			p_store_string_func(p_store_string_ud, "PackedVector3Array( ");
 			Vector<Vector3> data = p_variant;
 			int len = data.size();
@@ -1764,7 +1764,7 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 			p_store_string_func(p_store_string_ud, " )");
 
 		} break;
-		case Variant::PACKED_COLOR_ARRAY: {
+		case Variant::Type::PACKED_COLOR_ARRAY: {
 			p_store_string_func(p_store_string_ud, "PackedColorArray( ");
 
 			Vector<Color> data = p_variant;

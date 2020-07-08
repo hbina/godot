@@ -1484,7 +1484,7 @@ void HeightMapShape3DSW::_setup(Vector<real_t> p_heights, int p_width, int p_dep
 }
 
 void HeightMapShape3DSW::set_data(const Variant &p_data) {
-	ERR_FAIL_COND(p_data.get_type() != Variant::DICTIONARY);
+	ERR_FAIL_COND(p_data.get_type() != Variant::Type::DICTIONARY);
 	Dictionary d = p_data;
 	ERR_FAIL_COND(!d.has("width"));
 	ERR_FAIL_COND(!d.has("depth"));

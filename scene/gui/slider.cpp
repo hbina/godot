@@ -261,10 +261,10 @@ void Slider::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_scrollable", "scrollable"), &Slider::set_scrollable);
 	ClassDB::bind_method(D_METHOD("is_scrollable"), &Slider::is_scrollable);
 
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "editable"), "set_editable", "is_editable");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "scrollable"), "set_scrollable", "is_scrollable");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "tick_count", PROPERTY_HINT_RANGE, "0,4096,1"), "set_ticks", "get_ticks");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "ticks_on_borders"), "set_ticks_on_borders", "get_ticks_on_borders");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "editable"), "set_editable", "is_editable");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "scrollable"), "set_scrollable", "is_scrollable");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "tick_count", PROPERTY_HINT_RANGE, "0,4096,1"), "set_ticks", "get_ticks");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "ticks_on_borders"), "set_ticks_on_borders", "get_ticks_on_borders");
 }
 
 Slider::Slider(Orientation p_orientation) {

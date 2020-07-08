@@ -88,14 +88,14 @@ void DynamicFontData::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_hinting", "mode"), &DynamicFontData::set_hinting);
 	ClassDB::bind_method(D_METHOD("get_hinting"), &DynamicFontData::get_hinting);
 
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "antialiased"), "set_antialiased", "is_antialiased");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "hinting", PROPERTY_HINT_ENUM, "None,Light,Normal"), "set_hinting", "get_hinting");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "antialiased"), "set_antialiased", "is_antialiased");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "hinting", PROPERTY_HINT_ENUM, "None,Light,Normal"), "set_hinting", "get_hinting");
 
 	BIND_ENUM_CONSTANT(HINTING_NONE);
 	BIND_ENUM_CONSTANT(HINTING_LIGHT);
 	BIND_ENUM_CONSTANT(HINTING_NORMAL);
 
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "font_path", PROPERTY_HINT_FILE, "*.ttf,*.otf"), "set_font_path", "get_font_path");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::STRING, "font_path", PROPERTY_HINT_FILE, "*.ttf,*.otf"), "set_font_path", "get_font_path");
 }
 
 DynamicFontData::DynamicFontData() {
@@ -954,10 +954,10 @@ bool DynamicFont::_get(const StringName &p_name, Variant &r_ret) const {
 
 void DynamicFont::_get_property_list(List<PropertyInfo> *p_list) const {
 	for (int i = 0; i < fallbacks.size(); i++) {
-		p_list->push_back(PropertyInfo(Variant::OBJECT, "fallback/" + itos(i), PROPERTY_HINT_RESOURCE_TYPE, "DynamicFontData"));
+		p_list->push_back(PropertyInfo(Variant::Type::OBJECT, "fallback/" + itos(i), PROPERTY_HINT_RESOURCE_TYPE, "DynamicFontData"));
 	}
 
-	p_list->push_back(PropertyInfo(Variant::OBJECT, "fallback/" + itos(fallbacks.size()), PROPERTY_HINT_RESOURCE_TYPE, "DynamicFontData"));
+	p_list->push_back(PropertyInfo(Variant::Type::OBJECT, "fallback/" + itos(fallbacks.size()), PROPERTY_HINT_RESOURCE_TYPE, "DynamicFontData"));
 }
 
 void DynamicFont::_bind_methods() {
@@ -983,16 +983,16 @@ void DynamicFont::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("get_fallback_count"), &DynamicFont::get_fallback_count);
 
 	ADD_GROUP("Settings", "");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "size", PROPERTY_HINT_RANGE, "1,1024,1"), "set_size", "get_size");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "outline_size", PROPERTY_HINT_RANGE, "0,1024,1"), "set_outline_size", "get_outline_size");
-	ADD_PROPERTY(PropertyInfo(Variant::COLOR, "outline_color"), "set_outline_color", "get_outline_color");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "size", PROPERTY_HINT_RANGE, "1,1024,1"), "set_size", "get_size");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "outline_size", PROPERTY_HINT_RANGE, "0,1024,1"), "set_outline_size", "get_outline_size");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::COLOR, "outline_color"), "set_outline_color", "get_outline_color");
 	ADD_GROUP("Extra Spacing", "extra_spacing");
-	ADD_PROPERTYI(PropertyInfo(Variant::INT, "extra_spacing_top"), "set_spacing", "get_spacing", SPACING_TOP);
-	ADD_PROPERTYI(PropertyInfo(Variant::INT, "extra_spacing_bottom"), "set_spacing", "get_spacing", SPACING_BOTTOM);
-	ADD_PROPERTYI(PropertyInfo(Variant::INT, "extra_spacing_char"), "set_spacing", "get_spacing", SPACING_CHAR);
-	ADD_PROPERTYI(PropertyInfo(Variant::INT, "extra_spacing_space"), "set_spacing", "get_spacing", SPACING_SPACE);
+	ADD_PROPERTYI(PropertyInfo(Variant::Type::INT, "extra_spacing_top"), "set_spacing", "get_spacing", SPACING_TOP);
+	ADD_PROPERTYI(PropertyInfo(Variant::Type::INT, "extra_spacing_bottom"), "set_spacing", "get_spacing", SPACING_BOTTOM);
+	ADD_PROPERTYI(PropertyInfo(Variant::Type::INT, "extra_spacing_char"), "set_spacing", "get_spacing", SPACING_CHAR);
+	ADD_PROPERTYI(PropertyInfo(Variant::Type::INT, "extra_spacing_space"), "set_spacing", "get_spacing", SPACING_SPACE);
 	ADD_GROUP("Font", "");
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "font_data", PROPERTY_HINT_RESOURCE_TYPE, "DynamicFontData"), "set_font_data", "get_font_data");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "font_data", PROPERTY_HINT_RESOURCE_TYPE, "DynamicFontData"), "set_font_data", "get_font_data");
 
 	BIND_ENUM_CONSTANT(SPACING_TOP);
 	BIND_ENUM_CONSTANT(SPACING_BOTTOM);

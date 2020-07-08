@@ -417,7 +417,7 @@ Object *CreateDialog::instance_selected() {
 
 	Variant md = selected->get_metadata(0);
 	Object *obj = nullptr;
-	if (md.get_type() != Variant::NIL) {
+	if (md.get_type() != Variant::Type::NIL) {
 		String custom = md;
 		if (ScriptServer::is_global_class(custom)) {
 			obj = EditorNode::get_editor_data().script_class_instance(custom);
@@ -438,7 +438,7 @@ Object *CreateDialog::instance_selected() {
 
 	for (List<PropertyInfo>::Element *E = pinfo.front(); E; E = E->next()) {
 		PropertyInfo pi = E->get();
-		if (pi.type == Variant::OBJECT && pi.usage & PROPERTY_USAGE_EDITOR_INSTANTIATE_OBJECT) {
+		if (pi.type == Variant::Type::OBJECT && pi.usage & PROPERTY_USAGE_EDITOR_INSTANTIATE_OBJECT) {
 			Object *prop = ClassDB::instance(pi.class_name);
 			obj->set(pi.name, prop);
 		}

@@ -73,15 +73,15 @@ public:
 
 protected:
 	static void _bind_methods() {
-		RD_BIND(Variant::INT, RDTextureFormat, format);
-		RD_BIND(Variant::INT, RDTextureFormat, width);
-		RD_BIND(Variant::INT, RDTextureFormat, height);
-		RD_BIND(Variant::INT, RDTextureFormat, depth);
-		RD_BIND(Variant::INT, RDTextureFormat, array_layers);
-		RD_BIND(Variant::INT, RDTextureFormat, mipmaps);
-		RD_BIND(Variant::INT, RDTextureFormat, type);
-		RD_BIND(Variant::INT, RDTextureFormat, samples);
-		RD_BIND(Variant::INT, RDTextureFormat, usage_bits);
+		RD_BIND(Variant::Type::INT, RDTextureFormat, format);
+		RD_BIND(Variant::Type::INT, RDTextureFormat, width);
+		RD_BIND(Variant::Type::INT, RDTextureFormat, height);
+		RD_BIND(Variant::Type::INT, RDTextureFormat, depth);
+		RD_BIND(Variant::Type::INT, RDTextureFormat, array_layers);
+		RD_BIND(Variant::Type::INT, RDTextureFormat, mipmaps);
+		RD_BIND(Variant::Type::INT, RDTextureFormat, type);
+		RD_BIND(Variant::Type::INT, RDTextureFormat, samples);
+		RD_BIND(Variant::Type::INT, RDTextureFormat, usage_bits);
 		ClassDB::bind_method(D_METHOD("add_shareable_format", "format"), &RDTextureFormat::add_shareable_format);
 		ClassDB::bind_method(D_METHOD("remove_shareable_format", "format"), &RDTextureFormat::remove_shareable_format);
 	}
@@ -102,11 +102,11 @@ public:
 	RD_SETGET(RD::TextureSwizzle, swizzle_a)
 protected:
 	static void _bind_methods() {
-		RD_BIND(Variant::INT, RDTextureView, format_override);
-		RD_BIND(Variant::INT, RDTextureView, swizzle_r);
-		RD_BIND(Variant::INT, RDTextureView, swizzle_g);
-		RD_BIND(Variant::INT, RDTextureView, swizzle_b);
-		RD_BIND(Variant::INT, RDTextureView, swizzle_a);
+		RD_BIND(Variant::Type::INT, RDTextureView, format_override);
+		RD_BIND(Variant::Type::INT, RDTextureView, swizzle_r);
+		RD_BIND(Variant::Type::INT, RDTextureView, swizzle_g);
+		RD_BIND(Variant::Type::INT, RDTextureView, swizzle_b);
+		RD_BIND(Variant::Type::INT, RDTextureView, swizzle_a);
 	}
 };
 
@@ -122,9 +122,9 @@ public:
 	RD_SETGET(uint32_t, usage_flags)
 protected:
 	static void _bind_methods() {
-		RD_BIND(Variant::INT, RDAttachmentFormat, format);
-		RD_BIND(Variant::INT, RDAttachmentFormat, samples);
-		RD_BIND(Variant::INT, RDAttachmentFormat, usage_flags);
+		RD_BIND(Variant::Type::INT, RDAttachmentFormat, format);
+		RD_BIND(Variant::Type::INT, RDAttachmentFormat, samples);
+		RD_BIND(Variant::Type::INT, RDAttachmentFormat, usage_flags);
 	}
 };
 
@@ -153,21 +153,21 @@ public:
 
 protected:
 	static void _bind_methods() {
-		RD_BIND(Variant::INT, RDSamplerState, mag_filter);
-		RD_BIND(Variant::INT, RDSamplerState, min_filter);
-		RD_BIND(Variant::INT, RDSamplerState, mip_filter);
-		RD_BIND(Variant::INT, RDSamplerState, repeat_u);
-		RD_BIND(Variant::INT, RDSamplerState, repeat_v);
-		RD_BIND(Variant::INT, RDSamplerState, repeat_w);
-		RD_BIND(Variant::FLOAT, RDSamplerState, lod_bias);
-		RD_BIND(Variant::BOOL, RDSamplerState, use_anisotropy);
-		RD_BIND(Variant::FLOAT, RDSamplerState, anisotropy_max);
-		RD_BIND(Variant::BOOL, RDSamplerState, enable_compare);
-		RD_BIND(Variant::INT, RDSamplerState, compare_op);
-		RD_BIND(Variant::FLOAT, RDSamplerState, min_lod);
-		RD_BIND(Variant::FLOAT, RDSamplerState, max_lod);
-		RD_BIND(Variant::INT, RDSamplerState, border_color);
-		RD_BIND(Variant::BOOL, RDSamplerState, unnormalized_uvw);
+		RD_BIND(Variant::Type::INT, RDSamplerState, mag_filter);
+		RD_BIND(Variant::Type::INT, RDSamplerState, min_filter);
+		RD_BIND(Variant::Type::INT, RDSamplerState, mip_filter);
+		RD_BIND(Variant::Type::INT, RDSamplerState, repeat_u);
+		RD_BIND(Variant::Type::INT, RDSamplerState, repeat_v);
+		RD_BIND(Variant::Type::INT, RDSamplerState, repeat_w);
+		RD_BIND(Variant::Type::FLOAT, RDSamplerState, lod_bias);
+		RD_BIND(Variant::Type::BOOL, RDSamplerState, use_anisotropy);
+		RD_BIND(Variant::Type::FLOAT, RDSamplerState, anisotropy_max);
+		RD_BIND(Variant::Type::BOOL, RDSamplerState, enable_compare);
+		RD_BIND(Variant::Type::INT, RDSamplerState, compare_op);
+		RD_BIND(Variant::Type::FLOAT, RDSamplerState, min_lod);
+		RD_BIND(Variant::Type::FLOAT, RDSamplerState, max_lod);
+		RD_BIND(Variant::Type::INT, RDSamplerState, border_color);
+		RD_BIND(Variant::Type::BOOL, RDSamplerState, unnormalized_uvw);
 	}
 };
 
@@ -185,11 +185,11 @@ public:
 
 protected:
 	static void _bind_methods() {
-		RD_BIND(Variant::INT, RDVertexAttribute, location);
-		RD_BIND(Variant::INT, RDVertexAttribute, offset);
-		RD_BIND(Variant::INT, RDVertexAttribute, format);
-		RD_BIND(Variant::INT, RDVertexAttribute, stride);
-		RD_BIND(Variant::INT, RDVertexAttribute, frequency);
+		RD_BIND(Variant::Type::INT, RDVertexAttribute, location);
+		RD_BIND(Variant::Type::INT, RDVertexAttribute, offset);
+		RD_BIND(Variant::Type::INT, RDVertexAttribute, format);
+		RD_BIND(Variant::Type::INT, RDVertexAttribute, stride);
+		RD_BIND(Variant::Type::INT, RDVertexAttribute, frequency);
 	}
 };
 class RDShaderSource : public Reference {
@@ -225,13 +225,13 @@ protected:
 		ClassDB::bind_method(D_METHOD("get_language"), &RDShaderSource::get_language);
 
 		ADD_GROUP("Source", "source_");
-		ADD_PROPERTYI(PropertyInfo(Variant::STRING, "source_vertex"), "set_stage_source", "get_stage_source", RD::SHADER_STAGE_VERTEX);
-		ADD_PROPERTYI(PropertyInfo(Variant::STRING, "source_fragment"), "set_stage_source", "get_stage_source", RD::SHADER_STAGE_FRAGMENT);
-		ADD_PROPERTYI(PropertyInfo(Variant::STRING, "source_tesselation_control"), "set_stage_source", "get_stage_source", RD::SHADER_STAGE_TESSELATION_CONTROL);
-		ADD_PROPERTYI(PropertyInfo(Variant::STRING, "source_tesselation_evaluation"), "set_stage_source", "get_stage_source", RD::SHADER_STAGE_TESSELATION_EVALUATION);
-		ADD_PROPERTYI(PropertyInfo(Variant::STRING, "source_compute"), "set_stage_source", "get_stage_source", RD::SHADER_STAGE_COMPUTE);
+		ADD_PROPERTYI(PropertyInfo(Variant::Type::STRING, "source_vertex"), "set_stage_source", "get_stage_source", RD::SHADER_STAGE_VERTEX);
+		ADD_PROPERTYI(PropertyInfo(Variant::Type::STRING, "source_fragment"), "set_stage_source", "get_stage_source", RD::SHADER_STAGE_FRAGMENT);
+		ADD_PROPERTYI(PropertyInfo(Variant::Type::STRING, "source_tesselation_control"), "set_stage_source", "get_stage_source", RD::SHADER_STAGE_TESSELATION_CONTROL);
+		ADD_PROPERTYI(PropertyInfo(Variant::Type::STRING, "source_tesselation_evaluation"), "set_stage_source", "get_stage_source", RD::SHADER_STAGE_TESSELATION_EVALUATION);
+		ADD_PROPERTYI(PropertyInfo(Variant::Type::STRING, "source_compute"), "set_stage_source", "get_stage_source", RD::SHADER_STAGE_COMPUTE);
 		ADD_GROUP("Syntax", "source_");
-		ADD_PROPERTY(PropertyInfo(Variant::INT, "language", PROPERTY_HINT_RANGE, "GLSL,HLSL"), "set_language", "get_language");
+		ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "language", PROPERTY_HINT_RANGE, "GLSL,HLSL"), "set_language", "get_language");
 	}
 };
 
@@ -271,17 +271,17 @@ protected:
 		ClassDB::bind_method(D_METHOD("get_stage_compile_error", "stage"), &RDShaderBytecode::get_stage_compile_error);
 
 		ADD_GROUP("Bytecode", "bytecode_");
-		ADD_PROPERTYI(PropertyInfo(Variant::PACKED_BYTE_ARRAY, "bytecode_vertex"), "set_stage_bytecode", "get_stage_bytecode", RD::SHADER_STAGE_VERTEX);
-		ADD_PROPERTYI(PropertyInfo(Variant::PACKED_BYTE_ARRAY, "bytecode_fragment"), "set_stage_bytecode", "get_stage_bytecode", RD::SHADER_STAGE_FRAGMENT);
-		ADD_PROPERTYI(PropertyInfo(Variant::PACKED_BYTE_ARRAY, "bytecode_tesselation_control"), "set_stage_bytecode", "get_stage_bytecode", RD::SHADER_STAGE_TESSELATION_CONTROL);
-		ADD_PROPERTYI(PropertyInfo(Variant::PACKED_BYTE_ARRAY, "bytecode_tesselation_evaluation"), "set_stage_bytecode", "get_stage_bytecode", RD::SHADER_STAGE_TESSELATION_EVALUATION);
-		ADD_PROPERTYI(PropertyInfo(Variant::PACKED_BYTE_ARRAY, "bytecode_compute"), "set_stage_bytecode", "get_stage_bytecode", RD::SHADER_STAGE_COMPUTE);
+		ADD_PROPERTYI(PropertyInfo(Variant::Type::PACKED_BYTE_ARRAY, "bytecode_vertex"), "set_stage_bytecode", "get_stage_bytecode", RD::SHADER_STAGE_VERTEX);
+		ADD_PROPERTYI(PropertyInfo(Variant::Type::PACKED_BYTE_ARRAY, "bytecode_fragment"), "set_stage_bytecode", "get_stage_bytecode", RD::SHADER_STAGE_FRAGMENT);
+		ADD_PROPERTYI(PropertyInfo(Variant::Type::PACKED_BYTE_ARRAY, "bytecode_tesselation_control"), "set_stage_bytecode", "get_stage_bytecode", RD::SHADER_STAGE_TESSELATION_CONTROL);
+		ADD_PROPERTYI(PropertyInfo(Variant::Type::PACKED_BYTE_ARRAY, "bytecode_tesselation_evaluation"), "set_stage_bytecode", "get_stage_bytecode", RD::SHADER_STAGE_TESSELATION_EVALUATION);
+		ADD_PROPERTYI(PropertyInfo(Variant::Type::PACKED_BYTE_ARRAY, "bytecode_compute"), "set_stage_bytecode", "get_stage_bytecode", RD::SHADER_STAGE_COMPUTE);
 		ADD_GROUP("Compile Error", "compile_error_");
-		ADD_PROPERTYI(PropertyInfo(Variant::STRING, "compile_error_vertex"), "set_stage_compile_error", "get_stage_compile_error", RD::SHADER_STAGE_VERTEX);
-		ADD_PROPERTYI(PropertyInfo(Variant::STRING, "compile_error_fragment"), "set_stage_compile_error", "get_stage_compile_error", RD::SHADER_STAGE_FRAGMENT);
-		ADD_PROPERTYI(PropertyInfo(Variant::STRING, "compile_error_tesselation_control"), "set_stage_compile_error", "get_stage_compile_error", RD::SHADER_STAGE_TESSELATION_CONTROL);
-		ADD_PROPERTYI(PropertyInfo(Variant::STRING, "compile_error_tesselation_evaluation"), "set_stage_compile_error", "get_stage_compile_error", RD::SHADER_STAGE_TESSELATION_EVALUATION);
-		ADD_PROPERTYI(PropertyInfo(Variant::STRING, "compile_error_compute"), "set_stage_compile_error", "get_stage_compile_error", RD::SHADER_STAGE_COMPUTE);
+		ADD_PROPERTYI(PropertyInfo(Variant::Type::STRING, "compile_error_vertex"), "set_stage_compile_error", "get_stage_compile_error", RD::SHADER_STAGE_VERTEX);
+		ADD_PROPERTYI(PropertyInfo(Variant::Type::STRING, "compile_error_fragment"), "set_stage_compile_error", "get_stage_compile_error", RD::SHADER_STAGE_FRAGMENT);
+		ADD_PROPERTYI(PropertyInfo(Variant::Type::STRING, "compile_error_tesselation_control"), "set_stage_compile_error", "get_stage_compile_error", RD::SHADER_STAGE_TESSELATION_CONTROL);
+		ADD_PROPERTYI(PropertyInfo(Variant::Type::STRING, "compile_error_tesselation_evaluation"), "set_stage_compile_error", "get_stage_compile_error", RD::SHADER_STAGE_TESSELATION_EVALUATION);
+		ADD_PROPERTYI(PropertyInfo(Variant::Type::STRING, "compile_error_compute"), "set_stage_compile_error", "get_stage_compile_error", RD::SHADER_STAGE_COMPUTE);
 	}
 };
 
@@ -381,8 +381,8 @@ protected:
 		ClassDB::bind_method(D_METHOD("_set_versions", "versions"), &RDShaderFile::_set_versions);
 		ClassDB::bind_method(D_METHOD("_get_versions"), &RDShaderFile::_get_versions);
 
-		ADD_PROPERTY(PropertyInfo(Variant::DICTIONARY, "_versions", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_versions", "_get_versions");
-		ADD_PROPERTY(PropertyInfo(Variant::STRING, "base_error"), "set_base_error", "get_base_error");
+		ADD_PROPERTY(PropertyInfo(Variant::Type::DICTIONARY, "_versions", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_versions", "_get_versions");
+		ADD_PROPERTY(PropertyInfo(Variant::Type::STRING, "base_error"), "set_base_error", "get_base_error");
 	}
 };
 
@@ -415,13 +415,13 @@ protected:
 		}
 	}
 	static void _bind_methods() {
-		RD_BIND(Variant::INT, RDUniform, type);
-		RD_BIND(Variant::INT, RDUniform, binding);
+		RD_BIND(Variant::Type::INT, RDUniform, type);
+		RD_BIND(Variant::Type::INT, RDUniform, binding);
 		ClassDB::bind_method(D_METHOD("add_id", "id"), &RDUniform::add_id);
 		ClassDB::bind_method(D_METHOD("clear_ids"), &RDUniform::clear_ids);
 		ClassDB::bind_method(D_METHOD("_set_ids", "ids"), &RDUniform::_set_ids);
 		ClassDB::bind_method(D_METHOD("get_ids"), &RDUniform::get_ids);
-		ADD_PROPERTY(PropertyInfo(Variant::ARRAY, "_ids", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_INTERNAL), "_set_ids", "get_ids");
+		ADD_PROPERTY(PropertyInfo(Variant::Type::ARRAY, "_ids", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_INTERNAL), "_set_ids", "get_ids");
 	}
 };
 class RDPipelineRasterizationState : public Reference {
@@ -445,17 +445,17 @@ public:
 
 protected:
 	static void _bind_methods() {
-		RD_BIND(Variant::BOOL, RDPipelineRasterizationState, enable_depth_clamp);
-		RD_BIND(Variant::BOOL, RDPipelineRasterizationState, discard_primitives);
-		RD_BIND(Variant::BOOL, RDPipelineRasterizationState, wireframe);
-		RD_BIND(Variant::INT, RDPipelineRasterizationState, cull_mode);
-		RD_BIND(Variant::INT, RDPipelineRasterizationState, front_face);
-		RD_BIND(Variant::BOOL, RDPipelineRasterizationState, depth_bias_enable);
-		RD_BIND(Variant::FLOAT, RDPipelineRasterizationState, depth_bias_constant_factor);
-		RD_BIND(Variant::FLOAT, RDPipelineRasterizationState, depth_bias_clamp);
-		RD_BIND(Variant::FLOAT, RDPipelineRasterizationState, depth_bias_slope_factor);
-		RD_BIND(Variant::FLOAT, RDPipelineRasterizationState, line_width);
-		RD_BIND(Variant::INT, RDPipelineRasterizationState, patch_control_points);
+		RD_BIND(Variant::Type::BOOL, RDPipelineRasterizationState, enable_depth_clamp);
+		RD_BIND(Variant::Type::BOOL, RDPipelineRasterizationState, discard_primitives);
+		RD_BIND(Variant::Type::BOOL, RDPipelineRasterizationState, wireframe);
+		RD_BIND(Variant::Type::INT, RDPipelineRasterizationState, cull_mode);
+		RD_BIND(Variant::Type::INT, RDPipelineRasterizationState, front_face);
+		RD_BIND(Variant::Type::BOOL, RDPipelineRasterizationState, depth_bias_enable);
+		RD_BIND(Variant::Type::FLOAT, RDPipelineRasterizationState, depth_bias_constant_factor);
+		RD_BIND(Variant::Type::FLOAT, RDPipelineRasterizationState, depth_bias_clamp);
+		RD_BIND(Variant::Type::FLOAT, RDPipelineRasterizationState, depth_bias_slope_factor);
+		RD_BIND(Variant::Type::FLOAT, RDPipelineRasterizationState, line_width);
+		RD_BIND(Variant::Type::INT, RDPipelineRasterizationState, patch_control_points);
 	}
 };
 
@@ -478,15 +478,15 @@ public:
 
 protected:
 	static void _bind_methods() {
-		RD_BIND(Variant::INT, RDPipelineMultisampleState, sample_count);
-		RD_BIND(Variant::BOOL, RDPipelineMultisampleState, enable_sample_shading);
-		RD_BIND(Variant::FLOAT, RDPipelineMultisampleState, min_sample_shading);
-		RD_BIND(Variant::BOOL, RDPipelineMultisampleState, enable_alpha_to_coverage);
-		RD_BIND(Variant::BOOL, RDPipelineMultisampleState, enable_alpha_to_one);
+		RD_BIND(Variant::Type::INT, RDPipelineMultisampleState, sample_count);
+		RD_BIND(Variant::Type::BOOL, RDPipelineMultisampleState, enable_sample_shading);
+		RD_BIND(Variant::Type::FLOAT, RDPipelineMultisampleState, min_sample_shading);
+		RD_BIND(Variant::Type::BOOL, RDPipelineMultisampleState, enable_alpha_to_coverage);
+		RD_BIND(Variant::Type::BOOL, RDPipelineMultisampleState, enable_alpha_to_one);
 
 		ClassDB::bind_method(D_METHOD("set_sample_masks", "masks"), &RDPipelineMultisampleState::set_sample_masks);
 		ClassDB::bind_method(D_METHOD("get_sample_masks"), &RDPipelineMultisampleState::get_sample_masks);
-		ADD_PROPERTY(PropertyInfo(Variant::ARRAY, "sample_masks", PROPERTY_HINT_ARRAY_TYPE, "int"), "set_sample_masks", "get_sample_masks");
+		ADD_PROPERTY(PropertyInfo(Variant::Type::ARRAY, "sample_masks", PROPERTY_HINT_ARRAY_TYPE, "int"), "set_sample_masks", "get_sample_masks");
 	}
 };
 
@@ -523,29 +523,29 @@ public:
 
 protected:
 	static void _bind_methods() {
-		RD_BIND(Variant::BOOL, RDPipelineDepthStencilState, enable_depth_test);
-		RD_BIND(Variant::BOOL, RDPipelineDepthStencilState, enable_depth_write);
-		RD_BIND(Variant::INT, RDPipelineDepthStencilState, depth_compare_operator);
-		RD_BIND(Variant::BOOL, RDPipelineDepthStencilState, enable_depth_range);
-		RD_BIND(Variant::FLOAT, RDPipelineDepthStencilState, depth_range_min);
-		RD_BIND(Variant::FLOAT, RDPipelineDepthStencilState, depth_range_max);
-		RD_BIND(Variant::BOOL, RDPipelineDepthStencilState, enable_stencil);
+		RD_BIND(Variant::Type::BOOL, RDPipelineDepthStencilState, enable_depth_test);
+		RD_BIND(Variant::Type::BOOL, RDPipelineDepthStencilState, enable_depth_write);
+		RD_BIND(Variant::Type::INT, RDPipelineDepthStencilState, depth_compare_operator);
+		RD_BIND(Variant::Type::BOOL, RDPipelineDepthStencilState, enable_depth_range);
+		RD_BIND(Variant::Type::FLOAT, RDPipelineDepthStencilState, depth_range_min);
+		RD_BIND(Variant::Type::FLOAT, RDPipelineDepthStencilState, depth_range_max);
+		RD_BIND(Variant::Type::BOOL, RDPipelineDepthStencilState, enable_stencil);
 
-		RD_BIND_SUB(Variant::INT, RDPipelineDepthStencilState, front_op, fail);
-		RD_BIND_SUB(Variant::INT, RDPipelineDepthStencilState, front_op, pass);
-		RD_BIND_SUB(Variant::INT, RDPipelineDepthStencilState, front_op, depth_fail);
-		RD_BIND_SUB(Variant::INT, RDPipelineDepthStencilState, front_op, compare);
-		RD_BIND_SUB(Variant::INT, RDPipelineDepthStencilState, front_op, compare_mask);
-		RD_BIND_SUB(Variant::INT, RDPipelineDepthStencilState, front_op, write_mask);
-		RD_BIND_SUB(Variant::INT, RDPipelineDepthStencilState, front_op, reference);
+		RD_BIND_SUB(Variant::Type::INT, RDPipelineDepthStencilState, front_op, fail);
+		RD_BIND_SUB(Variant::Type::INT, RDPipelineDepthStencilState, front_op, pass);
+		RD_BIND_SUB(Variant::Type::INT, RDPipelineDepthStencilState, front_op, depth_fail);
+		RD_BIND_SUB(Variant::Type::INT, RDPipelineDepthStencilState, front_op, compare);
+		RD_BIND_SUB(Variant::Type::INT, RDPipelineDepthStencilState, front_op, compare_mask);
+		RD_BIND_SUB(Variant::Type::INT, RDPipelineDepthStencilState, front_op, write_mask);
+		RD_BIND_SUB(Variant::Type::INT, RDPipelineDepthStencilState, front_op, reference);
 
-		RD_BIND_SUB(Variant::INT, RDPipelineDepthStencilState, back_op, fail);
-		RD_BIND_SUB(Variant::INT, RDPipelineDepthStencilState, back_op, pass);
-		RD_BIND_SUB(Variant::INT, RDPipelineDepthStencilState, back_op, depth_fail);
-		RD_BIND_SUB(Variant::INT, RDPipelineDepthStencilState, back_op, compare);
-		RD_BIND_SUB(Variant::INT, RDPipelineDepthStencilState, back_op, compare_mask);
-		RD_BIND_SUB(Variant::INT, RDPipelineDepthStencilState, back_op, write_mask);
-		RD_BIND_SUB(Variant::INT, RDPipelineDepthStencilState, back_op, reference);
+		RD_BIND_SUB(Variant::Type::INT, RDPipelineDepthStencilState, back_op, fail);
+		RD_BIND_SUB(Variant::Type::INT, RDPipelineDepthStencilState, back_op, pass);
+		RD_BIND_SUB(Variant::Type::INT, RDPipelineDepthStencilState, back_op, depth_fail);
+		RD_BIND_SUB(Variant::Type::INT, RDPipelineDepthStencilState, back_op, compare);
+		RD_BIND_SUB(Variant::Type::INT, RDPipelineDepthStencilState, back_op, compare_mask);
+		RD_BIND_SUB(Variant::Type::INT, RDPipelineDepthStencilState, back_op, write_mask);
+		RD_BIND_SUB(Variant::Type::INT, RDPipelineDepthStencilState, back_op, reference);
 	}
 };
 
@@ -580,17 +580,17 @@ protected:
 	static void _bind_methods() {
 		ClassDB::bind_method(D_METHOD("set_as_mix"), &RDPipelineColorBlendStateAttachment::set_as_mix);
 
-		RD_BIND(Variant::BOOL, RDPipelineColorBlendStateAttachment, enable_blend);
-		RD_BIND(Variant::INT, RDPipelineColorBlendStateAttachment, src_color_blend_factor);
-		RD_BIND(Variant::INT, RDPipelineColorBlendStateAttachment, dst_color_blend_factor);
-		RD_BIND(Variant::INT, RDPipelineColorBlendStateAttachment, color_blend_op);
-		RD_BIND(Variant::INT, RDPipelineColorBlendStateAttachment, src_alpha_blend_factor);
-		RD_BIND(Variant::INT, RDPipelineColorBlendStateAttachment, dst_alpha_blend_factor);
-		RD_BIND(Variant::INT, RDPipelineColorBlendStateAttachment, alpha_blend_op);
-		RD_BIND(Variant::BOOL, RDPipelineColorBlendStateAttachment, write_r);
-		RD_BIND(Variant::BOOL, RDPipelineColorBlendStateAttachment, write_g);
-		RD_BIND(Variant::BOOL, RDPipelineColorBlendStateAttachment, write_b);
-		RD_BIND(Variant::BOOL, RDPipelineColorBlendStateAttachment, write_a);
+		RD_BIND(Variant::Type::BOOL, RDPipelineColorBlendStateAttachment, enable_blend);
+		RD_BIND(Variant::Type::INT, RDPipelineColorBlendStateAttachment, src_color_blend_factor);
+		RD_BIND(Variant::Type::INT, RDPipelineColorBlendStateAttachment, dst_color_blend_factor);
+		RD_BIND(Variant::Type::INT, RDPipelineColorBlendStateAttachment, color_blend_op);
+		RD_BIND(Variant::Type::INT, RDPipelineColorBlendStateAttachment, src_alpha_blend_factor);
+		RD_BIND(Variant::Type::INT, RDPipelineColorBlendStateAttachment, dst_alpha_blend_factor);
+		RD_BIND(Variant::Type::INT, RDPipelineColorBlendStateAttachment, alpha_blend_op);
+		RD_BIND(Variant::Type::BOOL, RDPipelineColorBlendStateAttachment, write_r);
+		RD_BIND(Variant::Type::BOOL, RDPipelineColorBlendStateAttachment, write_g);
+		RD_BIND(Variant::Type::BOOL, RDPipelineColorBlendStateAttachment, write_b);
+		RD_BIND(Variant::Type::BOOL, RDPipelineColorBlendStateAttachment, write_a);
 	}
 };
 
@@ -616,13 +616,13 @@ public:
 
 protected:
 	static void _bind_methods() {
-		RD_BIND(Variant::BOOL, RDPipelineColorBlendState, enable_logic_op);
-		RD_BIND(Variant::INT, RDPipelineColorBlendState, logic_op);
-		RD_BIND(Variant::COLOR, RDPipelineColorBlendState, blend_constant);
+		RD_BIND(Variant::Type::BOOL, RDPipelineColorBlendState, enable_logic_op);
+		RD_BIND(Variant::Type::INT, RDPipelineColorBlendState, logic_op);
+		RD_BIND(Variant::Type::COLOR, RDPipelineColorBlendState, blend_constant);
 
 		ClassDB::bind_method(D_METHOD("set_attachments", "atachments"), &RDPipelineColorBlendState::set_attachments);
 		ClassDB::bind_method(D_METHOD("get_attachments"), &RDPipelineColorBlendState::get_attachments);
-		ADD_PROPERTY(PropertyInfo(Variant::ARRAY, "attachments", PROPERTY_HINT_ARRAY_TYPE, "RDPipelineColorBlendStateAttachment"), "set_attachments", "get_attachments");
+		ADD_PROPERTY(PropertyInfo(Variant::Type::ARRAY, "attachments", PROPERTY_HINT_ARRAY_TYPE, "RDPipelineColorBlendStateAttachment"), "set_attachments", "get_attachments");
 	}
 };
 

@@ -482,7 +482,7 @@ HeightMapShapeBullet::HeightMapShapeBullet() :
 		ShapeBullet() {}
 
 void HeightMapShapeBullet::set_data(const Variant &p_data) {
-	ERR_FAIL_COND(p_data.get_type() != Variant::DICTIONARY);
+	ERR_FAIL_COND(p_data.get_type() != Variant::Type::DICTIONARY);
 	Dictionary d = p_data;
 	ERR_FAIL_COND(!d.has("width"));
 	ERR_FAIL_COND(!d.has("depth"));
@@ -510,12 +510,12 @@ void HeightMapShapeBullet::set_data(const Variant &p_data) {
 	Vector<real_t> l_heights;
 	Variant l_heights_v = d["heights"];
 
-	if (l_heights_v.get_type() == Variant::PACKED_FLOAT32_ARRAY) {
+	if (l_heights_v.get_type() == Variant::Type::PACKED_FLOAT32_ARRAY) {
 		// Ready-to-use heights can be passed
 
 		l_heights = l_heights_v;
 
-	} else if (l_heights_v.get_type() == Variant::OBJECT) {
+	} else if (l_heights_v.get_type() == Variant::Type::OBJECT) {
 		// If an image is passed, we have to convert it to a format Bullet supports.
 		// this would be expensive to do with a script, so it's nice to have it here.
 

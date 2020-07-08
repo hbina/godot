@@ -79,7 +79,7 @@ bool EditorAutoloadSettings::_autoload_name_is_valid(const String &p_name, Strin
 		return false;
 	}
 
-	for (int i = 0; i < Variant::VARIANT_MAX; i++) {
+	for (int i = 0; i < Variant::Type::VARIANT_MAX; i++) {
 		if (Variant::get_type_name(Variant::Type(i)) == p_name) {
 			if (r_error) {
 				*r_error = TTR("Invalid name.") + "\n" + TTR("Must not collide with an existing built-in type name.");

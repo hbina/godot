@@ -71,7 +71,7 @@ void BoxShape3D::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_extents", "extents"), &BoxShape3D::set_extents);
 	ClassDB::bind_method(D_METHOD("get_extents"), &BoxShape3D::get_extents);
 
-	ADD_PROPERTY(PropertyInfo(Variant::VECTOR3, "extents"), "set_extents", "get_extents");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::VECTOR3, "extents"), "set_extents", "get_extents");
 }
 
 BoxShape3D::BoxShape3D() :

@@ -92,7 +92,7 @@ void CenterContainer::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_use_top_left", "enable"), &CenterContainer::set_use_top_left);
 	ClassDB::bind_method(D_METHOD("is_using_top_left"), &CenterContainer::is_using_top_left);
 
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "use_top_left"), "set_use_top_left", "is_using_top_left");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "use_top_left"), "set_use_top_left", "is_using_top_left");
 }
 
 CenterContainer::CenterContainer() {

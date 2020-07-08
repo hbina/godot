@@ -97,7 +97,7 @@ Array RenderingServer::_instances_cull_convex_bind(const Array &p_convex, RID p_
 	Vector<Plane> planes;
 	for (int i = 0; i < p_convex.size(); ++i) {
 		Variant v = p_convex[i];
-		ERR_FAIL_COND_V(v.get_type() != Variant::PLANE, Array());
+		ERR_FAIL_COND_V(v.get_type() != Variant::Type::PLANE, Array());
 		planes.push_back(v);
 	}
 
@@ -386,7 +386,7 @@ Error RenderingServer::_surface_set_data(Array p_arrays, uint32_t p_format, uint
 
 			} break;
 			case RS::ARRAY_NORMAL: {
-				ERR_FAIL_COND_V(p_arrays[ai].get_type() != Variant::PACKED_VECTOR3_ARRAY, ERR_INVALID_PARAMETER);
+				ERR_FAIL_COND_V(p_arrays[ai].get_type() != Variant::Type::PACKED_VECTOR3_ARRAY, ERR_INVALID_PARAMETER);
 
 				Vector<Vector3> array = p_arrays[ai];
 				ERR_FAIL_COND_V(array.size() != p_vertex_array_len, ERR_INVALID_PARAMETER);
@@ -417,7 +417,7 @@ Error RenderingServer::_surface_set_data(Array p_arrays, uint32_t p_format, uint
 			} break;
 
 			case RS::ARRAY_TANGENT: {
-				ERR_FAIL_COND_V(p_arrays[ai].get_type() != Variant::PACKED_FLOAT32_ARRAY, ERR_INVALID_PARAMETER);
+				ERR_FAIL_COND_V(p_arrays[ai].get_type() != Variant::Type::PACKED_FLOAT32_ARRAY, ERR_INVALID_PARAMETER);
 
 				Vector<real_t> array = p_arrays[ai];
 
@@ -452,7 +452,7 @@ Error RenderingServer::_surface_set_data(Array p_arrays, uint32_t p_format, uint
 
 			} break;
 			case RS::ARRAY_COLOR: {
-				ERR_FAIL_COND_V(p_arrays[ai].get_type() != Variant::PACKED_COLOR_ARRAY, ERR_INVALID_PARAMETER);
+				ERR_FAIL_COND_V(p_arrays[ai].get_type() != Variant::Type::PACKED_COLOR_ARRAY, ERR_INVALID_PARAMETER);
 
 				Vector<Color> array = p_arrays[ai];
 
@@ -478,7 +478,7 @@ Error RenderingServer::_surface_set_data(Array p_arrays, uint32_t p_format, uint
 
 			} break;
 			case RS::ARRAY_TEX_UV: {
-				ERR_FAIL_COND_V(p_arrays[ai].get_type() != Variant::PACKED_VECTOR3_ARRAY && p_arrays[ai].get_type() != Variant::PACKED_VECTOR2_ARRAY, ERR_INVALID_PARAMETER);
+				ERR_FAIL_COND_V(p_arrays[ai].get_type() != Variant::Type::PACKED_VECTOR3_ARRAY && p_arrays[ai].get_type() != Variant::Type::PACKED_VECTOR2_ARRAY, ERR_INVALID_PARAMETER);
 
 				Vector<Vector2> array = p_arrays[ai];
 
@@ -503,7 +503,7 @@ Error RenderingServer::_surface_set_data(Array p_arrays, uint32_t p_format, uint
 			} break;
 
 			case RS::ARRAY_TEX_UV2: {
-				ERR_FAIL_COND_V(p_arrays[ai].get_type() != Variant::PACKED_VECTOR3_ARRAY && p_arrays[ai].get_type() != Variant::PACKED_VECTOR2_ARRAY, ERR_INVALID_PARAMETER);
+				ERR_FAIL_COND_V(p_arrays[ai].get_type() != Variant::Type::PACKED_VECTOR3_ARRAY && p_arrays[ai].get_type() != Variant::Type::PACKED_VECTOR2_ARRAY, ERR_INVALID_PARAMETER);
 
 				Vector<Vector2> array = p_arrays[ai];
 
@@ -526,7 +526,7 @@ Error RenderingServer::_surface_set_data(Array p_arrays, uint32_t p_format, uint
 				}
 			} break;
 			case RS::ARRAY_WEIGHTS: {
-				ERR_FAIL_COND_V(p_arrays[ai].get_type() != Variant::PACKED_FLOAT32_ARRAY, ERR_INVALID_PARAMETER);
+				ERR_FAIL_COND_V(p_arrays[ai].get_type() != Variant::Type::PACKED_FLOAT32_ARRAY, ERR_INVALID_PARAMETER);
 
 				Vector<real_t> array = p_arrays[ai];
 
@@ -547,7 +547,7 @@ Error RenderingServer::_surface_set_data(Array p_arrays, uint32_t p_format, uint
 
 			} break;
 			case RS::ARRAY_BONES: {
-				ERR_FAIL_COND_V(p_arrays[ai].get_type() != Variant::PACKED_INT32_ARRAY && p_arrays[ai].get_type() != Variant::PACKED_FLOAT32_ARRAY, ERR_INVALID_PARAMETER);
+				ERR_FAIL_COND_V(p_arrays[ai].get_type() != Variant::Type::PACKED_INT32_ARRAY && p_arrays[ai].get_type() != Variant::Type::PACKED_FLOAT32_ARRAY, ERR_INVALID_PARAMETER);
 
 				Vector<int> array = p_arrays[ai];
 
@@ -569,7 +569,7 @@ Error RenderingServer::_surface_set_data(Array p_arrays, uint32_t p_format, uint
 			case RS::ARRAY_INDEX: {
 				ERR_FAIL_NULL_V(iw, ERR_INVALID_DATA);
 				ERR_FAIL_COND_V(p_index_array_len <= 0, ERR_INVALID_DATA);
-				ERR_FAIL_COND_V(p_arrays[ai].get_type() != Variant::PACKED_INT32_ARRAY, ERR_INVALID_PARAMETER);
+				ERR_FAIL_COND_V(p_arrays[ai].get_type() != Variant::Type::PACKED_INT32_ARRAY, ERR_INVALID_PARAMETER);
 
 				Vector<int> indices = p_arrays[ai];
 				ERR_FAIL_COND_V(indices.size() == 0, ERR_INVALID_PARAMETER);
@@ -779,7 +779,7 @@ Error RenderingServer::mesh_create_surface_data_from_arrays(SurfaceData *r_surfa
 	int array_len = 0;
 
 	for (int i = 0; i < p_arrays.size(); i++) {
-		if (p_arrays[i].get_type() == Variant::NIL) {
+		if (p_arrays[i].get_type() == Variant::Type::NIL) {
 			continue;
 		}
 
@@ -788,10 +788,10 @@ Error RenderingServer::mesh_create_surface_data_from_arrays(SurfaceData *r_surfa
 		if (i == RS::ARRAY_VERTEX) {
 			Variant var = p_arrays[i];
 			switch (var.get_type()) {
-				case Variant::PACKED_VECTOR2_ARRAY: {
+				case Variant::Type::PACKED_VECTOR2_ARRAY: {
 					Vector<Vector2> v2 = var;
 				} break;
-				case Variant::PACKED_VECTOR3_ARRAY: {
+				case Variant::Type::PACKED_VECTOR3_ARRAY: {
 					Vector<Vector3> v3 = var;
 				} break;
 				default: {
@@ -814,7 +814,7 @@ Error RenderingServer::mesh_create_surface_data_from_arrays(SurfaceData *r_surfa
 			uint32_t bsformat = 0;
 			Array arr = p_blend_shapes[i];
 			for (int j = 0; j < arr.size(); j++) {
-				if (arr[j].get_type() != Variant::NIL) {
+				if (arr[j].get_type() != Variant::Type::NIL) {
 					bsformat |= (1 << j);
 				}
 			}
@@ -839,10 +839,10 @@ Error RenderingServer::mesh_create_surface_data_from_arrays(SurfaceData *r_surfa
 		switch (i) {
 			case RS::ARRAY_VERTEX: {
 				Variant arr = p_arrays[0];
-				if (arr.get_type() == Variant::PACKED_VECTOR2_ARRAY) {
+				if (arr.get_type() == Variant::Type::PACKED_VECTOR2_ARRAY) {
 					elem_size = 2;
 					p_compress_format |= ARRAY_FLAG_USE_2D_VERTICES;
-				} else if (arr.get_type() == Variant::PACKED_VECTOR3_ARRAY) {
+				} else if (arr.get_type() == Variant::Type::PACKED_VECTOR3_ARRAY) {
 					p_compress_format &= ~ARRAY_FLAG_USE_2D_VERTICES;
 					elem_size = 3;
 				} else {
@@ -1897,7 +1897,7 @@ void RenderingServer::_bind_methods() {
 
 	ClassDB::bind_method(D_METHOD("is_render_loop_enabled"), &RenderingServer::is_render_loop_enabled);
 	ClassDB::bind_method(D_METHOD("set_render_loop_enabled", "enabled"), &RenderingServer::set_render_loop_enabled);
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "render_loop_enabled"), "set_render_loop_enabled", "is_render_loop_enabled");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "render_loop_enabled"), "set_render_loop_enabled", "is_render_loop_enabled");
 
 	BIND_CONSTANT(NO_INDEX_ARRAY);
 	BIND_CONSTANT(ARRAY_WEIGHTS_SIZE);
@@ -2319,30 +2319,30 @@ RenderingServer::RenderingServer() {
 	GLOBAL_DEF_RST("rendering/vram_compression/import_pvrtc", false);
 
 	GLOBAL_DEF("rendering/limits/time/time_rollover_secs", 3600);
-	ProjectSettings::get_singleton()->set_custom_property_info("rendering/limits/time/time_rollover_secs", PropertyInfo(Variant::FLOAT, "rendering/limits/time/time_rollover_secs", PROPERTY_HINT_RANGE, "0,10000,1,or_greater"));
+	ProjectSettings::get_singleton()->set_custom_property_info("rendering/limits/time/time_rollover_secs", PropertyInfo(Variant::Type::FLOAT, "rendering/limits/time/time_rollover_secs", PROPERTY_HINT_RANGE, "0,10000,1,or_greater"));
 
 	GLOBAL_DEF("rendering/quality/directional_shadow/size", 4096);
 	GLOBAL_DEF("rendering/quality/directional_shadow/size.mobile", 2048);
-	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/directional_shadow/size", PropertyInfo(Variant::INT, "rendering/quality/directional_shadow/size", PROPERTY_HINT_RANGE, "256,16384"));
+	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/directional_shadow/size", PropertyInfo(Variant::Type::INT, "rendering/quality/directional_shadow/size", PROPERTY_HINT_RANGE, "256,16384"));
 	GLOBAL_DEF("rendering/quality/directional_shadow/soft_shadow_quality", 2);
 	GLOBAL_DEF("rendering/quality/directional_shadow/soft_shadow_quality.mobile", 0);
-	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/directional_shadow/soft_shadow_quality", PropertyInfo(Variant::INT, "rendering/quality/directional_shadow/soft_shadow_quality", PROPERTY_HINT_ENUM, "Hard(Fastest), Soft Low (Fast), Soft Medium (Average), Soft High (Slow), Soft Ultra (Slowest)"));
+	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/directional_shadow/soft_shadow_quality", PropertyInfo(Variant::Type::INT, "rendering/quality/directional_shadow/soft_shadow_quality", PROPERTY_HINT_ENUM, "Hard(Fastest), Soft Low (Fast), Soft Medium (Average), Soft High (Slow), Soft Ultra (Slowest)"));
 
 	GLOBAL_DEF("rendering/quality/shadows/soft_shadow_quality", 2);
 	GLOBAL_DEF("rendering/quality/shadows/soft_shadow_quality.mobile", 0);
-	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/shadows/soft_shadow_quality", PropertyInfo(Variant::INT, "rendering/quality/shadows/soft_shadow_quality", PROPERTY_HINT_ENUM, "Hard(Fastest), Soft Low (Fast), Soft Medium (Average), Soft High (Slow), Soft Ultra (Slowest)"));
+	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/shadows/soft_shadow_quality", PropertyInfo(Variant::Type::INT, "rendering/quality/shadows/soft_shadow_quality", PROPERTY_HINT_ENUM, "Hard(Fastest), Soft Low (Fast), Soft Medium (Average), Soft High (Slow), Soft Ultra (Slowest)"));
 
 	GLOBAL_DEF("rendering/quality/shadow_atlas/size", 4096);
 	GLOBAL_DEF("rendering/quality/shadow_atlas/size.mobile", 2048);
-	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/shadow_atlas/size", PropertyInfo(Variant::INT, "rendering/quality/shadow_atlas/size", PROPERTY_HINT_RANGE, "256,16384"));
+	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/shadow_atlas/size", PropertyInfo(Variant::Type::INT, "rendering/quality/shadow_atlas/size", PROPERTY_HINT_RANGE, "256,16384"));
 	GLOBAL_DEF("rendering/quality/shadow_atlas/quadrant_0_subdiv", 1);
 	GLOBAL_DEF("rendering/quality/shadow_atlas/quadrant_1_subdiv", 2);
 	GLOBAL_DEF("rendering/quality/shadow_atlas/quadrant_2_subdiv", 3);
 	GLOBAL_DEF("rendering/quality/shadow_atlas/quadrant_3_subdiv", 4);
-	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/shadow_atlas/quadrant_0_subdiv", PropertyInfo(Variant::INT, "rendering/quality/shadow_atlas/quadrant_0_subdiv", PROPERTY_HINT_ENUM, "Disabled,1 Shadow,4 Shadows,16 Shadows,64 Shadows,256 Shadows,1024 Shadows"));
-	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/shadow_atlas/quadrant_1_subdiv", PropertyInfo(Variant::INT, "rendering/quality/shadow_atlas/quadrant_1_subdiv", PROPERTY_HINT_ENUM, "Disabled,1 Shadow,4 Shadows,16 Shadows,64 Shadows,256 Shadows,1024 Shadows"));
-	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/shadow_atlas/quadrant_2_subdiv", PropertyInfo(Variant::INT, "rendering/quality/shadow_atlas/quadrant_2_subdiv", PROPERTY_HINT_ENUM, "Disabled,1 Shadow,4 Shadows,16 Shadows,64 Shadows,256 Shadows,1024 Shadows"));
-	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/shadow_atlas/quadrant_3_subdiv", PropertyInfo(Variant::INT, "rendering/quality/shadow_atlas/quadrant_3_subdiv", PROPERTY_HINT_ENUM, "Disabled,1 Shadow,4 Shadows,16 Shadows,64 Shadows,256 Shadows,1024 Shadows"));
+	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/shadow_atlas/quadrant_0_subdiv", PropertyInfo(Variant::Type::INT, "rendering/quality/shadow_atlas/quadrant_0_subdiv", PROPERTY_HINT_ENUM, "Disabled,1 Shadow,4 Shadows,16 Shadows,64 Shadows,256 Shadows,1024 Shadows"));
+	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/shadow_atlas/quadrant_1_subdiv", PropertyInfo(Variant::Type::INT, "rendering/quality/shadow_atlas/quadrant_1_subdiv", PROPERTY_HINT_ENUM, "Disabled,1 Shadow,4 Shadows,16 Shadows,64 Shadows,256 Shadows,1024 Shadows"));
+	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/shadow_atlas/quadrant_2_subdiv", PropertyInfo(Variant::Type::INT, "rendering/quality/shadow_atlas/quadrant_2_subdiv", PROPERTY_HINT_ENUM, "Disabled,1 Shadow,4 Shadows,16 Shadows,64 Shadows,256 Shadows,1024 Shadows"));
+	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/shadow_atlas/quadrant_3_subdiv", PropertyInfo(Variant::Type::INT, "rendering/quality/shadow_atlas/quadrant_3_subdiv", PROPERTY_HINT_ENUM, "Disabled,1 Shadow,4 Shadows,16 Shadows,64 Shadows,256 Shadows,1024 Shadows"));
 
 	GLOBAL_DEF("rendering/quality/reflections/roughness_layers", 8);
 	GLOBAL_DEF("rendering/quality/reflections/texture_array_reflections", true);
@@ -2356,7 +2356,7 @@ RenderingServer::RenderingServer() {
 
 	GLOBAL_DEF("rendering/quality/gi_probes/anisotropic", false);
 	GLOBAL_DEF("rendering/quality/gi_probes/quality", 1);
-	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/gi_probes/quality", PropertyInfo(Variant::INT, "rendering/quality/gi_probes/quality", PROPERTY_HINT_ENUM, "Low (4 Cones - Fast),High (6 Cones - Slow)"));
+	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/gi_probes/quality", PropertyInfo(Variant::Type::INT, "rendering/quality/gi_probes/quality", PROPERTY_HINT_ENUM, "Low (4 Cones - Fast),High (6 Cones - Slow)"));
 
 	GLOBAL_DEF("rendering/quality/shading/force_vertex_shading", false);
 	GLOBAL_DEF("rendering/quality/shading/force_vertex_shading.mobile", true);
@@ -2370,47 +2370,47 @@ RenderingServer::RenderingServer() {
 
 	GLOBAL_DEF("rendering/quality/texture_filters/use_nearest_mipmap_filter", false);
 	GLOBAL_DEF("rendering/quality/texture_filters/anisotropic_filtering_level", 2);
-	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/texture_filters/anisotropic_filtering_level", PropertyInfo(Variant::INT, "rendering/quality/texture_filters/anisotropic_filtering_level", PROPERTY_HINT_ENUM, "Disabled (Fastest),2x (Faster),4x (Fast),8x (Average),16x (Slow)"));
+	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/texture_filters/anisotropic_filtering_level", PropertyInfo(Variant::Type::INT, "rendering/quality/texture_filters/anisotropic_filtering_level", PROPERTY_HINT_ENUM, "Disabled (Fastest),2x (Faster),4x (Fast),8x (Average),16x (Slow)"));
 
 	GLOBAL_DEF("rendering/quality/depth_of_field/depth_of_field_bokeh_shape", 1);
-	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/depth_of_field/depth_of_field_bokeh_shape", PropertyInfo(Variant::INT, "rendering/quality/depth_of_field/depth_of_field_bokeh_shape", PROPERTY_HINT_ENUM, "Box (Fast),Hexagon (Average),Circle (Slow)"));
+	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/depth_of_field/depth_of_field_bokeh_shape", PropertyInfo(Variant::Type::INT, "rendering/quality/depth_of_field/depth_of_field_bokeh_shape", PROPERTY_HINT_ENUM, "Box (Fast),Hexagon (Average),Circle (Slow)"));
 	GLOBAL_DEF("rendering/quality/depth_of_field/depth_of_field_bokeh_quality", 2);
-	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/depth_of_field/depth_of_field_bokeh_quality", PropertyInfo(Variant::INT, "rendering/quality/depth_of_field/depth_of_field_bokeh_quality", PROPERTY_HINT_ENUM, "Very Low (Fastest),Low (Fast),Medium (Average),High (Slow)"));
+	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/depth_of_field/depth_of_field_bokeh_quality", PropertyInfo(Variant::Type::INT, "rendering/quality/depth_of_field/depth_of_field_bokeh_quality", PROPERTY_HINT_ENUM, "Very Low (Fastest),Low (Fast),Medium (Average),High (Slow)"));
 	GLOBAL_DEF("rendering/quality/depth_of_field/depth_of_field_use_jitter", false);
 
 	GLOBAL_DEF("rendering/quality/ssao/quality", 1);
-	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/ssao/quality", PropertyInfo(Variant::INT, "rendering/quality/ssao/quality", PROPERTY_HINT_ENUM, "Low (Fast),Medium (Average),High (Slow),Ultra (Slower)"));
+	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/ssao/quality", PropertyInfo(Variant::Type::INT, "rendering/quality/ssao/quality", PROPERTY_HINT_ENUM, "Low (Fast),Medium (Average),High (Slow),Ultra (Slower)"));
 	GLOBAL_DEF("rendering/quality/ssao/half_size", false);
 
 	GLOBAL_DEF("rendering/quality/screen_filters/screen_space_roughness_limiter_enabled", true);
 	GLOBAL_DEF("rendering/quality/screen_filters/screen_space_roughness_limiter_amount", 0.25);
 	GLOBAL_DEF("rendering/quality/screen_filters/screen_space_roughness_limiter_limit", 0.18);
-	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/screen_filters/screen_space_roughness_limiter_amount", PropertyInfo(Variant::FLOAT, "rendering/quality/screen_filters/screen_space_roughness_limiter_amount", PROPERTY_HINT_RANGE, "0.01,4.0,0.01"));
-	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/screen_filters/screen_space_roughness_limiter_limit", PropertyInfo(Variant::FLOAT, "rendering/quality/screen_filters/screen_space_roughness_limiter_limit", PROPERTY_HINT_RANGE, "0.01,1.0,0.01"));
+	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/screen_filters/screen_space_roughness_limiter_amount", PropertyInfo(Variant::Type::FLOAT, "rendering/quality/screen_filters/screen_space_roughness_limiter_amount", PROPERTY_HINT_RANGE, "0.01,4.0,0.01"));
+	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/screen_filters/screen_space_roughness_limiter_limit", PropertyInfo(Variant::Type::FLOAT, "rendering/quality/screen_filters/screen_space_roughness_limiter_limit", PROPERTY_HINT_RANGE, "0.01,1.0,0.01"));
 
 	GLOBAL_DEF("rendering/quality/glow/upscale_mode", 1);
-	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/glow/upscale_mode", PropertyInfo(Variant::INT, "rendering/quality/glow/upscale_mode", PROPERTY_HINT_ENUM, "Linear (Fast),Bicubic (Slow)"));
+	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/glow/upscale_mode", PropertyInfo(Variant::Type::INT, "rendering/quality/glow/upscale_mode", PROPERTY_HINT_ENUM, "Linear (Fast),Bicubic (Slow)"));
 	GLOBAL_DEF("rendering/quality/glow/upscale_mode.mobile", 0);
 
 	GLOBAL_DEF("rendering/quality/screen_space_reflection/roughness_quality", 1);
-	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/screen_space_reflection/roughness_quality", PropertyInfo(Variant::INT, "rendering/quality/screen_space_reflection/roughness_quality", PROPERTY_HINT_ENUM, "Disabled (Fastest),Low (Fast),Medium (Average),High (Slow)"));
+	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/screen_space_reflection/roughness_quality", PropertyInfo(Variant::Type::INT, "rendering/quality/screen_space_reflection/roughness_quality", PROPERTY_HINT_ENUM, "Disabled (Fastest),Low (Fast),Medium (Average),High (Slow)"));
 
 	GLOBAL_DEF("rendering/quality/subsurface_scattering/subsurface_scattering_quality", 1);
-	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/subsurface_scattering/subsurface_scattering_quality", PropertyInfo(Variant::INT, "rendering/quality/subsurface_scattering/subsurface_scattering_quality", PROPERTY_HINT_ENUM, "Disabled (Fastest),Low (Fast),Medium (Average),High (Slow)"));
+	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/subsurface_scattering/subsurface_scattering_quality", PropertyInfo(Variant::Type::INT, "rendering/quality/subsurface_scattering/subsurface_scattering_quality", PROPERTY_HINT_ENUM, "Disabled (Fastest),Low (Fast),Medium (Average),High (Slow)"));
 	GLOBAL_DEF("rendering/quality/subsurface_scattering/subsurface_scattering_scale", 0.05);
-	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/subsurface_scattering/subsurface_scattering_scale", PropertyInfo(Variant::FLOAT, "rendering/quality/subsurface_scattering/subsurface_scattering_scale", PROPERTY_HINT_RANGE, "0.001,1,0.001"));
+	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/subsurface_scattering/subsurface_scattering_scale", PropertyInfo(Variant::Type::FLOAT, "rendering/quality/subsurface_scattering/subsurface_scattering_scale", PROPERTY_HINT_RANGE, "0.001,1,0.001"));
 	GLOBAL_DEF("rendering/quality/subsurface_scattering/subsurface_scattering_depth_scale", 0.01);
-	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/subsurface_scattering/subsurface_scattering_depth_scale", PropertyInfo(Variant::FLOAT, "rendering/quality/subsurface_scattering/subsurface_scattering_depth_scale", PROPERTY_HINT_RANGE, "0.001,1,0.001"));
+	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/subsurface_scattering/subsurface_scattering_depth_scale", PropertyInfo(Variant::Type::FLOAT, "rendering/quality/subsurface_scattering/subsurface_scattering_depth_scale", PROPERTY_HINT_RANGE, "0.001,1,0.001"));
 
 	GLOBAL_DEF("rendering/high_end/global_shader_variables_buffer_size", 65536);
 
 	GLOBAL_DEF("rendering/lightmapper/probe_capture_update_speed", 15);
-	ProjectSettings::get_singleton()->set_custom_property_info("rendering/lightmapper/probe_capture_update_speed", PropertyInfo(Variant::FLOAT, "rendering/lightmapper/probe_capture_update_speed", PROPERTY_HINT_RANGE, "0.001,256,0.001"));
+	ProjectSettings::get_singleton()->set_custom_property_info("rendering/lightmapper/probe_capture_update_speed", PropertyInfo(Variant::Type::FLOAT, "rendering/lightmapper/probe_capture_update_speed", PROPERTY_HINT_RANGE, "0.001,256,0.001"));
 
 	GLOBAL_DEF("rendering/sdfgi/probe_ray_count", 2);
-	ProjectSettings::get_singleton()->set_custom_property_info("rendering/sdfgi/probe_ray_count", PropertyInfo(Variant::INT, "rendering/sdfgi/probe_ray_count", PROPERTY_HINT_ENUM, "8 (Fastest),16,32,64,96,128 (Slowest)"));
+	ProjectSettings::get_singleton()->set_custom_property_info("rendering/sdfgi/probe_ray_count", PropertyInfo(Variant::Type::INT, "rendering/sdfgi/probe_ray_count", PROPERTY_HINT_ENUM, "8 (Fastest),16,32,64,96,128 (Slowest)"));
 	GLOBAL_DEF("rendering/sdfgi/frames_to_converge", 1);
-	ProjectSettings::get_singleton()->set_custom_property_info("rendering/sdfgi/frames_to_converge", PropertyInfo(Variant::INT, "rendering/sdfgi/frames_to_converge", PROPERTY_HINT_ENUM, "5 (Less Latency but Lower Quality),10,15,20,25,30 (More Latency but Higher Quality)"));
+	ProjectSettings::get_singleton()->set_custom_property_info("rendering/sdfgi/frames_to_converge", PropertyInfo(Variant::Type::INT, "rendering/sdfgi/frames_to_converge", PROPERTY_HINT_ENUM, "5 (Less Latency but Lower Quality),10,15,20,25,30 (More Latency but Higher Quality)"));
 }
 
 RenderingServer::~RenderingServer() {

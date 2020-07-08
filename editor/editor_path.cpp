@@ -49,7 +49,7 @@ void EditorPath::_add_children_to_popup(Object *p_obj, int p_depth) {
 		}
 
 		Variant value = p_obj->get(E->get().name);
-		if (value.get_type() != Variant::OBJECT) {
+		if (value.get_type() != Variant::Type::OBJECT) {
 			continue;
 		}
 		Object *obj = value;

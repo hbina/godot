@@ -147,15 +147,15 @@ Variant nsobject_to_variant(NSObject *object) {
 }
 
 NSObject *variant_to_nsobject(Variant v) {
-	if (v.get_type() == Variant::STRING) {
+	if (v.get_type() == Variant::Type::STRING) {
 		return [[[NSString alloc] initWithUTF8String:((String)v).utf8().get_data()] autorelease];
 	} else if (v.get_type() == Variant::REAL) {
 		return [NSNumber numberWithDouble:(double)v];
-	} else if (v.get_type() == Variant::INT) {
+	} else if (v.get_type() == Variant::Type::INT) {
 		return [NSNumber numberWithLongLong:(long)(int)v];
-	} else if (v.get_type() == Variant::BOOL) {
+	} else if (v.get_type() == Variant::Type::BOOL) {
 		return [NSNumber numberWithBool:BOOL((bool)v)];
-	} else if (v.get_type() == Variant::DICTIONARY) {
+	} else if (v.get_type() == Variant::Type::DICTIONARY) {
 		NSMutableDictionary *result = [[[NSMutableDictionary alloc] init] autorelease];
 		Dictionary dic = v;
 		Array keys = dic.keys();
@@ -170,7 +170,7 @@ NSObject *variant_to_nsobject(Variant v) {
 			[result setObject:value forKey:key];
 		}
 		return result;
-	} else if (v.get_type() == Variant::ARRAY) {
+	} else if (v.get_type() == Variant::Type::ARRAY) {
 		NSMutableArray *result = [[[NSMutableArray alloc] init] autorelease];
 		Array arr = v;
 		for (unsigned int i = 0; i < arr.size(); ++i) {
@@ -182,7 +182,7 @@ NSObject *variant_to_nsobject(Variant v) {
 			[result addObject:value];
 		}
 		return result;
-	} else if (v.get_type() == Variant::PACKED_BYTE_ARRAY) {
+	} else if (v.get_type() == Variant::Type::PACKED_BYTE_ARRAY) {
 		PackedByteArray arr = v;
 		// PackedByteArray::Read r = arr.read();
 		NSData *result = [NSData dataWithBytes:arr.ptr() length:arr.size()];

@@ -86,7 +86,7 @@ protected:
 				}
 			} else if (new_argc > argc) {
 				for (int i = argc; i < new_argc; i++) {
-					undo_redo->add_do_method(script.ptr(), "custom_signal_add_argument", sig, Variant::NIL, "arg" + itos(i + 1), -1);
+					undo_redo->add_do_method(script.ptr(), "custom_signal_add_argument", sig, Variant::Type::NIL, "arg" + itos(i + 1), -1);
 					undo_redo->add_undo_method(script.ptr(), "custom_signal_remove_argument", sig, argc);
 				}
 			}
@@ -157,15 +157,15 @@ protected:
 			return;
 		}
 
-		p_list->push_back(PropertyInfo(Variant::INT, "argument_count", PROPERTY_HINT_RANGE, "0,256"));
+		p_list->push_back(PropertyInfo(Variant::Type::INT, "argument_count", PROPERTY_HINT_RANGE, "0,256"));
 		String argt = "Variant";
-		for (int i = 1; i < Variant::VARIANT_MAX; i++) {
+		for (int i = 1; i < Variant::Type::VARIANT_MAX; i++) {
 			argt += "," + Variant::get_type_name(Variant::Type(i));
 		}
 
 		for (int i = 0; i < script->custom_signal_get_argument_count(sig); i++) {
-			p_list->push_back(PropertyInfo(Variant::INT, "argument/" + itos(i + 1) + "/type", PROPERTY_HINT_ENUM, argt));
-			p_list->push_back(PropertyInfo(Variant::STRING, "argument/" + itos(i + 1) + "/name"));
+			p_list->push_back(PropertyInfo(Variant::Type::INT, "argument/" + itos(i + 1) + "/type", PROPERTY_HINT_ENUM, argt));
+			p_list->push_back(PropertyInfo(Variant::Type::STRING, "argument/" + itos(i + 1) + "/name"));
 		}
 	}
 
@@ -304,15 +304,15 @@ protected:
 		}
 
 		String argt = "Variant";
-		for (int i = 1; i < Variant::VARIANT_MAX; i++) {
+		for (int i = 1; i < Variant::Type::VARIANT_MAX; i++) {
 			argt += "," + Variant::get_type_name(Variant::Type(i));
 		}
-		p_list->push_back(PropertyInfo(Variant::INT, "type", PROPERTY_HINT_ENUM, argt));
+		p_list->push_back(PropertyInfo(Variant::Type::INT, "type", PROPERTY_HINT_ENUM, argt));
 		p_list->push_back(PropertyInfo(script->get_variable_info(var).type, "value", script->get_variable_info(var).hint, script->get_variable_info(var).hint_string, PROPERTY_USAGE_DEFAULT));
 		// Update this when PropertyHint changes
-		p_list->push_back(PropertyInfo(Variant::INT, "hint", PROPERTY_HINT_ENUM, "None,Range,ExpRange,Enum,ExpEasing,Length,SpriteFrame,KeyAccel,Flags,Layers2dRender,Layers2dPhysics,Layer3dRender,Layer3dPhysics,File,Dir,GlobalFile,GlobalDir,ResourceType,MultilineText,PlaceholderText,ColorNoAlpha,ImageCompressLossy,ImageCompressLossLess,ObjectId,String,NodePathToEditedNode,MethodOfVariantType,MethodOfBaseType,MethodOfInstance,MethodOfScript,PropertyOfVariantType,PropertyOfBaseType,PropertyOfInstance,PropertyOfScript,ObjectTooBig,NodePathValidTypes"));
-		p_list->push_back(PropertyInfo(Variant::STRING, "hint_string"));
-		p_list->push_back(PropertyInfo(Variant::BOOL, "export"));
+		p_list->push_back(PropertyInfo(Variant::Type::INT, "hint", PROPERTY_HINT_ENUM, "None,Range,ExpRange,Enum,ExpEasing,Length,SpriteFrame,KeyAccel,Flags,Layers2dRender,Layers2dPhysics,Layer3dRender,Layer3dPhysics,File,Dir,GlobalFile,GlobalDir,ResourceType,MultilineText,PlaceholderText,ColorNoAlpha,ImageCompressLossy,ImageCompressLossLess,ObjectId,String,NodePathToEditedNode,MethodOfVariantType,MethodOfBaseType,MethodOfInstance,MethodOfScript,PropertyOfVariantType,PropertyOfBaseType,PropertyOfInstance,PropertyOfScript,ObjectTooBig,NodePathValidTypes"));
+		p_list->push_back(PropertyInfo(Variant::Type::STRING, "hint_string"));
+		p_list->push_back(PropertyInfo(Variant::Type::BOOL, "export"));
 	}
 
 public:
@@ -328,215 +328,215 @@ static Color _color_from_type(Variant::Type p_type, bool dark_theme = true) {
 	Color color;
 	if (dark_theme) {
 		switch (p_type) {
-			case Variant::NIL:
+			case Variant::Type::NIL:
 				color = Color(0.41, 0.93, 0.74);
 				break;
 
-			case Variant::BOOL:
+			case Variant::Type::BOOL:
 				color = Color(0.55, 0.65, 0.94);
 				break;
-			case Variant::INT:
+			case Variant::Type::INT:
 				color = Color(0.49, 0.78, 0.94);
 				break;
-			case Variant::FLOAT:
+			case Variant::Type::FLOAT:
 				color = Color(0.38, 0.85, 0.96);
 				break;
-			case Variant::STRING:
+			case Variant::Type::STRING:
 				color = Color(0.42, 0.65, 0.93);
 				break;
 
-			case Variant::VECTOR2:
+			case Variant::Type::VECTOR2:
 				color = Color(0.74, 0.57, 0.95);
 				break;
-			case Variant::VECTOR2I:
+			case Variant::Type::VECTOR2I:
 				color = Color(0.74, 0.57, 0.95);
 				break;
-			case Variant::RECT2:
+			case Variant::Type::RECT2:
 				color = Color(0.95, 0.57, 0.65);
 				break;
-			case Variant::RECT2I:
+			case Variant::Type::RECT2I:
 				color = Color(0.95, 0.57, 0.65);
 				break;
-			case Variant::VECTOR3:
+			case Variant::Type::VECTOR3:
 				color = Color(0.84, 0.49, 0.93);
 				break;
-			case Variant::VECTOR3I:
+			case Variant::Type::VECTOR3I:
 				color = Color(0.84, 0.49, 0.93);
 				break;
-			case Variant::TRANSFORM2D:
+			case Variant::Type::TRANSFORM2D:
 				color = Color(0.77, 0.93, 0.41);
 				break;
-			case Variant::PLANE:
+			case Variant::Type::PLANE:
 				color = Color(0.97, 0.44, 0.44);
 				break;
-			case Variant::QUAT:
+			case Variant::Type::QUAT:
 				color = Color(0.93, 0.41, 0.64);
 				break;
-			case Variant::AABB:
+			case Variant::Type::AABB:
 				color = Color(0.93, 0.47, 0.57);
 				break;
-			case Variant::BASIS:
+			case Variant::Type::BASIS:
 				color = Color(0.89, 0.93, 0.41);
 				break;
-			case Variant::TRANSFORM:
+			case Variant::Type::TRANSFORM:
 				color = Color(0.96, 0.66, 0.43);
 				break;
 
-			case Variant::COLOR:
+			case Variant::Type::COLOR:
 				color = Color(0.62, 1.0, 0.44);
 				break;
-			case Variant::NODE_PATH:
+			case Variant::Type::NODE_PATH:
 				color = Color(0.41, 0.58, 0.93);
 				break;
-			case Variant::_RID:
+			case Variant::Type::_RID:
 				color = Color(0.41, 0.93, 0.6);
 				break;
-			case Variant::OBJECT:
+			case Variant::Type::OBJECT:
 				color = Color(0.47, 0.95, 0.91);
 				break;
-			case Variant::DICTIONARY:
+			case Variant::Type::DICTIONARY:
 				color = Color(0.47, 0.93, 0.69);
 				break;
 
-			case Variant::ARRAY:
+			case Variant::Type::ARRAY:
 				color = Color(0.88, 0.88, 0.88);
 				break;
-			case Variant::PACKED_BYTE_ARRAY:
+			case Variant::Type::PACKED_BYTE_ARRAY:
 				color = Color(0.67, 0.96, 0.78);
 				break;
-			case Variant::PACKED_INT32_ARRAY:
+			case Variant::Type::PACKED_INT32_ARRAY:
 				color = Color(0.69, 0.86, 0.96);
 				break;
-			case Variant::PACKED_FLOAT32_ARRAY:
+			case Variant::Type::PACKED_FLOAT32_ARRAY:
 				color = Color(0.59, 0.91, 0.97);
 				break;
-			case Variant::PACKED_INT64_ARRAY:
+			case Variant::Type::PACKED_INT64_ARRAY:
 				color = Color(0.69, 0.86, 0.96);
 				break;
-			case Variant::PACKED_FLOAT64_ARRAY:
+			case Variant::Type::PACKED_FLOAT64_ARRAY:
 				color = Color(0.59, 0.91, 0.97);
 				break;
-			case Variant::PACKED_STRING_ARRAY:
+			case Variant::Type::PACKED_STRING_ARRAY:
 				color = Color(0.62, 0.77, 0.95);
 				break;
-			case Variant::PACKED_VECTOR2_ARRAY:
+			case Variant::Type::PACKED_VECTOR2_ARRAY:
 				color = Color(0.82, 0.7, 0.96);
 				break;
-			case Variant::PACKED_VECTOR3_ARRAY:
+			case Variant::Type::PACKED_VECTOR3_ARRAY:
 				color = Color(0.87, 0.61, 0.95);
 				break;
-			case Variant::PACKED_COLOR_ARRAY:
+			case Variant::Type::PACKED_COLOR_ARRAY:
 				color = Color(0.91, 1.0, 0.59);
 				break;
 
 			default:
-				color.set_hsv(p_type / float(Variant::VARIANT_MAX), 0.7, 0.7);
+				color.set_hsv(p_type / float(Variant::Type::VARIANT_MAX), 0.7, 0.7);
 		}
 	} else {
 		switch (p_type) {
-			case Variant::NIL:
+			case Variant::Type::NIL:
 				color = Color(0.15, 0.89, 0.63);
 				break;
 
-			case Variant::BOOL:
+			case Variant::Type::BOOL:
 				color = Color(0.43, 0.56, 0.92);
 				break;
-			case Variant::INT:
+			case Variant::Type::INT:
 				color = Color(0.31, 0.7, 0.91);
 				break;
-			case Variant::FLOAT:
+			case Variant::Type::FLOAT:
 				color = Color(0.15, 0.8, 0.94);
 				break;
-			case Variant::STRING:
+			case Variant::Type::STRING:
 				color = Color(0.27, 0.56, 0.91);
 				break;
 
-			case Variant::VECTOR2:
+			case Variant::Type::VECTOR2:
 				color = Color(0.68, 0.46, 0.93);
 				break;
-			case Variant::VECTOR2I:
+			case Variant::Type::VECTOR2I:
 				color = Color(0.68, 0.46, 0.93);
 				break;
-			case Variant::RECT2:
+			case Variant::Type::RECT2:
 				color = Color(0.93, 0.46, 0.56);
 				break;
-			case Variant::RECT2I:
+			case Variant::Type::RECT2I:
 				color = Color(0.93, 0.46, 0.56);
 				break;
-			case Variant::VECTOR3:
+			case Variant::Type::VECTOR3:
 				color = Color(0.86, 0.42, 0.93);
 				break;
-			case Variant::VECTOR3I:
+			case Variant::Type::VECTOR3I:
 				color = Color(0.86, 0.42, 0.93);
 				break;
-			case Variant::TRANSFORM2D:
+			case Variant::Type::TRANSFORM2D:
 				color = Color(0.59, 0.81, 0.1);
 				break;
-			case Variant::PLANE:
+			case Variant::Type::PLANE:
 				color = Color(0.97, 0.44, 0.44);
 				break;
-			case Variant::QUAT:
+			case Variant::Type::QUAT:
 				color = Color(0.93, 0.41, 0.64);
 				break;
-			case Variant::AABB:
+			case Variant::Type::AABB:
 				color = Color(0.93, 0.47, 0.57);
 				break;
-			case Variant::BASIS:
+			case Variant::Type::BASIS:
 				color = Color(0.7, 0.73, 0.1);
 				break;
-			case Variant::TRANSFORM:
+			case Variant::Type::TRANSFORM:
 				color = Color(0.96, 0.56, 0.28);
 				break;
 
-			case Variant::COLOR:
+			case Variant::Type::COLOR:
 				color = Color(0.24, 0.75, 0.0);
 				break;
-			case Variant::NODE_PATH:
+			case Variant::Type::NODE_PATH:
 				color = Color(0.41, 0.58, 0.93);
 				break;
-			case Variant::_RID:
+			case Variant::Type::_RID:
 				color = Color(0.17, 0.9, 0.45);
 				break;
-			case Variant::OBJECT:
+			case Variant::Type::OBJECT:
 				color = Color(0.07, 0.84, 0.76);
 				break;
-			case Variant::DICTIONARY:
+			case Variant::Type::DICTIONARY:
 				color = Color(0.34, 0.91, 0.62);
 				break;
 
-			case Variant::ARRAY:
+			case Variant::Type::ARRAY:
 				color = Color(0.45, 0.45, 0.45);
 				break;
-			case Variant::PACKED_BYTE_ARRAY:
+			case Variant::Type::PACKED_BYTE_ARRAY:
 				color = Color(0.38, 0.92, 0.6);
 				break;
-			case Variant::PACKED_INT32_ARRAY:
+			case Variant::Type::PACKED_INT32_ARRAY:
 				color = Color(0.38, 0.73, 0.92);
 				break;
-			case Variant::PACKED_FLOAT32_ARRAY:
+			case Variant::Type::PACKED_FLOAT32_ARRAY:
 				color = Color(0.25, 0.83, 0.95);
 				break;
-			case Variant::PACKED_INT64_ARRAY:
+			case Variant::Type::PACKED_INT64_ARRAY:
 				color = Color(0.38, 0.73, 0.92);
 				break;
-			case Variant::PACKED_FLOAT64_ARRAY:
+			case Variant::Type::PACKED_FLOAT64_ARRAY:
 				color = Color(0.25, 0.83, 0.95);
 				break;
-			case Variant::PACKED_STRING_ARRAY:
+			case Variant::Type::PACKED_STRING_ARRAY:
 				color = Color(0.38, 0.62, 0.92);
 				break;
-			case Variant::PACKED_VECTOR2_ARRAY:
+			case Variant::Type::PACKED_VECTOR2_ARRAY:
 				color = Color(0.62, 0.36, 0.92);
 				break;
-			case Variant::PACKED_VECTOR3_ARRAY:
+			case Variant::Type::PACKED_VECTOR3_ARRAY:
 				color = Color(0.79, 0.35, 0.92);
 				break;
-			case Variant::PACKED_COLOR_ARRAY:
+			case Variant::Type::PACKED_COLOR_ARRAY:
 				color = Color(0.57, 0.73, 0.0);
 				break;
 
 			default:
-				color.set_hsv(p_type / float(Variant::VARIANT_MAX), 0.3, 0.3);
+				color.set_hsv(p_type / float(Variant::Type::VARIANT_MAX), 0.3, 0.3);
 		}
 	}
 
@@ -619,7 +619,7 @@ void VisualScriptEditor::_update_graph(int p_only_id) {
 	graph->show();
 	select_func_text->hide();
 
-	Ref<Texture2D> type_icons[Variant::VARIANT_MAX] = {
+	Ref<Texture2D> type_icons[Variant::Type::VARIANT_MAX] = {
 		Control::get_theme_icon("Variant", "EditorIcons"),
 		Control::get_theme_icon("bool", "EditorIcons"),
 		Control::get_theme_icon("int", "EditorIcons"),
@@ -807,7 +807,7 @@ void VisualScriptEditor::_update_graph(int p_only_id) {
 
 			for (int i = 0; i < MAX(node->get_output_value_port_count(), MAX(mixed_seq_ports, node->get_input_value_port_count())); i++) {
 				bool left_ok = false;
-				Variant::Type left_type = Variant::NIL;
+				Variant::Type left_type = Variant::Type::NIL;
 				String left_name;
 
 				if (i < node->get_input_value_port_count()) {
@@ -818,7 +818,7 @@ void VisualScriptEditor::_update_graph(int p_only_id) {
 				}
 
 				bool right_ok = false;
-				Variant::Type right_type = Variant::NIL;
+				Variant::Type right_type = Variant::Type::NIL;
 				String right_name;
 
 				if (i >= mixed_seq_ports && i < node->get_output_value_port_count() + mixed_seq_ports) {
@@ -834,7 +834,7 @@ void VisualScriptEditor::_update_graph(int p_only_id) {
 				vbc->add_child(hbc2);
 				if (left_ok) {
 					Ref<Texture2D> t;
-					if (left_type >= 0 && left_type < Variant::VARIANT_MAX) {
+					if (left_type >= 0 && left_type < Variant::Type::VARIANT_MAX) {
 						t = type_icons[left_type];
 					}
 					if (t.is_valid()) {
@@ -859,7 +859,7 @@ void VisualScriptEditor::_update_graph(int p_only_id) {
 
 						if (nd_list->is_input_port_type_editable()) {
 							OptionButton *opbtn = memnew(OptionButton);
-							for (int j = Variant::NIL; j < Variant::VARIANT_MAX; j++) {
+							for (int j = Variant::Type::NIL; j < Variant::Type::VARIANT_MAX; j++) {
 								opbtn->add_item(Variant::get_type_name(Variant::Type(j)));
 							}
 							opbtn->select(left_type);
@@ -876,7 +876,7 @@ void VisualScriptEditor::_update_graph(int p_only_id) {
 						hbc->add_child(memnew(Label(left_name)));
 					}
 
-					if (left_type != Variant::NIL && !script->is_input_value_port_connected(F->get(), E->get(), i)) {
+					if (left_type != Variant::Type::NIL && !script->is_input_value_port_connected(F->get(), E->get(), i)) {
 						PropertyInfo pi = node->get_input_value_port_info(i);
 						Button *button = memnew(Button);
 						Variant value = node->get_default_input_value(i);
@@ -888,17 +888,17 @@ void VisualScriptEditor::_update_graph(int p_only_id) {
 							value = Variant::construct(left_type, &existingp, 1, ce, false);
 						}
 
-						if (left_type == Variant::COLOR) {
+						if (left_type == Variant::Type::COLOR) {
 							button->set_custom_minimum_size(Size2(30, 0) * EDSCALE);
 							button->connect("draw", callable_mp(this, &VisualScriptEditor::_draw_color_over_button), varray(button, value));
-						} else if (left_type == Variant::OBJECT && Ref<Resource>(value).is_valid()) {
+						} else if (left_type == Variant::Type::OBJECT && Ref<Resource>(value).is_valid()) {
 							Ref<Resource> res = value;
 							Array arr;
 							arr.push_back(button->get_instance_id());
 							arr.push_back(String(value));
 							EditorResourcePreview::get_singleton()->queue_edited_resource_preview(res, this, "_button_resource_previewed", arr);
 
-						} else if (pi.type == Variant::INT && pi.hint == PROPERTY_HINT_ENUM) {
+						} else if (pi.type == Variant::Type::INT && pi.hint == PROPERTY_HINT_ENUM) {
 							button->set_text(pi.hint_string.get_slice(",", value));
 						} else {
 							button->set_text(value);
@@ -931,7 +931,7 @@ void VisualScriptEditor::_update_graph(int p_only_id) {
 
 						if (nd_list->is_output_port_type_editable()) {
 							OptionButton *opbtn = memnew(OptionButton);
-							for (int j = Variant::NIL; j < Variant::VARIANT_MAX; j++) {
+							for (int j = Variant::Type::NIL; j < Variant::Type::VARIANT_MAX; j++) {
 								opbtn->add_item(Variant::get_type_name(Variant::Type(j)));
 							}
 							opbtn->select(right_type);
@@ -956,7 +956,7 @@ void VisualScriptEditor::_update_graph(int p_only_id) {
 					}
 
 					Ref<Texture2D> t;
-					if (right_type >= 0 && right_type < Variant::VARIANT_MAX) {
+					if (right_type >= 0 && right_type < Variant::Type::VARIANT_MAX) {
 						t = type_icons[right_type];
 					}
 					if (t.is_valid()) {
@@ -1083,7 +1083,7 @@ void VisualScriptEditor::_update_members() {
 	variables->add_button(0, Control::get_theme_icon("Add", "EditorIcons"), -1, false, TTR("Create a new variable."));
 	variables->set_custom_color(0, Control::get_theme_color("mono_color", "Editor"));
 
-	Ref<Texture2D> type_icons[Variant::VARIANT_MAX] = {
+	Ref<Texture2D> type_icons[Variant::Type::VARIANT_MAX] = {
 		Control::get_theme_icon("Variant", "EditorIcons"),
 		Control::get_theme_icon("bool", "EditorIcons"),
 		Control::get_theme_icon("int", "EditorIcons"),
@@ -1368,7 +1368,7 @@ void VisualScriptEditor::_add_func_input() {
 
 	OptionButton *type_box = memnew(OptionButton);
 	type_box->set_custom_minimum_size(Size2(120 * EDSCALE, 0));
-	for (int i = Variant::NIL; i < Variant::VARIANT_MAX; i++) {
+	for (int i = Variant::Type::NIL; i < Variant::Type::VARIANT_MAX; i++) {
 		type_box->add_item(Variant::get_type_name(Variant::Type(i)));
 	}
 	type_box->select(1);
@@ -1500,7 +1500,7 @@ void VisualScriptEditor::_add_input_port(int p_id) {
 	updating_graph = true;
 
 	undo_redo->create_action(TTR("Add Input Port"), UndoRedo::MERGE_ENDS);
-	undo_redo->add_do_method(vsn.ptr(), "add_input_data_port", Variant::NIL, "arg", -1);
+	undo_redo->add_do_method(vsn.ptr(), "add_input_data_port", Variant::Type::NIL, "arg", -1);
 	undo_redo->add_do_method(this, "_update_graph", p_id);
 
 	undo_redo->add_undo_method(vsn.ptr(), "remove_input_data_port", vsn->get_input_value_port_count());
@@ -1522,7 +1522,7 @@ void VisualScriptEditor::_add_output_port(int p_id) {
 	updating_graph = true;
 
 	undo_redo->create_action(TTR("Add Output Port"), UndoRedo::MERGE_ENDS);
-	undo_redo->add_do_method(vsn.ptr(), "add_output_data_port", Variant::NIL, "arg", -1);
+	undo_redo->add_do_method(vsn.ptr(), "add_output_data_port", Variant::Type::NIL, "arg", -1);
 	undo_redo->add_do_method(this, "_update_graph", p_id);
 
 	undo_redo->add_undo_method(vsn.ptr(), "remove_output_data_port", vsn->get_output_value_port_count());
@@ -1559,7 +1559,7 @@ void VisualScriptEditor::_remove_input_port(int p_id, int p_port) {
 		undo_redo->add_undo_method(script.ptr(), "data_connect", func, conn_from, conn_port, p_id, p_port);
 	}
 
-	undo_redo->add_undo_method(vsn.ptr(), "add_input_data_port", vsn->get_input_value_port_info(p_port).type, vsn->get_input_value_port_info(p_port).name, p_port);
+	undo_redo->add_undo_method(vsn.ptr(), "add_input_data_port", static_cast<int>(vsn->get_input_value_port_info(p_port).type), vsn->get_input_value_port_info(p_port).name, p_port);
 	undo_redo->add_undo_method(this, "_update_graph", p_id);
 
 	updating_graph = false;
@@ -2697,12 +2697,12 @@ void VisualScriptEditor::add_callback(const String &p_function, PackedStringArra
 	func.instance();
 	for (int i = 0; i < p_args.size(); i++) {
 		String name = p_args[i];
-		Variant::Type type = Variant::NIL;
+		Variant::Type type = Variant::Type::NIL;
 
 		if (name.find(":") != -1) {
 			String tt = name.get_slice(":", 1);
 			name = name.get_slice(":", 0);
-			for (int j = 0; j < Variant::VARIANT_MAX; j++) {
+			for (int j = 0; j < static_cast<int>(Variant::Type::VARIANT_MAX); j++) {
 				String tname = Variant::get_type_name(Variant::Type(j));
 				if (tname == tt) {
 					type = Variant::Type(j);
@@ -2975,17 +2975,17 @@ void VisualScriptEditor::_graph_connected(const String &p_from, int p_from_slot,
 		int conv_node = -1;
 
 		Ref<VisualScriptOperator> oper = to_node;
-		if (oper.is_valid() && oper->get_typed() == Variant::NIL) {
+		if (oper.is_valid() && oper->get_typed() == Variant::Type::NIL) {
 			// it's an operator Node and if the type is already nil
-			if (from_node->get_output_value_port_info(from_port).type != Variant::NIL) {
+			if (from_node->get_output_value_port_info(from_port).type != Variant::Type::NIL) {
 				oper->set_typed(from_node->get_output_value_port_info(from_port).type);
 			}
 		}
 
 		Ref<VisualScriptOperator> operf = from_node;
-		if (operf.is_valid() && operf->get_typed() == Variant::NIL) {
+		if (operf.is_valid() && operf->get_typed() == Variant::Type::NIL) {
 			// it's an operator Node and if the type is already nil
-			if (to_node->get_input_value_port_info(to_port).type != Variant::NIL) {
+			if (to_node->get_input_value_port_info(to_port).type != Variant::Type::NIL) {
 				operf->set_typed(to_node->get_input_value_port_info(to_port).type);
 			}
 		}
@@ -2993,11 +2993,11 @@ void VisualScriptEditor::_graph_connected(const String &p_from, int p_from_slot,
 		Variant::Type to_type = to_node->get_input_value_port_info(to_port).type;
 		Variant::Type from_type = from_node->get_output_value_port_info(from_port).type;
 
-		if (to_type != Variant::NIL && from_type != Variant::NIL && to_type != from_type) {
+		if (to_type != Variant::Type::NIL && from_type != Variant::Type::NIL && to_type != from_type) {
 			// add a constructor node between the ports
 			bool exceptions = false; // true if there are any exceptions
-			exceptions = exceptions || (to_type == Variant::INT && from_type == Variant::FLOAT);
-			exceptions = exceptions || (to_type == Variant::FLOAT && from_type == Variant::INT);
+			exceptions = exceptions || (to_type == Variant::Type::INT && from_type == Variant::Type::FLOAT);
+			exceptions = exceptions || (to_type == Variant::Type::FLOAT && from_type == Variant::Type::INT);
 			if (Variant::can_convert(from_type, to_type) && !exceptions) {
 				MethodInfo mi;
 				mi.name = Variant::get_type_name(to_type);
@@ -3401,7 +3401,7 @@ void VisualScriptEditor::_graph_connect_to_empty(const String &p_from, int p_fro
 
 VisualScriptNode::TypeGuess VisualScriptEditor::_guess_output_type(int p_port_action_node, int p_port_action_output, Set<int> &visited_nodes) {
 	VisualScriptNode::TypeGuess tg;
-	tg.type = Variant::NIL;
+	tg.type = Variant::Type::NIL;
 
 	if (visited_nodes.has(p_port_action_node)) {
 		return tg; //no loop
@@ -3424,7 +3424,7 @@ VisualScriptNode::TypeGuess VisualScriptEditor::_guess_output_type(int p_port_ac
 		VisualScriptNode::TypeGuess g;
 		g.type = pi.type;
 
-		if (g.type == Variant::NIL || g.type == Variant::OBJECT) {
+		if (g.type == Variant::Type::NIL || g.type == Variant::Type::OBJECT) {
 			//any or object input, must further guess what this is
 			int from_node;
 			int from_port;
@@ -3433,11 +3433,11 @@ VisualScriptNode::TypeGuess VisualScriptEditor::_guess_output_type(int p_port_ac
 				g = _guess_output_type(from_node, from_port, visited_nodes);
 			} else {
 				Variant defval = node->get_default_input_value(i);
-				if (defval.get_type() == Variant::OBJECT) {
+				if (defval.get_type() == Variant::Type::OBJECT) {
 					Object *obj = defval;
 
 					if (obj) {
-						g.type = Variant::OBJECT;
+						g.type = Variant::Type::OBJECT;
 						g.gdclass = obj->get_class();
 						g.script = obj->get_script();
 					}
@@ -3477,7 +3477,7 @@ void VisualScriptEditor::_port_action_menu(int p_option, const StringName &func)
 			if (script->get_node(func, port_action_node)->get_output_value_port_count() > 0) {
 				type_string = script->get_node(func, port_action_node)->get_output_value_port_info(port_action_output).hint_string;
 			}
-			if (tg.type == Variant::OBJECT) {
+			if (tg.type == Variant::Type::OBJECT) {
 				if (tg.script.is_valid()) {
 					new_connect_node_select->select_from_script(tg.script, "");
 				} else if (type_string != String()) {
@@ -3485,7 +3485,7 @@ void VisualScriptEditor::_port_action_menu(int p_option, const StringName &func)
 				} else {
 					new_connect_node_select->select_from_base_type(n->get_base_type());
 				}
-			} else if (tg.type == Variant::NIL) {
+			} else if (tg.type == Variant::Type::NIL) {
 				new_connect_node_select->select_from_base_type("");
 			} else {
 				new_connect_node_select->select_from_basic_type(tg.type);
@@ -3503,13 +3503,13 @@ void VisualScriptEditor::_port_action_menu(int p_option, const StringName &func)
 			if (script->get_node(func, port_action_node)->get_output_value_port_count() > 0) {
 				property_info = script->get_node(func, port_action_node)->get_output_value_port_info(port_action_output);
 			}
-			if (tg.type == Variant::OBJECT) {
-				if (property_info.type == Variant::OBJECT && property_info.hint_string != String()) {
+			if (tg.type == Variant::Type::OBJECT) {
+				if (property_info.type == Variant::Type::OBJECT && property_info.hint_string != String()) {
 					new_connect_node_select->select_from_action(property_info.hint_string);
 				} else {
 					new_connect_node_select->select_from_action("");
 				}
-			} else if (tg.type == Variant::NIL) {
+			} else if (tg.type == Variant::Type::NIL) {
 				new_connect_node_select->select_from_action("");
 			} else {
 				new_connect_node_select->select_from_action(Variant::get_type_name(tg.type));
@@ -3585,9 +3585,9 @@ void VisualScriptEditor::_selected_connect_node(const String &p_text, const Stri
 			Variant::Type type = vnode_old->get_output_value_port_info(port_action_output).type;
 			String hint_name = vnode_old->get_output_value_port_info(port_action_output).hint_string;
 
-			if (type == Variant::OBJECT) {
+			if (type == Variant::Type::OBJECT) {
 				Object::cast_to<VisualScriptTypeCast>(vnode_new.ptr())->set_base_type(hint_name);
-			} else if (type == Variant::NIL) {
+			} else if (type == Variant::Type::NIL) {
 				Object::cast_to<VisualScriptTypeCast>(vnode_new.ptr())->set_base_type("");
 			} else {
 				Object::cast_to<VisualScriptTypeCast>(vnode_new.ptr())->set_base_type(Variant::get_type_name(type));
@@ -3679,7 +3679,7 @@ void VisualScriptEditor::_selected_connect_node(const String &p_text, const Stri
 		if (port_node_exists && p_connecting) {
 			VisualScriptNode::TypeGuess tg = _guess_output_type(port_action_node, port_action_output, vn);
 
-			if (tg.type == Variant::OBJECT) {
+			if (tg.type == Variant::Type::OBJECT) {
 				vsfc->set_call_mode(VisualScriptFunctionCall::CALL_MODE_INSTANCE);
 				vsfc->set_base_type(String(""));
 				if (tg.gdclass != StringName()) {
@@ -3699,7 +3699,7 @@ void VisualScriptEditor::_selected_connect_node(const String &p_text, const Stri
 				if (tg.script.is_valid()) {
 					vsfc->set_base_script(tg.script->get_path());
 				}
-			} else if (tg.type == Variant::NIL) {
+			} else if (tg.type == Variant::Type::NIL) {
 				vsfc->set_call_mode(VisualScriptFunctionCall::CALL_MODE_INSTANCE);
 				vsfc->set_base_type(String(""));
 			} else {
@@ -3714,7 +3714,7 @@ void VisualScriptEditor::_selected_connect_node(const String &p_text, const Stri
 			Ref<VisualScriptPropertySet> vsp = vsn;
 
 			VisualScriptNode::TypeGuess tg = _guess_output_type(port_action_node, port_action_output, vn);
-			if (tg.type == Variant::OBJECT) {
+			if (tg.type == Variant::Type::OBJECT) {
 				vsp->set_call_mode(VisualScriptPropertySet::CALL_MODE_INSTANCE);
 				vsp->set_base_type(String(""));
 				if (tg.gdclass != StringName()) {
@@ -3731,7 +3731,7 @@ void VisualScriptEditor::_selected_connect_node(const String &p_text, const Stri
 				if (tg.script.is_valid()) {
 					vsp->set_base_script(tg.script->get_path());
 				}
-			} else if (tg.type == Variant::NIL) {
+			} else if (tg.type == Variant::Type::NIL) {
 				vsp->set_call_mode(VisualScriptPropertySet::CALL_MODE_INSTANCE);
 				vsp->set_base_type(String(""));
 			} else {
@@ -3744,7 +3744,7 @@ void VisualScriptEditor::_selected_connect_node(const String &p_text, const Stri
 			Ref<VisualScriptPropertyGet> vsp = vsn;
 
 			VisualScriptNode::TypeGuess tg = _guess_output_type(port_action_node, port_action_output, vn);
-			if (tg.type == Variant::OBJECT) {
+			if (tg.type == Variant::Type::OBJECT) {
 				vsp->set_call_mode(VisualScriptPropertyGet::CALL_MODE_INSTANCE);
 				vsp->set_base_type(String(""));
 				if (tg.gdclass != StringName()) {
@@ -3760,7 +3760,7 @@ void VisualScriptEditor::_selected_connect_node(const String &p_text, const Stri
 				if (tg.script.is_valid()) {
 					vsp->set_base_script(tg.script->get_path());
 				}
-			} else if (tg.type == Variant::NIL) {
+			} else if (tg.type == Variant::Type::NIL) {
 				vsp->set_call_mode(VisualScriptPropertyGet::CALL_MODE_INSTANCE);
 				vsp->set_base_type(String(""));
 			} else {
@@ -3866,7 +3866,7 @@ void VisualScriptEditor::_selected_new_virtual_method(const String &p_text, cons
 	Vector2 ofs = _get_available_pos();
 
 	undo_redo->add_do_method(script.ptr(), "add_node", name, script->get_available_id(), func_node, ofs);
-	if (minfo.return_val.type != Variant::NIL || minfo.return_val.usage & PROPERTY_USAGE_NIL_IS_VARIANT) {
+	if (minfo.return_val.type != Variant::Type::NIL || minfo.return_val.usage & PROPERTY_USAGE_NIL_IS_VARIANT) {
 		Ref<VisualScriptReturn> ret_node;
 		ret_node.instance();
 		ret_node->set_return_type(minfo.return_val.type);
@@ -3931,7 +3931,7 @@ void VisualScriptEditor::_default_value_edited(Node *p_button, int p_id, int p_i
 
 	PropertyInfo pinfo = vsn->get_input_value_port_info(p_input_port);
 	Variant existing = vsn->get_default_input_value(p_input_port);
-	if (pinfo.type != Variant::NIL && existing.get_type() != pinfo.type) {
+	if (pinfo.type != Variant::Type::NIL && existing.get_type() != pinfo.type) {
 		Callable::CallError ce;
 		const Variant *existingp = &existing;
 		existing = Variant::construct(pinfo.type, &existingp, 1, ce, false);
@@ -3940,7 +3940,7 @@ void VisualScriptEditor::_default_value_edited(Node *p_button, int p_id, int p_i
 	default_value_edit->set_position(Object::cast_to<Control>(p_button)->get_global_position() + Vector2(0, Object::cast_to<Control>(p_button)->get_size().y));
 	default_value_edit->set_size(Size2(1, 1));
 
-	if (pinfo.type == Variant::NODE_PATH) {
+	if (pinfo.type == Variant::Type::NODE_PATH) {
 		Node *edited_scene = get_tree()->get_edited_scene_root();
 		if (edited_scene) { // Fixing an old crash bug ( Visual Script Crashes on editing NodePath with an empty scene open)
 			Node *script_node = _find_script_node(edited_scene, edited_scene, script);
@@ -4850,10 +4850,10 @@ VisualScriptEditor::VisualScriptEditor() {
 	add_child(hint_text_timer);
 
 	// Allowed casts (connections).
-	for (int i = 0; i < Variant::VARIANT_MAX; i++) {
-		graph->add_valid_connection_type(Variant::NIL, i);
-		graph->add_valid_connection_type(i, Variant::NIL);
-		for (int j = 0; j < Variant::VARIANT_MAX; j++) {
+	for (int i = 0; i < static_cast<int>(Variant::Type::VARIANT_MAX); i++) {
+		graph->add_valid_connection_type(static_cast<int>(Variant::Type::NIL), i);
+		graph->add_valid_connection_type(i, static_cast<int>(Variant::Type::NIL));
+		for (int j = 0; j < static_cast<int>(Variant::Type::VARIANT_MAX); j++) {
 			if (Variant::can_convert(Variant::Type(i), Variant::Type(j))) {
 				graph->add_valid_connection_type(i, j);
 			}

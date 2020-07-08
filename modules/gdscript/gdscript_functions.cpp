@@ -160,7 +160,7 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 	if (!p_args[m_arg]->is_num()) {                                       \
 		r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT; \
 		r_error.argument = m_arg;                                         \
-		r_error.expected = Variant::FLOAT;                                \
+		r_error.expected = Variant::Type::FLOAT;                                \
 		r_ret = Variant();                                                \
 		return;                                                           \
 	}
@@ -265,31 +265,31 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 		} break;
 		case MATH_ABS: {
 			VALIDATE_ARG_COUNT(1);
-			if (p_args[0]->get_type() == Variant::INT) {
+			if (p_args[0]->get_type() == Variant::Type::INT) {
 				int64_t i = *p_args[0];
 				r_ret = ABS(i);
-			} else if (p_args[0]->get_type() == Variant::FLOAT) {
+			} else if (p_args[0]->get_type() == Variant::Type::FLOAT) {
 				double r = *p_args[0];
 				r_ret = Math::abs(r);
 			} else {
 				r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 0;
-				r_error.expected = Variant::FLOAT;
+				r_error.expected = Variant::Type::FLOAT;
 				r_ret = Variant();
 			}
 		} break;
 		case MATH_SIGN: {
 			VALIDATE_ARG_COUNT(1);
-			if (p_args[0]->get_type() == Variant::INT) {
+			if (p_args[0]->get_type() == Variant::Type::INT) {
 				int64_t i = *p_args[0];
 				r_ret = i < 0 ? -1 : (i > 0 ? +1 : 0);
-			} else if (p_args[0]->get_type() == Variant::FLOAT) {
+			} else if (p_args[0]->get_type() == Variant::Type::FLOAT) {
 				real_t r = *p_args[0];
 				r_ret = r < 0.0 ? -1.0 : (r > 0.0 ? +1.0 : 0.0);
 			} else {
 				r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 0;
-				r_error.expected = Variant::FLOAT;
+				r_error.expected = Variant::Type::FLOAT;
 				r_ret = Variant();
 			}
 		} break;
@@ -351,14 +351,14 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 			VALIDATE_ARG_COUNT(3);
 			VALIDATE_ARG_NUM(2);
 			const double t = (double)*p_args[2];
-			switch (p_args[0]->get_type() == p_args[1]->get_type() ? p_args[0]->get_type() : Variant::FLOAT) {
-				case Variant::VECTOR2: {
+			switch (p_args[0]->get_type() == p_args[1]->get_type() ? p_args[0]->get_type() : Variant::Type::FLOAT) {
+				case Variant::Type::VECTOR2: {
 					r_ret = ((Vector2)*p_args[0]).lerp((Vector2)*p_args[1], t);
 				} break;
-				case Variant::VECTOR3: {
+				case Variant::Type::VECTOR3: {
 					r_ret = (p_args[0]->operator Vector3()).lerp(p_args[1]->operator Vector3(), t);
 				} break;
-				case Variant::COLOR: {
+				case Variant::Type::COLOR: {
 					r_ret = ((Color)*p_args[0]).lerp((Color)*p_args[1], t);
 				} break;
 				default: {
@@ -495,7 +495,7 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 		} break;
 		case LOGIC_MAX: {
 			VALIDATE_ARG_COUNT(2);
-			if (p_args[0]->get_type() == Variant::INT && p_args[1]->get_type() == Variant::INT) {
+			if (p_args[0]->get_type() == Variant::Type::INT && p_args[1]->get_type() == Variant::Type::INT) {
 				int64_t a = *p_args[0];
 				int64_t b = *p_args[1];
 				r_ret = MAX(a, b);
@@ -512,7 +512,7 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 		} break;
 		case LOGIC_MIN: {
 			VALIDATE_ARG_COUNT(2);
-			if (p_args[0]->get_type() == Variant::INT && p_args[1]->get_type() == Variant::INT) {
+			if (p_args[0]->get_type() == Variant::Type::INT && p_args[1]->get_type() == Variant::Type::INT) {
 				int64_t a = *p_args[0];
 				int64_t b = *p_args[1];
 				r_ret = MIN(a, b);
@@ -528,7 +528,7 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 		} break;
 		case LOGIC_CLAMP: {
 			VALIDATE_ARG_COUNT(3);
-			if (p_args[0]->get_type() == Variant::INT && p_args[1]->get_type() == Variant::INT && p_args[2]->get_type() == Variant::INT) {
+			if (p_args[0]->get_type() == Variant::Type::INT && p_args[1]->get_type() == Variant::Type::INT && p_args[2]->get_type() == Variant::Type::INT) {
 				int64_t a = *p_args[0];
 				int64_t b = *p_args[1];
 				int64_t c = *p_args[2];
@@ -553,7 +553,7 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 		} break;
 		case OBJ_WEAKREF: {
 			VALIDATE_ARG_COUNT(1);
-			if (p_args[0]->get_type() == Variant::OBJECT) {
+			if (p_args[0]->get_type() == Variant::Type::OBJECT) {
 				if (p_args[0]->is_ref()) {
 					Ref<WeakRef> wref = memnew(WeakRef);
 					REF r = *p_args[0];
@@ -569,30 +569,30 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 					}
 					r_ret = wref;
 				}
-			} else if (p_args[0]->get_type() == Variant::NIL) {
+			} else if (p_args[0]->get_type() == Variant::Type::NIL) {
 				Ref<WeakRef> wref = memnew(WeakRef);
 				r_ret = wref;
 			} else {
 				r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 0;
-				r_error.expected = Variant::OBJECT;
+				r_error.expected = Variant::Type::OBJECT;
 				r_ret = Variant();
 				return;
 			}
 		} break;
 		case FUNC_FUNCREF: {
 			VALIDATE_ARG_COUNT(2);
-			if (p_args[0]->get_type() != Variant::OBJECT) {
+			if (p_args[0]->get_type() != Variant::Type::OBJECT) {
 				r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 0;
-				r_error.expected = Variant::OBJECT;
+				r_error.expected = Variant::Type::OBJECT;
 				r_ret = Variant();
 				return;
 			}
-			if (p_args[1]->get_type() != Variant::STRING && p_args[1]->get_type() != Variant::NODE_PATH) {
+			if (p_args[1]->get_type() != Variant::Type::STRING && p_args[1]->get_type() != Variant::Type::NODE_PATH) {
 				r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 1;
-				r_error.expected = Variant::STRING;
+				r_error.expected = Variant::Type::STRING;
 				r_ret = Variant();
 				return;
 			}
@@ -609,11 +609,11 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 			VALIDATE_ARG_COUNT(2);
 			VALIDATE_ARG_NUM(1);
 			int type = *p_args[1];
-			if (type < 0 || type >= Variant::VARIANT_MAX) {
+			if (type < 0 || type >= Variant::Type::VARIANT_MAX) {
 				r_ret = RTR("Invalid type argument to convert(), use TYPE_* constants.");
 				r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 0;
-				r_error.expected = Variant::INT;
+				r_error.expected = Variant::Type::INT;
 				return;
 
 			} else {
@@ -639,10 +639,10 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 		case TEXT_ORD: {
 			VALIDATE_ARG_COUNT(1);
 
-			if (p_args[0]->get_type() != Variant::STRING) {
+			if (p_args[0]->get_type() != Variant::Type::STRING) {
 				r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 0;
-				r_error.expected = Variant::STRING;
+				r_error.expected = Variant::Type::STRING;
 				r_ret = Variant();
 				return;
 			}
@@ -652,7 +652,7 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 			if (str.length() != 1) {
 				r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 0;
-				r_error.expected = Variant::STRING;
+				r_error.expected = Variant::Type::STRING;
 				r_ret = RTR("Expected a string of length 1 (a character).");
 				return;
 			}
@@ -755,10 +755,10 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 		} break;
 		case PUSH_ERROR: {
 			VALIDATE_ARG_COUNT(1);
-			if (p_args[0]->get_type() != Variant::STRING) {
+			if (p_args[0]->get_type() != Variant::Type::STRING) {
 				r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 0;
-				r_error.expected = Variant::STRING;
+				r_error.expected = Variant::Type::STRING;
 				r_ret = Variant();
 				break;
 			}
@@ -769,10 +769,10 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 		} break;
 		case PUSH_WARNING: {
 			VALIDATE_ARG_COUNT(1);
-			if (p_args[0]->get_type() != Variant::STRING) {
+			if (p_args[0]->get_type() != Variant::Type::STRING) {
 				r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 0;
-				r_error.expected = Variant::STRING;
+				r_error.expected = Variant::Type::STRING;
 				r_ret = Variant();
 				break;
 			}
@@ -789,10 +789,10 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 		} break;
 		case STR_TO_VAR: {
 			VALIDATE_ARG_COUNT(1);
-			if (p_args[0]->get_type() != Variant::STRING) {
+			if (p_args[0]->get_type() != Variant::Type::STRING) {
 				r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 0;
-				r_error.expected = Variant::STRING;
+				r_error.expected = Variant::Type::STRING;
 				r_ret = Variant();
 				return;
 			}
@@ -817,10 +817,10 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 				r_error.argument = 2;
 				r_ret = Variant();
 			} else if (p_arg_count == 2) {
-				if (p_args[1]->get_type() != Variant::BOOL) {
+				if (p_args[1]->get_type() != Variant::Type::BOOL) {
 					r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 					r_error.argument = 1;
-					r_error.expected = Variant::BOOL;
+					r_error.expected = Variant::Type::BOOL;
 					r_ret = Variant();
 					return;
 				}
@@ -833,7 +833,7 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 			if (err) {
 				r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 0;
-				r_error.expected = Variant::NIL;
+				r_error.expected = Variant::Type::NIL;
 				r_ret = "Unexpected error encoding variable to bytes, likely unserializable type found (Object or RID).";
 				return;
 			}
@@ -857,20 +857,20 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 				r_error.argument = 2;
 				r_ret = Variant();
 			} else if (p_arg_count == 2) {
-				if (p_args[1]->get_type() != Variant::BOOL) {
+				if (p_args[1]->get_type() != Variant::Type::BOOL) {
 					r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 					r_error.argument = 1;
-					r_error.expected = Variant::BOOL;
+					r_error.expected = Variant::Type::BOOL;
 					r_ret = Variant();
 					return;
 				}
 				allow_objects = *p_args[1];
 			}
 
-			if (p_args[0]->get_type() != Variant::PACKED_BYTE_ARRAY) {
+			if (p_args[0]->get_type() != Variant::Type::PACKED_BYTE_ARRAY) {
 				r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 1;
-				r_error.expected = Variant::PACKED_BYTE_ARRAY;
+				r_error.expected = Variant::Type::PACKED_BYTE_ARRAY;
 				r_ret = Variant();
 				return;
 			}
@@ -884,7 +884,7 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 					r_ret = RTR("Not enough bytes for decoding bytes, or invalid format.");
 					r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 					r_error.argument = 0;
-					r_error.expected = Variant::PACKED_BYTE_ARRAY;
+					r_error.expected = Variant::Type::PACKED_BYTE_ARRAY;
 					return;
 				}
 			}
@@ -1009,10 +1009,10 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 		} break;
 		case RESOURCE_LOAD: {
 			VALIDATE_ARG_COUNT(1);
-			if (p_args[0]->get_type() != Variant::STRING) {
+			if (p_args[0]->get_type() != Variant::Type::STRING) {
 				r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 0;
-				r_error.expected = Variant::STRING;
+				r_error.expected = Variant::Type::STRING;
 				r_ret = Variant();
 			} else {
 				r_ret = ResourceLoader::load(*p_args[0]);
@@ -1022,9 +1022,9 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 		case INST2DICT: {
 			VALIDATE_ARG_COUNT(1);
 
-			if (p_args[0]->get_type() == Variant::NIL) {
+			if (p_args[0]->get_type() == Variant::Type::NIL) {
 				r_ret = Variant();
-			} else if (p_args[0]->get_type() != Variant::OBJECT) {
+			} else if (p_args[0]->get_type() != Variant::Type::OBJECT) {
 				r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 0;
 				r_ret = Variant();
@@ -1036,7 +1036,7 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 				} else if (!obj->get_script_instance() || obj->get_script_instance()->get_language() != GDScriptLanguage::get_singleton()) {
 					r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 					r_error.argument = 0;
-					r_error.expected = Variant::DICTIONARY;
+					r_error.expected = Variant::Type::DICTIONARY;
 					r_ret = RTR("Not a script with an instance");
 					return;
 				} else {
@@ -1045,7 +1045,7 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 					if (base.is_null()) {
 						r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 						r_error.argument = 0;
-						r_error.expected = Variant::DICTIONARY;
+						r_error.expected = Variant::Type::DICTIONARY;
 						r_ret = RTR("Not based on a script");
 						return;
 					}
@@ -1062,7 +1062,7 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 					if (!p->path.is_resource_file()) {
 						r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 						r_error.argument = 0;
-						r_error.expected = Variant::DICTIONARY;
+						r_error.expected = Variant::Type::DICTIONARY;
 						r_ret = Variant();
 
 						r_ret = RTR("Not based on a resource file");
@@ -1089,10 +1089,10 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 		case DICT2INST: {
 			VALIDATE_ARG_COUNT(1);
 
-			if (p_args[0]->get_type() != Variant::DICTIONARY) {
+			if (p_args[0]->get_type() != Variant::Type::DICTIONARY) {
 				r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 0;
-				r_error.expected = Variant::DICTIONARY;
+				r_error.expected = Variant::Type::DICTIONARY;
 				r_ret = Variant();
 
 				return;
@@ -1103,7 +1103,7 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 			if (!d.has("@path")) {
 				r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 0;
-				r_error.expected = Variant::OBJECT;
+				r_error.expected = Variant::Type::OBJECT;
 				r_ret = RTR("Invalid instance dictionary format (missing @path)");
 
 				return;
@@ -1113,7 +1113,7 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 			if (!scr.is_valid()) {
 				r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 0;
-				r_error.expected = Variant::OBJECT;
+				r_error.expected = Variant::Type::OBJECT;
 				r_ret = RTR("Invalid instance dictionary format (can't load script at @path)");
 				return;
 			}
@@ -1123,7 +1123,7 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 			if (!gdscr.is_valid()) {
 				r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 0;
-				r_error.expected = Variant::OBJECT;
+				r_error.expected = Variant::Type::OBJECT;
 				r_ret = Variant();
 				r_ret = RTR("Invalid instance dictionary format (invalid script at @path)");
 				return;
@@ -1139,7 +1139,7 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 				if (!gdscr.is_valid()) {
 					r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 					r_error.argument = 0;
-					r_error.expected = Variant::OBJECT;
+					r_error.expected = Variant::Type::OBJECT;
 					r_ret = Variant();
 					r_ret = RTR("Invalid instance dictionary (invalid subclasses)");
 					return;
@@ -1165,10 +1165,10 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 		case VALIDATE_JSON: {
 			VALIDATE_ARG_COUNT(1);
 
-			if (p_args[0]->get_type() != Variant::STRING) {
+			if (p_args[0]->get_type() != Variant::Type::STRING) {
 				r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 0;
-				r_error.expected = Variant::STRING;
+				r_error.expected = Variant::Type::STRING;
 				r_ret = Variant();
 				return;
 			}
@@ -1188,10 +1188,10 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 		case PARSE_JSON: {
 			VALIDATE_ARG_COUNT(1);
 
-			if (p_args[0]->get_type() != Variant::STRING) {
+			if (p_args[0]->get_type() != Variant::Type::STRING) {
 				r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 0;
-				r_error.expected = Variant::STRING;
+				r_error.expected = Variant::Type::STRING;
 				r_ret = Variant();
 				return;
 			}
@@ -1262,7 +1262,7 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 				return;
 			}
 
-			if (p_args[0]->get_type() != Variant::STRING) {
+			if (p_args[0]->get_type() != Variant::Type::STRING) {
 				r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 0;
 				r_ret = Variant();
@@ -1303,10 +1303,10 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 
 		case INSTANCE_FROM_ID: {
 			VALIDATE_ARG_COUNT(1);
-			if (p_args[0]->get_type() != Variant::INT && p_args[0]->get_type() != Variant::FLOAT) {
+			if (p_args[0]->get_type() != Variant::Type::INT && p_args[0]->get_type() != Variant::Type::FLOAT) {
 				r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 0;
-				r_error.expected = Variant::INT;
+				r_error.expected = Variant::Type::INT;
 				r_ret = Variant();
 				break;
 			}
@@ -1318,58 +1318,58 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 		case LEN: {
 			VALIDATE_ARG_COUNT(1);
 			switch (p_args[0]->get_type()) {
-				case Variant::STRING: {
+				case Variant::Type::STRING: {
 					String d = *p_args[0];
 					r_ret = d.length();
 				} break;
-				case Variant::DICTIONARY: {
+				case Variant::Type::DICTIONARY: {
 					Dictionary d = *p_args[0];
 					r_ret = d.size();
 				} break;
-				case Variant::ARRAY: {
+				case Variant::Type::ARRAY: {
 					Array d = *p_args[0];
 					r_ret = d.size();
 				} break;
-				case Variant::PACKED_BYTE_ARRAY: {
+				case Variant::Type::PACKED_BYTE_ARRAY: {
 					Vector<uint8_t> d = *p_args[0];
 					r_ret = d.size();
 				} break;
-				case Variant::PACKED_INT32_ARRAY: {
+				case Variant::Type::PACKED_INT32_ARRAY: {
 					Vector<int32_t> d = *p_args[0];
 					r_ret = d.size();
 				} break;
-				case Variant::PACKED_INT64_ARRAY: {
+				case Variant::Type::PACKED_INT64_ARRAY: {
 					Vector<int64_t> d = *p_args[0];
 					r_ret = d.size();
 				} break;
-				case Variant::PACKED_FLOAT32_ARRAY: {
+				case Variant::Type::PACKED_FLOAT32_ARRAY: {
 					Vector<float> d = *p_args[0];
 					r_ret = d.size();
 				} break;
-				case Variant::PACKED_FLOAT64_ARRAY: {
+				case Variant::Type::PACKED_FLOAT64_ARRAY: {
 					Vector<double> d = *p_args[0];
 					r_ret = d.size();
 				} break;
-				case Variant::PACKED_STRING_ARRAY: {
+				case Variant::Type::PACKED_STRING_ARRAY: {
 					Vector<String> d = *p_args[0];
 					r_ret = d.size();
 				} break;
-				case Variant::PACKED_VECTOR2_ARRAY: {
+				case Variant::Type::PACKED_VECTOR2_ARRAY: {
 					Vector<Vector2> d = *p_args[0];
 					r_ret = d.size();
 				} break;
-				case Variant::PACKED_VECTOR3_ARRAY: {
+				case Variant::Type::PACKED_VECTOR3_ARRAY: {
 					Vector<Vector3> d = *p_args[0];
 					r_ret = d.size();
 				} break;
-				case Variant::PACKED_COLOR_ARRAY: {
+				case Variant::Type::PACKED_COLOR_ARRAY: {
 					Vector<Color> d = *p_args[0];
 					r_ret = d.size();
 				} break;
 				default: {
 					r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 					r_error.argument = 0;
-					r_error.expected = Variant::OBJECT;
+					r_error.expected = Variant::Type::OBJECT;
 					r_ret = Variant();
 					r_ret = RTR("Object can't provide a length.");
 				}
@@ -1378,7 +1378,7 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 		} break;
 		case IS_INSTANCE_VALID: {
 			VALIDATE_ARG_COUNT(1);
-			if (p_args[0]->get_type() != Variant::OBJECT) {
+			if (p_args[0]->get_type() != Variant::Type::OBJECT) {
 				r_ret = false;
 			} else {
 				Object *obj = p_args[0]->get_validated_object();
@@ -1465,488 +1465,488 @@ MethodInfo GDScriptFunctions::get_info(Function p_func) {
 
 	switch (p_func) {
 		case MATH_SIN: {
-			MethodInfo mi("sin", PropertyInfo(Variant::FLOAT, "s"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("sin", PropertyInfo(Variant::Type::FLOAT, "s"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 
 		} break;
 		case MATH_COS: {
-			MethodInfo mi("cos", PropertyInfo(Variant::FLOAT, "s"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("cos", PropertyInfo(Variant::Type::FLOAT, "s"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_TAN: {
-			MethodInfo mi("tan", PropertyInfo(Variant::FLOAT, "s"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("tan", PropertyInfo(Variant::Type::FLOAT, "s"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_SINH: {
-			MethodInfo mi("sinh", PropertyInfo(Variant::FLOAT, "s"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("sinh", PropertyInfo(Variant::Type::FLOAT, "s"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_COSH: {
-			MethodInfo mi("cosh", PropertyInfo(Variant::FLOAT, "s"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("cosh", PropertyInfo(Variant::Type::FLOAT, "s"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_TANH: {
-			MethodInfo mi("tanh", PropertyInfo(Variant::FLOAT, "s"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("tanh", PropertyInfo(Variant::Type::FLOAT, "s"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_ASIN: {
-			MethodInfo mi("asin", PropertyInfo(Variant::FLOAT, "s"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("asin", PropertyInfo(Variant::Type::FLOAT, "s"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_ACOS: {
-			MethodInfo mi("acos", PropertyInfo(Variant::FLOAT, "s"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("acos", PropertyInfo(Variant::Type::FLOAT, "s"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_ATAN: {
-			MethodInfo mi("atan", PropertyInfo(Variant::FLOAT, "s"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("atan", PropertyInfo(Variant::Type::FLOAT, "s"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_ATAN2: {
-			MethodInfo mi("atan2", PropertyInfo(Variant::FLOAT, "y"), PropertyInfo(Variant::FLOAT, "x"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("atan2", PropertyInfo(Variant::Type::FLOAT, "y"), PropertyInfo(Variant::Type::FLOAT, "x"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_SQRT: {
-			MethodInfo mi("sqrt", PropertyInfo(Variant::FLOAT, "s"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("sqrt", PropertyInfo(Variant::Type::FLOAT, "s"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_FMOD: {
-			MethodInfo mi("fmod", PropertyInfo(Variant::FLOAT, "a"), PropertyInfo(Variant::FLOAT, "b"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("fmod", PropertyInfo(Variant::Type::FLOAT, "a"), PropertyInfo(Variant::Type::FLOAT, "b"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_FPOSMOD: {
-			MethodInfo mi("fposmod", PropertyInfo(Variant::FLOAT, "a"), PropertyInfo(Variant::FLOAT, "b"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("fposmod", PropertyInfo(Variant::Type::FLOAT, "a"), PropertyInfo(Variant::Type::FLOAT, "b"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_POSMOD: {
-			MethodInfo mi("posmod", PropertyInfo(Variant::INT, "a"), PropertyInfo(Variant::INT, "b"));
-			mi.return_val.type = Variant::INT;
+			MethodInfo mi("posmod", PropertyInfo(Variant::Type::INT, "a"), PropertyInfo(Variant::Type::INT, "b"));
+			mi.return_val.type = Variant::Type::INT;
 			return mi;
 		} break;
 		case MATH_FLOOR: {
-			MethodInfo mi("floor", PropertyInfo(Variant::FLOAT, "s"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("floor", PropertyInfo(Variant::Type::FLOAT, "s"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_CEIL: {
-			MethodInfo mi("ceil", PropertyInfo(Variant::FLOAT, "s"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("ceil", PropertyInfo(Variant::Type::FLOAT, "s"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_ROUND: {
-			MethodInfo mi("round", PropertyInfo(Variant::FLOAT, "s"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("round", PropertyInfo(Variant::Type::FLOAT, "s"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_ABS: {
-			MethodInfo mi("abs", PropertyInfo(Variant::FLOAT, "s"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("abs", PropertyInfo(Variant::Type::FLOAT, "s"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_SIGN: {
-			MethodInfo mi("sign", PropertyInfo(Variant::FLOAT, "s"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("sign", PropertyInfo(Variant::Type::FLOAT, "s"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_POW: {
-			MethodInfo mi("pow", PropertyInfo(Variant::FLOAT, "base"), PropertyInfo(Variant::FLOAT, "exp"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("pow", PropertyInfo(Variant::Type::FLOAT, "base"), PropertyInfo(Variant::Type::FLOAT, "exp"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_LOG: {
-			MethodInfo mi("log", PropertyInfo(Variant::FLOAT, "s"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("log", PropertyInfo(Variant::Type::FLOAT, "s"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_EXP: {
-			MethodInfo mi("exp", PropertyInfo(Variant::FLOAT, "s"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("exp", PropertyInfo(Variant::Type::FLOAT, "s"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_ISNAN: {
-			MethodInfo mi("is_nan", PropertyInfo(Variant::FLOAT, "s"));
-			mi.return_val.type = Variant::BOOL;
+			MethodInfo mi("is_nan", PropertyInfo(Variant::Type::FLOAT, "s"));
+			mi.return_val.type = Variant::Type::BOOL;
 			return mi;
 		} break;
 		case MATH_ISINF: {
-			MethodInfo mi("is_inf", PropertyInfo(Variant::FLOAT, "s"));
-			mi.return_val.type = Variant::BOOL;
+			MethodInfo mi("is_inf", PropertyInfo(Variant::Type::FLOAT, "s"));
+			mi.return_val.type = Variant::Type::BOOL;
 			return mi;
 		} break;
 		case MATH_ISEQUALAPPROX: {
-			MethodInfo mi("is_equal_approx", PropertyInfo(Variant::FLOAT, "a"), PropertyInfo(Variant::FLOAT, "b"));
-			mi.return_val.type = Variant::BOOL;
+			MethodInfo mi("is_equal_approx", PropertyInfo(Variant::Type::FLOAT, "a"), PropertyInfo(Variant::Type::FLOAT, "b"));
+			mi.return_val.type = Variant::Type::BOOL;
 			return mi;
 		} break;
 		case MATH_ISZEROAPPROX: {
-			MethodInfo mi("is_zero_approx", PropertyInfo(Variant::FLOAT, "s"));
-			mi.return_val.type = Variant::BOOL;
+			MethodInfo mi("is_zero_approx", PropertyInfo(Variant::Type::FLOAT, "s"));
+			mi.return_val.type = Variant::Type::BOOL;
 			return mi;
 		} break;
 		case MATH_EASE: {
-			MethodInfo mi("ease", PropertyInfo(Variant::FLOAT, "s"), PropertyInfo(Variant::FLOAT, "curve"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("ease", PropertyInfo(Variant::Type::FLOAT, "s"), PropertyInfo(Variant::Type::FLOAT, "curve"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_STEP_DECIMALS: {
-			MethodInfo mi("step_decimals", PropertyInfo(Variant::FLOAT, "step"));
-			mi.return_val.type = Variant::INT;
+			MethodInfo mi("step_decimals", PropertyInfo(Variant::Type::FLOAT, "step"));
+			mi.return_val.type = Variant::Type::INT;
 			return mi;
 		} break;
 		case MATH_STEPIFY: {
-			MethodInfo mi("stepify", PropertyInfo(Variant::FLOAT, "s"), PropertyInfo(Variant::FLOAT, "step"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("stepify", PropertyInfo(Variant::Type::FLOAT, "s"), PropertyInfo(Variant::Type::FLOAT, "step"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_LERP: {
-			MethodInfo mi("lerp", PropertyInfo(Variant::NIL, "from"), PropertyInfo(Variant::NIL, "to"), PropertyInfo(Variant::FLOAT, "weight"));
-			mi.return_val.type = Variant::NIL;
+			MethodInfo mi("lerp", PropertyInfo(Variant::Type::NIL, "from"), PropertyInfo(Variant::Type::NIL, "to"), PropertyInfo(Variant::Type::FLOAT, "weight"));
+			mi.return_val.type = Variant::Type::NIL;
 			mi.return_val.usage |= PROPERTY_USAGE_NIL_IS_VARIANT;
 			return mi;
 		} break;
 		case MATH_LERP_ANGLE: {
-			MethodInfo mi("lerp_angle", PropertyInfo(Variant::FLOAT, "from"), PropertyInfo(Variant::FLOAT, "to"), PropertyInfo(Variant::FLOAT, "weight"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("lerp_angle", PropertyInfo(Variant::Type::FLOAT, "from"), PropertyInfo(Variant::Type::FLOAT, "to"), PropertyInfo(Variant::Type::FLOAT, "weight"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_INVERSE_LERP: {
-			MethodInfo mi("inverse_lerp", PropertyInfo(Variant::FLOAT, "from"), PropertyInfo(Variant::FLOAT, "to"), PropertyInfo(Variant::FLOAT, "weight"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("inverse_lerp", PropertyInfo(Variant::Type::FLOAT, "from"), PropertyInfo(Variant::Type::FLOAT, "to"), PropertyInfo(Variant::Type::FLOAT, "weight"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_RANGE_LERP: {
-			MethodInfo mi("range_lerp", PropertyInfo(Variant::FLOAT, "value"), PropertyInfo(Variant::FLOAT, "istart"), PropertyInfo(Variant::FLOAT, "istop"), PropertyInfo(Variant::FLOAT, "ostart"), PropertyInfo(Variant::FLOAT, "ostop"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("range_lerp", PropertyInfo(Variant::Type::FLOAT, "value"), PropertyInfo(Variant::Type::FLOAT, "istart"), PropertyInfo(Variant::Type::FLOAT, "istop"), PropertyInfo(Variant::Type::FLOAT, "ostart"), PropertyInfo(Variant::Type::FLOAT, "ostop"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_SMOOTHSTEP: {
-			MethodInfo mi("smoothstep", PropertyInfo(Variant::FLOAT, "from"), PropertyInfo(Variant::FLOAT, "to"), PropertyInfo(Variant::FLOAT, "weight"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("smoothstep", PropertyInfo(Variant::Type::FLOAT, "from"), PropertyInfo(Variant::Type::FLOAT, "to"), PropertyInfo(Variant::Type::FLOAT, "weight"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_MOVE_TOWARD: {
-			MethodInfo mi("move_toward", PropertyInfo(Variant::FLOAT, "from"), PropertyInfo(Variant::FLOAT, "to"), PropertyInfo(Variant::FLOAT, "delta"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("move_toward", PropertyInfo(Variant::Type::FLOAT, "from"), PropertyInfo(Variant::Type::FLOAT, "to"), PropertyInfo(Variant::Type::FLOAT, "delta"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_DECTIME: {
-			MethodInfo mi("dectime", PropertyInfo(Variant::FLOAT, "value"), PropertyInfo(Variant::FLOAT, "amount"), PropertyInfo(Variant::FLOAT, "step"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("dectime", PropertyInfo(Variant::Type::FLOAT, "value"), PropertyInfo(Variant::Type::FLOAT, "amount"), PropertyInfo(Variant::Type::FLOAT, "step"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_RANDOMIZE: {
 			MethodInfo mi("randomize");
-			mi.return_val.type = Variant::NIL;
+			mi.return_val.type = Variant::Type::NIL;
 			return mi;
 		} break;
 		case MATH_RAND: {
 			MethodInfo mi("randi");
-			mi.return_val.type = Variant::INT;
+			mi.return_val.type = Variant::Type::INT;
 			return mi;
 		} break;
 		case MATH_RANDF: {
 			MethodInfo mi("randf");
-			mi.return_val.type = Variant::FLOAT;
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_RANDOM: {
-			MethodInfo mi("rand_range", PropertyInfo(Variant::FLOAT, "from"), PropertyInfo(Variant::FLOAT, "to"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("rand_range", PropertyInfo(Variant::Type::FLOAT, "from"), PropertyInfo(Variant::Type::FLOAT, "to"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_SEED: {
-			MethodInfo mi("seed", PropertyInfo(Variant::INT, "seed"));
-			mi.return_val.type = Variant::NIL;
+			MethodInfo mi("seed", PropertyInfo(Variant::Type::INT, "seed"));
+			mi.return_val.type = Variant::Type::NIL;
 			return mi;
 		} break;
 		case MATH_RANDSEED: {
-			MethodInfo mi("rand_seed", PropertyInfo(Variant::INT, "seed"));
-			mi.return_val.type = Variant::ARRAY;
+			MethodInfo mi("rand_seed", PropertyInfo(Variant::Type::INT, "seed"));
+			mi.return_val.type = Variant::Type::ARRAY;
 			return mi;
 		} break;
 		case MATH_DEG2RAD: {
-			MethodInfo mi("deg2rad", PropertyInfo(Variant::FLOAT, "deg"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("deg2rad", PropertyInfo(Variant::Type::FLOAT, "deg"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_RAD2DEG: {
-			MethodInfo mi("rad2deg", PropertyInfo(Variant::FLOAT, "rad"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("rad2deg", PropertyInfo(Variant::Type::FLOAT, "rad"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_LINEAR2DB: {
-			MethodInfo mi("linear2db", PropertyInfo(Variant::FLOAT, "nrg"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("linear2db", PropertyInfo(Variant::Type::FLOAT, "nrg"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_DB2LINEAR: {
-			MethodInfo mi("db2linear", PropertyInfo(Variant::FLOAT, "db"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("db2linear", PropertyInfo(Variant::Type::FLOAT, "db"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case MATH_POLAR2CARTESIAN: {
-			MethodInfo mi("polar2cartesian", PropertyInfo(Variant::FLOAT, "r"), PropertyInfo(Variant::FLOAT, "th"));
-			mi.return_val.type = Variant::VECTOR2;
+			MethodInfo mi("polar2cartesian", PropertyInfo(Variant::Type::FLOAT, "r"), PropertyInfo(Variant::Type::FLOAT, "th"));
+			mi.return_val.type = Variant::Type::VECTOR2;
 			return mi;
 		} break;
 		case MATH_CARTESIAN2POLAR: {
-			MethodInfo mi("cartesian2polar", PropertyInfo(Variant::FLOAT, "x"), PropertyInfo(Variant::FLOAT, "y"));
-			mi.return_val.type = Variant::VECTOR2;
+			MethodInfo mi("cartesian2polar", PropertyInfo(Variant::Type::FLOAT, "x"), PropertyInfo(Variant::Type::FLOAT, "y"));
+			mi.return_val.type = Variant::Type::VECTOR2;
 			return mi;
 		} break;
 		case MATH_WRAP: {
-			MethodInfo mi("wrapi", PropertyInfo(Variant::INT, "value"), PropertyInfo(Variant::INT, "min"), PropertyInfo(Variant::INT, "max"));
-			mi.return_val.type = Variant::INT;
+			MethodInfo mi("wrapi", PropertyInfo(Variant::Type::INT, "value"), PropertyInfo(Variant::Type::INT, "min"), PropertyInfo(Variant::Type::INT, "max"));
+			mi.return_val.type = Variant::Type::INT;
 			return mi;
 		} break;
 		case MATH_WRAPF: {
-			MethodInfo mi("wrapf", PropertyInfo(Variant::FLOAT, "value"), PropertyInfo(Variant::FLOAT, "min"), PropertyInfo(Variant::FLOAT, "max"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("wrapf", PropertyInfo(Variant::Type::FLOAT, "value"), PropertyInfo(Variant::Type::FLOAT, "min"), PropertyInfo(Variant::Type::FLOAT, "max"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case LOGIC_MAX: {
-			MethodInfo mi("max", PropertyInfo(Variant::FLOAT, "a"), PropertyInfo(Variant::FLOAT, "b"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("max", PropertyInfo(Variant::Type::FLOAT, "a"), PropertyInfo(Variant::Type::FLOAT, "b"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 
 		} break;
 		case LOGIC_MIN: {
-			MethodInfo mi("min", PropertyInfo(Variant::FLOAT, "a"), PropertyInfo(Variant::FLOAT, "b"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("min", PropertyInfo(Variant::Type::FLOAT, "a"), PropertyInfo(Variant::Type::FLOAT, "b"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case LOGIC_CLAMP: {
-			MethodInfo mi("clamp", PropertyInfo(Variant::FLOAT, "value"), PropertyInfo(Variant::FLOAT, "min"), PropertyInfo(Variant::FLOAT, "max"));
-			mi.return_val.type = Variant::FLOAT;
+			MethodInfo mi("clamp", PropertyInfo(Variant::Type::FLOAT, "value"), PropertyInfo(Variant::Type::FLOAT, "min"), PropertyInfo(Variant::Type::FLOAT, "max"));
+			mi.return_val.type = Variant::Type::FLOAT;
 			return mi;
 		} break;
 		case LOGIC_NEAREST_PO2: {
-			MethodInfo mi("nearest_po2", PropertyInfo(Variant::INT, "value"));
-			mi.return_val.type = Variant::INT;
+			MethodInfo mi("nearest_po2", PropertyInfo(Variant::Type::INT, "value"));
+			mi.return_val.type = Variant::Type::INT;
 			return mi;
 		} break;
 		case OBJ_WEAKREF: {
-			MethodInfo mi("weakref", PropertyInfo(Variant::OBJECT, "obj"));
-			mi.return_val.type = Variant::OBJECT;
+			MethodInfo mi("weakref", PropertyInfo(Variant::Type::OBJECT, "obj"));
+			mi.return_val.type = Variant::Type::OBJECT;
 			mi.return_val.class_name = "WeakRef";
 
 			return mi;
 
 		} break;
 		case FUNC_FUNCREF: {
-			MethodInfo mi("funcref", PropertyInfo(Variant::OBJECT, "instance"), PropertyInfo(Variant::STRING, "funcname"));
-			mi.return_val.type = Variant::OBJECT;
+			MethodInfo mi("funcref", PropertyInfo(Variant::Type::OBJECT, "instance"), PropertyInfo(Variant::Type::STRING, "funcname"));
+			mi.return_val.type = Variant::Type::OBJECT;
 			mi.return_val.class_name = "FuncRef";
 			return mi;
 
 		} break;
 		case TYPE_CONVERT: {
-			MethodInfo mi("convert", PropertyInfo(Variant::NIL, "what", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_NIL_IS_VARIANT), PropertyInfo(Variant::INT, "type"));
-			mi.return_val.type = Variant::NIL;
+			MethodInfo mi("convert", PropertyInfo(Variant::Type::NIL, "what", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_NIL_IS_VARIANT), PropertyInfo(Variant::Type::INT, "type"));
+			mi.return_val.type = Variant::Type::NIL;
 			mi.return_val.usage |= PROPERTY_USAGE_NIL_IS_VARIANT;
 			return mi;
 		} break;
 		case TYPE_OF: {
-			MethodInfo mi("typeof", PropertyInfo(Variant::NIL, "what", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_NIL_IS_VARIANT));
-			mi.return_val.type = Variant::INT;
+			MethodInfo mi("typeof", PropertyInfo(Variant::Type::NIL, "what", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_NIL_IS_VARIANT));
+			mi.return_val.type = Variant::Type::INT;
 			return mi;
 
 		} break;
 		case TYPE_EXISTS: {
-			MethodInfo mi("type_exists", PropertyInfo(Variant::STRING, "type"));
-			mi.return_val.type = Variant::BOOL;
+			MethodInfo mi("type_exists", PropertyInfo(Variant::Type::STRING, "type"));
+			mi.return_val.type = Variant::Type::BOOL;
 			return mi;
 
 		} break;
 		case TEXT_CHAR: {
-			MethodInfo mi("char", PropertyInfo(Variant::INT, "code"));
-			mi.return_val.type = Variant::STRING;
+			MethodInfo mi("char", PropertyInfo(Variant::Type::INT, "code"));
+			mi.return_val.type = Variant::Type::STRING;
 			return mi;
 
 		} break;
 		case TEXT_ORD: {
-			MethodInfo mi("ord", PropertyInfo(Variant::STRING, "char"));
-			mi.return_val.type = Variant::INT;
+			MethodInfo mi("ord", PropertyInfo(Variant::Type::STRING, "char"));
+			mi.return_val.type = Variant::Type::INT;
 			return mi;
 
 		} break;
 		case TEXT_STR: {
 			MethodInfo mi("str");
-			mi.return_val.type = Variant::STRING;
+			mi.return_val.type = Variant::Type::STRING;
 			mi.flags |= METHOD_FLAG_VARARG;
 			return mi;
 
 		} break;
 		case TEXT_PRINT: {
 			MethodInfo mi("print");
-			mi.return_val.type = Variant::NIL;
+			mi.return_val.type = Variant::Type::NIL;
 			mi.flags |= METHOD_FLAG_VARARG;
 			return mi;
 
 		} break;
 		case TEXT_PRINT_TABBED: {
 			MethodInfo mi("printt");
-			mi.return_val.type = Variant::NIL;
+			mi.return_val.type = Variant::Type::NIL;
 			mi.flags |= METHOD_FLAG_VARARG;
 			return mi;
 
 		} break;
 		case TEXT_PRINT_SPACED: {
 			MethodInfo mi("prints");
-			mi.return_val.type = Variant::NIL;
+			mi.return_val.type = Variant::Type::NIL;
 			mi.flags |= METHOD_FLAG_VARARG;
 			return mi;
 
 		} break;
 		case TEXT_PRINTERR: {
 			MethodInfo mi("printerr");
-			mi.return_val.type = Variant::NIL;
+			mi.return_val.type = Variant::Type::NIL;
 			mi.flags |= METHOD_FLAG_VARARG;
 			return mi;
 
 		} break;
 		case TEXT_PRINTRAW: {
 			MethodInfo mi("printraw");
-			mi.return_val.type = Variant::NIL;
+			mi.return_val.type = Variant::Type::NIL;
 			mi.flags |= METHOD_FLAG_VARARG;
 			return mi;
 
 		} break;
 		case TEXT_PRINT_DEBUG: {
 			MethodInfo mi("print_debug");
-			mi.return_val.type = Variant::NIL;
+			mi.return_val.type = Variant::Type::NIL;
 			mi.flags |= METHOD_FLAG_VARARG;
 			return mi;
 
 		} break;
 		case PUSH_ERROR: {
-			MethodInfo mi(Variant::NIL, "push_error", PropertyInfo(Variant::STRING, "message"));
-			mi.return_val.type = Variant::NIL;
+			MethodInfo mi(Variant::Type::NIL, "push_error", PropertyInfo(Variant::Type::STRING, "message"));
+			mi.return_val.type = Variant::Type::NIL;
 			return mi;
 
 		} break;
 		case PUSH_WARNING: {
-			MethodInfo mi(Variant::NIL, "push_warning", PropertyInfo(Variant::STRING, "message"));
-			mi.return_val.type = Variant::NIL;
+			MethodInfo mi(Variant::Type::NIL, "push_warning", PropertyInfo(Variant::Type::STRING, "message"));
+			mi.return_val.type = Variant::Type::NIL;
 			return mi;
 
 		} break;
 		case VAR_TO_STR: {
-			MethodInfo mi("var2str", PropertyInfo(Variant::NIL, "var", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_NIL_IS_VARIANT));
-			mi.return_val.type = Variant::STRING;
+			MethodInfo mi("var2str", PropertyInfo(Variant::Type::NIL, "var", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_NIL_IS_VARIANT));
+			mi.return_val.type = Variant::Type::STRING;
 			return mi;
 		} break;
 		case STR_TO_VAR: {
-			MethodInfo mi(Variant::NIL, "str2var", PropertyInfo(Variant::STRING, "string"));
-			mi.return_val.type = Variant::NIL;
+			MethodInfo mi(Variant::Type::NIL, "str2var", PropertyInfo(Variant::Type::STRING, "string"));
+			mi.return_val.type = Variant::Type::NIL;
 			mi.return_val.usage |= PROPERTY_USAGE_NIL_IS_VARIANT;
 			return mi;
 		} break;
 		case VAR_TO_BYTES: {
-			MethodInfo mi("var2bytes", PropertyInfo(Variant::NIL, "var", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_NIL_IS_VARIANT), PropertyInfo(Variant::BOOL, "full_objects"));
+			MethodInfo mi("var2bytes", PropertyInfo(Variant::Type::NIL, "var", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_NIL_IS_VARIANT), PropertyInfo(Variant::Type::BOOL, "full_objects"));
 			mi.default_arguments.push_back(false);
-			mi.return_val.type = Variant::PACKED_BYTE_ARRAY;
+			mi.return_val.type = Variant::Type::PACKED_BYTE_ARRAY;
 			return mi;
 		} break;
 		case BYTES_TO_VAR: {
-			MethodInfo mi(Variant::NIL, "bytes2var", PropertyInfo(Variant::PACKED_BYTE_ARRAY, "bytes"), PropertyInfo(Variant::BOOL, "allow_objects"));
+			MethodInfo mi(Variant::Type::NIL, "bytes2var", PropertyInfo(Variant::Type::PACKED_BYTE_ARRAY, "bytes"), PropertyInfo(Variant::Type::BOOL, "allow_objects"));
 			mi.default_arguments.push_back(false);
-			mi.return_val.type = Variant::NIL;
+			mi.return_val.type = Variant::Type::NIL;
 			mi.return_val.usage |= PROPERTY_USAGE_NIL_IS_VARIANT;
 			return mi;
 		} break;
 		case GEN_RANGE: {
 			MethodInfo mi("range");
-			mi.return_val.type = Variant::ARRAY;
+			mi.return_val.type = Variant::Type::ARRAY;
 			mi.flags |= METHOD_FLAG_VARARG;
 			return mi;
 		} break;
 		case RESOURCE_LOAD: {
-			MethodInfo mi("load", PropertyInfo(Variant::STRING, "path"));
-			mi.return_val.type = Variant::OBJECT;
+			MethodInfo mi("load", PropertyInfo(Variant::Type::STRING, "path"));
+			mi.return_val.type = Variant::Type::OBJECT;
 			mi.return_val.class_name = "Resource";
 			return mi;
 		} break;
 		case INST2DICT: {
-			MethodInfo mi("inst2dict", PropertyInfo(Variant::OBJECT, "inst"));
-			mi.return_val.type = Variant::DICTIONARY;
+			MethodInfo mi("inst2dict", PropertyInfo(Variant::Type::OBJECT, "inst"));
+			mi.return_val.type = Variant::Type::DICTIONARY;
 			return mi;
 		} break;
 		case DICT2INST: {
-			MethodInfo mi("dict2inst", PropertyInfo(Variant::DICTIONARY, "dict"));
-			mi.return_val.type = Variant::OBJECT;
+			MethodInfo mi("dict2inst", PropertyInfo(Variant::Type::DICTIONARY, "dict"));
+			mi.return_val.type = Variant::Type::OBJECT;
 			return mi;
 		} break;
 		case VALIDATE_JSON: {
-			MethodInfo mi("validate_json", PropertyInfo(Variant::STRING, "json"));
-			mi.return_val.type = Variant::STRING;
+			MethodInfo mi("validate_json", PropertyInfo(Variant::Type::STRING, "json"));
+			mi.return_val.type = Variant::Type::STRING;
 			return mi;
 		} break;
 		case PARSE_JSON: {
-			MethodInfo mi(Variant::NIL, "parse_json", PropertyInfo(Variant::STRING, "json"));
-			mi.return_val.type = Variant::NIL;
+			MethodInfo mi(Variant::Type::NIL, "parse_json", PropertyInfo(Variant::Type::STRING, "json"));
+			mi.return_val.type = Variant::Type::NIL;
 			mi.return_val.usage |= PROPERTY_USAGE_NIL_IS_VARIANT;
 			return mi;
 		} break;
 		case TO_JSON: {
-			MethodInfo mi("to_json", PropertyInfo(Variant::NIL, "var", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_NIL_IS_VARIANT));
-			mi.return_val.type = Variant::STRING;
+			MethodInfo mi("to_json", PropertyInfo(Variant::Type::NIL, "var", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_NIL_IS_VARIANT));
+			mi.return_val.type = Variant::Type::STRING;
 			return mi;
 		} break;
 		case HASH: {
-			MethodInfo mi("hash", PropertyInfo(Variant::NIL, "var", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_NIL_IS_VARIANT));
-			mi.return_val.type = Variant::INT;
+			MethodInfo mi("hash", PropertyInfo(Variant::Type::NIL, "var", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_NIL_IS_VARIANT));
+			mi.return_val.type = Variant::Type::INT;
 			return mi;
 		} break;
 		case COLOR8: {
-			MethodInfo mi("Color8", PropertyInfo(Variant::INT, "r8"), PropertyInfo(Variant::INT, "g8"), PropertyInfo(Variant::INT, "b8"), PropertyInfo(Variant::INT, "a8"));
+			MethodInfo mi("Color8", PropertyInfo(Variant::Type::INT, "r8"), PropertyInfo(Variant::Type::INT, "g8"), PropertyInfo(Variant::Type::INT, "b8"), PropertyInfo(Variant::Type::INT, "a8"));
 			mi.default_arguments.push_back(255);
-			mi.return_val.type = Variant::COLOR;
+			mi.return_val.type = Variant::Type::COLOR;
 			return mi;
 		} break;
 		case COLORN: {
-			MethodInfo mi("ColorN", PropertyInfo(Variant::STRING, "name"), PropertyInfo(Variant::FLOAT, "alpha"));
+			MethodInfo mi("ColorN", PropertyInfo(Variant::Type::STRING, "name"), PropertyInfo(Variant::Type::FLOAT, "alpha"));
 			mi.default_arguments.push_back(1.0f);
-			mi.return_val.type = Variant::COLOR;
+			mi.return_val.type = Variant::Type::COLOR;
 			return mi;
 		} break;
 
 		case PRINT_STACK: {
 			MethodInfo mi("print_stack");
-			mi.return_val.type = Variant::NIL;
+			mi.return_val.type = Variant::Type::NIL;
 			return mi;
 		} break;
 		case GET_STACK: {
 			MethodInfo mi("get_stack");
-			mi.return_val.type = Variant::ARRAY;
+			mi.return_val.type = Variant::Type::ARRAY;
 			return mi;
 		} break;
 
 		case INSTANCE_FROM_ID: {
-			MethodInfo mi("instance_from_id", PropertyInfo(Variant::INT, "instance_id"));
-			mi.return_val.type = Variant::OBJECT;
+			MethodInfo mi("instance_from_id", PropertyInfo(Variant::Type::INT, "instance_id"));
+			mi.return_val.type = Variant::Type::OBJECT;
 			return mi;
 		} break;
 		case LEN: {
-			MethodInfo mi("len", PropertyInfo(Variant::NIL, "var", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_NIL_IS_VARIANT));
-			mi.return_val.type = Variant::INT;
+			MethodInfo mi("len", PropertyInfo(Variant::Type::NIL, "var", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_NIL_IS_VARIANT));
+			mi.return_val.type = Variant::Type::INT;
 			return mi;
 		} break;
 		case IS_INSTANCE_VALID: {
-			MethodInfo mi("is_instance_valid", PropertyInfo(Variant::OBJECT, "instance"));
-			mi.return_val.type = Variant::BOOL;
+			MethodInfo mi("is_instance_valid", PropertyInfo(Variant::Type::OBJECT, "instance"));
+			mi.return_val.type = Variant::Type::BOOL;
 			return mi;
 		} break;
 		default: {

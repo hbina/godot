@@ -1195,7 +1195,7 @@ void RasterizerStorageRD::material_set_param(RID p_material, const StringName &p
 	Material *material = material_owner.getornull(p_material);
 	ERR_FAIL_COND(!material);
 
-	if (p_value.get_type() == Variant::NIL) {
+	if (p_value.get_type() == Variant::Type::NIL) {
 		material->params.erase(p_param);
 	} else {
 		material->params[p_param] = p_value;
@@ -1456,7 +1456,7 @@ _FORCE_INLINE_ static void _fill_std140_variant_ubo_value(ShaderLanguage::DataTy
 		case ShaderLanguage::TYPE_VEC4: {
 			float *gui = (float *)data;
 
-			if (value.get_type() == Variant::COLOR) {
+			if (value.get_type() == Variant::Type::COLOR) {
 				Color v = value;
 
 				if (p_linear_color) {
@@ -1467,14 +1467,14 @@ _FORCE_INLINE_ static void _fill_std140_variant_ubo_value(ShaderLanguage::DataTy
 				gui[1] = v.g;
 				gui[2] = v.b;
 				gui[3] = v.a;
-			} else if (value.get_type() == Variant::RECT2) {
+			} else if (value.get_type() == Variant::Type::RECT2) {
 				Rect2 v = value;
 
 				gui[0] = v.position.x;
 				gui[1] = v.position.y;
 				gui[2] = v.size.x;
 				gui[3] = v.size.y;
-			} else if (value.get_type() == Variant::QUAT) {
+			} else if (value.get_type() == Variant::Type::QUAT) {
 				Quat v = value;
 
 				gui[0] = v.x;
@@ -1866,7 +1866,7 @@ void RasterizerStorageRD::MaterialData::update_textures(const Map<StringName, Va
 						E->get() = global_textures_pass;
 					}
 
-					texture = v->override.get_type() != Variant::NIL ? v->override : v->value;
+					texture = v->override.get_type() != Variant::Type::NIL ? v->override : v->value;
 				}
 
 			} else {
@@ -5339,7 +5339,7 @@ void RasterizerStorageRD::global_variable_set(const StringName &p_name, const Va
 	ERR_FAIL_COND(!global_variables.variables.has(p_name));
 	GlobalVariables::Variable &gv = global_variables.variables[p_name];
 	gv.value = p_value;
-	if (gv.override.get_type() == Variant::NIL) {
+	if (gv.override.get_type() == Variant::Type::NIL) {
 		if (gv.buffer_index >= 0) {
 			//buffer
 			_global_variable_store_in_buffer(gv.buffer_index, gv.type, gv.value);
@@ -5365,7 +5365,7 @@ void RasterizerStorageRD::global_variable_set_override(const StringName &p_name,
 
 	if (gv.buffer_index >= 0) {
 		//buffer
-		if (gv.override.get_type() == Variant::NIL) {
+		if (gv.override.get_type() == Variant::Type::NIL) {
 			_global_variable_store_in_buffer(gv.buffer_index, gv.type, gv.value);
 		} else {
 			_global_variable_store_in_buffer(gv.buffer_index, gv.type, gv.override);
@@ -5528,9 +5528,9 @@ void RasterizerStorageRD::global_variables_instance_update(RID p_instance, int p
 		return; //again, not allocated, ignore
 	}
 	ERR_FAIL_INDEX(p_index, ShaderLanguage::MAX_INSTANCE_UNIFORM_INDICES);
-	ERR_FAIL_COND_MSG(p_value.get_type() > Variant::COLOR, "Unsupported variant type for instance parameter: " + Variant::get_type_name(p_value.get_type())); //anything greater not supported
+	ERR_FAIL_COND_MSG(p_value.get_type() > Variant::Type::COLOR, "Unsupported variant type for instance parameter: " + Variant::get_type_name(p_value.get_type())); //anything greater not supported
 
-	ShaderLanguage::DataType datatype_from_value[Variant::COLOR + 1] = {
+	ShaderLanguage::DataType datatype_from_value[Variant::Type::COLOR + 1] = {
 		ShaderLanguage::TYPE_MAX, //nil
 		ShaderLanguage::TYPE_BOOL, //bool
 		ShaderLanguage::TYPE_INT, //int

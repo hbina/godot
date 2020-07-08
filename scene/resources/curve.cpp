@@ -392,15 +392,15 @@ void Curve::set_data(Array input) {
 
 	// Validate input
 	for (int i = 0; i < input.size(); i += ELEMS) {
-		ERR_FAIL_COND(input[i].get_type() != Variant::VECTOR2);
+		ERR_FAIL_COND(input[i].get_type() != Variant::Type::VECTOR2);
 		ERR_FAIL_COND(!input[i + 1].is_num());
-		ERR_FAIL_COND(input[i + 2].get_type() != Variant::FLOAT);
+		ERR_FAIL_COND(input[i + 2].get_type() != Variant::Type::FLOAT);
 
-		ERR_FAIL_COND(input[i + 3].get_type() != Variant::INT);
+		ERR_FAIL_COND(input[i + 3].get_type() != Variant::Type::INT);
 		int left_mode = input[i + 3];
 		ERR_FAIL_COND(left_mode < 0 || left_mode >= TANGENT_MODE_COUNT);
 
-		ERR_FAIL_COND(input[i + 4].get_type() != Variant::INT);
+		ERR_FAIL_COND(input[i + 4].get_type() != Variant::Type::INT);
 		int right_mode = input[i + 4];
 		ERR_FAIL_COND(right_mode < 0 || right_mode >= TANGENT_MODE_COUNT);
 	}
@@ -524,10 +524,10 @@ void Curve::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("_get_data"), &Curve::get_data);
 	ClassDB::bind_method(D_METHOD("_set_data", "data"), &Curve::set_data);
 
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "min_value", PROPERTY_HINT_RANGE, "-1024,1024,0.01"), "set_min_value", "get_min_value");
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "max_value", PROPERTY_HINT_RANGE, "-1024,1024,0.01"), "set_max_value", "get_max_value");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "bake_resolution", PROPERTY_HINT_RANGE, "1,1000,1"), "set_bake_resolution", "get_bake_resolution");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "_data", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_data", "_get_data");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "min_value", PROPERTY_HINT_RANGE, "-1024,1024,0.01"), "set_min_value", "get_min_value");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "max_value", PROPERTY_HINT_RANGE, "-1024,1024,0.01"), "set_max_value", "get_max_value");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "bake_resolution", PROPERTY_HINT_RANGE, "1,1000,1"), "set_bake_resolution", "get_bake_resolution");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "_data", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_data", "_get_data");
 
 	ADD_SIGNAL(MethodInfo(SIGNAL_RANGE_CHANGED));
 
@@ -988,8 +988,8 @@ void Curve2D::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("_get_data"), &Curve2D::_get_data);
 	ClassDB::bind_method(D_METHOD("_set_data"), &Curve2D::_set_data);
 
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "bake_interval", PROPERTY_HINT_RANGE, "0.01,512,0.01"), "set_bake_interval", "get_bake_interval");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "_data", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_data", "_get_data");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "bake_interval", PROPERTY_HINT_RANGE, "0.01,512,0.01"), "set_bake_interval", "get_bake_interval");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "_data", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_data", "_get_data");
 }
 
 Curve2D::Curve2D() {
@@ -1661,11 +1661,11 @@ void Curve3D::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("_get_data"), &Curve3D::_get_data);
 	ClassDB::bind_method(D_METHOD("_set_data"), &Curve3D::_set_data);
 
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "bake_interval", PROPERTY_HINT_RANGE, "0.01,512,0.01"), "set_bake_interval", "get_bake_interval");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "_data", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_data", "_get_data");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "bake_interval", PROPERTY_HINT_RANGE, "0.01,512,0.01"), "set_bake_interval", "get_bake_interval");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "_data", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_data", "_get_data");
 
 	ADD_GROUP("Up Vector", "up_vector_");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "up_vector_enabled"), "set_up_vector_enabled", "is_up_vector_enabled");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "up_vector_enabled"), "set_up_vector_enabled", "is_up_vector_enabled");
 }
 
 Curve3D::Curve3D() {

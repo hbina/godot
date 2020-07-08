@@ -186,7 +186,7 @@ void DocData::remove_from(const DocData &p_data) {
 }
 
 static void return_doc_from_retinfo(DocData::MethodDoc &p_method, const PropertyInfo &p_retinfo) {
-	if (p_retinfo.type == Variant::INT && p_retinfo.usage & PROPERTY_USAGE_CLASS_IS_ENUM) {
+	if (p_retinfo.type == Variant::Type::INT && p_retinfo.usage & PROPERTY_USAGE_CLASS_IS_ENUM) {
 		p_method.return_enum = p_retinfo.class_name;
 		if (p_method.return_enum.begins_with("_")) { //proxy class
 			p_method.return_enum = p_method.return_enum.substr(1, p_method.return_enum.length());
@@ -194,13 +194,13 @@ static void return_doc_from_retinfo(DocData::MethodDoc &p_method, const Property
 		p_method.return_type = "int";
 	} else if (p_retinfo.class_name != StringName()) {
 		p_method.return_type = p_retinfo.class_name;
-	} else if (p_retinfo.type == Variant::ARRAY && p_retinfo.hint == PROPERTY_HINT_ARRAY_TYPE) {
+	} else if (p_retinfo.type == Variant::Type::ARRAY && p_retinfo.hint == PROPERTY_HINT_ARRAY_TYPE) {
 		p_method.return_type = p_retinfo.hint_string + "[]";
 	} else if (p_retinfo.hint == PROPERTY_HINT_RESOURCE_TYPE) {
 		p_method.return_type = p_retinfo.hint_string;
-	} else if (p_retinfo.type == Variant::NIL && p_retinfo.usage & PROPERTY_USAGE_NIL_IS_VARIANT) {
+	} else if (p_retinfo.type == Variant::Type::NIL && p_retinfo.usage & PROPERTY_USAGE_NIL_IS_VARIANT) {
 		p_method.return_type = "Variant";
-	} else if (p_retinfo.type == Variant::NIL) {
+	} else if (p_retinfo.type == Variant::Type::NIL) {
 		p_method.return_type = "void";
 	} else {
 		p_method.return_type = Variant::get_type_name(p_retinfo.type);
@@ -210,7 +210,7 @@ static void return_doc_from_retinfo(DocData::MethodDoc &p_method, const Property
 static void argument_doc_from_arginfo(DocData::ArgumentDoc &p_argument, const PropertyInfo &p_arginfo) {
 	p_argument.name = p_arginfo.name;
 
-	if (p_arginfo.type == Variant::INT && p_arginfo.usage & PROPERTY_USAGE_CLASS_IS_ENUM) {
+	if (p_arginfo.type == Variant::Type::INT && p_arginfo.usage & PROPERTY_USAGE_CLASS_IS_ENUM) {
 		p_argument.enumeration = p_arginfo.class_name;
 		if (p_argument.enumeration.begins_with("_")) { //proxy class
 			p_argument.enumeration = p_argument.enumeration.substr(1, p_argument.enumeration.length());
@@ -218,11 +218,11 @@ static void argument_doc_from_arginfo(DocData::ArgumentDoc &p_argument, const Pr
 		p_argument.type = "int";
 	} else if (p_arginfo.class_name != StringName()) {
 		p_argument.type = p_arginfo.class_name;
-	} else if (p_arginfo.type == Variant::ARRAY && p_arginfo.hint == PROPERTY_HINT_ARRAY_TYPE) {
+	} else if (p_arginfo.type == Variant::Type::ARRAY && p_arginfo.hint == PROPERTY_HINT_ARRAY_TYPE) {
 		p_argument.type = p_arginfo.hint_string + "[]";
 	} else if (p_arginfo.hint == PROPERTY_HINT_RESOURCE_TYPE) {
 		p_argument.type = p_arginfo.hint_string;
-	} else if (p_arginfo.type == Variant::NIL) {
+	} else if (p_arginfo.type == Variant::Type::NIL) {
 		// Parameters cannot be void, so PROPERTY_USAGE_NIL_IS_VARIANT is not necessary
 		p_argument.type = "Variant";
 	} else {
@@ -338,7 +338,7 @@ void DocData::generate(bool p_basic_types) {
 
 			//used to track uninitialized values using valgrind
 			//print_line("getting default value for " + String(name) + "." + String(E->get().name));
-			if (default_value_valid && default_value.get_type() != Variant::OBJECT) {
+			if (default_value_valid && default_value.get_type() != Variant::Type::OBJECT) {
 				prop.default_value = default_value.get_construct_string().replace("\n", "");
 			}
 
@@ -355,18 +355,18 @@ void DocData::generate(bool p_basic_types) {
 					PropertyInfo retinfo = mb->get_return_info();
 
 					found_type = true;
-					if (retinfo.type == Variant::INT && retinfo.usage & PROPERTY_USAGE_CLASS_IS_ENUM) {
+					if (retinfo.type == Variant::Type::INT && retinfo.usage & PROPERTY_USAGE_CLASS_IS_ENUM) {
 						prop.enumeration = retinfo.class_name;
 						prop.type = "int";
 					} else if (retinfo.class_name != StringName()) {
 						prop.type = retinfo.class_name;
-					} else if (retinfo.type == Variant::ARRAY && retinfo.hint == PROPERTY_HINT_ARRAY_TYPE) {
+					} else if (retinfo.type == Variant::Type::ARRAY && retinfo.hint == PROPERTY_HINT_ARRAY_TYPE) {
 						prop.type = retinfo.hint_string + "[]";
 					} else if (retinfo.hint == PROPERTY_HINT_RESOURCE_TYPE) {
 						prop.type = retinfo.hint_string;
-					} else if (retinfo.type == Variant::NIL && retinfo.usage & PROPERTY_USAGE_NIL_IS_VARIANT) {
+					} else if (retinfo.type == Variant::Type::NIL && retinfo.usage & PROPERTY_USAGE_NIL_IS_VARIANT) {
 						prop.type = "Variant";
-					} else if (retinfo.type == Variant::NIL) {
+					} else if (retinfo.type == Variant::Type::NIL) {
 						prop.type = "void";
 					} else {
 						prop.type = Variant::get_type_name(retinfo.type);
@@ -381,7 +381,7 @@ void DocData::generate(bool p_basic_types) {
 			}
 
 			if (!found_type) {
-				if (E->get().type == Variant::OBJECT && E->get().hint == PROPERTY_HINT_RESOURCE_TYPE) {
+				if (E->get().type == Variant::Type::OBJECT && E->get().hint == PROPERTY_HINT_RESOURCE_TYPE) {
 					prop.type = E->get().hint_string;
 				} else {
 					prop.type = Variant::get_type_name(E->get().type);
@@ -404,7 +404,7 @@ void DocData::generate(bool p_basic_types) {
 				// Don't skip parametric setters and getters, i.e. method which require
 				// one or more parameters to define what property should be set or retrieved.
 				// E.g. CPUParticles3D::set_param(Parameter param, float value).
-				if (E->get().arguments.size() == 0 /* getter */ || (E->get().arguments.size() == 1 && E->get().return_val.type == Variant::NIL /* setter */)) {
+				if (E->get().arguments.size() == 0 /* getter */ || (E->get().arguments.size() == 1 && E->get().return_val.type == Variant::Type::NIL /* setter */)) {
 					continue;
 				}
 			}
@@ -545,11 +545,11 @@ void DocData::generate(bool p_basic_types) {
 	}
 
 	// Add Variant types.
-	for (int i = 0; i < Variant::VARIANT_MAX; i++) {
-		if (i == Variant::NIL) {
+	for (int i = 0; i < Variant::Type::VARIANT_MAX; i++) {
+		if (i == Variant::Type::NIL) {
 			continue; // Not exposed outside of 'null', should not be in class list.
 		}
-		if (i == Variant::OBJECT) {
+		if (i == Variant::Type::OBJECT) {
 			continue; // Use the core type instead.
 		}
 
@@ -619,7 +619,7 @@ void DocData::generate(bool p_basic_types) {
 			ConstantDoc constant;
 			constant.name = E->get();
 			Variant value = Variant::get_constant_value(Variant::Type(i), E->get());
-			constant.value = value.get_type() == Variant::INT ? itos(value) : value.get_construct_string();
+			constant.value = value.get_type() == Variant::Type::INT ? itos(value) : value.get_construct_string();
 			c.constants.push_back(constant);
 		}
 	}

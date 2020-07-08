@@ -200,7 +200,7 @@ Variant PackedDataContainer::_key_at_ofs(uint32_t p_ofs, const Variant &p_key, b
 
 uint32_t PackedDataContainer::_pack(const Variant &p_data, Vector<uint8_t> &tmpdata, Map<String, uint32_t> &string_cache) {
 	switch (p_data.get_type()) {
-		case Variant::STRING: {
+		case Variant::Type::STRING: {
 			String s = p_data;
 			if (string_cache.has(s)) {
 				return string_cache[s];
@@ -210,30 +210,30 @@ uint32_t PackedDataContainer::_pack(const Variant &p_data, Vector<uint8_t> &tmpd
 
 			[[fallthrough]];
 		}
-		case Variant::NIL:
-		case Variant::BOOL:
-		case Variant::INT:
-		case Variant::FLOAT:
-		case Variant::VECTOR2:
-		case Variant::RECT2:
-		case Variant::VECTOR3:
-		case Variant::TRANSFORM2D:
-		case Variant::PLANE:
-		case Variant::QUAT:
-		case Variant::AABB:
-		case Variant::BASIS:
-		case Variant::TRANSFORM:
-		case Variant::PACKED_BYTE_ARRAY:
-		case Variant::PACKED_INT32_ARRAY:
-		case Variant::PACKED_INT64_ARRAY:
-		case Variant::PACKED_FLOAT32_ARRAY:
-		case Variant::PACKED_FLOAT64_ARRAY:
-		case Variant::PACKED_STRING_ARRAY:
-		case Variant::PACKED_VECTOR2_ARRAY:
-		case Variant::PACKED_VECTOR3_ARRAY:
-		case Variant::PACKED_COLOR_ARRAY:
-		case Variant::STRING_NAME:
-		case Variant::NODE_PATH: {
+		case Variant::Type::NIL:
+		case Variant::Type::BOOL:
+		case Variant::Type::INT:
+		case Variant::Type::FLOAT:
+		case Variant::Type::VECTOR2:
+		case Variant::Type::RECT2:
+		case Variant::Type::VECTOR3:
+		case Variant::Type::TRANSFORM2D:
+		case Variant::Type::PLANE:
+		case Variant::Type::QUAT:
+		case Variant::Type::AABB:
+		case Variant::Type::BASIS:
+		case Variant::Type::TRANSFORM:
+		case Variant::Type::PACKED_BYTE_ARRAY:
+		case Variant::Type::PACKED_INT32_ARRAY:
+		case Variant::Type::PACKED_INT64_ARRAY:
+		case Variant::Type::PACKED_FLOAT32_ARRAY:
+		case Variant::Type::PACKED_FLOAT64_ARRAY:
+		case Variant::Type::PACKED_STRING_ARRAY:
+		case Variant::Type::PACKED_VECTOR2_ARRAY:
+		case Variant::Type::PACKED_VECTOR3_ARRAY:
+		case Variant::Type::PACKED_COLOR_ARRAY:
+		case Variant::Type::STRING_NAME:
+		case Variant::Type::NODE_PATH: {
 			uint32_t pos = tmpdata.size();
 			int len;
 			encode_variant(p_data, nullptr, len, false);
@@ -243,11 +243,11 @@ uint32_t PackedDataContainer::_pack(const Variant &p_data, Vector<uint8_t> &tmpd
 
 		} break;
 		// misc types
-		case Variant::_RID:
-		case Variant::OBJECT: {
+		case Variant::Type::_RID:
+		case Variant::Type::OBJECT: {
 			return _pack(Variant(), tmpdata, string_cache);
 		} break;
-		case Variant::DICTIONARY: {
+		case Variant::Type::DICTIONARY: {
 			Dictionary d = p_data;
 			//size is known, use sort
 			uint32_t pos = tmpdata.size();
@@ -282,7 +282,7 @@ uint32_t PackedDataContainer::_pack(const Variant &p_data, Vector<uint8_t> &tmpd
 			return pos;
 
 		} break;
-		case Variant::ARRAY: {
+		case Variant::Type::ARRAY: {
 			Array a = p_data;
 			//size is known, use sort
 			uint32_t pos = tmpdata.size();
@@ -349,7 +349,7 @@ void PackedDataContainer::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("pack", "value"), &PackedDataContainer::pack);
 	ClassDB::bind_method(D_METHOD("size"), &PackedDataContainer::size);
 
-	ADD_PROPERTY(PropertyInfo(Variant::PACKED_BYTE_ARRAY, "__data__"), "_set_data", "_get_data");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::PACKED_BYTE_ARRAY, "__data__"), "_set_data", "_get_data");
 }
 
 //////////////////

@@ -1290,10 +1290,10 @@ AnimationTrackEdit *AnimationTrackEditDefaultPlugin::create_value_track_edit(Obj
 		return vu;
 	}
 
-	if (p_type == Variant::BOOL) {
+	if (p_type == Variant::Type::BOOL) {
 		return memnew(AnimationTrackEditBool);
 	}
-	if (p_type == Variant::COLOR) {
+	if (p_type == Variant::Type::COLOR) {
 		return memnew(AnimationTrackEditColor);
 	}
 

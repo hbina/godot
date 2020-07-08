@@ -51,24 +51,24 @@ void WebSocketServer::_bind_methods() {
 
 	ClassDB::bind_method(D_METHOD("get_bind_ip"), &WebSocketServer::get_bind_ip);
 	ClassDB::bind_method(D_METHOD("set_bind_ip"), &WebSocketServer::set_bind_ip);
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "bind_ip"), "set_bind_ip", "get_bind_ip");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::STRING, "bind_ip"), "set_bind_ip", "get_bind_ip");
 
 	ClassDB::bind_method(D_METHOD("get_private_key"), &WebSocketServer::get_private_key);
 	ClassDB::bind_method(D_METHOD("set_private_key"), &WebSocketServer::set_private_key);
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "private_key", PROPERTY_HINT_RESOURCE_TYPE, "CryptoKey", 0), "set_private_key", "get_private_key");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "private_key", PROPERTY_HINT_RESOURCE_TYPE, "CryptoKey", 0), "set_private_key", "get_private_key");
 
 	ClassDB::bind_method(D_METHOD("get_ssl_certificate"), &WebSocketServer::get_ssl_certificate);
 	ClassDB::bind_method(D_METHOD("set_ssl_certificate"), &WebSocketServer::set_ssl_certificate);
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "ssl_certificate", PROPERTY_HINT_RESOURCE_TYPE, "X509Certificate", 0), "set_ssl_certificate", "get_ssl_certificate");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "ssl_certificate", PROPERTY_HINT_RESOURCE_TYPE, "X509Certificate", 0), "set_ssl_certificate", "get_ssl_certificate");
 
 	ClassDB::bind_method(D_METHOD("get_ca_chain"), &WebSocketServer::get_ca_chain);
 	ClassDB::bind_method(D_METHOD("set_ca_chain"), &WebSocketServer::set_ca_chain);
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "ca_chain", PROPERTY_HINT_RESOURCE_TYPE, "X509Certificate", 0), "set_ca_chain", "get_ca_chain");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "ca_chain", PROPERTY_HINT_RESOURCE_TYPE, "X509Certificate", 0), "set_ca_chain", "get_ca_chain");
 
-	ADD_SIGNAL(MethodInfo("client_close_request", PropertyInfo(Variant::INT, "id"), PropertyInfo(Variant::INT, "code"), PropertyInfo(Variant::STRING, "reason")));
-	ADD_SIGNAL(MethodInfo("client_disconnected", PropertyInfo(Variant::INT, "id"), PropertyInfo(Variant::BOOL, "was_clean_close")));
-	ADD_SIGNAL(MethodInfo("client_connected", PropertyInfo(Variant::INT, "id"), PropertyInfo(Variant::STRING, "protocol")));
-	ADD_SIGNAL(MethodInfo("data_received", PropertyInfo(Variant::INT, "id")));
+	ADD_SIGNAL(MethodInfo("client_close_request", PropertyInfo(Variant::Type::INT, "id"), PropertyInfo(Variant::Type::INT, "code"), PropertyInfo(Variant::Type::STRING, "reason")));
+	ADD_SIGNAL(MethodInfo("client_disconnected", PropertyInfo(Variant::Type::INT, "id"), PropertyInfo(Variant::Type::BOOL, "was_clean_close")));
+	ADD_SIGNAL(MethodInfo("client_connected", PropertyInfo(Variant::Type::INT, "id"), PropertyInfo(Variant::Type::STRING, "protocol")));
+	ADD_SIGNAL(MethodInfo("data_received", PropertyInfo(Variant::Type::INT, "id")));
 }
 
 IP_Address WebSocketServer::get_bind_ip() const {

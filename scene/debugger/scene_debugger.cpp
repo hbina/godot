@@ -278,10 +278,10 @@ SceneDebuggerObject::SceneDebuggerObject(ObjectID p_id) {
 	if (Node *node = Object::cast_to<Node>(obj)) {
 		// Add specialized NodePath info (if inside tree).
 		if (node->is_inside_tree()) {
-			PropertyInfo pi(Variant::NODE_PATH, String("Node/path"));
+			PropertyInfo pi(Variant::Type::NODE_PATH, String("Node/path"));
 			properties.push_back(SceneDebuggerProperty(pi, node->get_path()));
 		} else { // Can't ask for path if a node is not in tree.
-			PropertyInfo pi(Variant::STRING, String("Node/path"));
+			PropertyInfo pi(Variant::Type::STRING, String("Node/path"));
 			properties.push_back(SceneDebuggerProperty(pi, "[Orphan]"));
 		}
 	} else if (Script *s = Object::cast_to<Script>(obj)) {
@@ -341,7 +341,7 @@ void SceneDebuggerObject::_parse_script_properties(Script *p_script, ScriptInsta
 	for (ScriptConstantsMap::Element *sc = constants.front(); sc; sc = sc->next()) {
 		for (Map<StringName, Variant>::Element *E = sc->get().front(); E; E = E->next()) {
 			String script_path = sc->key() == p_script ? "" : sc->key()->get_path().get_file() + "/";
-			if (E->value().get_type() == Variant::OBJECT) {
+			if (E->value().get_type() == Variant::Type::OBJECT) {
 				Variant id = ((Object *)E->value())->get_instance_id();
 				PropertyInfo pi(id.get_type(), "Constants/" + E->key(), PROPERTY_HINT_OBJECT_ID, "Object");
 				properties.push_back(SceneDebuggerProperty(pi, id));
@@ -419,10 +419,10 @@ void SceneDebuggerObject::deserialize(const Array &p_arr) {
 		pinfo.usage = PropertyUsageFlags(int(prop[4]));
 		Variant var = prop[5];
 
-		if (pinfo.type == Variant::OBJECT) {
+		if (pinfo.type == Variant::Type::OBJECT) {
 			if (var.is_zero()) {
 				var = RES();
-			} else if (var.get_type() == Variant::OBJECT) {
+			} else if (var.get_type() == Variant::Type::OBJECT) {
 				if (((Object *)var)->is_class("EncodedObjectAsID")) {
 					var = Object::cast_to<EncodedObjectAsID>(var)->get_object_id();
 					pinfo.type = var.get_type();

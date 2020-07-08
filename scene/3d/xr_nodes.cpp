@@ -233,7 +233,7 @@ void XRController3D::_notification(int p_what) {
 void XRController3D::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_controller_id", "controller_id"), &XRController3D::set_controller_id);
 	ClassDB::bind_method(D_METHOD("get_controller_id"), &XRController3D::get_controller_id);
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "controller_id", PROPERTY_HINT_RANGE, "0,32,1"), "set_controller_id", "get_controller_id");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "controller_id", PROPERTY_HINT_RANGE, "0,32,1"), "set_controller_id", "get_controller_id");
 	ClassDB::bind_method(D_METHOD("get_controller_name"), &XRController3D::get_controller_name);
 
 	// passthroughs to information about our related joystick
@@ -246,14 +246,14 @@ void XRController3D::_bind_methods() {
 
 	ClassDB::bind_method(D_METHOD("get_rumble"), &XRController3D::get_rumble);
 	ClassDB::bind_method(D_METHOD("set_rumble", "rumble"), &XRController3D::set_rumble);
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "rumble", PROPERTY_HINT_RANGE, "0.0,1.0,0.01"), "set_rumble", "get_rumble");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "rumble", PROPERTY_HINT_RANGE, "0.0,1.0,0.01"), "set_rumble", "get_rumble");
 	ADD_PROPERTY_DEFAULT("rumble", 0.0);
 
 	ClassDB::bind_method(D_METHOD("get_mesh"), &XRController3D::get_mesh);
 
-	ADD_SIGNAL(MethodInfo("button_pressed", PropertyInfo(Variant::INT, "button")));
-	ADD_SIGNAL(MethodInfo("button_release", PropertyInfo(Variant::INT, "button")));
-	ADD_SIGNAL(MethodInfo("mesh_updated", PropertyInfo(Variant::OBJECT, "mesh", PROPERTY_HINT_RESOURCE_TYPE, "Mesh")));
+	ADD_SIGNAL(MethodInfo("button_pressed", PropertyInfo(Variant::Type::INT, "button")));
+	ADD_SIGNAL(MethodInfo("button_release", PropertyInfo(Variant::Type::INT, "button")));
+	ADD_SIGNAL(MethodInfo("mesh_updated", PropertyInfo(Variant::Type::OBJECT, "mesh", PROPERTY_HINT_RESOURCE_TYPE, "Mesh")));
 };
 
 void XRController3D::set_controller_id(int p_controller_id) {
@@ -430,7 +430,7 @@ void XRAnchor3D::_notification(int p_what) {
 void XRAnchor3D::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_anchor_id", "anchor_id"), &XRAnchor3D::set_anchor_id);
 	ClassDB::bind_method(D_METHOD("get_anchor_id"), &XRAnchor3D::get_anchor_id);
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "anchor_id", PROPERTY_HINT_RANGE, "0,32,1"), "set_anchor_id", "get_anchor_id");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "anchor_id", PROPERTY_HINT_RANGE, "0,32,1"), "set_anchor_id", "get_anchor_id");
 	ClassDB::bind_method(D_METHOD("get_anchor_name"), &XRAnchor3D::get_anchor_name);
 
 	ClassDB::bind_method(D_METHOD("get_is_active"), &XRAnchor3D::get_is_active);
@@ -439,7 +439,7 @@ void XRAnchor3D::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("get_plane"), &XRAnchor3D::get_plane);
 
 	ClassDB::bind_method(D_METHOD("get_mesh"), &XRAnchor3D::get_mesh);
-	ADD_SIGNAL(MethodInfo("mesh_updated", PropertyInfo(Variant::OBJECT, "mesh", PROPERTY_HINT_RESOURCE_TYPE, "Mesh")));
+	ADD_SIGNAL(MethodInfo("mesh_updated", PropertyInfo(Variant::Type::OBJECT, "mesh", PROPERTY_HINT_RESOURCE_TYPE, "Mesh")));
 };
 
 void XRAnchor3D::set_anchor_id(int p_anchor_id) {
@@ -522,7 +522,7 @@ String XROrigin3D::get_configuration_warning() const {
 void XROrigin3D::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_world_scale", "world_scale"), &XROrigin3D::set_world_scale);
 	ClassDB::bind_method(D_METHOD("get_world_scale"), &XROrigin3D::get_world_scale);
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "world_scale"), "set_world_scale", "get_world_scale");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "world_scale"), "set_world_scale", "get_world_scale");
 };
 
 void XROrigin3D::set_tracked_camera(XRCamera3D *p_tracked_camera) {

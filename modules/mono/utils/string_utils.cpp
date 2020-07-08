@@ -94,19 +94,19 @@ String sformat(const String &p_text, const Variant &p1, const Variant &p2, const
 
 	Array args;
 
-	if (p1.get_type() != Variant::NIL) {
+	if (p1.get_type() != Variant::Type::NIL) {
 		args.push_back(p1);
 
-		if (p2.get_type() != Variant::NIL) {
+		if (p2.get_type() != Variant::Type::NIL) {
 			args.push_back(p2);
 
-			if (p3.get_type() != Variant::NIL) {
+			if (p3.get_type() != Variant::Type::NIL) {
 				args.push_back(p3);
 
-				if (p4.get_type() != Variant::NIL) {
+				if (p4.get_type() != Variant::Type::NIL) {
 					args.push_back(p4);
 
-					if (p5.get_type() != Variant::NIL) {
+					if (p5.get_type() != Variant::Type::NIL) {
 						args.push_back(p5);
 					}
 				}

@@ -548,8 +548,8 @@ void DependencyRemoveDialog::ok_pressed() {
 }
 
 void DependencyRemoveDialog::_bind_methods() {
-	ADD_SIGNAL(MethodInfo("file_removed", PropertyInfo(Variant::STRING, "file")));
-	ADD_SIGNAL(MethodInfo("folder_removed", PropertyInfo(Variant::STRING, "folder")));
+	ADD_SIGNAL(MethodInfo("file_removed", PropertyInfo(Variant::Type::STRING, "file")));
+	ADD_SIGNAL(MethodInfo("folder_removed", PropertyInfo(Variant::Type::STRING, "folder")));
 }
 
 DependencyRemoveDialog::DependencyRemoveDialog() {

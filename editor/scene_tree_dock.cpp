@@ -1319,7 +1319,7 @@ void SceneTreeDock::perform_node_renames(Node *p_base, List<Pair<NodePath, NodeP
 			for (List<PropertyInfo>::Element *E = properties.front(); E; E = E->next()) {
 				String propertyname = E->get().name;
 				Variant p = p_base->get(propertyname);
-				if (p.get_type() == Variant::NODE_PATH) {
+				if (p.get_type() == Variant::Type::NODE_PATH) {
 					// Goes through all paths to check if its matching
 					for (List<Pair<NodePath, NodePath>>::Element *F = p_renames->front(); F; F = F->next()) {
 						NodePath root_path = p_base->get_path();
@@ -2372,7 +2372,7 @@ void SceneTreeDock::_add_children_to_popup(Object *p_obj, int p_depth) {
 		}
 
 		Variant value = p_obj->get(E->get().name);
-		if (value.get_type() != Variant::OBJECT) {
+		if (value.get_type() != Variant::Type::OBJECT) {
 			continue;
 		}
 		Object *obj = value;

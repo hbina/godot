@@ -187,7 +187,7 @@ class VisualScriptSwitch : public VisualScriptNode {
 
 	struct Case {
 		Variant::Type type;
-		Case() { type = Variant::NIL; }
+		Case() { type = Variant::Type::NIL; }
 	};
 
 	Vector<Case> case_values;

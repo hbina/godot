@@ -222,7 +222,7 @@ Array DebuggerMarshalls::ScriptStackVariable::serialize(int max_size) {
 	arr.push_back(type);
 
 	Variant var = value;
-	if (value.get_type() == Variant::OBJECT && value.get_validated_object() == nullptr) {
+	if (value.get_type() == Variant::Type::OBJECT && value.get_validated_object() == nullptr) {
 		var = Variant();
 	}
 

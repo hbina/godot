@@ -80,8 +80,8 @@ void Shader::get_param_list(List<PropertyInfo> *p_params) const {
 		params_cache[pi.name] = E->get().name;
 		if (p_params) {
 			//small little hack
-			if (pi.type == Variant::_RID) {
-				pi.type = Variant::OBJECT;
+			if (pi.type == Variant::Type::_RID) {
+				pi.type = Variant::Type::OBJECT;
 			}
 			p_params->push_back(pi);
 		}
@@ -144,7 +144,7 @@ void Shader::_bind_methods() {
 
 	//ClassDB::bind_method(D_METHOD("get_param_list"),&Shader::get_fragment_code);
 
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "code", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR), "set_code", "get_code");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::STRING, "code", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR), "set_code", "get_code");
 
 	BIND_ENUM_CONSTANT(MODE_SPATIAL);
 	BIND_ENUM_CONSTANT(MODE_CANVAS_ITEM);

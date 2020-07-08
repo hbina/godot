@@ -118,14 +118,14 @@ private:
 	static const char *func_name[FUNC_MAX];
 
 	struct Input {
-		Variant::Type type = Variant::NIL;
+		Variant::Type type = Variant::Type::NIL;
 		String name;
 
 		Input() {}
 	};
 
 	Vector<Input> inputs;
-	Variant::Type output_type = Variant::NIL;
+	Variant::Type output_type = Variant::Type::NIL;
 
 	String expression;
 

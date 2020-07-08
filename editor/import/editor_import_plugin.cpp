@@ -151,16 +151,16 @@ Error EditorImportPlugin::import(const String &p_source_file, const String &p_sa
 }
 
 void EditorImportPlugin::_bind_methods() {
-	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::STRING, "get_importer_name"));
-	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::STRING, "get_visible_name"));
-	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::INT, "get_preset_count"));
-	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::STRING, "get_preset_name", PropertyInfo(Variant::INT, "preset")));
-	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::ARRAY, "get_recognized_extensions"));
-	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::ARRAY, "get_import_options", PropertyInfo(Variant::INT, "preset")));
-	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::STRING, "get_save_extension"));
-	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::STRING, "get_resource_type"));
-	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::FLOAT, "get_priority"));
-	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::INT, "get_import_order"));
-	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::BOOL, "get_option_visibility", PropertyInfo(Variant::STRING, "option"), PropertyInfo(Variant::DICTIONARY, "options")));
-	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::INT, "import", PropertyInfo(Variant::STRING, "source_file"), PropertyInfo(Variant::STRING, "save_path"), PropertyInfo(Variant::DICTIONARY, "options"), PropertyInfo(Variant::ARRAY, "platform_variants"), PropertyInfo(Variant::ARRAY, "gen_files")));
+	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::Type::STRING, "get_importer_name"));
+	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::Type::STRING, "get_visible_name"));
+	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::Type::INT, "get_preset_count"));
+	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::Type::STRING, "get_preset_name", PropertyInfo(Variant::Type::INT, "preset")));
+	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::Type::ARRAY, "get_recognized_extensions"));
+	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::Type::ARRAY, "get_import_options", PropertyInfo(Variant::Type::INT, "preset")));
+	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::Type::STRING, "get_save_extension"));
+	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::Type::STRING, "get_resource_type"));
+	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::Type::FLOAT, "get_priority"));
+	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::Type::INT, "get_import_order"));
+	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::Type::BOOL, "get_option_visibility", PropertyInfo(Variant::Type::STRING, "option"), PropertyInfo(Variant::Type::DICTIONARY, "options")));
+	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::Type::INT, "import", PropertyInfo(Variant::Type::STRING, "source_file"), PropertyInfo(Variant::Type::STRING, "save_path"), PropertyInfo(Variant::Type::DICTIONARY, "options"), PropertyInfo(Variant::Type::ARRAY, "platform_variants"), PropertyInfo(Variant::Type::ARRAY, "gen_files")));
 }

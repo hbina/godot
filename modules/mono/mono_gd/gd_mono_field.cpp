@@ -114,7 +114,7 @@ void GDMonoField::set_value_from_variant(MonoObject *p_object, const Variant &p_
 		} break;
 
 		case MONO_TYPE_STRING: {
-			if (p_value.get_type() == Variant::NIL) {
+			if (p_value.get_type() == Variant::Type::NIL) {
 				// Otherwise, Variant -> String would return the string "Null"
 				MonoString *mono_string = nullptr;
 				mono_field_set_value(p_object, mono_field, mono_string);
@@ -382,15 +382,15 @@ void GDMonoField::set_value_from_variant(MonoObject *p_object, const Variant &p_
 		case MONO_TYPE_OBJECT: {
 			// Variant
 			switch (p_value.get_type()) {
-				case Variant::BOOL: {
+				case Variant::Type::BOOL: {
 					MonoBoolean val = p_value.operator bool();
 					mono_field_set_value(p_object, mono_field, &val);
 				} break;
-				case Variant::INT: {
+				case Variant::Type::INT: {
 					int32_t val = p_value.operator signed int();
 					mono_field_set_value(p_object, mono_field, &val);
 				} break;
-				case Variant::FLOAT: {
+				case Variant::Type::FLOAT: {
 #ifdef REAL_T_IS_DOUBLE
 					double val = p_value.operator double();
 					mono_field_set_value(p_object, mono_field, &val);
@@ -399,106 +399,106 @@ void GDMonoField::set_value_from_variant(MonoObject *p_object, const Variant &p_
 					mono_field_set_value(p_object, mono_field, &val);
 #endif
 				} break;
-				case Variant::STRING: {
+				case Variant::Type::STRING: {
 					MonoString *mono_string = GDMonoMarshal::mono_string_from_godot(p_value);
 					mono_field_set_value(p_object, mono_field, mono_string);
 				} break;
-				case Variant::VECTOR2: {
+				case Variant::Type::VECTOR2: {
 					SET_FROM_STRUCT(Vector2);
 				} break;
-				case Variant::VECTOR2I: {
+				case Variant::Type::VECTOR2I: {
 					SET_FROM_STRUCT(Vector2i);
 				} break;
-				case Variant::RECT2: {
+				case Variant::Type::RECT2: {
 					SET_FROM_STRUCT(Rect2);
 				} break;
-				case Variant::RECT2I: {
+				case Variant::Type::RECT2I: {
 					SET_FROM_STRUCT(Rect2i);
 				} break;
-				case Variant::VECTOR3: {
+				case Variant::Type::VECTOR3: {
 					SET_FROM_STRUCT(Vector3);
 				} break;
-				case Variant::VECTOR3I: {
+				case Variant::Type::VECTOR3I: {
 					SET_FROM_STRUCT(Vector3i);
 				} break;
-				case Variant::TRANSFORM2D: {
+				case Variant::Type::TRANSFORM2D: {
 					SET_FROM_STRUCT(Transform2D);
 				} break;
-				case Variant::PLANE: {
+				case Variant::Type::PLANE: {
 					SET_FROM_STRUCT(Plane);
 				} break;
-				case Variant::QUAT: {
+				case Variant::Type::QUAT: {
 					SET_FROM_STRUCT(Quat);
 				} break;
-				case Variant::AABB: {
+				case Variant::Type::AABB: {
 					SET_FROM_STRUCT(AABB);
 				} break;
-				case Variant::BASIS: {
+				case Variant::Type::BASIS: {
 					SET_FROM_STRUCT(Basis);
 				} break;
-				case Variant::TRANSFORM: {
+				case Variant::Type::TRANSFORM: {
 					SET_FROM_STRUCT(Transform);
 				} break;
-				case Variant::COLOR: {
+				case Variant::Type::COLOR: {
 					SET_FROM_STRUCT(Color);
 				} break;
-				case Variant::STRING_NAME: {
+				case Variant::Type::STRING_NAME: {
 					MonoObject *managed = GDMonoUtils::create_managed_from(p_value.operator StringName());
 					mono_field_set_value(p_object, mono_field, managed);
 				} break;
-				case Variant::NODE_PATH: {
+				case Variant::Type::NODE_PATH: {
 					MonoObject *managed = GDMonoUtils::create_managed_from(p_value.operator NodePath());
 					mono_field_set_value(p_object, mono_field, managed);
 				} break;
-				case Variant::_RID: {
+				case Variant::Type::_RID: {
 					MonoObject *managed = GDMonoUtils::create_managed_from(p_value.operator RID());
 					mono_field_set_value(p_object, mono_field, managed);
 				} break;
-				case Variant::OBJECT: {
+				case Variant::Type::OBJECT: {
 					MonoObject *managed = GDMonoUtils::unmanaged_get_managed(p_value.operator Object *());
 					mono_field_set_value(p_object, mono_field, managed);
 				} break;
-				case Variant::CALLABLE: {
+				case Variant::Type::CALLABLE: {
 					GDMonoMarshal::M_Callable val = GDMonoMarshal::callable_to_managed(p_value.operator Callable());
 					mono_field_set_value(p_object, mono_field, &val);
 				} break;
-				case Variant::SIGNAL: {
+				case Variant::Type::SIGNAL: {
 					GDMonoMarshal::M_SignalInfo val = GDMonoMarshal::signal_info_to_managed(p_value.operator Signal());
 					mono_field_set_value(p_object, mono_field, &val);
 				} break;
-				case Variant::DICTIONARY: {
+				case Variant::Type::DICTIONARY: {
 					MonoObject *managed = GDMonoUtils::create_managed_from(p_value.operator Dictionary(), CACHED_CLASS(Dictionary));
 					mono_field_set_value(p_object, mono_field, managed);
 				} break;
-				case Variant::ARRAY: {
+				case Variant::Type::ARRAY: {
 					MonoObject *managed = GDMonoUtils::create_managed_from(p_value.operator Array(), CACHED_CLASS(Array));
 					mono_field_set_value(p_object, mono_field, managed);
 				} break;
-				case Variant::PACKED_BYTE_ARRAY: {
+				case Variant::Type::PACKED_BYTE_ARRAY: {
 					SET_FROM_ARRAY(PackedByteArray);
 				} break;
-				case Variant::PACKED_INT32_ARRAY: {
+				case Variant::Type::PACKED_INT32_ARRAY: {
 					SET_FROM_ARRAY(PackedInt32Array);
 				} break;
-				case Variant::PACKED_INT64_ARRAY: {
+				case Variant::Type::PACKED_INT64_ARRAY: {
 					SET_FROM_ARRAY(PackedInt64Array);
 				} break;
-				case Variant::PACKED_FLOAT32_ARRAY: {
+				case Variant::Type::PACKED_FLOAT32_ARRAY: {
 					SET_FROM_ARRAY(PackedFloat32Array);
 				} break;
-				case Variant::PACKED_FLOAT64_ARRAY: {
+				case Variant::Type::PACKED_FLOAT64_ARRAY: {
 					SET_FROM_ARRAY(PackedFloat64Array);
 				} break;
-				case Variant::PACKED_STRING_ARRAY: {
+				case Variant::Type::PACKED_STRING_ARRAY: {
 					SET_FROM_ARRAY(PackedStringArray);
 				} break;
-				case Variant::PACKED_VECTOR2_ARRAY: {
+				case Variant::Type::PACKED_VECTOR2_ARRAY: {
 					SET_FROM_ARRAY(PackedVector2Array);
 				} break;
-				case Variant::PACKED_VECTOR3_ARRAY: {
+				case Variant::Type::PACKED_VECTOR3_ARRAY: {
 					SET_FROM_ARRAY(PackedVector3Array);
 				} break;
-				case Variant::PACKED_COLOR_ARRAY: {
+				case Variant::Type::PACKED_COLOR_ARRAY: {
 					SET_FROM_ARRAY(PackedColorArray);
 				} break;
 				default:

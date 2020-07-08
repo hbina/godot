@@ -365,7 +365,7 @@ void EditorSpinSlider::_evaluate_input_text() {
 	}
 
 	Variant v = expr->execute(Array(), nullptr, false);
-	if (v.get_type() == Variant::NIL) {
+	if (v.get_type() == Variant::Type::NIL) {
 		return;
 	}
 	set_value(v);
@@ -461,9 +461,9 @@ void EditorSpinSlider::_bind_methods() {
 
 	ClassDB::bind_method(D_METHOD("_gui_input"), &EditorSpinSlider::_gui_input);
 
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "label"), "set_label", "get_label");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "read_only"), "set_read_only", "is_read_only");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "flat"), "set_flat", "is_flat");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::STRING, "label"), "set_label", "get_label");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "read_only"), "set_read_only", "is_read_only");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "flat"), "set_flat", "is_flat");
 }
 
 EditorSpinSlider::EditorSpinSlider() {

@@ -287,12 +287,12 @@ void EditorExportPlatformJavaScript::get_preset_features(const Ref<EditorExportP
 }
 
 void EditorExportPlatformJavaScript::get_export_options(List<ExportOption> *r_options) {
-	r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "vram_texture_compression/for_desktop"), true)); // S3TC
-	r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "vram_texture_compression/for_mobile"), false)); // ETC or ETC2, depending on renderer
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "html/custom_html_shell", PROPERTY_HINT_FILE, "*.html"), ""));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "html/head_include", PROPERTY_HINT_MULTILINE_TEXT), ""));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "custom_template/release", PROPERTY_HINT_GLOBAL_FILE, "*.zip"), ""));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "custom_template/debug", PROPERTY_HINT_GLOBAL_FILE, "*.zip"), ""));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::BOOL, "vram_texture_compression/for_desktop"), true)); // S3TC
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::BOOL, "vram_texture_compression/for_mobile"), false)); // ETC or ETC2, depending on renderer
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "html/custom_html_shell", PROPERTY_HINT_FILE, "*.html"), ""));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "html/head_include", PROPERTY_HINT_MULTILINE_TEXT), ""));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "custom_template/release", PROPERTY_HINT_GLOBAL_FILE, "*.zip"), ""));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "custom_template/debug", PROPERTY_HINT_GLOBAL_FILE, "*.zip"), ""));
 }
 
 String EditorExportPlatformJavaScript::get_name() const {
@@ -642,7 +642,7 @@ EditorExportPlatformJavaScript::~EditorExportPlatformJavaScript() {
 void register_javascript_exporter() {
 	EDITOR_DEF("export/web/http_host", "localhost");
 	EDITOR_DEF("export/web/http_port", 8060);
-	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(Variant::INT, "export/web/http_port", PROPERTY_HINT_RANGE, "1,65535,1"));
+	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(Variant::Type::INT, "export/web/http_port", PROPERTY_HINT_RANGE, "1,65535,1"));
 
 	Ref<EditorExportPlatformJavaScript> platform;
 	platform.instance();

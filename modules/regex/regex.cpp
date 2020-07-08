@@ -51,7 +51,7 @@ int RegExMatch::_find(const Variant &p_name) const {
 		}
 		return i;
 
-	} else if (p_name.get_type() == Variant::STRING) {
+	} else if (p_name.get_type() == Variant::Type::STRING) {
 		const Map<String, int>::Element *found = names.find((String)p_name);
 		if (found) {
 			return found->value();
@@ -150,9 +150,9 @@ void RegExMatch::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("get_start", "name"), &RegExMatch::get_start, DEFVAL(0));
 	ClassDB::bind_method(D_METHOD("get_end", "name"), &RegExMatch::get_end, DEFVAL(0));
 
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "subject"), "", "get_subject");
-	ADD_PROPERTY(PropertyInfo(Variant::DICTIONARY, "names"), "", "get_names");
-	ADD_PROPERTY(PropertyInfo(Variant::ARRAY, "strings"), "", "get_strings");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::STRING, "subject"), "", "get_subject");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::DICTIONARY, "names"), "", "get_names");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::ARRAY, "strings"), "", "get_strings");
 }
 
 void RegEx::_pattern_info(uint32_t what, void *where) const {

@@ -139,7 +139,7 @@ enum PropertyUsageFlags {
 #define ADD_SUBGROUP(m_name, m_prefix) ClassDB::add_property_subgroup(get_class_static(), m_name, m_prefix)
 
 struct PropertyInfo {
-	Variant::Type type = Variant::NIL;
+	Variant::Type type = Variant::Type::NIL;
 	String name;
 	StringName class_name; //for classes
 	PropertyHint hint = PROPERTY_HINT_NONE;
@@ -172,7 +172,7 @@ struct PropertyInfo {
 	}
 
 	PropertyInfo(const StringName &p_class_name) :
-			type(Variant::OBJECT),
+			type(Variant::Type::OBJECT),
 			class_name(p_class_name) {}
 
 	bool operator==(const PropertyInfo &p_info) const {
@@ -357,7 +357,7 @@ protected:                                                                      
 		if (!p_reversed) {                                                                                                              \
 			m_inherits::_get_property_listv(p_list, p_reversed);                                                                        \
 		}                                                                                                                               \
-		p_list->push_back(PropertyInfo(Variant::NIL, get_class_static(), PROPERTY_HINT_NONE, String(), PROPERTY_USAGE_CATEGORY));       \
+		p_list->push_back(PropertyInfo(Variant::Type::NIL, get_class_static(), PROPERTY_HINT_NONE, String(), PROPERTY_USAGE_CATEGORY));       \
 		if (!_is_gpl_reversed()) {                                                                                                      \
 			ClassDB::get_property_list(#m_class, p_list, true, this);                                                                   \
 		}                                                                                                                               \

@@ -614,7 +614,7 @@ Error MultiplayerAPI::_encode_and_compress_variant(const Variant &p_variant, uin
 	uint8_t encode_mode = 0;
 
 	switch (p_variant.get_type()) {
-		case Variant::BOOL: {
+		case Variant::Type::BOOL: {
 			if (buf) {
 				// We still have 1 free bit in the meta, so let's use it.
 				buf[0] = (p_variant.operator bool()) ? (1 << 7) : 0;
@@ -622,7 +622,7 @@ Error MultiplayerAPI::_encode_and_compress_variant(const Variant &p_variant, uin
 			}
 			r_len += 1;
 		} break;
-		case Variant::INT: {
+		case Variant::Type::INT: {
 			if (buf) {
 				// Reserve the first byte for the meta.
 				buf += 1;
@@ -688,17 +688,17 @@ Error MultiplayerAPI::_decode_and_decompress_variant(Variant &r_variant, const u
 	uint8_t type = buf[0] & VARIANT_META_TYPE_MASK;
 	uint8_t encode_mode = buf[0] & VARIANT_META_EMODE_MASK;
 
-	ERR_FAIL_COND_V(type >= Variant::VARIANT_MAX, ERR_INVALID_DATA);
+	ERR_FAIL_COND_V(type >= Variant::Type::VARIANT_MAX, ERR_INVALID_DATA);
 
 	switch (type) {
-		case Variant::BOOL: {
+		case Variant::Type::BOOL: {
 			bool val = (buf[0] & VARIANT_META_BOOL_MASK) > 0;
 			r_variant = val;
 			if (r_len) {
 				*r_len = 1;
 			}
 		} break;
-		case Variant::INT: {
+		case Variant::Type::INT: {
 			buf += 1;
 			len -= 1;
 			if (r_len) {
@@ -888,7 +888,7 @@ void MultiplayerAPI::_send_rpc(Node *p_from, int p_to, bool p_unreliable, bool p
 
 		if (p_argcount == 0) {
 			byte_only_or_no_args = true;
-		} else if (p_argcount == 1 && p_arg[0]->get_type() == Variant::PACKED_BYTE_ARRAY) {
+		} else if (p_argcount == 1 && p_arg[0]->get_type() == Variant::Type::PACKED_BYTE_ARRAY) {
 			byte_only_or_no_args = true;
 			// Special optimization when only the byte vector is sent.
 			const Vector<uint8_t> data = *p_arg[0];
@@ -1218,14 +1218,14 @@ void MultiplayerAPI::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_allow_object_decoding", "enable"), &MultiplayerAPI::set_allow_object_decoding);
 	ClassDB::bind_method(D_METHOD("is_object_decoding_allowed"), &MultiplayerAPI::is_object_decoding_allowed);
 
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "allow_object_decoding"), "set_allow_object_decoding", "is_object_decoding_allowed");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "refuse_new_network_connections"), "set_refuse_new_network_connections", "is_refusing_new_network_connections");
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "network_peer", PROPERTY_HINT_RESOURCE_TYPE, "NetworkedMultiplayerPeer", 0), "set_network_peer", "get_network_peer");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "allow_object_decoding"), "set_allow_object_decoding", "is_object_decoding_allowed");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "refuse_new_network_connections"), "set_refuse_new_network_connections", "is_refusing_new_network_connections");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "network_peer", PROPERTY_HINT_RESOURCE_TYPE, "NetworkedMultiplayerPeer", 0), "set_network_peer", "get_network_peer");
 	ADD_PROPERTY_DEFAULT("refuse_new_network_connections", false);
 
-	ADD_SIGNAL(MethodInfo("network_peer_connected", PropertyInfo(Variant::INT, "id")));
-	ADD_SIGNAL(MethodInfo("network_peer_disconnected", PropertyInfo(Variant::INT, "id")));
-	ADD_SIGNAL(MethodInfo("network_peer_packet", PropertyInfo(Variant::INT, "id"), PropertyInfo(Variant::PACKED_BYTE_ARRAY, "packet")));
+	ADD_SIGNAL(MethodInfo("network_peer_connected", PropertyInfo(Variant::Type::INT, "id")));
+	ADD_SIGNAL(MethodInfo("network_peer_disconnected", PropertyInfo(Variant::Type::INT, "id")));
+	ADD_SIGNAL(MethodInfo("network_peer_packet", PropertyInfo(Variant::Type::INT, "id"), PropertyInfo(Variant::Type::PACKED_BYTE_ARRAY, "packet")));
 	ADD_SIGNAL(MethodInfo("connected_to_server"));
 	ADD_SIGNAL(MethodInfo("connection_failed"));
 	ADD_SIGNAL(MethodInfo("server_disconnected"));

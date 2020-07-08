@@ -19,7 +19,7 @@ public:
 		$ifret if (p_argument==-1) return (Variant::Type)GetTypeInfo<R>::VARIANT_TYPE;$
 		$arg if (p_argument==(@-1)) return (Variant::Type)GetTypeInfo<P@>::VARIANT_TYPE;
 		$
-		return Variant::NIL;
+		return Variant::Type::NIL;
 	}
 	virtual PropertyInfo _gen_argument_type_info(int p_argument) const {
 		$ifret if (p_argument==-1) return GetTypeInfo<R>::get_class_info();$
@@ -111,7 +111,7 @@ public:
 		$ifret if (p_argument==-1) return (Variant::Type)GetTypeInfo<R>::VARIANT_TYPE;$
 		$arg if (p_argument==(@-1)) return (Variant::Type)GetTypeInfo<P@>::VARIANT_TYPE;
 		$
-		return Variant::NIL;
+		return Variant::Type::NIL;
 	}
 
 	virtual PropertyInfo _gen_argument_type_info(int p_argument) const {
@@ -210,7 +210,7 @@ public:
 		$ifret if (p_argument==-1) return (Variant::Type)GetTypeInfo<R>::VARIANT_TYPE;$
 		$arg if (p_argument==(@-1)) return (Variant::Type)GetTypeInfo<P@>::VARIANT_TYPE;
 		$
-		return Variant::NIL;
+		return Variant::Type::NIL;
 	}
 	virtual PropertyInfo _gen_argument_type_info(int p_argument) const {
 		$ifret if (p_argument==-1) return GetTypeInfo<R>::get_class_info();$

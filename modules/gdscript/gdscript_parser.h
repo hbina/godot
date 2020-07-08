@@ -62,7 +62,7 @@ public:
 		bool infer_type = false;
 		bool may_yield = false; // For function calls
 
-		Variant::Type builtin_type = Variant::NIL;
+		Variant::Type builtin_type = Variant::Type::NIL;
 		StringName native_type;
 		Ref<Script> script_type;
 		ClassNode *class_type = nullptr;
@@ -309,7 +309,7 @@ public:
 			type = TYPE_ARRAY;
 			datatype.has_type = true;
 			datatype.kind = DataType::BUILTIN;
-			datatype.builtin_type = Variant::ARRAY;
+			datatype.builtin_type = Variant::Type::ARRAY;
 		}
 	};
 
@@ -328,7 +328,7 @@ public:
 			type = TYPE_DICTIONARY;
 			datatype.has_type = true;
 			datatype.kind = DataType::BUILTIN;
-			datatype.builtin_type = Variant::DICTIONARY;
+			datatype.builtin_type = Variant::Type::DICTIONARY;
 		}
 	};
 

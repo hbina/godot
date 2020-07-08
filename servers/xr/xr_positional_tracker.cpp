@@ -60,7 +60,7 @@ void XRPositionalTracker::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("get_rumble"), &XRPositionalTracker::get_rumble);
 	ClassDB::bind_method(D_METHOD("set_rumble", "rumble"), &XRPositionalTracker::set_rumble);
 
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "rumble"), "set_rumble", "get_rumble");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "rumble"), "set_rumble", "get_rumble");
 };
 
 void XRPositionalTracker::set_type(XRServer::TrackerType p_type) {

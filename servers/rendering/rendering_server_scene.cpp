@@ -2894,7 +2894,7 @@ void RenderingServerScene::_update_dirty_instance(Instance *p_instance) {
 				if (p_instance->instance_allocated_shader_parameters) {
 					p_instance->instance_allocated_shader_parameters_offset = RSG::storage->global_variables_instance_allocate(p_instance->self);
 					for (Map<StringName, RasterizerScene::InstanceBase::InstanceShaderParameter>::Element *E = p_instance->instance_shader_parameters.front(); E; E = E->next()) {
-						if (E->get().value.get_type() != Variant::NIL) {
+						if (E->get().value.get_type() != Variant::Type::NIL) {
 							RSG::storage->global_variables_instance_update(p_instance->self, E->get().index, E->get().value);
 						}
 					}

@@ -2515,13 +2515,13 @@ void FileSystemDock::_bind_methods() {
 
 	ClassDB::bind_method(D_METHOD("_update_import_dock"), &FileSystemDock::_update_import_dock);
 
-	ADD_SIGNAL(MethodInfo("inherit", PropertyInfo(Variant::STRING, "file")));
-	ADD_SIGNAL(MethodInfo("instance", PropertyInfo(Variant::PACKED_STRING_ARRAY, "files")));
+	ADD_SIGNAL(MethodInfo("inherit", PropertyInfo(Variant::Type::STRING, "file")));
+	ADD_SIGNAL(MethodInfo("instance", PropertyInfo(Variant::Type::PACKED_STRING_ARRAY, "files")));
 
-	ADD_SIGNAL(MethodInfo("file_removed", PropertyInfo(Variant::STRING, "file")));
-	ADD_SIGNAL(MethodInfo("folder_removed", PropertyInfo(Variant::STRING, "folder")));
-	ADD_SIGNAL(MethodInfo("files_moved", PropertyInfo(Variant::STRING, "old_file"), PropertyInfo(Variant::STRING, "new_file")));
-	ADD_SIGNAL(MethodInfo("folder_moved", PropertyInfo(Variant::STRING, "old_folder"), PropertyInfo(Variant::STRING, "new_file")));
+	ADD_SIGNAL(MethodInfo("file_removed", PropertyInfo(Variant::Type::STRING, "file")));
+	ADD_SIGNAL(MethodInfo("folder_removed", PropertyInfo(Variant::Type::STRING, "folder")));
+	ADD_SIGNAL(MethodInfo("files_moved", PropertyInfo(Variant::Type::STRING, "old_file"), PropertyInfo(Variant::Type::STRING, "new_file")));
+	ADD_SIGNAL(MethodInfo("folder_moved", PropertyInfo(Variant::Type::STRING, "old_folder"), PropertyInfo(Variant::Type::STRING, "new_file")));
 
 	ADD_SIGNAL(MethodInfo("display_mode_changed"));
 }

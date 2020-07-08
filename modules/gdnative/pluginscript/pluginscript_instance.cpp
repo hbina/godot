@@ -59,7 +59,7 @@ Variant::Type PluginScriptInstance::get_property_type(const StringName &p_name, 
 		if (r_is_valid) {
 			*r_is_valid = false;
 		}
-		return Variant::NIL;
+		return Variant::Type::NIL;
 	}
 	if (r_is_valid) {
 		*r_is_valid = true;

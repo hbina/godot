@@ -59,7 +59,7 @@ void SceneTreeTimer::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_time_left", "time"), &SceneTreeTimer::set_time_left);
 	ClassDB::bind_method(D_METHOD("get_time_left"), &SceneTreeTimer::get_time_left);
 
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "time_left"), "set_time_left", "get_time_left");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "time_left"), "set_time_left", "get_time_left");
 
 	ADD_SIGNAL(MethodInfo("timeout"));
 }
@@ -225,7 +225,7 @@ void SceneTree::call_group_flags(uint32_t p_call_flags, const StringName &p_grou
 
 		Vector<Variant> args;
 		for (int i = 0; i < VARIANT_ARG_MAX; i++) {
-			if (argptr[i]->get_type() == Variant::NIL) {
+			if (argptr[i]->get_type() == Variant::Type::NIL) {
 				break;
 			}
 			args.push_back(*argptr[i]);
@@ -898,8 +898,8 @@ Variant SceneTree::_call_group_flags(const Variant **p_args, int p_argcount, Cal
 
 	ERR_FAIL_COND_V(p_argcount < 3, Variant());
 	ERR_FAIL_COND_V(!p_args[0]->is_num(), Variant());
-	ERR_FAIL_COND_V(p_args[1]->get_type() != Variant::STRING_NAME && p_args[1]->get_type() != Variant::STRING, Variant());
-	ERR_FAIL_COND_V(p_args[2]->get_type() != Variant::STRING_NAME && p_args[2]->get_type() != Variant::STRING, Variant());
+	ERR_FAIL_COND_V(p_args[1]->get_type() != Variant::Type::STRING_NAME && p_args[1]->get_type() != Variant::Type::STRING, Variant());
+	ERR_FAIL_COND_V(p_args[2]->get_type() != Variant::Type::STRING_NAME && p_args[2]->get_type() != Variant::Type::STRING, Variant());
 
 	int flags = *p_args[0];
 	StringName group = *p_args[1];
@@ -919,8 +919,8 @@ Variant SceneTree::_call_group(const Variant **p_args, int p_argcount, Callable:
 	r_error.error = Callable::CallError::CALL_OK;
 
 	ERR_FAIL_COND_V(p_argcount < 2, Variant());
-	ERR_FAIL_COND_V(p_args[0]->get_type() != Variant::STRING_NAME && p_args[0]->get_type() != Variant::STRING, Variant());
-	ERR_FAIL_COND_V(p_args[1]->get_type() != Variant::STRING_NAME && p_args[1]->get_type() != Variant::STRING, Variant());
+	ERR_FAIL_COND_V(p_args[0]->get_type() != Variant::Type::STRING_NAME && p_args[0]->get_type() != Variant::Type::STRING, Variant());
+	ERR_FAIL_COND_V(p_args[1]->get_type() != Variant::Type::STRING_NAME && p_args[1]->get_type() != Variant::Type::STRING, Variant());
 
 	StringName group = *p_args[0];
 	StringName method = *p_args[1];
@@ -1206,9 +1206,9 @@ void SceneTree::_bind_methods() {
 
 	MethodInfo mi;
 	mi.name = "call_group_flags";
-	mi.arguments.push_back(PropertyInfo(Variant::INT, "flags"));
-	mi.arguments.push_back(PropertyInfo(Variant::STRING_NAME, "group"));
-	mi.arguments.push_back(PropertyInfo(Variant::STRING_NAME, "method"));
+	mi.arguments.push_back(PropertyInfo(Variant::Type::INT, "flags"));
+	mi.arguments.push_back(PropertyInfo(Variant::Type::STRING_NAME, "group"));
+	mi.arguments.push_back(PropertyInfo(Variant::Type::STRING_NAME, "method"));
 
 	ClassDB::bind_vararg_method(METHOD_FLAGS_DEFAULT, "call_group_flags", &SceneTree::_call_group_flags, mi);
 
@@ -1217,8 +1217,8 @@ void SceneTree::_bind_methods() {
 
 	MethodInfo mi2;
 	mi2.name = "call_group";
-	mi2.arguments.push_back(PropertyInfo(Variant::STRING_NAME, "group"));
-	mi2.arguments.push_back(PropertyInfo(Variant::STRING_NAME, "method"));
+	mi2.arguments.push_back(PropertyInfo(Variant::Type::STRING_NAME, "group"));
+	mi2.arguments.push_back(PropertyInfo(Variant::Type::STRING_NAME, "method"));
 
 	ClassDB::bind_vararg_method(METHOD_FLAGS_DEFAULT, "call_group", &SceneTree::_call_group, mi2);
 
@@ -1251,30 +1251,30 @@ void SceneTree::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_refuse_new_network_connections", "refuse"), &SceneTree::set_refuse_new_network_connections);
 	ClassDB::bind_method(D_METHOD("is_refusing_new_network_connections"), &SceneTree::is_refusing_new_network_connections);
 
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "debug_collisions_hint"), "set_debug_collisions_hint", "is_debugging_collisions_hint");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "debug_navigation_hint"), "set_debug_navigation_hint", "is_debugging_navigation_hint");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "paused"), "set_pause", "is_paused");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "refuse_new_network_connections"), "set_refuse_new_network_connections", "is_refusing_new_network_connections");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "debug_collisions_hint"), "set_debug_collisions_hint", "is_debugging_collisions_hint");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "debug_navigation_hint"), "set_debug_navigation_hint", "is_debugging_navigation_hint");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "paused"), "set_pause", "is_paused");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "refuse_new_network_connections"), "set_refuse_new_network_connections", "is_refusing_new_network_connections");
 	ADD_PROPERTY_DEFAULT("refuse_new_network_connections", false);
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "edited_scene_root", PROPERTY_HINT_RESOURCE_TYPE, "Node", 0), "set_edited_scene_root", "get_edited_scene_root");
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "current_scene", PROPERTY_HINT_RESOURCE_TYPE, "Node", 0), "set_current_scene", "get_current_scene");
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "network_peer", PROPERTY_HINT_RESOURCE_TYPE, "NetworkedMultiplayerPeer", 0), "set_network_peer", "get_network_peer");
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "root", PROPERTY_HINT_RESOURCE_TYPE, "Node", 0), "", "get_root");
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "multiplayer", PROPERTY_HINT_RESOURCE_TYPE, "MultiplayerAPI", 0), "set_multiplayer", "get_multiplayer");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "multiplayer_poll"), "set_multiplayer_poll_enabled", "is_multiplayer_poll_enabled");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "edited_scene_root", PROPERTY_HINT_RESOURCE_TYPE, "Node", 0), "set_edited_scene_root", "get_edited_scene_root");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "current_scene", PROPERTY_HINT_RESOURCE_TYPE, "Node", 0), "set_current_scene", "get_current_scene");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "network_peer", PROPERTY_HINT_RESOURCE_TYPE, "NetworkedMultiplayerPeer", 0), "set_network_peer", "get_network_peer");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "root", PROPERTY_HINT_RESOURCE_TYPE, "Node", 0), "", "get_root");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "multiplayer", PROPERTY_HINT_RESOURCE_TYPE, "MultiplayerAPI", 0), "set_multiplayer", "get_multiplayer");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "multiplayer_poll"), "set_multiplayer_poll_enabled", "is_multiplayer_poll_enabled");
 
 	ADD_SIGNAL(MethodInfo("tree_changed"));
-	ADD_SIGNAL(MethodInfo("node_added", PropertyInfo(Variant::OBJECT, "node", PROPERTY_HINT_RESOURCE_TYPE, "Node")));
-	ADD_SIGNAL(MethodInfo("node_removed", PropertyInfo(Variant::OBJECT, "node", PROPERTY_HINT_RESOURCE_TYPE, "Node")));
-	ADD_SIGNAL(MethodInfo("node_renamed", PropertyInfo(Variant::OBJECT, "node", PROPERTY_HINT_RESOURCE_TYPE, "Node")));
-	ADD_SIGNAL(MethodInfo("node_configuration_warning_changed", PropertyInfo(Variant::OBJECT, "node", PROPERTY_HINT_RESOURCE_TYPE, "Node")));
+	ADD_SIGNAL(MethodInfo("node_added", PropertyInfo(Variant::Type::OBJECT, "node", PROPERTY_HINT_RESOURCE_TYPE, "Node")));
+	ADD_SIGNAL(MethodInfo("node_removed", PropertyInfo(Variant::Type::OBJECT, "node", PROPERTY_HINT_RESOURCE_TYPE, "Node")));
+	ADD_SIGNAL(MethodInfo("node_renamed", PropertyInfo(Variant::Type::OBJECT, "node", PROPERTY_HINT_RESOURCE_TYPE, "Node")));
+	ADD_SIGNAL(MethodInfo("node_configuration_warning_changed", PropertyInfo(Variant::Type::OBJECT, "node", PROPERTY_HINT_RESOURCE_TYPE, "Node")));
 
 	ADD_SIGNAL(MethodInfo("idle_frame"));
 	ADD_SIGNAL(MethodInfo("physics_frame"));
 
-	ADD_SIGNAL(MethodInfo("files_dropped", PropertyInfo(Variant::PACKED_STRING_ARRAY, "files"), PropertyInfo(Variant::INT, "screen")));
-	ADD_SIGNAL(MethodInfo("network_peer_connected", PropertyInfo(Variant::INT, "id")));
-	ADD_SIGNAL(MethodInfo("network_peer_disconnected", PropertyInfo(Variant::INT, "id")));
+	ADD_SIGNAL(MethodInfo("files_dropped", PropertyInfo(Variant::Type::PACKED_STRING_ARRAY, "files"), PropertyInfo(Variant::Type::INT, "screen")));
+	ADD_SIGNAL(MethodInfo("network_peer_connected", PropertyInfo(Variant::Type::INT, "id")));
+	ADD_SIGNAL(MethodInfo("network_peer_disconnected", PropertyInfo(Variant::Type::INT, "id")));
 	ADD_SIGNAL(MethodInfo("connected_to_server"));
 	ADD_SIGNAL(MethodInfo("connection_failed"));
 	ADD_SIGNAL(MethodInfo("server_disconnected"));
@@ -1349,7 +1349,7 @@ SceneTree::SceneTree() {
 	debug_navigation_color = GLOBAL_DEF("debug/shapes/navigation/geometry_color", Color(0.1, 1.0, 0.7, 0.4));
 	debug_navigation_disabled_color = GLOBAL_DEF("debug/shapes/navigation/disabled_geometry_color", Color(1.0, 0.7, 0.1, 0.4));
 	collision_debug_contacts = GLOBAL_DEF("debug/shapes/collision/max_contacts_displayed", 10000);
-	ProjectSettings::get_singleton()->set_custom_property_info("debug/shapes/collision/max_contacts_displayed", PropertyInfo(Variant::INT, "debug/shapes/collision/max_contacts_displayed", PROPERTY_HINT_RANGE, "0,20000,1")); // No negative
+	ProjectSettings::get_singleton()->set_custom_property_info("debug/shapes/collision/max_contacts_displayed", PropertyInfo(Variant::Type::INT, "debug/shapes/collision/max_contacts_displayed", PROPERTY_HINT_RANGE, "0,20000,1")); // No negative
 
 	tree_version = 1;
 	physics_process_time = 1;
@@ -1385,11 +1385,11 @@ SceneTree::SceneTree() {
 	current_scene = nullptr;
 
 	int msaa_mode = GLOBAL_DEF("rendering/quality/screen_filters/msaa", 0);
-	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/screen_filters/msaa", PropertyInfo(Variant::INT, "rendering/quality/screen_filters/msaa", PROPERTY_HINT_ENUM, "Disabled (Fastest),2x (Fast),4x (Average),8x (Slow),16x (Slower)"));
+	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/screen_filters/msaa", PropertyInfo(Variant::Type::INT, "rendering/quality/screen_filters/msaa", PROPERTY_HINT_ENUM, "Disabled (Fastest),2x (Fast),4x (Average),8x (Slow),16x (Slower)"));
 	root->set_msaa(Viewport::MSAA(msaa_mode));
 
 	int ssaa_mode = GLOBAL_DEF("rendering/quality/screen_filters/screen_space_aa", 0);
-	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/screen_filters/screen_space_aa", PropertyInfo(Variant::INT, "rendering/quality/screen_filters/screen_space_aa", PROPERTY_HINT_ENUM, "Disabled (Fastest),FXAA (Fast)"));
+	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/screen_filters/screen_space_aa", PropertyInfo(Variant::Type::INT, "rendering/quality/screen_filters/screen_space_aa", PROPERTY_HINT_ENUM, "Disabled (Fastest),FXAA (Fast)"));
 	root->set_screen_space_aa(Viewport::ScreenSpaceAA(ssaa_mode));
 
 	{ //load default fallback environment
@@ -1406,7 +1406,7 @@ SceneTree::SceneTree() {
 		//get path
 		String env_path = GLOBAL_DEF("rendering/environment/default_environment", "");
 		//setup property
-		ProjectSettings::get_singleton()->set_custom_property_info("rendering/environment/default_environment", PropertyInfo(Variant::STRING, "rendering/viewport/default_environment", PROPERTY_HINT_FILE, ext_hint));
+		ProjectSettings::get_singleton()->set_custom_property_info("rendering/environment/default_environment", PropertyInfo(Variant::Type::STRING, "rendering/viewport/default_environment", PROPERTY_HINT_FILE, ext_hint));
 		env_path = env_path.strip_edges();
 		if (env_path != String()) {
 			Ref<Environment> env = ResourceLoader::load(env_path);

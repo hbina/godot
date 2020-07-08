@@ -175,46 +175,46 @@ void ConnectDialog::_add_bind() {
 	Variant value;
 
 	switch (vt) {
-		case Variant::BOOL:
+		case Variant::Type::BOOL:
 			value = false;
 			break;
-		case Variant::INT:
+		case Variant::Type::INT:
 			value = 0;
 			break;
-		case Variant::FLOAT:
+		case Variant::Type::FLOAT:
 			value = 0.0;
 			break;
-		case Variant::STRING:
+		case Variant::Type::STRING:
 			value = "";
 			break;
-		case Variant::STRING_NAME:
+		case Variant::Type::STRING_NAME:
 			value = "";
 			break;
-		case Variant::VECTOR2:
+		case Variant::Type::VECTOR2:
 			value = Vector2();
 			break;
-		case Variant::RECT2:
+		case Variant::Type::RECT2:
 			value = Rect2();
 			break;
-		case Variant::VECTOR3:
+		case Variant::Type::VECTOR3:
 			value = Vector3();
 			break;
-		case Variant::PLANE:
+		case Variant::Type::PLANE:
 			value = Plane();
 			break;
-		case Variant::QUAT:
+		case Variant::Type::QUAT:
 			value = Quat();
 			break;
-		case Variant::AABB:
+		case Variant::Type::AABB:
 			value = AABB();
 			break;
-		case Variant::BASIS:
+		case Variant::Type::BASIS:
 			value = Basis();
 			break;
-		case Variant::TRANSFORM:
+		case Variant::Type::TRANSFORM:
 			value = Transform();
 			break;
-		case Variant::COLOR:
+		case Variant::Type::COLOR:
 			value = Color();
 			break;
 		default: {
@@ -222,7 +222,7 @@ void ConnectDialog::_add_bind() {
 		} break;
 	}
 
-	ERR_FAIL_COND(value.get_type() == Variant::NIL);
+	ERR_FAIL_COND(value.get_type() == Variant::Type::NIL);
 
 	cdbinds->params.push_back(value);
 	cdbinds->notify_changed();
@@ -432,20 +432,20 @@ ConnectDialog::ConnectDialog() {
 	type_list = memnew(OptionButton);
 	type_list->set_h_size_flags(Control::SIZE_EXPAND_FILL);
 	add_bind_hb->add_child(type_list);
-	type_list->add_item("bool", Variant::BOOL);
-	type_list->add_item("int", Variant::INT);
-	type_list->add_item("real", Variant::FLOAT);
-	type_list->add_item("String", Variant::STRING);
-	type_list->add_item("StringName", Variant::STRING_NAME);
-	type_list->add_item("Vector2", Variant::VECTOR2);
-	type_list->add_item("Rect2", Variant::RECT2);
-	type_list->add_item("Vector3", Variant::VECTOR3);
-	type_list->add_item("Plane", Variant::PLANE);
-	type_list->add_item("Quat", Variant::QUAT);
-	type_list->add_item("AABB", Variant::AABB);
-	type_list->add_item("Basis", Variant::BASIS);
-	type_list->add_item("Transform", Variant::TRANSFORM);
-	type_list->add_item("Color", Variant::COLOR);
+	type_list->add_item("bool", Variant::Type::BOOL);
+	type_list->add_item("int", Variant::Type::INT);
+	type_list->add_item("real", Variant::Type::FLOAT);
+	type_list->add_item("String", Variant::Type::STRING);
+	type_list->add_item("StringName", Variant::Type::STRING_NAME);
+	type_list->add_item("Vector2", Variant::Type::VECTOR2);
+	type_list->add_item("Rect2", Variant::Type::RECT2);
+	type_list->add_item("Vector3", Variant::Type::VECTOR3);
+	type_list->add_item("Plane", Variant::Type::PLANE);
+	type_list->add_item("Quat", Variant::Type::QUAT);
+	type_list->add_item("AABB", Variant::Type::AABB);
+	type_list->add_item("Basis", Variant::Type::BASIS);
+	type_list->add_item("Transform", Variant::Type::TRANSFORM);
+	type_list->add_item("Color", Variant::Type::COLOR);
 	type_list->select(0);
 
 	Button *add_bind = memnew(Button);
@@ -954,9 +954,9 @@ void ConnectionsDock::update_tree() {
 						signaldesc += ", ";
 					}
 					String tname = "var";
-					if (pi.type == Variant::OBJECT && pi.class_name != StringName()) {
+					if (pi.type == Variant::Type::OBJECT && pi.class_name != StringName()) {
 						tname = pi.class_name.operator String();
-					} else if (pi.type != Variant::NIL) {
+					} else if (pi.type != Variant::Type::NIL) {
 						tname = Variant::get_type_name(pi.type);
 					}
 					signaldesc += (pi.name == "" ? String("arg " + itos(i)) : pi.name) + ": " + tname;

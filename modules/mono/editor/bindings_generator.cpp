@@ -2390,12 +2390,12 @@ bool BindingsGenerator::_arg_default_value_is_assignable_to_type(const Variant &
 	}
 
 	switch (p_val.get_type()) {
-		case Variant::NIL:
+		case Variant::Type::NIL:
 			return p_arg_type.is_object_type ||
 				   name_cache.is_nullable_type(p_arg_type.name);
-		case Variant::BOOL:
+		case Variant::Type::BOOL:
 			return p_arg_type.name == name_cache.type_bool;
-		case Variant::INT:
+		case Variant::Type::INT:
 			return p_arg_type.name == name_cache.type_sbyte ||
 				   p_arg_type.name == name_cache.type_short ||
 				   p_arg_type.name == name_cache.type_int ||
@@ -2407,50 +2407,50 @@ bool BindingsGenerator::_arg_default_value_is_assignable_to_type(const Variant &
 				   p_arg_type.name == name_cache.type_float ||
 				   p_arg_type.name == name_cache.type_double ||
 				   p_arg_type.is_enum;
-		case Variant::FLOAT:
+		case Variant::Type::FLOAT:
 			return p_arg_type.name == name_cache.type_float ||
 				   p_arg_type.name == name_cache.type_double;
-		case Variant::STRING:
-		case Variant::STRING_NAME:
+		case Variant::Type::STRING:
+		case Variant::Type::STRING_NAME:
 			return p_arg_type.name == name_cache.type_String ||
 				   p_arg_type.name == name_cache.type_StringName ||
 				   p_arg_type.name == name_cache.type_NodePath;
-		case Variant::NODE_PATH:
+		case Variant::Type::NODE_PATH:
 			return p_arg_type.name == name_cache.type_NodePath;
-		case Variant::TRANSFORM:
-		case Variant::TRANSFORM2D:
-		case Variant::BASIS:
-		case Variant::QUAT:
-		case Variant::PLANE:
-		case Variant::AABB:
-		case Variant::COLOR:
-		case Variant::VECTOR2:
-		case Variant::RECT2:
-		case Variant::VECTOR3:
-		case Variant::_RID:
-		case Variant::ARRAY:
-		case Variant::DICTIONARY:
-		case Variant::PACKED_BYTE_ARRAY:
-		case Variant::PACKED_INT32_ARRAY:
-		case Variant::PACKED_INT64_ARRAY:
-		case Variant::PACKED_FLOAT32_ARRAY:
-		case Variant::PACKED_FLOAT64_ARRAY:
-		case Variant::PACKED_STRING_ARRAY:
-		case Variant::PACKED_VECTOR2_ARRAY:
-		case Variant::PACKED_VECTOR3_ARRAY:
-		case Variant::PACKED_COLOR_ARRAY:
-		case Variant::CALLABLE:
-		case Variant::SIGNAL:
+		case Variant::Type::TRANSFORM:
+		case Variant::Type::TRANSFORM2D:
+		case Variant::Type::BASIS:
+		case Variant::Type::QUAT:
+		case Variant::Type::PLANE:
+		case Variant::Type::AABB:
+		case Variant::Type::COLOR:
+		case Variant::Type::VECTOR2:
+		case Variant::Type::RECT2:
+		case Variant::Type::VECTOR3:
+		case Variant::Type::_RID:
+		case Variant::Type::ARRAY:
+		case Variant::Type::DICTIONARY:
+		case Variant::Type::PACKED_BYTE_ARRAY:
+		case Variant::Type::PACKED_INT32_ARRAY:
+		case Variant::Type::PACKED_INT64_ARRAY:
+		case Variant::Type::PACKED_FLOAT32_ARRAY:
+		case Variant::Type::PACKED_FLOAT64_ARRAY:
+		case Variant::Type::PACKED_STRING_ARRAY:
+		case Variant::Type::PACKED_VECTOR2_ARRAY:
+		case Variant::Type::PACKED_VECTOR3_ARRAY:
+		case Variant::Type::PACKED_COLOR_ARRAY:
+		case Variant::Type::CALLABLE:
+		case Variant::Type::SIGNAL:
 			return p_arg_type.name == Variant::get_type_name(p_val.get_type());
-		case Variant::OBJECT:
+		case Variant::Type::OBJECT:
 			return p_arg_type.is_object_type;
-		case Variant::VECTOR2I:
+		case Variant::Type::VECTOR2I:
 			return p_arg_type.name == name_cache.type_Vector2 ||
 				   p_arg_type.name == Variant::get_type_name(p_val.get_type());
-		case Variant::RECT2I:
+		case Variant::Type::RECT2I:
 			return p_arg_type.name == name_cache.type_Rect2 ||
 				   p_arg_type.name == Variant::get_type_name(p_val.get_type());
-		case Variant::VECTOR3I:
+		case Variant::Type::VECTOR3I:
 			return p_arg_type.name == name_cache.type_Vector3 ||
 				   p_arg_type.name == Variant::get_type_name(p_val.get_type());
 		default:
@@ -2631,7 +2631,7 @@ bool BindingsGenerator::_populate_object_type_interfaces() {
 							   " We only expected Object.free, but found '" +
 							   itype.name + "." + imethod.name + "'.");
 				}
-			} else if (return_info.type == Variant::INT && return_info.usage & PROPERTY_USAGE_CLASS_IS_ENUM) {
+			} else if (return_info.type == Variant::Type::INT && return_info.usage & PROPERTY_USAGE_CLASS_IS_ENUM) {
 				imethod.return_type.cname = return_info.class_name;
 				imethod.return_type.is_enum = true;
 			} else if (return_info.class_name != StringName()) {
@@ -2644,14 +2644,14 @@ bool BindingsGenerator::_populate_object_type_interfaces() {
 								" Are you returning a reference type by pointer? Method: '" + itype.name + "." + imethod.name + "'.");
 			} else if (return_info.hint == PROPERTY_HINT_RESOURCE_TYPE) {
 				imethod.return_type.cname = return_info.hint_string;
-			} else if (return_info.type == Variant::NIL && return_info.usage & PROPERTY_USAGE_NIL_IS_VARIANT) {
+			} else if (return_info.type == Variant::Type::NIL && return_info.usage & PROPERTY_USAGE_NIL_IS_VARIANT) {
 				imethod.return_type.cname = name_cache.type_Variant;
-			} else if (return_info.type == Variant::NIL) {
+			} else if (return_info.type == Variant::Type::NIL) {
 				imethod.return_type.cname = name_cache.type_void;
 			} else {
-				if (return_info.type == Variant::INT) {
+				if (return_info.type == Variant::Type::INT) {
 					imethod.return_type.cname = _get_int_type_name_from_meta(m ? m->get_argument_meta(-1) : GodotTypeInfo::METADATA_NONE);
-				} else if (return_info.type == Variant::FLOAT) {
+				} else if (return_info.type == Variant::Type::FLOAT) {
 					imethod.return_type.cname = _get_float_type_name_from_meta(m ? m->get_argument_meta(-1) : GodotTypeInfo::METADATA_NONE);
 				} else {
 					imethod.return_type.cname = Variant::get_type_name(return_info.type);
@@ -2666,19 +2666,19 @@ bool BindingsGenerator::_populate_object_type_interfaces() {
 				ArgumentInterface iarg;
 				iarg.name = orig_arg_name;
 
-				if (arginfo.type == Variant::INT && arginfo.usage & PROPERTY_USAGE_CLASS_IS_ENUM) {
+				if (arginfo.type == Variant::Type::INT && arginfo.usage & PROPERTY_USAGE_CLASS_IS_ENUM) {
 					iarg.type.cname = arginfo.class_name;
 					iarg.type.is_enum = true;
 				} else if (arginfo.class_name != StringName()) {
 					iarg.type.cname = arginfo.class_name;
 				} else if (arginfo.hint == PROPERTY_HINT_RESOURCE_TYPE) {
 					iarg.type.cname = arginfo.hint_string;
-				} else if (arginfo.type == Variant::NIL) {
+				} else if (arginfo.type == Variant::Type::NIL) {
 					iarg.type.cname = name_cache.type_Variant;
 				} else {
-					if (arginfo.type == Variant::INT) {
+					if (arginfo.type == Variant::Type::INT) {
 						iarg.type.cname = _get_int_type_name_from_meta(m ? m->get_argument_meta(i) : GodotTypeInfo::METADATA_NONE);
-					} else if (arginfo.type == Variant::FLOAT) {
+					} else if (arginfo.type == Variant::Type::FLOAT) {
 						iarg.type.cname = _get_float_type_name_from_meta(m ? m->get_argument_meta(i) : GodotTypeInfo::METADATA_NONE);
 					} else {
 						iarg.type.cname = Variant::get_type_name(arginfo.type);
@@ -2774,19 +2774,19 @@ bool BindingsGenerator::_populate_object_type_interfaces() {
 				ArgumentInterface iarg;
 				iarg.name = orig_arg_name;
 
-				if (arginfo.type == Variant::INT && arginfo.usage & PROPERTY_USAGE_CLASS_IS_ENUM) {
+				if (arginfo.type == Variant::Type::INT && arginfo.usage & PROPERTY_USAGE_CLASS_IS_ENUM) {
 					iarg.type.cname = arginfo.class_name;
 					iarg.type.is_enum = true;
 				} else if (arginfo.class_name != StringName()) {
 					iarg.type.cname = arginfo.class_name;
 				} else if (arginfo.hint == PROPERTY_HINT_RESOURCE_TYPE) {
 					iarg.type.cname = arginfo.hint_string;
-				} else if (arginfo.type == Variant::NIL) {
+				} else if (arginfo.type == Variant::Type::NIL) {
 					iarg.type.cname = name_cache.type_Variant;
 				} else {
-					if (arginfo.type == Variant::INT) {
+					if (arginfo.type == Variant::Type::INT) {
 						iarg.type.cname = _get_int_type_name_from_meta(GodotTypeInfo::METADATA_NONE);
-					} else if (arginfo.type == Variant::FLOAT) {
+					} else if (arginfo.type == Variant::Type::FLOAT) {
 						iarg.type.cname = _get_float_type_name_from_meta(GodotTypeInfo::METADATA_NONE);
 					} else {
 						iarg.type.cname = Variant::get_type_name(arginfo.type);
@@ -2919,27 +2919,27 @@ bool BindingsGenerator::_arg_default_value_from_variant(const Variant &p_val, Ar
 	r_iarg.default_argument = p_val.operator String();
 
 	switch (p_val.get_type()) {
-		case Variant::NIL:
+		case Variant::Type::NIL:
 			// Either Object type or Variant
 			r_iarg.default_argument = "null";
 			break;
 		// Atomic types
-		case Variant::BOOL:
+		case Variant::Type::BOOL:
 			r_iarg.default_argument = bool(p_val) ? "true" : "false";
 			break;
-		case Variant::INT:
+		case Variant::Type::INT:
 			if (r_iarg.type.cname != name_cache.type_int) {
 				r_iarg.default_argument = "(%s)" + r_iarg.default_argument;
 			}
 			break;
-		case Variant::FLOAT:
+		case Variant::Type::FLOAT:
 #ifndef REAL_T_IS_DOUBLE
 			r_iarg.default_argument += "f";
 #endif
 			break;
-		case Variant::STRING:
-		case Variant::STRING_NAME:
-		case Variant::NODE_PATH:
+		case Variant::Type::STRING:
+		case Variant::Type::STRING_NAME:
+		case Variant::Type::NODE_PATH:
 			if (r_iarg.type.cname == name_cache.type_StringName || r_iarg.type.cname == name_cache.type_NodePath) {
 				r_iarg.default_argument = "(%s)\"" + r_iarg.default_argument + "\"";
 				r_iarg.def_param_mode = ArgumentInterface::NULLABLE_REF;
@@ -2948,39 +2948,39 @@ bool BindingsGenerator::_arg_default_value_from_variant(const Variant &p_val, Ar
 				r_iarg.default_argument = "\"" + r_iarg.default_argument + "\"";
 			}
 			break;
-		case Variant::TRANSFORM:
+		case Variant::Type::TRANSFORM:
 			if (p_val.operator Transform() == Transform()) {
 				r_iarg.default_argument.clear();
 			}
 			r_iarg.default_argument = "new %s(" + r_iarg.default_argument + ")";
 			r_iarg.def_param_mode = ArgumentInterface::NULLABLE_VAL;
 			break;
-		case Variant::PLANE:
-		case Variant::AABB:
-		case Variant::COLOR:
+		case Variant::Type::PLANE:
+		case Variant::Type::AABB:
+		case Variant::Type::COLOR:
 			r_iarg.default_argument = "new Color(1, 1, 1, 1)";
 			r_iarg.def_param_mode = ArgumentInterface::NULLABLE_VAL;
 			break;
-		case Variant::VECTOR2:
-		case Variant::VECTOR2I:
-		case Variant::RECT2:
-		case Variant::RECT2I:
-		case Variant::VECTOR3:
-		case Variant::VECTOR3I:
+		case Variant::Type::VECTOR2:
+		case Variant::Type::VECTOR2I:
+		case Variant::Type::RECT2:
+		case Variant::Type::RECT2I:
+		case Variant::Type::VECTOR3:
+		case Variant::Type::VECTOR3I:
 			r_iarg.default_argument = "new %s" + r_iarg.default_argument;
 			r_iarg.def_param_mode = ArgumentInterface::NULLABLE_VAL;
 			break;
-		case Variant::OBJECT:
+		case Variant::Type::OBJECT:
 			ERR_FAIL_COND_V_MSG(!p_val.is_zero(), false,
 					"Parameter of type '" + String(r_iarg.type.cname) + "' can only have null/zero as the default value.");
 
 			r_iarg.default_argument = "null";
 			break;
-		case Variant::DICTIONARY:
+		case Variant::Type::DICTIONARY:
 			r_iarg.default_argument = "new %s()";
 			r_iarg.def_param_mode = ArgumentInterface::NULLABLE_REF;
 			break;
-		case Variant::_RID:
+		case Variant::Type::_RID:
 			ERR_FAIL_COND_V_MSG(r_iarg.type.cname != name_cache.type_RID, false,
 					"Parameter of type '" + String(r_iarg.type.cname) + "' cannot have a default value of type '" + String(name_cache.type_RID) + "'.");
 
@@ -2989,27 +2989,27 @@ bool BindingsGenerator::_arg_default_value_from_variant(const Variant &p_val, Ar
 
 			r_iarg.default_argument = "null";
 			break;
-		case Variant::ARRAY:
-		case Variant::PACKED_BYTE_ARRAY:
-		case Variant::PACKED_INT32_ARRAY:
-		case Variant::PACKED_INT64_ARRAY:
-		case Variant::PACKED_FLOAT32_ARRAY:
-		case Variant::PACKED_FLOAT64_ARRAY:
-		case Variant::PACKED_STRING_ARRAY:
-		case Variant::PACKED_VECTOR2_ARRAY:
-		case Variant::PACKED_VECTOR3_ARRAY:
-		case Variant::PACKED_COLOR_ARRAY:
+		case Variant::Type::ARRAY:
+		case Variant::Type::PACKED_BYTE_ARRAY:
+		case Variant::Type::PACKED_INT32_ARRAY:
+		case Variant::Type::PACKED_INT64_ARRAY:
+		case Variant::Type::PACKED_FLOAT32_ARRAY:
+		case Variant::Type::PACKED_FLOAT64_ARRAY:
+		case Variant::Type::PACKED_STRING_ARRAY:
+		case Variant::Type::PACKED_VECTOR2_ARRAY:
+		case Variant::Type::PACKED_VECTOR3_ARRAY:
+		case Variant::Type::PACKED_COLOR_ARRAY:
 			r_iarg.default_argument = "new %s {}";
 			r_iarg.def_param_mode = ArgumentInterface::NULLABLE_REF;
 			break;
-		case Variant::TRANSFORM2D:
-		case Variant::BASIS:
-		case Variant::QUAT:
+		case Variant::Type::TRANSFORM2D:
+		case Variant::Type::BASIS:
+		case Variant::Type::QUAT:
 			r_iarg.default_argument = Variant::get_type_name(p_val.get_type()) + ".Identity";
 			r_iarg.def_param_mode = ArgumentInterface::NULLABLE_VAL;
 			break;
-		case Variant::CALLABLE:
-		case Variant::SIGNAL:
+		case Variant::Type::CALLABLE:
+		case Variant::Type::SIGNAL:
 			CRASH_NOW_MSG("Parameter of type '" + String(r_iarg.type.cname) + "' cannot have a default value.");
 			break;
 		default:

@@ -1557,29 +1557,29 @@ void RasterizerStorageGLES2::shader_get_param_list(RID p_shader, List<PropertyIn
 
 		switch (u.type) {
 			case ShaderLanguage::TYPE_STRUCT: {
-				pi.type = Variant::ARRAY;
+				pi.type = Variant::Type::ARRAY;
 			} break;
 			case ShaderLanguage::TYPE_VOID: {
-				pi.type = Variant::NIL;
+				pi.type = Variant::Type::NIL;
 			} break;
 
 			case ShaderLanguage::TYPE_BOOL: {
-				pi.type = Variant::BOOL;
+				pi.type = Variant::Type::BOOL;
 			} break;
 
 			// bool vectors
 			case ShaderLanguage::TYPE_BVEC2: {
-				pi.type = Variant::INT;
+				pi.type = Variant::Type::INT;
 				pi.hint = PROPERTY_HINT_FLAGS;
 				pi.hint_string = "x,y";
 			} break;
 			case ShaderLanguage::TYPE_BVEC3: {
-				pi.type = Variant::INT;
+				pi.type = Variant::Type::INT;
 				pi.hint = PROPERTY_HINT_FLAGS;
 				pi.hint_string = "x,y,z";
 			} break;
 			case ShaderLanguage::TYPE_BVEC4: {
-				pi.type = Variant::INT;
+				pi.type = Variant::Type::INT;
 				pi.hint = PROPERTY_HINT_FLAGS;
 				pi.hint_string = "x,y,z,w";
 			} break;
@@ -1587,7 +1587,7 @@ void RasterizerStorageGLES2::shader_get_param_list(RID p_shader, List<PropertyIn
 				// int stuff
 			case ShaderLanguage::TYPE_UINT:
 			case ShaderLanguage::TYPE_INT: {
-				pi.type = Variant::INT;
+				pi.type = Variant::Type::INT;
 
 				if (u.hint == ShaderLanguage::ShaderNode::Uniform::HINT_RANGE) {
 					pi.hint = PROPERTY_HINT_RANGE;
@@ -1601,11 +1601,11 @@ void RasterizerStorageGLES2::shader_get_param_list(RID p_shader, List<PropertyIn
 			case ShaderLanguage::TYPE_UVEC3:
 			case ShaderLanguage::TYPE_IVEC4:
 			case ShaderLanguage::TYPE_UVEC4: {
-				pi.type = Variant::PACKED_INT32_ARRAY;
+				pi.type = Variant::Type::PACKED_INT32_ARRAY;
 			} break;
 
 			case ShaderLanguage::TYPE_FLOAT: {
-				pi.type = Variant::FLOAT;
+				pi.type = Variant::Type::FLOAT;
 				if (u.hint == ShaderLanguage::ShaderNode::Uniform::HINT_RANGE) {
 					pi.hint = PROPERTY_HINT_RANGE;
 					pi.hint_string = rtos(u.hint_range[0]) + "," + rtos(u.hint_range[1]) + "," + rtos(u.hint_range[2]);
@@ -1613,42 +1613,42 @@ void RasterizerStorageGLES2::shader_get_param_list(RID p_shader, List<PropertyIn
 			} break;
 
 			case ShaderLanguage::TYPE_VEC2: {
-				pi.type = Variant::VECTOR2;
+				pi.type = Variant::Type::VECTOR2;
 			} break;
 			case ShaderLanguage::TYPE_VEC3: {
-				pi.type = Variant::VECTOR3;
+				pi.type = Variant::Type::VECTOR3;
 			} break;
 
 			case ShaderLanguage::TYPE_VEC4: {
 				if (u.hint == ShaderLanguage::ShaderNode::Uniform::HINT_COLOR) {
-					pi.type = Variant::COLOR;
+					pi.type = Variant::Type::COLOR;
 				} else {
-					pi.type = Variant::PLANE;
+					pi.type = Variant::Type::PLANE;
 				}
 			} break;
 
 			case ShaderLanguage::TYPE_MAT2: {
-				pi.type = Variant::TRANSFORM2D;
+				pi.type = Variant::Type::TRANSFORM2D;
 			} break;
 
 			case ShaderLanguage::TYPE_MAT3: {
-				pi.type = Variant::BASIS;
+				pi.type = Variant::Type::BASIS;
 			} break;
 
 			case ShaderLanguage::TYPE_MAT4: {
-				pi.type = Variant::TRANSFORM;
+				pi.type = Variant::Type::TRANSFORM;
 			} break;
 
 			case ShaderLanguage::TYPE_SAMPLER2D:
 			case ShaderLanguage::TYPE_ISAMPLER2D:
 			case ShaderLanguage::TYPE_USAMPLER2D: {
-				pi.type = Variant::OBJECT;
+				pi.type = Variant::Type::OBJECT;
 				pi.hint = PROPERTY_HINT_RESOURCE_TYPE;
 				pi.hint_string = "Texture2D";
 			} break;
 
 			case ShaderLanguage::TYPE_SAMPLERCUBE: {
-				pi.type = Variant::OBJECT;
+				pi.type = Variant::Type::OBJECT;
 				pi.hint = PROPERTY_HINT_RESOURCE_TYPE;
 				pi.hint_string = "CubeMap";
 			} break;
@@ -1656,7 +1656,7 @@ void RasterizerStorageGLES2::shader_get_param_list(RID p_shader, List<PropertyIn
 			case ShaderLanguage::TYPE_SAMPLER2DARRAY:
 			case ShaderLanguage::TYPE_ISAMPLER2DARRAY:
 			case ShaderLanguage::TYPE_USAMPLER2DARRAY: {
-				pi.type = Variant::OBJECT;
+				pi.type = Variant::Type::OBJECT;
 				pi.hint = PROPERTY_HINT_RESOURCE_TYPE;
 				pi.hint_string = "TextureArray";
 			} break;
@@ -1664,7 +1664,7 @@ void RasterizerStorageGLES2::shader_get_param_list(RID p_shader, List<PropertyIn
 			case ShaderLanguage::TYPE_SAMPLER3D:
 			case ShaderLanguage::TYPE_ISAMPLER3D:
 			case ShaderLanguage::TYPE_USAMPLER3D: {
-				pi.type = Variant::OBJECT;
+				pi.type = Variant::Type::OBJECT;
 				pi.hint = PROPERTY_HINT_RESOURCE_TYPE;
 				pi.hint_string = "Texture3D";
 			} break;
@@ -1751,7 +1751,7 @@ void RasterizerStorageGLES2::material_set_param(RID p_material, const StringName
 	Material *material = material_owner.getornull(p_material);
 	ERR_FAIL_COND(!material);
 
-	if (p_value.get_type() == Variant::NIL) {
+	if (p_value.get_type() == Variant::Type::NIL) {
 		material->params.erase(p_param);
 	} else {
 		material->params[p_param] = p_value;

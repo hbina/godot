@@ -33,7 +33,7 @@
 #include "core/script_language.h"
 
 void RichTextEffect::_bind_methods() {
-	BIND_VMETHOD(MethodInfo(Variant::BOOL, "_process_custom_fx", PropertyInfo(Variant::OBJECT, "char_fx", PROPERTY_HINT_RESOURCE_TYPE, "CharFXTransform")));
+	BIND_VMETHOD(MethodInfo(Variant::Type::BOOL, "_process_custom_fx", PropertyInfo(Variant::Type::OBJECT, "char_fx", PROPERTY_HINT_RESOURCE_TYPE, "CharFXTransform")));
 }
 
 Variant RichTextEffect::get_bbcode() const {
@@ -51,7 +51,7 @@ bool RichTextEffect::_process_effect_impl(Ref<CharFXTransform> p_cfx) {
 	bool return_value = false;
 	if (get_script_instance()) {
 		Variant v = get_script_instance()->call("_process_custom_fx", p_cfx);
-		if (v.get_type() != Variant::BOOL) {
+		if (v.get_type() != Variant::Type::BOOL) {
 			return_value = false;
 		} else {
 			return_value = (bool)v;
@@ -88,14 +88,14 @@ void CharFXTransform::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("get_character"), &CharFXTransform::get_character);
 	ClassDB::bind_method(D_METHOD("set_character", "character"), &CharFXTransform::set_character);
 
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "relative_index"), "set_relative_index", "get_relative_index");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "absolute_index"), "set_absolute_index", "get_absolute_index");
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "elapsed_time"), "set_elapsed_time", "get_elapsed_time");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "visible"), "set_visibility", "is_visible");
-	ADD_PROPERTY(PropertyInfo(Variant::VECTOR2, "offset"), "set_offset", "get_offset");
-	ADD_PROPERTY(PropertyInfo(Variant::COLOR, "color"), "set_color", "get_color");
-	ADD_PROPERTY(PropertyInfo(Variant::DICTIONARY, "env"), "set_environment", "get_environment");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "character"), "set_character", "get_character");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "relative_index"), "set_relative_index", "get_relative_index");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "absolute_index"), "set_absolute_index", "get_absolute_index");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "elapsed_time"), "set_elapsed_time", "get_elapsed_time");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "visible"), "set_visibility", "is_visible");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::VECTOR2, "offset"), "set_offset", "get_offset");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::COLOR, "color"), "set_color", "get_color");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::DICTIONARY, "env"), "set_environment", "get_environment");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "character"), "set_character", "get_character");
 }
 
 CharFXTransform::CharFXTransform() {

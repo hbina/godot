@@ -108,13 +108,13 @@ uint32_t Array::hash() const {
 }
 
 void Array::_assign(const Array &p_array) {
-	if (_p->typed.type != Variant::OBJECT && _p->typed.type == p_array._p->typed.type) {
+	if (_p->typed.type != Variant::Type::OBJECT && _p->typed.type == p_array._p->typed.type) {
 		//same type or untyped, just reference, shuold be fine
 		_ref(p_array);
-	} else if (_p->typed.type == Variant::NIL) { //from typed to untyped, must copy, but this is cheap anyway
+	} else if (_p->typed.type == Variant::Type::NIL) { //from typed to untyped, must copy, but this is cheap anyway
 		_p->array = p_array._p->array;
-	} else if (p_array._p->typed.type == Variant::NIL) { //from untyped to typed, must try to check if they are all valid
-		if (_p->typed.type == Variant::OBJECT) {
+	} else if (p_array._p->typed.type == Variant::Type::NIL) { //from untyped to typed, must try to check if they are all valid
+		if (_p->typed.type == Variant::Type::OBJECT) {
 			//for objects, it needs full validation, either can be converted or fail
 			for (int i = 0; i < p_array._p->array.size(); i++) {
 				if (!_p->typed.validate(p_array._p->array[i], "assign")) {
@@ -502,8 +502,8 @@ Array::Array(const Array &p_from, uint32_t p_type, const StringName &p_class_nam
 void Array::set_typed(uint32_t p_type, const StringName &p_class_name, const Variant &p_script) {
 	ERR_FAIL_COND_MSG(_p->array.size() > 0, "Type can only be set when array is empty.");
 	ERR_FAIL_COND_MSG(_p->refcount.get() > 1, "Type can only be set when array has no more than one user.");
-	ERR_FAIL_COND_MSG(_p->typed.type != Variant::NIL, "Type can only be set once.");
-	ERR_FAIL_COND_MSG(p_class_name != StringName() && p_type != Variant::OBJECT, "Class names can only be set for type OBJECT");
+	ERR_FAIL_COND_MSG(_p->typed.type != Variant::Type::NIL, "Type can only be set once.");
+	ERR_FAIL_COND_MSG(p_class_name != StringName() && p_type != Variant::Type::OBJECT, "Class names can only be set for type OBJECT");
 	Ref<Script> script = p_script;
 	ERR_FAIL_COND_MSG(script.is_valid() && p_class_name == StringName(), "Script class can only be set together with base class name");
 

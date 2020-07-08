@@ -100,10 +100,10 @@ void VisibilityNotifier3D::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("get_aabb"), &VisibilityNotifier3D::get_aabb);
 	ClassDB::bind_method(D_METHOD("is_on_screen"), &VisibilityNotifier3D::is_on_screen);
 
-	ADD_PROPERTY(PropertyInfo(Variant::AABB, "aabb"), "set_aabb", "get_aabb");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::AABB, "aabb"), "set_aabb", "get_aabb");
 
-	ADD_SIGNAL(MethodInfo("camera_entered", PropertyInfo(Variant::OBJECT, "camera", PROPERTY_HINT_RESOURCE_TYPE, "Camera3D")));
-	ADD_SIGNAL(MethodInfo("camera_exited", PropertyInfo(Variant::OBJECT, "camera", PROPERTY_HINT_RESOURCE_TYPE, "Camera3D")));
+	ADD_SIGNAL(MethodInfo("camera_entered", PropertyInfo(Variant::Type::OBJECT, "camera", PROPERTY_HINT_RESOURCE_TYPE, "Camera3D")));
+	ADD_SIGNAL(MethodInfo("camera_exited", PropertyInfo(Variant::Type::OBJECT, "camera", PROPERTY_HINT_RESOURCE_TYPE, "Camera3D")));
 	ADD_SIGNAL(MethodInfo("screen_entered"));
 	ADD_SIGNAL(MethodInfo("screen_exited"));
 }
@@ -227,8 +227,8 @@ void VisibilityEnabler3D::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_enabler", "enabler", "enabled"), &VisibilityEnabler3D::set_enabler);
 	ClassDB::bind_method(D_METHOD("is_enabler_enabled", "enabler"), &VisibilityEnabler3D::is_enabler_enabled);
 
-	ADD_PROPERTYI(PropertyInfo(Variant::BOOL, "pause_animations"), "set_enabler", "is_enabler_enabled", ENABLER_PAUSE_ANIMATIONS);
-	ADD_PROPERTYI(PropertyInfo(Variant::BOOL, "freeze_bodies"), "set_enabler", "is_enabler_enabled", ENABLER_FREEZE_BODIES);
+	ADD_PROPERTYI(PropertyInfo(Variant::Type::BOOL, "pause_animations"), "set_enabler", "is_enabler_enabled", ENABLER_PAUSE_ANIMATIONS);
+	ADD_PROPERTYI(PropertyInfo(Variant::Type::BOOL, "freeze_bodies"), "set_enabler", "is_enabler_enabled", ENABLER_FREEZE_BODIES);
 
 	BIND_ENUM_CONSTANT(ENABLER_PAUSE_ANIMATIONS);
 	BIND_ENUM_CONSTANT(ENABLER_FREEZE_BODIES);

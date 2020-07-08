@@ -79,7 +79,7 @@ void VisualScriptNode::validate_input_default_values() {
 	for (int i = 0; i < get_input_value_port_count(); i++) {
 		Variant::Type expected = get_input_value_port_info(i).type;
 
-		if (expected == Variant::NIL || expected == default_input_values[i].get_type()) {
+		if (expected == Variant::Type::NIL || expected == default_input_values[i].get_type()) {
 			continue;
 		} else {
 			//not the same, reconvert
@@ -115,7 +115,7 @@ void VisualScriptNode::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("_set_default_input_values", "values"), &VisualScriptNode::_set_default_input_values);
 	ClassDB::bind_method(D_METHOD("_get_default_input_values"), &VisualScriptNode::_get_default_input_values);
 
-	ADD_PROPERTY(PropertyInfo(Variant::ARRAY, "_default_input_values", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_default_input_values", "_get_default_input_values");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::ARRAY, "_default_input_values", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_default_input_values", "_get_default_input_values");
 	ADD_SIGNAL(MethodInfo("ports_changed"));
 }
 
@@ -645,7 +645,7 @@ void VisualScript::_set_variable_info(const StringName &p_name, const Dictionary
 Dictionary VisualScript::_get_variable_info(const StringName &p_name) const {
 	PropertyInfo pinfo = get_variable_info(p_name);
 	Dictionary d;
-	d["type"] = pinfo.type;
+	d["type"] = static_cast<int>(pinfo.type);
 	d["name"] = pinfo.name;
 	d["hint"] = pinfo.hint;
 	d["hint_string"] = pinfo.hint_string;
@@ -739,8 +739,8 @@ void VisualScript::custom_signal_set_argument_type(const StringName &p_func, int
 }
 
 Variant::Type VisualScript::custom_signal_get_argument_type(const StringName &p_func, int p_argidx) const {
-	ERR_FAIL_COND_V(!custom_signals.has(p_func), Variant::NIL);
-	ERR_FAIL_INDEX_V(p_argidx, custom_signals[p_func].size(), Variant::NIL);
+	ERR_FAIL_COND_V(!custom_signals.has(p_func), Variant::Type::NIL);
+	ERR_FAIL_INDEX_V(p_argidx, custom_signals[p_func].size(), Variant::Type::NIL);
 	return custom_signals[p_func][p_argidx].type;
 }
 
@@ -1256,7 +1256,7 @@ Dictionary VisualScript::_get_data() const {
 		Array args;
 		for (int i = 0; i < E->get().size(); i++) {
 			args.push_back(E->get()[i].name);
-			args.push_back(E->get()[i].type);
+			args.push_back(static_cast<int>(E->get()[i].type));
 		}
 		cs["arguments"] = args;
 
@@ -1371,9 +1371,9 @@ void VisualScript::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("_set_data", "data"), &VisualScript::_set_data);
 	ClassDB::bind_method(D_METHOD("_get_data"), &VisualScript::_get_data);
 
-	ADD_PROPERTY(PropertyInfo(Variant::DICTIONARY, "data", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_data", "_get_data");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::DICTIONARY, "data", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_data", "_get_data");
 
-	ADD_SIGNAL(MethodInfo("node_ports_changed", PropertyInfo(Variant::STRING, "function"), PropertyInfo(Variant::INT, "id")));
+	ADD_SIGNAL(MethodInfo("node_ports_changed", PropertyInfo(Variant::Type::STRING, "function"), PropertyInfo(Variant::Type::INT, "id")));
 }
 
 VisualScript::VisualScript() {
@@ -1449,7 +1449,7 @@ Variant::Type VisualScriptInstance::get_property_type(const StringName &p_name, 
 		if (r_is_valid) {
 			*r_is_valid = false;
 		}
-		ERR_FAIL_V(Variant::NIL);
+		ERR_FAIL_V(Variant::Type::NIL);
 	}
 
 	if (r_is_valid) {
@@ -2021,7 +2021,7 @@ String VisualScriptInstance::to_string(bool *r_valid) {
 		Callable::CallError ce;
 		Variant ret = call(CoreStringNames::get_singleton()->_to_string, nullptr, 0, ce);
 		if (ce.error == Callable::CallError::CALL_OK) {
-			if (ret.get_type() != Variant::STRING) {
+			if (ret.get_type() != Variant::Type::STRING) {
 				if (r_valid) {
 					*r_valid = false;
 				}
@@ -2352,7 +2352,7 @@ Variant VisualScriptFunctionState::_signal_callback(const Variant **p_args, int 
 	if (self.is_null()) {
 		r_error.error = Callable::CallError::CALL_ERROR_INVALID_ARGUMENT;
 		r_error.argument = p_argcount - 1;
-		r_error.expected = Variant::OBJECT;
+		r_error.expected = static_cast<int>(Variant::Type::OBJECT);
 		return Variant();
 	}
 
@@ -2746,7 +2746,7 @@ VisualScriptLanguage::VisualScriptLanguage() {
 	_debug_parse_err_file = "";
 	_debug_call_stack_pos = 0;
 	int dmcs = GLOBAL_DEF("debug/settings/visual_script/max_call_stack", 1024);
-	ProjectSettings::get_singleton()->set_custom_property_info("debug/settings/visual_script/max_call_stack", PropertyInfo(Variant::INT, "debug/settings/visual_script/max_call_stack", PROPERTY_HINT_RANGE, "1024,4096,1,or_greater")); //minimum is 1024
+	ProjectSettings::get_singleton()->set_custom_property_info("debug/settings/visual_script/max_call_stack", PropertyInfo(Variant::Type::INT, "debug/settings/visual_script/max_call_stack", PROPERTY_HINT_RANGE, "1024,4096,1,or_greater")); //minimum is 1024
 
 	if (EngineDebugger::is_active()) {
 		//debugging enabled!

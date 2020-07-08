@@ -180,7 +180,7 @@ void Dictionary::_unref() const {
 }
 
 uint32_t Dictionary::hash() const {
-	uint32_t h = hash_djb2_one_32(Variant::DICTIONARY);
+	uint32_t h = hash_djb2_one_32(Variant::Type::DICTIONARY);
 
 	for (OrderedHashMap<Variant, Variant, VariantHasher, VariantComparator>::Element E = _p->variant_map.front(); E; E = E.next()) {
 		h = hash_djb2_one_32(E.key().hash(), h);

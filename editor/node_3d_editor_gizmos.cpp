@@ -733,15 +733,15 @@ void EditorNode3DGizmo::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_hidden", "hidden"), &EditorNode3DGizmo::set_hidden);
 
 	BIND_VMETHOD(MethodInfo("redraw"));
-	BIND_VMETHOD(MethodInfo(Variant::STRING, "get_handle_name", PropertyInfo(Variant::INT, "index")));
-	BIND_VMETHOD(MethodInfo(Variant::BOOL, "is_handle_highlighted", PropertyInfo(Variant::INT, "index")));
+	BIND_VMETHOD(MethodInfo(Variant::Type::STRING, "get_handle_name", PropertyInfo(Variant::Type::INT, "index")));
+	BIND_VMETHOD(MethodInfo(Variant::Type::BOOL, "is_handle_highlighted", PropertyInfo(Variant::Type::INT, "index")));
 
-	MethodInfo hvget(Variant::NIL, "get_handle_value", PropertyInfo(Variant::INT, "index"));
+	MethodInfo hvget(Variant::Type::NIL, "get_handle_value", PropertyInfo(Variant::Type::INT, "index"));
 	hvget.return_val.usage |= PROPERTY_USAGE_NIL_IS_VARIANT;
 	BIND_VMETHOD(hvget);
 
-	BIND_VMETHOD(MethodInfo("set_handle", PropertyInfo(Variant::INT, "index"), PropertyInfo(Variant::OBJECT, "camera", PROPERTY_HINT_RESOURCE_TYPE, "Camera3D"), PropertyInfo(Variant::VECTOR2, "point")));
-	MethodInfo cm = MethodInfo("commit_handle", PropertyInfo(Variant::INT, "index"), PropertyInfo(Variant::NIL, "restore"), PropertyInfo(Variant::BOOL, "cancel"));
+	BIND_VMETHOD(MethodInfo("set_handle", PropertyInfo(Variant::Type::INT, "index"), PropertyInfo(Variant::Type::OBJECT, "camera", PROPERTY_HINT_RESOURCE_TYPE, "Camera3D"), PropertyInfo(Variant::Type::VECTOR2, "point")));
+	MethodInfo cm = MethodInfo("commit_handle", PropertyInfo(Variant::Type::INT, "index"), PropertyInfo(Variant::Type::NIL, "restore"), PropertyInfo(Variant::Type::BOOL, "cancel"));
 	cm.default_arguments.push_back(false);
 	BIND_VMETHOD(cm);
 }

@@ -62,7 +62,7 @@ bool MultiNodeEdit::_set_impl(const StringName &p_name, const Variant &p_value, 
 			continue;
 		}
 
-		if (p_value.get_type() == Variant::NODE_PATH) {
+		if (p_value.get_type() == Variant::Type::NODE_PATH) {
 			Node *tonode = n->get_node(p_value);
 			NodePath p_path = n->get_path_to(tonode);
 			ur->add_do_property(n, name, p_path);
@@ -170,7 +170,7 @@ void MultiNodeEdit::_get_property_list(List<PropertyInfo> *p_list) const {
 		}
 	}
 
-	p_list->push_back(PropertyInfo(Variant::OBJECT, "scripts", PROPERTY_HINT_RESOURCE_TYPE, "Script"));
+	p_list->push_back(PropertyInfo(Variant::Type::OBJECT, "scripts", PROPERTY_HINT_RESOURCE_TYPE, "Script"));
 }
 
 void MultiNodeEdit::clear_nodes() {

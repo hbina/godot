@@ -417,7 +417,7 @@ bool EditorPropertyRevert::get_instanced_node_original_property(Node *p_node, co
 	if (!found && node) {
 		//if not found, try default class value
 		Variant attempt = ClassDB::class_get_default_property_value(node->get_class_name(), p_prop);
-		if (attempt.get_type() != Variant::NIL) {
+		if (attempt.get_type() != Variant::Type::NIL) {
 			found = true;
 			value = attempt;
 		}
@@ -465,7 +465,7 @@ bool EditorPropertyRevert::is_node_property_different(Node *p_node, const Varian
 		}
 	}
 
-	if (p_current.get_type() == Variant::FLOAT && p_orig.get_type() == Variant::FLOAT) {
+	if (p_current.get_type() == Variant::Type::FLOAT && p_orig.get_type() == Variant::Type::FLOAT) {
 		float a = p_current;
 		float b = p_orig;
 
@@ -874,22 +874,22 @@ void EditorProperty::_bind_methods() {
 
 	ClassDB::bind_method(D_METHOD("emit_changed", "property", "value", "field", "changing"), &EditorProperty::emit_changed, DEFVAL(StringName()), DEFVAL(false));
 
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "label"), "set_label", "get_label");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "read_only"), "set_read_only", "is_read_only");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "checkable"), "set_checkable", "is_checkable");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "checked"), "set_checked", "is_checked");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "draw_red"), "set_draw_red", "is_draw_red");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "keying"), "set_keying", "is_keying");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "deletable"), "set_deletable", "is_deletable");
-	ADD_SIGNAL(MethodInfo("property_changed", PropertyInfo(Variant::STRING_NAME, "property"), PropertyInfo(Variant::NIL, "value", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NIL_IS_VARIANT)));
-	ADD_SIGNAL(MethodInfo("multiple_properties_changed", PropertyInfo(Variant::PACKED_STRING_ARRAY, "properties"), PropertyInfo(Variant::ARRAY, "value")));
-	ADD_SIGNAL(MethodInfo("property_keyed", PropertyInfo(Variant::STRING_NAME, "property")));
-	ADD_SIGNAL(MethodInfo("property_deleted", PropertyInfo(Variant::STRING_NAME, "property")));
-	ADD_SIGNAL(MethodInfo("property_keyed_with_value", PropertyInfo(Variant::STRING_NAME, "property"), PropertyInfo(Variant::NIL, "value", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NIL_IS_VARIANT)));
-	ADD_SIGNAL(MethodInfo("property_checked", PropertyInfo(Variant::STRING_NAME, "property"), PropertyInfo(Variant::STRING, "bool")));
-	ADD_SIGNAL(MethodInfo("resource_selected", PropertyInfo(Variant::STRING, "path"), PropertyInfo(Variant::OBJECT, "resource", PROPERTY_HINT_RESOURCE_TYPE, "Resource")));
-	ADD_SIGNAL(MethodInfo("object_id_selected", PropertyInfo(Variant::STRING_NAME, "property"), PropertyInfo(Variant::INT, "id")));
-	ADD_SIGNAL(MethodInfo("selected", PropertyInfo(Variant::STRING, "path"), PropertyInfo(Variant::INT, "focusable_idx")));
+	ADD_PROPERTY(PropertyInfo(Variant::Type::STRING, "label"), "set_label", "get_label");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "read_only"), "set_read_only", "is_read_only");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "checkable"), "set_checkable", "is_checkable");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "checked"), "set_checked", "is_checked");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "draw_red"), "set_draw_red", "is_draw_red");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "keying"), "set_keying", "is_keying");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "deletable"), "set_deletable", "is_deletable");
+	ADD_SIGNAL(MethodInfo("property_changed", PropertyInfo(Variant::Type::STRING_NAME, "property"), PropertyInfo(Variant::Type::NIL, "value", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NIL_IS_VARIANT)));
+	ADD_SIGNAL(MethodInfo("multiple_properties_changed", PropertyInfo(Variant::Type::PACKED_STRING_ARRAY, "properties"), PropertyInfo(Variant::Type::ARRAY, "value")));
+	ADD_SIGNAL(MethodInfo("property_keyed", PropertyInfo(Variant::Type::STRING_NAME, "property")));
+	ADD_SIGNAL(MethodInfo("property_deleted", PropertyInfo(Variant::Type::STRING_NAME, "property")));
+	ADD_SIGNAL(MethodInfo("property_keyed_with_value", PropertyInfo(Variant::Type::STRING_NAME, "property"), PropertyInfo(Variant::Type::NIL, "value", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NIL_IS_VARIANT)));
+	ADD_SIGNAL(MethodInfo("property_checked", PropertyInfo(Variant::Type::STRING_NAME, "property"), PropertyInfo(Variant::Type::STRING, "bool")));
+	ADD_SIGNAL(MethodInfo("resource_selected", PropertyInfo(Variant::Type::STRING, "path"), PropertyInfo(Variant::Type::OBJECT, "resource", PROPERTY_HINT_RESOURCE_TYPE, "Resource")));
+	ADD_SIGNAL(MethodInfo("object_id_selected", PropertyInfo(Variant::Type::STRING_NAME, "property"), PropertyInfo(Variant::Type::INT, "id")));
+	ADD_SIGNAL(MethodInfo("selected", PropertyInfo(Variant::Type::STRING, "path"), PropertyInfo(Variant::Type::INT, "focusable_idx")));
 
 	MethodInfo vm;
 	vm.name = "update_property";
@@ -993,27 +993,27 @@ void EditorInspectorPlugin::_bind_methods() {
 
 	MethodInfo vm;
 	vm.name = "can_handle";
-	vm.return_val.type = Variant::BOOL;
-	vm.arguments.push_back(PropertyInfo(Variant::OBJECT, "object"));
+	vm.return_val.type = Variant::Type::BOOL;
+	vm.arguments.push_back(PropertyInfo(Variant::Type::OBJECT, "object"));
 	BIND_VMETHOD(vm);
 	vm.name = "parse_begin";
-	vm.return_val.type = Variant::NIL;
+	vm.return_val.type = Variant::Type::NIL;
 	BIND_VMETHOD(vm);
 	vm.name = "parse_category";
-	vm.arguments.push_back(PropertyInfo(Variant::STRING, "category"));
+	vm.arguments.push_back(PropertyInfo(Variant::Type::STRING, "category"));
 	BIND_VMETHOD(vm);
 	vm.arguments.pop_back();
 	vm.name = "parse_property";
-	vm.return_val.type = Variant::BOOL;
-	vm.arguments.push_back(PropertyInfo(Variant::INT, "type"));
-	vm.arguments.push_back(PropertyInfo(Variant::STRING, "path"));
-	vm.arguments.push_back(PropertyInfo(Variant::INT, "hint"));
-	vm.arguments.push_back(PropertyInfo(Variant::STRING, "hint_text"));
-	vm.arguments.push_back(PropertyInfo(Variant::INT, "usage"));
+	vm.return_val.type = Variant::Type::BOOL;
+	vm.arguments.push_back(PropertyInfo(Variant::Type::INT, "type"));
+	vm.arguments.push_back(PropertyInfo(Variant::Type::STRING, "path"));
+	vm.arguments.push_back(PropertyInfo(Variant::Type::INT, "hint"));
+	vm.arguments.push_back(PropertyInfo(Variant::Type::STRING, "hint_text"));
+	vm.arguments.push_back(PropertyInfo(Variant::Type::INT, "usage"));
 	BIND_VMETHOD(vm);
 	vm.arguments.clear();
 	vm.name = "parse_end";
-	vm.return_val.type = Variant::NIL;
+	vm.return_val.type = Variant::Type::NIL;
 	BIND_VMETHOD(vm);
 }
 
@@ -2453,7 +2453,7 @@ void EditorInspector::_update_script_class_properties(const Object &p_object, Li
 		s->get_script_property_list(&props);
 
 		// Script Variables -> NodeA -> bottom (insert_here)
-		List<PropertyInfo>::Element *category = r_list.insert_before(insert_here, PropertyInfo(Variant::NIL, name, PROPERTY_HINT_NONE, path, PROPERTY_USAGE_CATEGORY));
+		List<PropertyInfo>::Element *category = r_list.insert_before(insert_here, PropertyInfo(Variant::Type::NIL, name, PROPERTY_HINT_NONE, path, PROPERTY_USAGE_CATEGORY));
 
 		// Script Variables -> NodeA -> A props... -> bottom (insert_here)
 		for (List<PropertyInfo>::Element *P = props.front(); P; P = P->next()) {
@@ -2485,13 +2485,13 @@ void EditorInspector::_bind_methods() {
 
 	ClassDB::bind_method("refresh", &EditorInspector::refresh);
 
-	ADD_SIGNAL(MethodInfo("property_selected", PropertyInfo(Variant::STRING, "property")));
-	ADD_SIGNAL(MethodInfo("property_keyed", PropertyInfo(Variant::STRING, "property")));
-	ADD_SIGNAL(MethodInfo("property_deleted", PropertyInfo(Variant::STRING, "property")));
-	ADD_SIGNAL(MethodInfo("resource_selected", PropertyInfo(Variant::OBJECT, "res"), PropertyInfo(Variant::STRING, "prop")));
-	ADD_SIGNAL(MethodInfo("object_id_selected", PropertyInfo(Variant::INT, "id")));
-	ADD_SIGNAL(MethodInfo("property_edited", PropertyInfo(Variant::STRING, "property")));
-	ADD_SIGNAL(MethodInfo("property_toggled", PropertyInfo(Variant::STRING, "property"), PropertyInfo(Variant::BOOL, "checked")));
+	ADD_SIGNAL(MethodInfo("property_selected", PropertyInfo(Variant::Type::STRING, "property")));
+	ADD_SIGNAL(MethodInfo("property_keyed", PropertyInfo(Variant::Type::STRING, "property")));
+	ADD_SIGNAL(MethodInfo("property_deleted", PropertyInfo(Variant::Type::STRING, "property")));
+	ADD_SIGNAL(MethodInfo("resource_selected", PropertyInfo(Variant::Type::OBJECT, "res"), PropertyInfo(Variant::Type::STRING, "prop")));
+	ADD_SIGNAL(MethodInfo("object_id_selected", PropertyInfo(Variant::Type::INT, "id")));
+	ADD_SIGNAL(MethodInfo("property_edited", PropertyInfo(Variant::Type::STRING, "property")));
+	ADD_SIGNAL(MethodInfo("property_toggled", PropertyInfo(Variant::Type::STRING, "property"), PropertyInfo(Variant::Type::BOOL, "checked")));
 	ADD_SIGNAL(MethodInfo("restart_requested"));
 }
 

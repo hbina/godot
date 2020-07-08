@@ -69,8 +69,8 @@ void EditorTranslationParserPlugin::get_recognized_extensions(List<String> *r_ex
 }
 
 void EditorTranslationParserPlugin::_bind_methods() {
-	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::NIL, "parse_file", PropertyInfo(Variant::STRING, "path"), PropertyInfo(Variant::ARRAY, "extracted_strings")));
-	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::ARRAY, "get_recognized_extensions"));
+	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::Type::NIL, "parse_file", PropertyInfo(Variant::Type::STRING, "path"), PropertyInfo(Variant::Type::ARRAY, "extracted_strings")));
+	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::Type::ARRAY, "get_recognized_extensions"));
 }
 
 /////////////////////////

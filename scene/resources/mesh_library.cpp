@@ -95,13 +95,13 @@ bool MeshLibrary::_get(const StringName &p_name, Variant &r_ret) const {
 void MeshLibrary::_get_property_list(List<PropertyInfo> *p_list) const {
 	for (Map<int, Item>::Element *E = item_map.front(); E; E = E->next()) {
 		String name = "item/" + itos(E->key()) + "/";
-		p_list->push_back(PropertyInfo(Variant::STRING, name + "name"));
-		p_list->push_back(PropertyInfo(Variant::OBJECT, name + "mesh", PROPERTY_HINT_RESOURCE_TYPE, "Mesh"));
-		p_list->push_back(PropertyInfo(Variant::TRANSFORM, name + "mesh_transform"));
-		p_list->push_back(PropertyInfo(Variant::ARRAY, name + "shapes"));
-		p_list->push_back(PropertyInfo(Variant::OBJECT, name + "navmesh", PROPERTY_HINT_RESOURCE_TYPE, "NavigationMesh"));
-		p_list->push_back(PropertyInfo(Variant::TRANSFORM, name + "navmesh_transform"));
-		p_list->push_back(PropertyInfo(Variant::OBJECT, name + "preview", PROPERTY_HINT_RESOURCE_TYPE, "Texture2D", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_EDITOR_HELPER));
+		p_list->push_back(PropertyInfo(Variant::Type::STRING, name + "name"));
+		p_list->push_back(PropertyInfo(Variant::Type::OBJECT, name + "mesh", PROPERTY_HINT_RESOURCE_TYPE, "Mesh"));
+		p_list->push_back(PropertyInfo(Variant::Type::TRANSFORM, name + "mesh_transform"));
+		p_list->push_back(PropertyInfo(Variant::Type::ARRAY, name + "shapes"));
+		p_list->push_back(PropertyInfo(Variant::Type::OBJECT, name + "navmesh", PROPERTY_HINT_RESOURCE_TYPE, "NavigationMesh"));
+		p_list->push_back(PropertyInfo(Variant::Type::TRANSFORM, name + "navmesh_transform"));
+		p_list->push_back(PropertyInfo(Variant::Type::OBJECT, name + "preview", PROPERTY_HINT_RESOURCE_TYPE, "Texture2D", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_EDITOR_HELPER));
 	}
 }
 

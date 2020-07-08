@@ -44,7 +44,7 @@ void TextureBasisU::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("get_basisu_data"), &TextureBasisU::get_data);
 	ClassDB::bind_method(D_METHOD("import"), &TextureBasisU::import);
 
-	ADD_PROPERTY(PropertyInfo(Variant::PACKED_BYTE_ARRAY, "basisu_data"), "set_basisu_data", "get_basisu_data");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::PACKED_BYTE_ARRAY, "basisu_data"), "set_basisu_data", "get_basisu_data");
 
 };
 

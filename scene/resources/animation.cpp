@@ -572,13 +572,13 @@ bool Animation::_get(const StringName &p_name, Variant &r_ret) const {
 
 void Animation::_get_property_list(List<PropertyInfo> *p_list) const {
 	for (int i = 0; i < tracks.size(); i++) {
-		p_list->push_back(PropertyInfo(Variant::STRING, "tracks/" + itos(i) + "/type", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
-		p_list->push_back(PropertyInfo(Variant::NODE_PATH, "tracks/" + itos(i) + "/path", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
-		p_list->push_back(PropertyInfo(Variant::INT, "tracks/" + itos(i) + "/interp", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
-		p_list->push_back(PropertyInfo(Variant::BOOL, "tracks/" + itos(i) + "/loop_wrap", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
-		p_list->push_back(PropertyInfo(Variant::BOOL, "tracks/" + itos(i) + "/imported", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
-		p_list->push_back(PropertyInfo(Variant::BOOL, "tracks/" + itos(i) + "/enabled", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
-		p_list->push_back(PropertyInfo(Variant::ARRAY, "tracks/" + itos(i) + "/keys", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
+		p_list->push_back(PropertyInfo(Variant::Type::STRING, "tracks/" + itos(i) + "/type", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
+		p_list->push_back(PropertyInfo(Variant::Type::NODE_PATH, "tracks/" + itos(i) + "/path", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
+		p_list->push_back(PropertyInfo(Variant::Type::INT, "tracks/" + itos(i) + "/interp", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
+		p_list->push_back(PropertyInfo(Variant::Type::BOOL, "tracks/" + itos(i) + "/loop_wrap", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
+		p_list->push_back(PropertyInfo(Variant::Type::BOOL, "tracks/" + itos(i) + "/imported", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
+		p_list->push_back(PropertyInfo(Variant::Type::BOOL, "tracks/" + itos(i) + "/enabled", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
+		p_list->push_back(PropertyInfo(Variant::Type::ARRAY, "tracks/" + itos(i) + "/keys", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
 	}
 }
 
@@ -984,10 +984,10 @@ void Animation::track_insert_key(int p_track, float p_time, const Variant &p_key
 		case TYPE_METHOD: {
 			MethodTrack *mt = static_cast<MethodTrack *>(t);
 
-			ERR_FAIL_COND(p_key.get_type() != Variant::DICTIONARY);
+			ERR_FAIL_COND(p_key.get_type() != Variant::Type::DICTIONARY);
 
 			Dictionary d = p_key;
-			ERR_FAIL_COND(!d.has("method") || (d["method"].get_type() != Variant::STRING_NAME && d["method"].get_type() != Variant::STRING));
+			ERR_FAIL_COND(!d.has("method") || (d["method"].get_type() != Variant::Type::STRING_NAME && d["method"].get_type() != Variant::Type::STRING));
 			ERR_FAIL_COND(!d.has("args") || !d["args"].is_array());
 
 			MethodKey k;
@@ -1506,7 +1506,7 @@ Variant Animation::_cubic_interpolate(const Variant &p_pre_a, const Variant &p_a
 	vformat |= 1 << type_pa;
 	vformat |= 1 << type_pb;
 
-	if (vformat == ((1 << Variant::INT) | (1 << Variant::FLOAT)) || vformat == (1 << Variant::FLOAT)) {
+	if (vformat == ((1 << Variant::Type::INT) | (1 << Variant::Type::FLOAT)) || vformat == (1 << Variant::Type::FLOAT)) {
 		//mix of real and int
 
 		real_t p0 = p_pre_a;
@@ -1528,7 +1528,7 @@ Variant Animation::_cubic_interpolate(const Variant &p_pre_a, const Variant &p_a
 	}
 
 	switch (type_a) {
-		case Variant::VECTOR2: {
+		case Variant::Type::VECTOR2: {
 			Vector2 a = p_a;
 			Vector2 b = p_b;
 			Vector2 pa = p_pre_a;
@@ -1536,7 +1536,7 @@ Variant Animation::_cubic_interpolate(const Variant &p_pre_a, const Variant &p_a
 
 			return a.cubic_interpolate(b, pa, pb, p_c);
 		}
-		case Variant::RECT2: {
+		case Variant::Type::RECT2: {
 			Rect2 a = p_a;
 			Rect2 b = p_b;
 			Rect2 pa = p_pre_a;
@@ -1546,7 +1546,7 @@ Variant Animation::_cubic_interpolate(const Variant &p_pre_a, const Variant &p_a
 					a.position.cubic_interpolate(b.position, pa.position, pb.position, p_c),
 					a.size.cubic_interpolate(b.size, pa.size, pb.size, p_c));
 		}
-		case Variant::VECTOR3: {
+		case Variant::Type::VECTOR3: {
 			Vector3 a = p_a;
 			Vector3 b = p_b;
 			Vector3 pa = p_pre_a;
@@ -1554,7 +1554,7 @@ Variant Animation::_cubic_interpolate(const Variant &p_pre_a, const Variant &p_a
 
 			return a.cubic_interpolate(b, pa, pb, p_c);
 		}
-		case Variant::QUAT: {
+		case Variant::Type::QUAT: {
 			Quat a = p_a;
 			Quat b = p_b;
 			Quat pa = p_pre_a;
@@ -1562,7 +1562,7 @@ Variant Animation::_cubic_interpolate(const Variant &p_pre_a, const Variant &p_a
 
 			return a.cubic_slerp(b, pa, pb, p_c);
 		}
-		case Variant::AABB: {
+		case Variant::Type::AABB: {
 			AABB a = p_a;
 			AABB b = p_b;
 			AABB pa = p_pre_a;
@@ -2672,9 +2672,9 @@ void Animation::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("clear"), &Animation::clear);
 	ClassDB::bind_method(D_METHOD("copy_track", "track_idx", "to_animation"), &Animation::copy_track);
 
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "length", PROPERTY_HINT_RANGE, "0.001,99999,0.001"), "set_length", "get_length");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "loop"), "set_loop", "has_loop");
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "step", PROPERTY_HINT_RANGE, "0,4096,0.001"), "set_step", "get_step");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "length", PROPERTY_HINT_RANGE, "0.001,99999,0.001"), "set_length", "get_length");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "loop"), "set_loop", "has_loop");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "step", PROPERTY_HINT_RANGE, "0,4096,0.001"), "set_step", "get_step");
 
 	ADD_SIGNAL(MethodInfo("tracks_changed"));
 

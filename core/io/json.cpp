@@ -65,20 +65,20 @@ String JSON::_print_var(const Variant &p_var, const String &p_indent, int p_cur_
 	}
 
 	switch (p_var.get_type()) {
-		case Variant::NIL:
+		case Variant::Type::NIL:
 			return "null";
-		case Variant::BOOL:
+		case Variant::Type::BOOL:
 			return p_var.operator bool() ? "true" : "false";
-		case Variant::INT:
+		case Variant::Type::INT:
 			return itos(p_var);
-		case Variant::FLOAT:
+		case Variant::Type::FLOAT:
 			return rtos(p_var);
-		case Variant::PACKED_INT32_ARRAY:
-		case Variant::PACKED_INT64_ARRAY:
-		case Variant::PACKED_FLOAT32_ARRAY:
-		case Variant::PACKED_FLOAT64_ARRAY:
-		case Variant::PACKED_STRING_ARRAY:
-		case Variant::ARRAY: {
+		case Variant::Type::PACKED_INT32_ARRAY:
+		case Variant::Type::PACKED_INT64_ARRAY:
+		case Variant::Type::PACKED_FLOAT32_ARRAY:
+		case Variant::Type::PACKED_FLOAT64_ARRAY:
+		case Variant::Type::PACKED_STRING_ARRAY:
+		case Variant::Type::ARRAY: {
 			String s = "[";
 			s += end_statement;
 			Array a = p_var;
@@ -92,7 +92,7 @@ String JSON::_print_var(const Variant &p_var, const String &p_indent, int p_cur_
 			s += end_statement + _make_indent(p_indent, p_cur_indent) + "]";
 			return s;
 		}
-		case Variant::DICTIONARY: {
+		case Variant::Type::DICTIONARY: {
 			String s = "{";
 			s += end_statement;
 			Dictionary d = p_var;

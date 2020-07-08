@@ -39,8 +39,8 @@ void MainLoop::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("finish"), &MainLoop::finish);
 
 	BIND_VMETHOD(MethodInfo("_initialize"));
-	BIND_VMETHOD(MethodInfo(Variant::BOOL, "_iteration", PropertyInfo(Variant::FLOAT, "delta")));
-	BIND_VMETHOD(MethodInfo(Variant::BOOL, "_idle", PropertyInfo(Variant::FLOAT, "delta")));
+	BIND_VMETHOD(MethodInfo(Variant::Type::BOOL, "_iteration", PropertyInfo(Variant::Type::FLOAT, "delta")));
+	BIND_VMETHOD(MethodInfo(Variant::Type::BOOL, "_idle", PropertyInfo(Variant::Type::FLOAT, "delta")));
 	BIND_VMETHOD(MethodInfo("_finalize"));
 
 	BIND_CONSTANT(NOTIFICATION_OS_MEMORY_WARNING);
@@ -53,7 +53,7 @@ void MainLoop::_bind_methods() {
 	BIND_CONSTANT(NOTIFICATION_APPLICATION_FOCUS_IN);
 	BIND_CONSTANT(NOTIFICATION_APPLICATION_FOCUS_OUT);
 
-	ADD_SIGNAL(MethodInfo("on_request_permissions_result", PropertyInfo(Variant::STRING, "permission"), PropertyInfo(Variant::BOOL, "granted")));
+	ADD_SIGNAL(MethodInfo("on_request_permissions_result", PropertyInfo(Variant::Type::STRING, "permission"), PropertyInfo(Variant::Type::BOOL, "granted")));
 };
 
 void MainLoop::set_init_script(const Ref<Script> &p_init_script) {

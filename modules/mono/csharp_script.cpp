@@ -404,11 +404,11 @@ static String variant_type_to_managed_name(const String &p_var_type_name) {
 		return p_var_type_name;
 	}
 
-	if (p_var_type_name == Variant::get_type_name(Variant::OBJECT)) {
+	if (p_var_type_name == Variant::get_type_name(Variant::Type::OBJECT)) {
 		return "Godot.Object";
 	}
 
-	if (p_var_type_name == Variant::get_type_name(Variant::FLOAT)) {
+	if (p_var_type_name == Variant::get_type_name(Variant::Type::FLOAT)) {
 #ifdef REAL_T_IS_DOUBLE
 		return "double";
 #else
@@ -416,70 +416,70 @@ static String variant_type_to_managed_name(const String &p_var_type_name) {
 #endif
 	}
 
-	if (p_var_type_name == Variant::get_type_name(Variant::STRING)) {
+	if (p_var_type_name == Variant::get_type_name(Variant::Type::STRING)) {
 		return "string"; // I prefer this one >:[
 	}
 
-	if (p_var_type_name == Variant::get_type_name(Variant::DICTIONARY)) {
+	if (p_var_type_name == Variant::get_type_name(Variant::Type::DICTIONARY)) {
 		return "Collections.Dictionary";
 	}
 
-	if (p_var_type_name == Variant::get_type_name(Variant::ARRAY)) {
+	if (p_var_type_name == Variant::get_type_name(Variant::Type::ARRAY)) {
 		return "Collections.Array";
 	}
 
-	if (p_var_type_name == Variant::get_type_name(Variant::PACKED_BYTE_ARRAY)) {
+	if (p_var_type_name == Variant::get_type_name(Variant::Type::PACKED_BYTE_ARRAY)) {
 		return "byte[]";
 	}
-	if (p_var_type_name == Variant::get_type_name(Variant::PACKED_INT32_ARRAY)) {
+	if (p_var_type_name == Variant::get_type_name(Variant::Type::PACKED_INT32_ARRAY)) {
 		return "int[]";
 	}
-	if (p_var_type_name == Variant::get_type_name(Variant::PACKED_INT64_ARRAY)) {
+	if (p_var_type_name == Variant::get_type_name(Variant::Type::PACKED_INT64_ARRAY)) {
 		return "long[]";
 	}
-	if (p_var_type_name == Variant::get_type_name(Variant::PACKED_FLOAT32_ARRAY)) {
+	if (p_var_type_name == Variant::get_type_name(Variant::Type::PACKED_FLOAT32_ARRAY)) {
 		return "float[]";
 	}
-	if (p_var_type_name == Variant::get_type_name(Variant::PACKED_FLOAT64_ARRAY)) {
+	if (p_var_type_name == Variant::get_type_name(Variant::Type::PACKED_FLOAT64_ARRAY)) {
 		return "double[]";
 	}
-	if (p_var_type_name == Variant::get_type_name(Variant::PACKED_STRING_ARRAY)) {
+	if (p_var_type_name == Variant::get_type_name(Variant::Type::PACKED_STRING_ARRAY)) {
 		return "string[]";
 	}
-	if (p_var_type_name == Variant::get_type_name(Variant::PACKED_VECTOR2_ARRAY)) {
+	if (p_var_type_name == Variant::get_type_name(Variant::Type::PACKED_VECTOR2_ARRAY)) {
 		return "Vector2[]";
 	}
-	if (p_var_type_name == Variant::get_type_name(Variant::PACKED_VECTOR3_ARRAY)) {
+	if (p_var_type_name == Variant::get_type_name(Variant::Type::PACKED_VECTOR3_ARRAY)) {
 		return "Vector3[]";
 	}
-	if (p_var_type_name == Variant::get_type_name(Variant::PACKED_COLOR_ARRAY)) {
+	if (p_var_type_name == Variant::get_type_name(Variant::Type::PACKED_COLOR_ARRAY)) {
 		return "Color[]";
 	}
 
-	if (p_var_type_name == Variant::get_type_name(Variant::SIGNAL)) {
+	if (p_var_type_name == Variant::get_type_name(Variant::Type::SIGNAL)) {
 		return "SignalInfo";
 	}
 
 	Variant::Type var_types[] = {
-		Variant::BOOL,
-		Variant::INT,
-		Variant::VECTOR2,
-		Variant::VECTOR2I,
-		Variant::RECT2,
-		Variant::RECT2I,
-		Variant::VECTOR3,
-		Variant::VECTOR3I,
-		Variant::TRANSFORM2D,
-		Variant::PLANE,
-		Variant::QUAT,
-		Variant::AABB,
-		Variant::BASIS,
-		Variant::TRANSFORM,
-		Variant::COLOR,
-		Variant::STRING_NAME,
-		Variant::NODE_PATH,
-		Variant::_RID,
-		Variant::CALLABLE
+		Variant::Type::BOOL,
+		Variant::Type::INT,
+		Variant::Type::VECTOR2,
+		Variant::Type::VECTOR2I,
+		Variant::Type::RECT2,
+		Variant::Type::RECT2I,
+		Variant::Type::VECTOR3,
+		Variant::Type::VECTOR3I,
+		Variant::Type::TRANSFORM2D,
+		Variant::Type::PLANE,
+		Variant::Type::QUAT,
+		Variant::Type::AABB,
+		Variant::Type::BASIS,
+		Variant::Type::TRANSFORM,
+		Variant::Type::COLOR,
+		Variant::Type::STRING_NAME,
+		Variant::Type::NODE_PATH,
+		Variant::Type::_RID,
+		Variant::Type::CALLABLE
 	};
 
 	for (unsigned int i = 0; i < sizeof(var_types) / sizeof(Variant::Type); i++) {
@@ -1718,7 +1718,7 @@ void CSharpInstance::get_properties_state_for_reloading(List<Pair<StringName, Va
 
 		managedType = field->get_type();
 
-		if (GDMonoMarshal::managed_to_variant_type(managedType) != Variant::NIL) { // If we can marshal it
+		if (GDMonoMarshal::managed_to_variant_type(managedType) != Variant::Type::NIL) { // If we can marshal it
 			if (get(state_pair.first, state_pair.second)) {
 				r_state.push_back(state_pair);
 			}
@@ -1806,7 +1806,7 @@ Variant::Type CSharpInstance::get_property_type(const StringName &p_name, bool *
 		*r_is_valid = false;
 	}
 
-	return Variant::NIL;
+	return Variant::Type::NIL;
 }
 
 bool CSharpInstance::has_method(const StringName &p_method) const {
@@ -2682,7 +2682,7 @@ bool CSharpScript::_get_signal(GDMonoClass *p_class, GDMonoMethod *p_delegate_in
 		bool nil_is_variant = false;
 		arg.type = GDMonoMarshal::managed_to_variant_type(types[i], &nil_is_variant);
 
-		if (arg.type == Variant::NIL) {
+		if (arg.type == Variant::Type::NIL) {
 			if (nil_is_variant) {
 				arg.nil_is_variant = true;
 			} else {
@@ -2769,7 +2769,7 @@ bool CSharpScript::_get_member_export(IMonoClassMember *p_member, bool p_inspect
 	PropertyHint hint = PROPERTY_HINT_NONE;
 	String hint_string;
 
-	if (variant_type == Variant::NIL && !nil_is_variant) {
+	if (variant_type == Variant::Type::NIL && !nil_is_variant) {
 #ifdef TOOLS_ENABLED
 		ERR_PRINT("Unknown exported member type: '" + MEMBER_FULL_QUALIFIED_NAME(p_member) + "'.");
 #endif
@@ -2791,7 +2791,7 @@ bool CSharpScript::_get_member_export(IMonoClassMember *p_member, bool p_inspect
 
 	uint32_t prop_usage = PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_SCRIPT_VARIABLE;
 
-	if (variant_type == Variant::NIL) {
+	if (variant_type == Variant::Type::NIL) {
 		// System.Object (Variant)
 		prop_usage |= PROPERTY_USAGE_NIL_IS_VARIANT;
 	}
@@ -2806,14 +2806,14 @@ bool CSharpScript::_get_member_export(IMonoClassMember *p_member, bool p_inspect
 
 #ifdef TOOLS_ENABLED
 int CSharpScript::_try_get_member_export_hint(IMonoClassMember *p_member, ManagedType p_type, Variant::Type p_variant_type, bool p_allow_generics, PropertyHint &r_hint, String &r_hint_string) {
-	if (p_variant_type == Variant::NIL) {
+	if (p_variant_type == Variant::Type::NIL) {
 		// System.Object (Variant)
 		return 1;
 	}
 
 	GD_MONO_ASSERT_THREAD_ATTACHED;
 
-	if (p_variant_type == Variant::INT && p_type.type_encoding == MONO_TYPE_VALUETYPE && mono_class_is_enum(p_type.type_class->get_mono_ptr())) {
+	if (p_variant_type == Variant::Type::INT && p_type.type_encoding == MONO_TYPE_VALUETYPE && mono_class_is_enum(p_type.type_class->get_mono_ptr())) {
 		r_hint = PROPERTY_HINT_ENUM;
 
 		Vector<MonoClassField *> fields = p_type.type_class->get_enum_fields();
@@ -2865,13 +2865,13 @@ int CSharpScript::_try_get_member_export_hint(IMonoClassMember *p_member, Manage
 			// This may not be needed in the future if the editor is changed to not display values.
 			r_hint_string = name_only_hint_string;
 		}
-	} else if (p_variant_type == Variant::OBJECT && CACHED_CLASS(GodotResource)->is_assignable_from(p_type.type_class)) {
+	} else if (p_variant_type == Variant::Type::OBJECT && CACHED_CLASS(GodotResource)->is_assignable_from(p_type.type_class)) {
 		GDMonoClass *field_native_class = GDMonoUtils::get_class_native_base(p_type.type_class);
 		CRASH_COND(field_native_class == nullptr);
 
 		r_hint = PROPERTY_HINT_RESOURCE_TYPE;
 		r_hint_string = String(NATIVE_GDMONOCLASS_NAME(field_native_class));
-	} else if (p_allow_generics && p_variant_type == Variant::ARRAY) {
+	} else if (p_allow_generics && p_variant_type == Variant::Type::ARRAY) {
 		// Nested arrays are not supported in the inspector
 
 		ManagedType elem_type;
@@ -2885,7 +2885,7 @@ int CSharpScript::_try_get_member_export_hint(IMonoClassMember *p_member, Manage
 		PropertyHint elem_hint = PROPERTY_HINT_NONE;
 		String elem_hint_string;
 
-		ERR_FAIL_COND_V_MSG(elem_variant_type == Variant::NIL, -1, "Unknown array element type.");
+		ERR_FAIL_COND_V_MSG(elem_variant_type == Variant::Type::NIL, -1, "Unknown array element type.");
 
 		int hint_res = _try_get_member_export_hint(p_member, elem_type, elem_variant_type, /* allow_generics: */ false, elem_hint, elem_hint_string);
 
@@ -2895,7 +2895,7 @@ int CSharpScript::_try_get_member_export_hint(IMonoClassMember *p_member, Manage
 		r_hint_string = itos(elem_variant_type) + "/" + itos(elem_hint) + ":" + elem_hint_string;
 		r_hint = PROPERTY_HINT_TYPE_STRING;
 
-	} else if (p_allow_generics && p_variant_type == Variant::DICTIONARY) {
+	} else if (p_allow_generics && p_variant_type == Variant::Type::DICTIONARY) {
 		// TODO: Dictionaries are not supported in the inspector
 	} else {
 		return 0;
@@ -2960,7 +2960,7 @@ bool CSharpScript::_set(const StringName &p_name, const Variant &p_value) {
 }
 
 void CSharpScript::_get_property_list(List<PropertyInfo> *p_properties) const {
-	p_properties->push_back(PropertyInfo(Variant::STRING, CSharpLanguage::singleton->string_names._script_source, PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
+	p_properties->push_back(PropertyInfo(Variant::Type::STRING, CSharpLanguage::singleton->string_names._script_source, PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
 }
 
 void CSharpScript::_bind_methods() {
@@ -3506,7 +3506,7 @@ void CSharpScript::get_script_signal_list(List<MethodInfo> *r_signals) const {
 			const SignalParameter &param = params[i];
 
 			PropertyInfo arg_info = PropertyInfo(param.type, param.name);
-			if (param.type == Variant::NIL && param.nil_is_variant) {
+			if (param.type == Variant::Type::NIL && param.nil_is_variant) {
 				arg_info.usage |= PROPERTY_USAGE_NIL_IS_VARIANT;
 			}
 
@@ -3526,7 +3526,7 @@ void CSharpScript::get_script_signal_list(List<MethodInfo> *r_signals) const {
 			const SignalParameter &param = params[i];
 
 			PropertyInfo arg_info = PropertyInfo(param.type, param.name);
-			if (param.type == Variant::NIL && param.nil_is_variant) {
+			if (param.type == Variant::Type::NIL && param.nil_is_variant) {
 				arg_info.usage |= PROPERTY_USAGE_NIL_IS_VARIANT;
 			}
 

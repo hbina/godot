@@ -886,8 +886,8 @@ void Translation::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("_set_messages"), &Translation::_set_messages);
 	ClassDB::bind_method(D_METHOD("_get_messages"), &Translation::_get_messages);
 
-	ADD_PROPERTY(PropertyInfo(Variant::PACKED_STRING_ARRAY, "messages", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_messages", "_get_messages");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "locale"), "set_locale", "get_locale");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::PACKED_STRING_ARRAY, "messages", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_messages", "_get_messages");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::STRING, "locale"), "set_locale", "get_locale");
 }
 
 ///////////////////////////////////////////////
@@ -1160,7 +1160,7 @@ void TranslationServer::setup() {
 			options += locale_list[idx];
 			idx++;
 		}
-		ProjectSettings::get_singleton()->set_custom_property_info("locale/fallback", PropertyInfo(Variant::STRING, "locale/fallback", PROPERTY_HINT_ENUM, options));
+		ProjectSettings::get_singleton()->set_custom_property_info("locale/fallback", PropertyInfo(Variant::Type::STRING, "locale/fallback", PROPERTY_HINT_ENUM, options));
 	}
 #endif
 }

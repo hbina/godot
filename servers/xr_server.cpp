@@ -46,7 +46,7 @@ void XRServer::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("center_on_hmd", "rotation_mode", "keep_height"), &XRServer::center_on_hmd);
 	ClassDB::bind_method(D_METHOD("get_hmd_transform"), &XRServer::get_hmd_transform);
 
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "world_scale"), "set_world_scale", "get_world_scale");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "world_scale"), "set_world_scale", "get_world_scale");
 
 	ClassDB::bind_method(D_METHOD("get_interface_count"), &XRServer::get_interface_count);
 	ClassDB::bind_method(D_METHOD("get_interface", "idx"), &XRServer::get_interface);
@@ -58,7 +58,7 @@ void XRServer::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("get_primary_interface"), &XRServer::get_primary_interface);
 	ClassDB::bind_method(D_METHOD("set_primary_interface", "interface"), &XRServer::set_primary_interface);
 
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "primary_interface"), "set_primary_interface", "get_primary_interface");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "primary_interface"), "set_primary_interface", "get_primary_interface");
 
 	ClassDB::bind_method(D_METHOD("get_last_process_usec"), &XRServer::get_last_process_usec);
 	ClassDB::bind_method(D_METHOD("get_last_commit_usec"), &XRServer::get_last_commit_usec);
@@ -75,11 +75,11 @@ void XRServer::_bind_methods() {
 	BIND_ENUM_CONSTANT(RESET_BUT_KEEP_TILT);
 	BIND_ENUM_CONSTANT(DONT_RESET_ROTATION);
 
-	ADD_SIGNAL(MethodInfo("interface_added", PropertyInfo(Variant::STRING_NAME, "interface_name")));
-	ADD_SIGNAL(MethodInfo("interface_removed", PropertyInfo(Variant::STRING_NAME, "interface_name")));
+	ADD_SIGNAL(MethodInfo("interface_added", PropertyInfo(Variant::Type::STRING_NAME, "interface_name")));
+	ADD_SIGNAL(MethodInfo("interface_removed", PropertyInfo(Variant::Type::STRING_NAME, "interface_name")));
 
-	ADD_SIGNAL(MethodInfo("tracker_added", PropertyInfo(Variant::STRING_NAME, "tracker_name"), PropertyInfo(Variant::INT, "type"), PropertyInfo(Variant::INT, "id")));
-	ADD_SIGNAL(MethodInfo("tracker_removed", PropertyInfo(Variant::STRING_NAME, "tracker_name"), PropertyInfo(Variant::INT, "type"), PropertyInfo(Variant::INT, "id")));
+	ADD_SIGNAL(MethodInfo("tracker_added", PropertyInfo(Variant::Type::STRING_NAME, "tracker_name"), PropertyInfo(Variant::Type::INT, "type"), PropertyInfo(Variant::Type::INT, "id")));
+	ADD_SIGNAL(MethodInfo("tracker_removed", PropertyInfo(Variant::Type::STRING_NAME, "tracker_name"), PropertyInfo(Variant::Type::INT, "type"), PropertyInfo(Variant::Type::INT, "id")));
 };
 
 real_t XRServer::get_world_scale() const {

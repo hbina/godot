@@ -89,9 +89,9 @@ void Navigation3D::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_edge_connection_margin", "margin"), &Navigation3D::set_edge_connection_margin);
 	ClassDB::bind_method(D_METHOD("get_edge_connection_margin"), &Navigation3D::get_edge_connection_margin);
 
-	ADD_PROPERTY(PropertyInfo(Variant::VECTOR3, "up_vector"), "set_up_vector", "get_up_vector");
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "cell_size"), "set_cell_size", "get_cell_size");
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "edge_connection_margin"), "set_edge_connection_margin", "get_edge_connection_margin");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::VECTOR3, "up_vector"), "set_up_vector", "get_up_vector");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "cell_size"), "set_cell_size", "get_cell_size");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "edge_connection_margin"), "set_edge_connection_margin", "get_edge_connection_margin");
 }
 
 void Navigation3D::_notification(int p_what) {

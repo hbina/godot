@@ -214,8 +214,8 @@ void NavigationRegion3D::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("bake_navigation_mesh"), &NavigationRegion3D::bake_navigation_mesh);
 	ClassDB::bind_method(D_METHOD("_bake_finished", "nav_mesh"), &NavigationRegion3D::_bake_finished);
 
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "navmesh", PROPERTY_HINT_RESOURCE_TYPE, "NavigationMesh"), "set_navigation_mesh", "get_navigation_mesh");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "enabled"), "set_enabled", "is_enabled");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "navmesh", PROPERTY_HINT_RESOURCE_TYPE, "NavigationMesh"), "set_navigation_mesh", "get_navigation_mesh");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "enabled"), "set_enabled", "is_enabled");
 
 	ADD_SIGNAL(MethodInfo("navigation_mesh_changed"));
 	ADD_SIGNAL(MethodInfo("bake_finished"));

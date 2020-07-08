@@ -124,18 +124,18 @@ Variant JavaScript::eval(const String &p_code, bool p_use_global_exec_context) {
 	/* clang-format on */
 
 	switch (return_type) {
-		case Variant::BOOL:
+		case Variant::Type::BOOL:
 			return js_data.b;
-		case Variant::FLOAT:
+		case Variant::Type::FLOAT:
 			return js_data.d;
-		case Variant::STRING: {
+		case Variant::Type::STRING: {
 			String str = String::utf8(js_data.s);
 			/* clang-format off */
 				EM_ASM_({ _free($0); }, js_data.s);
 			/* clang-format on */
 			return str;
 		}
-		case Variant::PACKED_BYTE_ARRAY:
+		case Variant::Type::PACKED_BYTE_ARRAY:
 			arr_write = VectorWriteProxy<uint8_t>();
 			return arr;
 		default:

@@ -68,8 +68,8 @@ void ReferenceRect::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("get_editor_only"), &ReferenceRect::get_editor_only);
 	ClassDB::bind_method(D_METHOD("set_editor_only", "enabled"), &ReferenceRect::set_editor_only);
 
-	ADD_PROPERTY(PropertyInfo(Variant::COLOR, "border_color"), "set_border_color", "get_border_color");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "editor_only"), "set_editor_only", "get_editor_only");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::COLOR, "border_color"), "set_border_color", "get_border_color");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "editor_only"), "set_editor_only", "get_editor_only");
 }
 
 ReferenceRect::ReferenceRect() {

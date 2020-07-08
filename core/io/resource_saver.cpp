@@ -71,14 +71,14 @@ void ResourceFormatSaver::get_recognized_extensions(const RES &p_resource, List<
 
 void ResourceFormatSaver::_bind_methods() {
 	{
-		PropertyInfo arg0 = PropertyInfo(Variant::STRING, "path");
-		PropertyInfo arg1 = PropertyInfo(Variant::OBJECT, "resource", PROPERTY_HINT_RESOURCE_TYPE, "Resource");
-		PropertyInfo arg2 = PropertyInfo(Variant::INT, "flags");
-		ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::INT, "save", arg0, arg1, arg2));
+		PropertyInfo arg0 = PropertyInfo(Variant::Type::STRING, "path");
+		PropertyInfo arg1 = PropertyInfo(Variant::Type::OBJECT, "resource", PROPERTY_HINT_RESOURCE_TYPE, "Resource");
+		PropertyInfo arg2 = PropertyInfo(Variant::Type::INT, "flags");
+		ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::Type::INT, "save", arg0, arg1, arg2));
 	}
 
-	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::PACKED_STRING_ARRAY, "get_recognized_extensions", PropertyInfo(Variant::OBJECT, "resource", PROPERTY_HINT_RESOURCE_TYPE, "Resource")));
-	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::BOOL, "recognize", PropertyInfo(Variant::OBJECT, "resource", PROPERTY_HINT_RESOURCE_TYPE, "Resource")));
+	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::Type::PACKED_STRING_ARRAY, "get_recognized_extensions", PropertyInfo(Variant::Type::OBJECT, "resource", PROPERTY_HINT_RESOURCE_TYPE, "Resource")));
+	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::Type::BOOL, "recognize", PropertyInfo(Variant::Type::OBJECT, "resource", PROPERTY_HINT_RESOURCE_TYPE, "Resource")));
 }
 
 Error ResourceSaver::save(const String &p_path, const RES &p_resource, uint32_t p_flags) {

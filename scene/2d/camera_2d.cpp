@@ -697,43 +697,43 @@ void Camera2D::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_margin_drawing_enabled", "margin_drawing_enabled"), &Camera2D::set_margin_drawing_enabled);
 	ClassDB::bind_method(D_METHOD("is_margin_drawing_enabled"), &Camera2D::is_margin_drawing_enabled);
 
-	ADD_PROPERTY(PropertyInfo(Variant::VECTOR2, "offset"), "set_offset", "get_offset");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "anchor_mode", PROPERTY_HINT_ENUM, "Fixed TopLeft,Drag Center"), "set_anchor_mode", "get_anchor_mode");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "rotating"), "set_rotating", "is_rotating");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "current"), "_set_current", "is_current");
-	ADD_PROPERTY(PropertyInfo(Variant::VECTOR2, "zoom"), "set_zoom", "get_zoom");
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "custom_viewport", PROPERTY_HINT_RESOURCE_TYPE, "Viewport", 0), "set_custom_viewport", "get_custom_viewport");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "process_mode", PROPERTY_HINT_ENUM, "Physics,Idle"), "set_process_mode", "get_process_mode");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::VECTOR2, "offset"), "set_offset", "get_offset");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "anchor_mode", PROPERTY_HINT_ENUM, "Fixed TopLeft,Drag Center"), "set_anchor_mode", "get_anchor_mode");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "rotating"), "set_rotating", "is_rotating");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "current"), "_set_current", "is_current");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::VECTOR2, "zoom"), "set_zoom", "get_zoom");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "custom_viewport", PROPERTY_HINT_RESOURCE_TYPE, "Viewport", 0), "set_custom_viewport", "get_custom_viewport");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "process_mode", PROPERTY_HINT_ENUM, "Physics,Idle"), "set_process_mode", "get_process_mode");
 
 	ADD_GROUP("Limit", "limit_");
-	ADD_PROPERTYI(PropertyInfo(Variant::INT, "limit_left"), "set_limit", "get_limit", MARGIN_LEFT);
-	ADD_PROPERTYI(PropertyInfo(Variant::INT, "limit_top"), "set_limit", "get_limit", MARGIN_TOP);
-	ADD_PROPERTYI(PropertyInfo(Variant::INT, "limit_right"), "set_limit", "get_limit", MARGIN_RIGHT);
-	ADD_PROPERTYI(PropertyInfo(Variant::INT, "limit_bottom"), "set_limit", "get_limit", MARGIN_BOTTOM);
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "limit_smoothed"), "set_limit_smoothing_enabled", "is_limit_smoothing_enabled");
+	ADD_PROPERTYI(PropertyInfo(Variant::Type::INT, "limit_left"), "set_limit", "get_limit", MARGIN_LEFT);
+	ADD_PROPERTYI(PropertyInfo(Variant::Type::INT, "limit_top"), "set_limit", "get_limit", MARGIN_TOP);
+	ADD_PROPERTYI(PropertyInfo(Variant::Type::INT, "limit_right"), "set_limit", "get_limit", MARGIN_RIGHT);
+	ADD_PROPERTYI(PropertyInfo(Variant::Type::INT, "limit_bottom"), "set_limit", "get_limit", MARGIN_BOTTOM);
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "limit_smoothed"), "set_limit_smoothing_enabled", "is_limit_smoothing_enabled");
 
 	ADD_GROUP("Draw Margin", "draw_margin_");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "drag_margin_h_enabled"), "set_h_drag_enabled", "is_h_drag_enabled");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "drag_margin_v_enabled"), "set_v_drag_enabled", "is_v_drag_enabled");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "drag_margin_h_enabled"), "set_h_drag_enabled", "is_h_drag_enabled");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "drag_margin_v_enabled"), "set_v_drag_enabled", "is_v_drag_enabled");
 
 	ADD_GROUP("Smoothing", "smoothing_");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "smoothing_enabled"), "set_enable_follow_smoothing", "is_follow_smoothing_enabled");
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "smoothing_speed"), "set_follow_smoothing", "get_follow_smoothing");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "smoothing_enabled"), "set_enable_follow_smoothing", "is_follow_smoothing_enabled");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "smoothing_speed"), "set_follow_smoothing", "get_follow_smoothing");
 
 	ADD_GROUP("Offset", "offset_");
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "offset_h", PROPERTY_HINT_RANGE, "-1,1,0.01"), "set_h_offset", "get_h_offset");
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "offset_v", PROPERTY_HINT_RANGE, "-1,1,0.01"), "set_v_offset", "get_v_offset");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "offset_h", PROPERTY_HINT_RANGE, "-1,1,0.01"), "set_h_offset", "get_h_offset");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "offset_v", PROPERTY_HINT_RANGE, "-1,1,0.01"), "set_v_offset", "get_v_offset");
 
 	ADD_GROUP("Drag Margin", "drag_margin_");
-	ADD_PROPERTYI(PropertyInfo(Variant::FLOAT, "drag_margin_left", PROPERTY_HINT_RANGE, "0,1,0.01"), "set_drag_margin", "get_drag_margin", MARGIN_LEFT);
-	ADD_PROPERTYI(PropertyInfo(Variant::FLOAT, "drag_margin_top", PROPERTY_HINT_RANGE, "0,1,0.01"), "set_drag_margin", "get_drag_margin", MARGIN_TOP);
-	ADD_PROPERTYI(PropertyInfo(Variant::FLOAT, "drag_margin_right", PROPERTY_HINT_RANGE, "0,1,0.01"), "set_drag_margin", "get_drag_margin", MARGIN_RIGHT);
-	ADD_PROPERTYI(PropertyInfo(Variant::FLOAT, "drag_margin_bottom", PROPERTY_HINT_RANGE, "0,1,0.01"), "set_drag_margin", "get_drag_margin", MARGIN_BOTTOM);
+	ADD_PROPERTYI(PropertyInfo(Variant::Type::FLOAT, "drag_margin_left", PROPERTY_HINT_RANGE, "0,1,0.01"), "set_drag_margin", "get_drag_margin", MARGIN_LEFT);
+	ADD_PROPERTYI(PropertyInfo(Variant::Type::FLOAT, "drag_margin_top", PROPERTY_HINT_RANGE, "0,1,0.01"), "set_drag_margin", "get_drag_margin", MARGIN_TOP);
+	ADD_PROPERTYI(PropertyInfo(Variant::Type::FLOAT, "drag_margin_right", PROPERTY_HINT_RANGE, "0,1,0.01"), "set_drag_margin", "get_drag_margin", MARGIN_RIGHT);
+	ADD_PROPERTYI(PropertyInfo(Variant::Type::FLOAT, "drag_margin_bottom", PROPERTY_HINT_RANGE, "0,1,0.01"), "set_drag_margin", "get_drag_margin", MARGIN_BOTTOM);
 
 	ADD_GROUP("Editor", "editor_");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "editor_draw_screen"), "set_screen_drawing_enabled", "is_screen_drawing_enabled");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "editor_draw_limits"), "set_limit_drawing_enabled", "is_limit_drawing_enabled");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "editor_draw_drag_margin"), "set_margin_drawing_enabled", "is_margin_drawing_enabled");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "editor_draw_screen"), "set_screen_drawing_enabled", "is_screen_drawing_enabled");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "editor_draw_limits"), "set_limit_drawing_enabled", "is_limit_drawing_enabled");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "editor_draw_drag_margin"), "set_margin_drawing_enabled", "is_margin_drawing_enabled");
 
 	BIND_ENUM_CONSTANT(ANCHOR_MODE_FIXED_TOP_LEFT);
 	BIND_ENUM_CONSTANT(ANCHOR_MODE_DRAG_CENTER);

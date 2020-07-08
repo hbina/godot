@@ -278,12 +278,12 @@ void AcceptDialog::_bind_methods() {
 
 	ADD_SIGNAL(MethodInfo("confirmed"));
 	ADD_SIGNAL(MethodInfo("cancelled"));
-	ADD_SIGNAL(MethodInfo("custom_action", PropertyInfo(Variant::STRING_NAME, "action")));
+	ADD_SIGNAL(MethodInfo("custom_action", PropertyInfo(Variant::Type::STRING_NAME, "action")));
 
 	ADD_GROUP("Dialog", "dialog");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "dialog_text", PROPERTY_HINT_MULTILINE_TEXT, "", PROPERTY_USAGE_DEFAULT_INTL), "set_text", "get_text");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "dialog_hide_on_ok"), "set_hide_on_ok", "get_hide_on_ok");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "dialog_autowrap"), "set_autowrap", "has_autowrap");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::STRING, "dialog_text", PROPERTY_HINT_MULTILINE_TEXT, "", PROPERTY_USAGE_DEFAULT_INTL), "set_text", "get_text");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "dialog_hide_on_ok"), "set_hide_on_ok", "get_hide_on_ok");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "dialog_autowrap"), "set_autowrap", "has_autowrap");
 }
 
 bool AcceptDialog::swap_ok_cancel = false;

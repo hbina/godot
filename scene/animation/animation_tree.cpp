@@ -416,20 +416,20 @@ void AnimationNode::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_parameter", "name", "value"), &AnimationNode::set_parameter);
 	ClassDB::bind_method(D_METHOD("get_parameter", "name"), &AnimationNode::get_parameter);
 
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "filter_enabled", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR), "set_filter_enabled", "is_filter_enabled");
-	ADD_PROPERTY(PropertyInfo(Variant::ARRAY, "filters", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_filters", "_get_filters");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "filter_enabled", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR), "set_filter_enabled", "is_filter_enabled");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::ARRAY, "filters", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_filters", "_get_filters");
 
-	BIND_VMETHOD(MethodInfo(Variant::DICTIONARY, "get_child_nodes"));
-	BIND_VMETHOD(MethodInfo(Variant::ARRAY, "get_parameter_list"));
-	BIND_VMETHOD(MethodInfo(Variant::OBJECT, "get_child_by_name", PropertyInfo(Variant::STRING, "name")));
+	BIND_VMETHOD(MethodInfo(Variant::Type::DICTIONARY, "get_child_nodes"));
+	BIND_VMETHOD(MethodInfo(Variant::Type::ARRAY, "get_parameter_list"));
+	BIND_VMETHOD(MethodInfo(Variant::Type::OBJECT, "get_child_by_name", PropertyInfo(Variant::Type::STRING, "name")));
 	{
-		MethodInfo mi = MethodInfo(Variant::NIL, "get_parameter_default_value", PropertyInfo(Variant::STRING_NAME, "name"));
+		MethodInfo mi = MethodInfo(Variant::Type::NIL, "get_parameter_default_value", PropertyInfo(Variant::Type::STRING_NAME, "name"));
 		mi.return_val.usage = PROPERTY_USAGE_NIL_IS_VARIANT;
 		BIND_VMETHOD(mi);
 	}
-	BIND_VMETHOD(MethodInfo("process", PropertyInfo(Variant::FLOAT, "time"), PropertyInfo(Variant::BOOL, "seek")));
-	BIND_VMETHOD(MethodInfo(Variant::STRING, "get_caption"));
-	BIND_VMETHOD(MethodInfo(Variant::BOOL, "has_filter"));
+	BIND_VMETHOD(MethodInfo("process", PropertyInfo(Variant::Type::FLOAT, "time"), PropertyInfo(Variant::Type::BOOL, "seek")));
+	BIND_VMETHOD(MethodInfo(Variant::Type::STRING, "get_caption"));
+	BIND_VMETHOD(MethodInfo(Variant::Type::BOOL, "has_filter"));
 
 	ADD_SIGNAL(MethodInfo("removed_from_graph"));
 
@@ -1502,12 +1502,12 @@ void AnimationTree::_bind_methods() {
 
 	ClassDB::bind_method(D_METHOD("advance", "delta"), &AnimationTree::advance);
 
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "tree_root", PROPERTY_HINT_RESOURCE_TYPE, "AnimationRootNode"), "set_tree_root", "get_tree_root");
-	ADD_PROPERTY(PropertyInfo(Variant::NODE_PATH, "anim_player", PROPERTY_HINT_NODE_PATH_VALID_TYPES, "AnimationPlayer"), "set_animation_player", "get_animation_player");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "active"), "set_active", "is_active");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "process_mode", PROPERTY_HINT_ENUM, "Physics,Idle,Manual"), "set_process_mode", "get_process_mode");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "tree_root", PROPERTY_HINT_RESOURCE_TYPE, "AnimationRootNode"), "set_tree_root", "get_tree_root");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::NODE_PATH, "anim_player", PROPERTY_HINT_NODE_PATH_VALID_TYPES, "AnimationPlayer"), "set_animation_player", "get_animation_player");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "active"), "set_active", "is_active");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "process_mode", PROPERTY_HINT_ENUM, "Physics,Idle,Manual"), "set_process_mode", "get_process_mode");
 	ADD_GROUP("Root Motion", "root_motion_");
-	ADD_PROPERTY(PropertyInfo(Variant::NODE_PATH, "root_motion_track"), "set_root_motion_track", "get_root_motion_track");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::NODE_PATH, "root_motion_track"), "set_root_motion_track", "get_root_motion_track");
 
 	BIND_ENUM_CONSTANT(ANIMATION_PROCESS_PHYSICS);
 	BIND_ENUM_CONSTANT(ANIMATION_PROCESS_IDLE);

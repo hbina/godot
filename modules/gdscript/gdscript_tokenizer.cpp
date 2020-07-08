@@ -144,41 +144,41 @@ struct _bit {
 
 static const _bit _type_list[] = {
 	//types
-	{ Variant::BOOL, "bool" },
-	{ Variant::INT, "int" },
-	{ Variant::FLOAT, "float" },
-	{ Variant::STRING, "String" },
-	{ Variant::VECTOR2, "Vector2" },
-	{ Variant::VECTOR2I, "Vector2i" },
-	{ Variant::RECT2, "Rect2" },
-	{ Variant::RECT2I, "Rect2i" },
-	{ Variant::TRANSFORM2D, "Transform2D" },
-	{ Variant::VECTOR3, "Vector3" },
-	{ Variant::VECTOR3I, "Vector3i" },
-	{ Variant::AABB, "AABB" },
-	{ Variant::PLANE, "Plane" },
-	{ Variant::QUAT, "Quat" },
-	{ Variant::BASIS, "Basis" },
-	{ Variant::TRANSFORM, "Transform" },
-	{ Variant::COLOR, "Color" },
-	{ Variant::_RID, "RID" },
-	{ Variant::OBJECT, "Object" },
-	{ Variant::STRING_NAME, "StringName" },
-	{ Variant::NODE_PATH, "NodePath" },
-	{ Variant::DICTIONARY, "Dictionary" },
-	{ Variant::CALLABLE, "Callable" },
-	{ Variant::SIGNAL, "Signal" },
-	{ Variant::ARRAY, "Array" },
-	{ Variant::PACKED_BYTE_ARRAY, "PackedByteArray" },
-	{ Variant::PACKED_INT32_ARRAY, "PackedInt32Array" },
-	{ Variant::PACKED_INT64_ARRAY, "PackedInt64Array" },
-	{ Variant::PACKED_FLOAT32_ARRAY, "PackedFloat32Array" },
-	{ Variant::PACKED_FLOAT64_ARRAY, "PackedFloat64Array" },
-	{ Variant::PACKED_STRING_ARRAY, "PackedStringArray" },
-	{ Variant::PACKED_VECTOR2_ARRAY, "PackedVector2Array" },
-	{ Variant::PACKED_VECTOR3_ARRAY, "PackedVector3Array" },
-	{ Variant::PACKED_COLOR_ARRAY, "PackedColorArray" },
-	{ Variant::VARIANT_MAX, nullptr },
+	{ Variant::Type::BOOL, "bool" },
+	{ Variant::Type::INT, "int" },
+	{ Variant::Type::FLOAT, "float" },
+	{ Variant::Type::STRING, "String" },
+	{ Variant::Type::VECTOR2, "Vector2" },
+	{ Variant::Type::VECTOR2I, "Vector2i" },
+	{ Variant::Type::RECT2, "Rect2" },
+	{ Variant::Type::RECT2I, "Rect2i" },
+	{ Variant::Type::TRANSFORM2D, "Transform2D" },
+	{ Variant::Type::VECTOR3, "Vector3" },
+	{ Variant::Type::VECTOR3I, "Vector3i" },
+	{ Variant::Type::AABB, "AABB" },
+	{ Variant::Type::PLANE, "Plane" },
+	{ Variant::Type::QUAT, "Quat" },
+	{ Variant::Type::BASIS, "Basis" },
+	{ Variant::Type::TRANSFORM, "Transform" },
+	{ Variant::Type::COLOR, "Color" },
+	{ Variant::Type::_RID, "RID" },
+	{ Variant::Type::OBJECT, "Object" },
+	{ Variant::Type::STRING_NAME, "StringName" },
+	{ Variant::Type::NODE_PATH, "NodePath" },
+	{ Variant::Type::DICTIONARY, "Dictionary" },
+	{ Variant::Type::CALLABLE, "Callable" },
+	{ Variant::Type::SIGNAL, "Signal" },
+	{ Variant::Type::ARRAY, "Array" },
+	{ Variant::Type::PACKED_BYTE_ARRAY, "PackedByteArray" },
+	{ Variant::Type::PACKED_INT32_ARRAY, "PackedInt32Array" },
+	{ Variant::Type::PACKED_INT64_ARRAY, "PackedInt64Array" },
+	{ Variant::Type::PACKED_FLOAT32_ARRAY, "PackedFloat32Array" },
+	{ Variant::Type::PACKED_FLOAT64_ARRAY, "PackedFloat64Array" },
+	{ Variant::Type::PACKED_STRING_ARRAY, "PackedStringArray" },
+	{ Variant::Type::PACKED_VECTOR2_ARRAY, "PackedVector2Array" },
+	{ Variant::Type::PACKED_VECTOR3_ARRAY, "PackedVector3Array" },
+	{ Variant::Type::PACKED_COLOR_ARRAY, "PackedColorArray" },
+	{ Variant::Type::VARIANT_MAX, nullptr },
 };
 
 struct _kws {
@@ -303,8 +303,8 @@ bool GDScriptTokenizer::is_token_literal(int p_offset, bool variable_safe) const
 
 		case TK_CONSTANT: {
 			switch (get_token_constant(p_offset).get_type()) {
-				case Variant::NIL:
-				case Variant::BOOL:
+				case Variant::Type::NIL:
+				case Variant::Type::BOOL:
 					return true;
 				default:
 					return false;
@@ -337,9 +337,9 @@ StringName GDScriptTokenizer::get_token_literal(int p_offset) const {
 			const Variant value = get_token_constant(p_offset);
 
 			switch (value.get_type()) {
-				case Variant::NIL:
+				case Variant::Type::NIL:
 					return "null";
-				case Variant::BOOL:
+				case Variant::Type::BOOL:
 					return value ? "true" : "false";
 				default: {
 				}
@@ -1136,11 +1136,11 @@ GDScriptFunctions::Function GDScriptTokenizerText::get_token_built_in_func(int p
 }
 
 Variant::Type GDScriptTokenizerText::get_token_type(int p_offset) const {
-	ERR_FAIL_COND_V(p_offset <= -MAX_LOOKAHEAD, Variant::NIL);
-	ERR_FAIL_COND_V(p_offset >= MAX_LOOKAHEAD, Variant::NIL);
+	ERR_FAIL_COND_V(p_offset <= -MAX_LOOKAHEAD, Variant::Type::NIL);
+	ERR_FAIL_COND_V(p_offset >= MAX_LOOKAHEAD, Variant::Type::NIL);
 
 	int ofs = (TK_RB_SIZE + tk_rb_pos + p_offset - MAX_LOOKAHEAD - 1) % TK_RB_SIZE;
-	ERR_FAIL_COND_V(tk_rb[ofs].type != TK_BUILT_IN_TYPE, Variant::NIL);
+	ERR_FAIL_COND_V(tk_rb[ofs].type != TK_BUILT_IN_TYPE, Variant::Type::NIL);
 	return tk_rb[ofs].vtype;
 }
 
@@ -1443,7 +1443,7 @@ GDScriptFunctions::Function GDScriptTokenizerBuffer::get_token_built_in_func(int
 
 Variant::Type GDScriptTokenizerBuffer::get_token_type(int p_offset) const {
 	int offset = token + p_offset;
-	ERR_FAIL_INDEX_V(offset, tokens.size(), Variant::NIL);
+	ERR_FAIL_INDEX_V(offset, tokens.size(), Variant::Type::NIL);
 
 	return Variant::Type(tokens[offset] >> TOKEN_BITS);
 }

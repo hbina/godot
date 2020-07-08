@@ -524,7 +524,7 @@ void EditorFeatureProfileManager::_class_list_item_selected() {
 	}
 
 	Variant md = item->get_metadata(0);
-	if (md.get_type() != Variant::STRING && md.get_type() != Variant::STRING_NAME) {
+	if (md.get_type() != Variant::Type::STRING && md.get_type() != Variant::Type::STRING_NAME) {
 		return;
 	}
 
@@ -588,12 +588,12 @@ void EditorFeatureProfileManager::_class_list_item_edited() {
 	bool checked = item->is_checked(0);
 
 	Variant md = item->get_metadata(0);
-	if (md.get_type() == Variant::STRING || md.get_type() == Variant::STRING_NAME) {
+	if (md.get_type() == Variant::Type::STRING || md.get_type() == Variant::Type::STRING_NAME) {
 		String class_selected = md;
 		edited->set_disable_class(class_selected, !checked);
 		_save_and_update();
 		_update_selected_profile();
-	} else if (md.get_type() == Variant::INT) {
+	} else if (md.get_type() == Variant::Type::INT) {
 		int feature_selected = md;
 		edited->set_disable_feature(EditorFeatureProfile::Feature(feature_selected), !checked);
 		_save_and_update();
@@ -611,7 +611,7 @@ void EditorFeatureProfileManager::_property_item_edited() {
 	}
 
 	Variant md = class_item->get_metadata(0);
-	if (md.get_type() != Variant::STRING && md.get_type() != Variant::STRING_NAME) {
+	if (md.get_type() != Variant::Type::STRING && md.get_type() != Variant::Type::STRING_NAME) {
 		return;
 	}
 
@@ -624,12 +624,12 @@ void EditorFeatureProfileManager::_property_item_edited() {
 	bool checked = item->is_checked(0);
 
 	md = item->get_metadata(0);
-	if (md.get_type() == Variant::STRING || md.get_type() == Variant::STRING_NAME) {
+	if (md.get_type() == Variant::Type::STRING || md.get_type() == Variant::Type::STRING_NAME) {
 		String property_selected = md;
 		edited->set_disable_class_property(class_name, property_selected, !checked);
 		_save_and_update();
 		_update_selected_profile();
-	} else if (md.get_type() == Variant::INT) {
+	} else if (md.get_type() == Variant::Type::INT) {
 		int feature_selected = md;
 		switch (feature_selected) {
 			case CLASS_OPTION_DISABLE_EDITOR: {
@@ -647,9 +647,9 @@ void EditorFeatureProfileManager::_update_selected_profile() {
 
 	if (class_list->get_selected()) {
 		Variant md = class_list->get_selected()->get_metadata(0);
-		if (md.get_type() == Variant::STRING || md.get_type() == Variant::STRING_NAME) {
+		if (md.get_type() == Variant::Type::STRING || md.get_type() == Variant::Type::STRING_NAME) {
 			class_selected = md;
-		} else if (md.get_type() == Variant::INT) {
+		} else if (md.get_type() == Variant::Type::INT) {
 			feature_selected = md;
 		}
 	}

@@ -35,14 +35,14 @@
 #include "core/variant.h"
 
 struct ContainerTypeValidate {
-	Variant::Type type = Variant::NIL;
+	Variant::Type type = Variant::Type::NIL;
 	StringName class_name;
 	Ref<Script> script;
 	const char *where = "conatiner";
 
 	_FORCE_INLINE_ bool can_reference(const ContainerTypeValidate &p_type) const {
 		if (type == p_type.type) {
-			if (type != Variant::OBJECT) {
+			if (type != Variant::Type::OBJECT) {
 				return true; //nothing else to check
 			}
 		} else {
@@ -75,7 +75,7 @@ struct ContainerTypeValidate {
 	}
 
 	_FORCE_INLINE_ bool validate(const Variant &p_variant, const char *p_operation = "use") {
-		if (type == Variant::NIL) {
+		if (type == Variant::Type::NIL) {
 			return true;
 		}
 
@@ -84,7 +84,7 @@ struct ContainerTypeValidate {
 			return false;
 		}
 
-		if (type != Variant::OBJECT) {
+		if (type != Variant::Type::OBJECT) {
 			return true;
 		}
 #ifdef DEBUG_ENABLED

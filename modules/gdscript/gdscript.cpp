@@ -433,7 +433,7 @@ bool GDScript::_update_exports(bool *r_err, bool p_recursive_call) {
 			member_default_values_cache.clear();
 
 			for (int i = 0; i < c->variables.size(); i++) {
-				if (c->variables[i]._export.type == Variant::NIL) {
+				if (c->variables[i]._export.type == Variant::Type::NIL) {
 					continue;
 				}
 
@@ -743,7 +743,7 @@ bool GDScript::_set(const StringName &p_name, const Variant &p_value) {
 }
 
 void GDScript::_get_property_list(List<PropertyInfo> *p_properties) const {
-	p_properties->push_back(PropertyInfo(Variant::STRING, "script/source", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
+	p_properties->push_back(PropertyInfo(Variant::Type::STRING, "script/source", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
 }
 
 void GDScript::_bind_methods() {
@@ -1112,7 +1112,7 @@ bool GDScriptInstance::set(const StringName &p_name, const Variant &p_value) {
 
 			Callable::CallError err;
 			Variant ret = E->get()->call(this, (const Variant **)args, 2, err);
-			if (err.error == Callable::CallError::CALL_OK && ret.get_type() == Variant::BOOL && ret.operator bool()) {
+			if (err.error == Callable::CallError::CALL_OK && ret.get_type() == Variant::Type::BOOL && ret.operator bool()) {
 				return true;
 			}
 		}
@@ -1160,7 +1160,7 @@ bool GDScriptInstance::get(const StringName &p_name, Variant &r_ret) const {
 
 				Callable::CallError err;
 				Variant ret = const_cast<GDScriptFunction *>(E->get())->call(const_cast<GDScriptInstance *>(this), (const Variant **)args, 1, err);
-				if (err.error == Callable::CallError::CALL_OK && ret.get_type() != Variant::NIL) {
+				if (err.error == Callable::CallError::CALL_OK && ret.get_type() != Variant::Type::NIL) {
 					r_ret = ret;
 					return true;
 				}
@@ -1187,7 +1187,7 @@ Variant::Type GDScriptInstance::get_property_type(const StringName &p_name, bool
 	if (r_is_valid) {
 		*r_is_valid = false;
 	}
-	return Variant::NIL;
+	return Variant::Type::NIL;
 }
 
 void GDScriptInstance::get_property_list(List<PropertyInfo> *p_properties) const {
@@ -1202,7 +1202,7 @@ void GDScriptInstance::get_property_list(List<PropertyInfo> *p_properties) const
 			Callable::CallError err;
 			Variant ret = const_cast<GDScriptFunction *>(E->get())->call(const_cast<GDScriptInstance *>(this), nullptr, 0, err);
 			if (err.error == Callable::CallError::CALL_OK) {
-				ERR_FAIL_COND_MSG(ret.get_type() != Variant::ARRAY, "Wrong type for _get_property_list, must be an array of dictionaries.");
+				ERR_FAIL_COND_MSG(ret.get_type() != Variant::Type::ARRAY, "Wrong type for _get_property_list, must be an array of dictionaries.");
 
 				Array arr = ret;
 				for (int i = 0; i < arr.size(); i++) {
@@ -1211,7 +1211,7 @@ void GDScriptInstance::get_property_list(List<PropertyInfo> *p_properties) const
 					ERR_CONTINUE(!d.has("type"));
 					PropertyInfo pinfo;
 					pinfo.type = Variant::Type(d["type"].operator int());
-					ERR_CONTINUE(pinfo.type < 0 || pinfo.type >= Variant::VARIANT_MAX);
+					ERR_CONTINUE(pinfo.type < 0 || pinfo.type >= Variant::Type::VARIANT_MAX);
 					pinfo.name = d["name"];
 					ERR_CONTINUE(pinfo.name == "");
 					if (d.has("hint")) {
@@ -1262,7 +1262,7 @@ void GDScriptInstance::get_method_list(List<MethodInfo> *p_list) const {
 			mi.name = E->key();
 			mi.flags |= METHOD_FLAG_FROM_SCRIPT;
 			for (int i = 0; i < E->get()->get_argument_count(); i++) {
-				mi.arguments.push_back(PropertyInfo(Variant::NIL, "arg" + itos(i)));
+				mi.arguments.push_back(PropertyInfo(Variant::Type::NIL, "arg" + itos(i)));
 			}
 			p_list->push_back(mi);
 		}
@@ -1352,7 +1352,7 @@ String GDScriptInstance::to_string(bool *r_valid) {
 		Callable::CallError ce;
 		Variant ret = call(CoreStringNames::get_singleton()->_to_string, nullptr, 0, ce);
 		if (ce.error == Callable::CallError::CALL_OK) {
-			if (ret.get_type() != Variant::STRING) {
+			if (ret.get_type() != Variant::Type::STRING) {
 				if (r_valid) {
 					*r_valid = false;
 				}
@@ -2186,7 +2186,7 @@ GDScriptLanguage::GDScriptLanguage() {
 
 	_debug_call_stack_pos = 0;
 	int dmcs = GLOBAL_DEF("debug/settings/gdscript/max_call_stack", 1024);
-	ProjectSettings::get_singleton()->set_custom_property_info("debug/settings/gdscript/max_call_stack", PropertyInfo(Variant::INT, "debug/settings/gdscript/max_call_stack", PROPERTY_HINT_RANGE, "1024,4096,1,or_greater")); //minimum is 1024
+	ProjectSettings::get_singleton()->set_custom_property_info("debug/settings/gdscript/max_call_stack", PropertyInfo(Variant::Type::INT, "debug/settings/gdscript/max_call_stack", PROPERTY_HINT_RANGE, "1024,4096,1,or_greater")); //minimum is 1024
 
 	if (EngineDebugger::is_active()) {
 		//debugging enabled!

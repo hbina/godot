@@ -89,7 +89,7 @@ void PropertySelector::_update_search() {
 
 		if (instance) {
 			instance->get_property_list(&props, true);
-		} else if (type != Variant::NIL) {
+		} else if (type != Variant::Type::NIL) {
 			Variant v;
 			Callable::CallError ce;
 			v = Variant::construct(type, nullptr, 0, ce);
@@ -98,13 +98,13 @@ void PropertySelector::_update_search() {
 		} else {
 			Object *obj = ObjectDB::get_instance(script);
 			if (Object::cast_to<Script>(obj)) {
-				props.push_back(PropertyInfo(Variant::NIL, "Script Variables", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_CATEGORY));
+				props.push_back(PropertyInfo(Variant::Type::NIL, "Script Variables", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_CATEGORY));
 				Object::cast_to<Script>(obj)->get_script_property_list(&props);
 			}
 
 			StringName base = base_type;
 			while (base) {
-				props.push_back(PropertyInfo(Variant::NIL, base, PROPERTY_HINT_NONE, "", PROPERTY_USAGE_CATEGORY));
+				props.push_back(PropertyInfo(Variant::Type::NIL, base, PROPERTY_HINT_NONE, "", PROPERTY_USAGE_CATEGORY));
 				ClassDB::get_property_list(base, &props, true);
 				base = ClassDB::get_parent_class(base);
 			}
@@ -114,7 +114,7 @@ void PropertySelector::_update_search() {
 
 		bool found = false;
 
-		Ref<Texture2D> type_icons[Variant::VARIANT_MAX] = {
+		Ref<Texture2D> type_icons[Variant::Type::VARIANT_MAX] = {
 			search_options->get_theme_icon("Variant", "EditorIcons"),
 			search_options->get_theme_icon("bool", "EditorIcons"),
 			search_options->get_theme_icon("int", "EditorIcons"),
@@ -194,7 +194,7 @@ void PropertySelector::_update_search() {
 	} else {
 		List<MethodInfo> methods;
 
-		if (type != Variant::NIL) {
+		if (type != Variant::Type::NIL) {
 			Variant v;
 			Callable::CallError ce;
 			v = Variant::construct(type, nullptr, 0, ce);
@@ -267,7 +267,7 @@ void PropertySelector::_update_search() {
 			if (mi.name.find(":") != -1) {
 				desc = mi.name.get_slice(":", 1) + " ";
 				mi.name = mi.name.get_slice(":", 0);
-			} else if (mi.return_val.type != Variant::NIL) {
+			} else if (mi.return_val.type != Variant::Type::NIL) {
 				desc = Variant::get_type_name(mi.return_val.type);
 			} else {
 				desc = "void ";
@@ -280,7 +280,7 @@ void PropertySelector::_update_search() {
 					desc += ", ";
 				}
 
-				if (mi.arguments[i].type == Variant::NIL) {
+				if (mi.arguments[i].type == Variant::Type::NIL) {
 					desc += "var ";
 				} else if (mi.arguments[i].name.find(":") != -1) {
 					desc += mi.arguments[i].name.get_slice(":", 1) + " ";
@@ -339,7 +339,7 @@ void PropertySelector::_item_selected() {
 	String name = item->get_metadata(0);
 
 	String class_type;
-	if (type != Variant::NIL) {
+	if (type != Variant::Type::NIL) {
 		class_type = Variant::get_type_name(type);
 
 	} else {
@@ -403,7 +403,7 @@ void PropertySelector::_notification(int p_what) {
 void PropertySelector::select_method_from_base_type(const String &p_base, const String &p_current, bool p_virtuals_only) {
 	base_type = p_base;
 	selected = p_current;
-	type = Variant::NIL;
+	type = Variant::Type::NIL;
 	script = ObjectID();
 	properties = false;
 	instance = nullptr;
@@ -419,7 +419,7 @@ void PropertySelector::select_method_from_script(const Ref<Script> &p_script, co
 	ERR_FAIL_COND(p_script.is_null());
 	base_type = p_script->get_instance_base_type();
 	selected = p_current;
-	type = Variant::NIL;
+	type = Variant::Type::NIL;
 	script = p_script->get_instance_id();
 	properties = false;
 	instance = nullptr;
@@ -432,7 +432,7 @@ void PropertySelector::select_method_from_script(const Ref<Script> &p_script, co
 }
 
 void PropertySelector::select_method_from_basic_type(Variant::Type p_type, const String &p_current) {
-	ERR_FAIL_COND(p_type == Variant::NIL);
+	ERR_FAIL_COND(p_type == Variant::Type::NIL);
 	base_type = "";
 	selected = p_current;
 	type = p_type;
@@ -450,7 +450,7 @@ void PropertySelector::select_method_from_basic_type(Variant::Type p_type, const
 void PropertySelector::select_method_from_instance(Object *p_instance, const String &p_current) {
 	base_type = p_instance->get_class();
 	selected = p_current;
-	type = Variant::NIL;
+	type = Variant::Type::NIL;
 	script = ObjectID();
 	{
 		Ref<Script> scr = p_instance->get_script();
@@ -471,7 +471,7 @@ void PropertySelector::select_method_from_instance(Object *p_instance, const Str
 void PropertySelector::select_property_from_base_type(const String &p_base, const String &p_current) {
 	base_type = p_base;
 	selected = p_current;
-	type = Variant::NIL;
+	type = Variant::Type::NIL;
 	script = ObjectID();
 	properties = true;
 	instance = nullptr;
@@ -488,7 +488,7 @@ void PropertySelector::select_property_from_script(const Ref<Script> &p_script, 
 
 	base_type = p_script->get_instance_base_type();
 	selected = p_current;
-	type = Variant::NIL;
+	type = Variant::Type::NIL;
 	script = p_script->get_instance_id();
 	properties = true;
 	instance = nullptr;
@@ -501,7 +501,7 @@ void PropertySelector::select_property_from_script(const Ref<Script> &p_script, 
 }
 
 void PropertySelector::select_property_from_basic_type(Variant::Type p_type, const String &p_current) {
-	ERR_FAIL_COND(p_type == Variant::NIL);
+	ERR_FAIL_COND(p_type == Variant::Type::NIL);
 	base_type = "";
 	selected = p_current;
 	type = p_type;
@@ -519,7 +519,7 @@ void PropertySelector::select_property_from_basic_type(Variant::Type p_type, con
 void PropertySelector::select_property_from_instance(Object *p_instance, const String &p_current) {
 	base_type = "";
 	selected = p_current;
-	type = Variant::NIL;
+	type = Variant::Type::NIL;
 	script = ObjectID();
 	properties = true;
 	instance = p_instance;
@@ -536,7 +536,7 @@ void PropertySelector::set_type_filter(const Vector<Variant::Type> &p_type_filte
 }
 
 void PropertySelector::_bind_methods() {
-	ADD_SIGNAL(MethodInfo("selected", PropertyInfo(Variant::STRING, "name")));
+	ADD_SIGNAL(MethodInfo("selected", PropertyInfo(Variant::Type::STRING, "name")));
 }
 
 PropertySelector::PropertySelector() {

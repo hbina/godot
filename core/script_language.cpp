@@ -120,7 +120,7 @@ void Script::_bind_methods() {
 
 	ClassDB::bind_method(D_METHOD("is_tool"), &Script::is_tool);
 
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "source_code", PROPERTY_HINT_NONE, "", 0), "set_source_code", "get_source_code");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::STRING, "source_code", PROPERTY_HINT_NONE, "", 0), "set_source_code", "get_source_code");
 }
 
 void ScriptServer::set_scripting_enabled(bool p_enabled) {
@@ -298,7 +298,7 @@ Variant ScriptInstance::call(const StringName &p_method, VARIANT_ARG_DECLARE) {
 	VARIANT_ARGPTRS;
 	int argc = 0;
 	for (int i = 0; i < VARIANT_ARG_MAX; i++) {
-		if (argptr[i]->get_type() == Variant::NIL) {
+		if (argptr[i]->get_type() == Variant::Type::NIL) {
 			break;
 		}
 		argc++;
@@ -335,7 +335,7 @@ void ScriptInstance::call_multilevel(const StringName &p_method, VARIANT_ARG_DEC
 	VARIANT_ARGPTRS;
 	int argc = 0;
 	for (int i = 0; i < VARIANT_ARG_MAX; i++) {
-		if (argptr[i]->get_type() == Variant::NIL) {
+		if (argptr[i]->get_type() == Variant::Type::NIL) {
 			break;
 		}
 		argc++;
@@ -439,7 +439,7 @@ Variant::Type PlaceHolderScriptInstance::get_property_type(const StringName &p_n
 		*r_is_valid = false;
 	}
 
-	return Variant::NIL;
+	return Variant::Type::NIL;
 }
 
 void PlaceHolderScriptInstance::get_method_list(List<MethodInfo> *p_list) const {

@@ -169,12 +169,12 @@ bool SoftBody3D::_get(const StringName &p_name, Variant &r_ret) const {
 void SoftBody3D::_get_property_list(List<PropertyInfo> *p_list) const {
 	const int pinned_points_indices_size = pinned_points.size();
 
-	p_list->push_back(PropertyInfo(Variant::PACKED_INT32_ARRAY, "pinned_points"));
+	p_list->push_back(PropertyInfo(Variant::Type::PACKED_INT32_ARRAY, "pinned_points"));
 
 	for (int i = 0; i < pinned_points_indices_size; ++i) {
-		p_list->push_back(PropertyInfo(Variant::INT, "attachments/" + itos(i) + "/point_index"));
-		p_list->push_back(PropertyInfo(Variant::NODE_PATH, "attachments/" + itos(i) + "/spatial_attachment_path"));
-		p_list->push_back(PropertyInfo(Variant::VECTOR3, "attachments/" + itos(i) + "/offset"));
+		p_list->push_back(PropertyInfo(Variant::Type::INT, "attachments/" + itos(i) + "/point_index"));
+		p_list->push_back(PropertyInfo(Variant::Type::NODE_PATH, "attachments/" + itos(i) + "/spatial_attachment_path"));
+		p_list->push_back(PropertyInfo(Variant::Type::VECTOR3, "attachments/" + itos(i) + "/offset"));
 	}
 }
 
@@ -359,21 +359,21 @@ void SoftBody3D::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("is_ray_pickable"), &SoftBody3D::is_ray_pickable);
 
 	ADD_GROUP("Collision", "collision_");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "collision_layer", PROPERTY_HINT_LAYERS_3D_PHYSICS), "set_collision_layer", "get_collision_layer");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "collision_mask", PROPERTY_HINT_LAYERS_3D_PHYSICS), "set_collision_mask", "get_collision_mask");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "collision_layer", PROPERTY_HINT_LAYERS_3D_PHYSICS), "set_collision_layer", "get_collision_layer");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "collision_mask", PROPERTY_HINT_LAYERS_3D_PHYSICS), "set_collision_mask", "get_collision_mask");
 
-	ADD_PROPERTY(PropertyInfo(Variant::NODE_PATH, "parent_collision_ignore", PROPERTY_HINT_PROPERTY_OF_VARIANT_TYPE, "Parent collision object"), "set_parent_collision_ignore", "get_parent_collision_ignore");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "simulation_precision", PROPERTY_HINT_RANGE, "1,100,1"), "set_simulation_precision", "get_simulation_precision");
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "total_mass", PROPERTY_HINT_RANGE, "0.01,10000,1"), "set_total_mass", "get_total_mass");
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "linear_stiffness", PROPERTY_HINT_RANGE, "0,1,0.01"), "set_linear_stiffness", "get_linear_stiffness");
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "areaAngular_stiffness", PROPERTY_HINT_RANGE, "0,1,0.01"), "set_areaAngular_stiffness", "get_areaAngular_stiffness");
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "volume_stiffness", PROPERTY_HINT_RANGE, "0,1,0.01"), "set_volume_stiffness", "get_volume_stiffness");
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "pressure_coefficient"), "set_pressure_coefficient", "get_pressure_coefficient");
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "damping_coefficient", PROPERTY_HINT_RANGE, "0,1,0.01"), "set_damping_coefficient", "get_damping_coefficient");
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "drag_coefficient", PROPERTY_HINT_RANGE, "0,1,0.01"), "set_drag_coefficient", "get_drag_coefficient");
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "pose_matching_coefficient", PROPERTY_HINT_RANGE, "0,1,0.01"), "set_pose_matching_coefficient", "get_pose_matching_coefficient");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::NODE_PATH, "parent_collision_ignore", PROPERTY_HINT_PROPERTY_OF_VARIANT_TYPE, "Parent collision object"), "set_parent_collision_ignore", "get_parent_collision_ignore");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "simulation_precision", PROPERTY_HINT_RANGE, "1,100,1"), "set_simulation_precision", "get_simulation_precision");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "total_mass", PROPERTY_HINT_RANGE, "0.01,10000,1"), "set_total_mass", "get_total_mass");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "linear_stiffness", PROPERTY_HINT_RANGE, "0,1,0.01"), "set_linear_stiffness", "get_linear_stiffness");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "areaAngular_stiffness", PROPERTY_HINT_RANGE, "0,1,0.01"), "set_areaAngular_stiffness", "get_areaAngular_stiffness");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "volume_stiffness", PROPERTY_HINT_RANGE, "0,1,0.01"), "set_volume_stiffness", "get_volume_stiffness");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "pressure_coefficient"), "set_pressure_coefficient", "get_pressure_coefficient");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "damping_coefficient", PROPERTY_HINT_RANGE, "0,1,0.01"), "set_damping_coefficient", "get_damping_coefficient");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "drag_coefficient", PROPERTY_HINT_RANGE, "0,1,0.01"), "set_drag_coefficient", "get_drag_coefficient");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "pose_matching_coefficient", PROPERTY_HINT_RANGE, "0,1,0.01"), "set_pose_matching_coefficient", "get_pose_matching_coefficient");
 
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "ray_pickable"), "set_ray_pickable", "is_ray_pickable");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "ray_pickable"), "set_ray_pickable", "is_ray_pickable");
 }
 
 String SoftBody3D::get_configuration_warning() const {

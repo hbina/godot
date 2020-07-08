@@ -88,7 +88,7 @@ bool EditorSettings::_set_only(const StringName &p_name, const Variant &p_value)
 
 	bool changed = false;
 
-	if (p_value.get_type() == Variant::NIL) {
+	if (p_value.get_type() == Variant::Type::NIL) {
 		if (props.has(p_name)) {
 			props.erase(p_name);
 			changed = true;
@@ -185,7 +185,7 @@ void EditorSettings::_get_property_list(List<PropertyInfo> *p_list) const {
 		vc.type = v->variant.get_type();
 		vc.save = v->save;
 		/*if (vc.save) { this should be implemented, but lets do after 3.1 is out.
-			if (v->initial.get_type() != Variant::NIL && v->initial == v->variant) {
+			if (v->initial.get_type() != Variant::Type::NIL && v->initial == v->variant) {
 				vc.save = false;
 			}
 		}*/
@@ -219,7 +219,7 @@ void EditorSettings::_get_property_list(List<PropertyInfo> *p_list) const {
 		p_list->push_back(pi);
 	}
 
-	p_list->push_back(PropertyInfo(Variant::ARRAY, "shortcuts", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL)); //do not edit
+	p_list->push_back(PropertyInfo(Variant::Type::ARRAY, "shortcuts", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL)); //do not edit
 }
 
 void EditorSettings::_add_property_info_bind(const Dictionary &p_info) {
@@ -230,7 +230,7 @@ void EditorSettings::_add_property_info_bind(const Dictionary &p_info) {
 	pinfo.name = p_info["name"];
 	ERR_FAIL_COND(!props.has(pinfo.name));
 	pinfo.type = Variant::Type(p_info["type"].operator int());
-	ERR_FAIL_INDEX(pinfo.type, Variant::VARIANT_MAX);
+	ERR_FAIL_INDEX(pinfo.type, Variant::Type::VARIANT_MAX);
 
 	if (p_info.has("hint")) {
 		pinfo.hint = PropertyHint(p_info["hint"].operator int());
@@ -302,79 +302,79 @@ void EditorSettings::_load_defaults(Ref<ConfigFile> p_extra_config) {
 
 		_initial_set("interface/editor/editor_language", best);
 		set_restart_if_changed("interface/editor/editor_language", true);
-		hints["interface/editor/editor_language"] = PropertyInfo(Variant::STRING, "interface/editor/editor_language", PROPERTY_HINT_ENUM, lang_hint, PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_RESTART_IF_CHANGED);
+		hints["interface/editor/editor_language"] = PropertyInfo(Variant::Type::STRING, "interface/editor/editor_language", PROPERTY_HINT_ENUM, lang_hint, PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_RESTART_IF_CHANGED);
 	}
 
 	/* Interface */
 
 	// Editor
 	_initial_set("interface/editor/display_scale", 0);
-	hints["interface/editor/display_scale"] = PropertyInfo(Variant::INT, "interface/editor/display_scale", PROPERTY_HINT_ENUM, "Auto,75%,100%,125%,150%,175%,200%,Custom", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_RESTART_IF_CHANGED);
+	hints["interface/editor/display_scale"] = PropertyInfo(Variant::Type::INT, "interface/editor/display_scale", PROPERTY_HINT_ENUM, "Auto,75%,100%,125%,150%,175%,200%,Custom", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_RESTART_IF_CHANGED);
 	_initial_set("interface/editor/custom_display_scale", 1.0f);
-	hints["interface/editor/custom_display_scale"] = PropertyInfo(Variant::FLOAT, "interface/editor/custom_display_scale", PROPERTY_HINT_RANGE, "0.5,3,0.01", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_RESTART_IF_CHANGED);
+	hints["interface/editor/custom_display_scale"] = PropertyInfo(Variant::Type::FLOAT, "interface/editor/custom_display_scale", PROPERTY_HINT_RANGE, "0.5,3,0.01", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_RESTART_IF_CHANGED);
 	_initial_set("interface/editor/main_font_size", 14);
-	hints["interface/editor/main_font_size"] = PropertyInfo(Variant::INT, "interface/editor/main_font_size", PROPERTY_HINT_RANGE, "8,48,1", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_RESTART_IF_CHANGED);
+	hints["interface/editor/main_font_size"] = PropertyInfo(Variant::Type::INT, "interface/editor/main_font_size", PROPERTY_HINT_RANGE, "8,48,1", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_RESTART_IF_CHANGED);
 	_initial_set("interface/editor/code_font_size", 14);
-	hints["interface/editor/code_font_size"] = PropertyInfo(Variant::INT, "interface/editor/code_font_size", PROPERTY_HINT_RANGE, "8,48,1", PROPERTY_USAGE_DEFAULT);
+	hints["interface/editor/code_font_size"] = PropertyInfo(Variant::Type::INT, "interface/editor/code_font_size", PROPERTY_HINT_RANGE, "8,48,1", PROPERTY_USAGE_DEFAULT);
 	_initial_set("interface/editor/font_antialiased", true);
 	_initial_set("interface/editor/font_hinting", 0);
-	hints["interface/editor/font_hinting"] = PropertyInfo(Variant::INT, "interface/editor/font_hinting", PROPERTY_HINT_ENUM, "Auto,None,Light,Normal", PROPERTY_USAGE_DEFAULT);
+	hints["interface/editor/font_hinting"] = PropertyInfo(Variant::Type::INT, "interface/editor/font_hinting", PROPERTY_HINT_ENUM, "Auto,None,Light,Normal", PROPERTY_USAGE_DEFAULT);
 	_initial_set("interface/editor/main_font", "");
-	hints["interface/editor/main_font"] = PropertyInfo(Variant::STRING, "interface/editor/main_font", PROPERTY_HINT_GLOBAL_FILE, "*.ttf,*.otf", PROPERTY_USAGE_DEFAULT);
+	hints["interface/editor/main_font"] = PropertyInfo(Variant::Type::STRING, "interface/editor/main_font", PROPERTY_HINT_GLOBAL_FILE, "*.ttf,*.otf", PROPERTY_USAGE_DEFAULT);
 	_initial_set("interface/editor/main_font_bold", "");
-	hints["interface/editor/main_font_bold"] = PropertyInfo(Variant::STRING, "interface/editor/main_font_bold", PROPERTY_HINT_GLOBAL_FILE, "*.ttf,*.otf", PROPERTY_USAGE_DEFAULT);
+	hints["interface/editor/main_font_bold"] = PropertyInfo(Variant::Type::STRING, "interface/editor/main_font_bold", PROPERTY_HINT_GLOBAL_FILE, "*.ttf,*.otf", PROPERTY_USAGE_DEFAULT);
 	_initial_set("interface/editor/code_font", "");
-	hints["interface/editor/code_font"] = PropertyInfo(Variant::STRING, "interface/editor/code_font", PROPERTY_HINT_GLOBAL_FILE, "*.ttf,*.otf", PROPERTY_USAGE_DEFAULT);
+	hints["interface/editor/code_font"] = PropertyInfo(Variant::Type::STRING, "interface/editor/code_font", PROPERTY_HINT_GLOBAL_FILE, "*.ttf,*.otf", PROPERTY_USAGE_DEFAULT);
 	_initial_set("interface/editor/dim_editor_on_dialog_popup", true);
 	_initial_set("interface/editor/low_processor_mode_sleep_usec", 6900); // ~144 FPS
-	hints["interface/editor/low_processor_mode_sleep_usec"] = PropertyInfo(Variant::FLOAT, "interface/editor/low_processor_mode_sleep_usec", PROPERTY_HINT_RANGE, "1,100000,1", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_RESTART_IF_CHANGED);
+	hints["interface/editor/low_processor_mode_sleep_usec"] = PropertyInfo(Variant::Type::FLOAT, "interface/editor/low_processor_mode_sleep_usec", PROPERTY_HINT_RANGE, "1,100000,1", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_RESTART_IF_CHANGED);
 	_initial_set("interface/editor/unfocused_low_processor_mode_sleep_usec", 50000); // 20 FPS
-	hints["interface/editor/unfocused_low_processor_mode_sleep_usec"] = PropertyInfo(Variant::FLOAT, "interface/editor/unfocused_low_processor_mode_sleep_usec", PROPERTY_HINT_RANGE, "1,100000,1", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_RESTART_IF_CHANGED);
+	hints["interface/editor/unfocused_low_processor_mode_sleep_usec"] = PropertyInfo(Variant::Type::FLOAT, "interface/editor/unfocused_low_processor_mode_sleep_usec", PROPERTY_HINT_RANGE, "1,100000,1", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_RESTART_IF_CHANGED);
 	_initial_set("interface/editor/separate_distraction_mode", false);
 	_initial_set("interface/editor/automatically_open_screenshots", true);
 	_initial_set("interface/editor/single_window_mode", false);
-	hints["interface/editor/single_window_mode"] = PropertyInfo(Variant::BOOL, "interface/editor/single_window_mode", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_RESTART_IF_CHANGED);
+	hints["interface/editor/single_window_mode"] = PropertyInfo(Variant::Type::BOOL, "interface/editor/single_window_mode", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_RESTART_IF_CHANGED);
 	_initial_set("interface/editor/hide_console_window", false);
 	_initial_set("interface/editor/save_each_scene_on_quit", true); // Regression
 	_initial_set("interface/editor/quit_confirmation", true);
 
 	// Theme
 	_initial_set("interface/theme/preset", "Default");
-	hints["interface/theme/preset"] = PropertyInfo(Variant::STRING, "interface/theme/preset", PROPERTY_HINT_ENUM, "Default,Alien,Arc,Godot 2,Grey,Light,Solarized (Dark),Solarized (Light),Custom", PROPERTY_USAGE_DEFAULT);
+	hints["interface/theme/preset"] = PropertyInfo(Variant::Type::STRING, "interface/theme/preset", PROPERTY_HINT_ENUM, "Default,Alien,Arc,Godot 2,Grey,Light,Solarized (Dark),Solarized (Light),Custom", PROPERTY_USAGE_DEFAULT);
 	_initial_set("interface/theme/icon_and_font_color", 0);
-	hints["interface/theme/icon_and_font_color"] = PropertyInfo(Variant::INT, "interface/theme/icon_and_font_color", PROPERTY_HINT_ENUM, "Auto,Dark,Light", PROPERTY_USAGE_DEFAULT);
+	hints["interface/theme/icon_and_font_color"] = PropertyInfo(Variant::Type::INT, "interface/theme/icon_and_font_color", PROPERTY_HINT_ENUM, "Auto,Dark,Light", PROPERTY_USAGE_DEFAULT);
 	_initial_set("interface/theme/base_color", Color(0.2, 0.23, 0.31));
-	hints["interface/theme/base_color"] = PropertyInfo(Variant::COLOR, "interface/theme/base_color", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT);
+	hints["interface/theme/base_color"] = PropertyInfo(Variant::Type::COLOR, "interface/theme/base_color", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT);
 	_initial_set("interface/theme/accent_color", Color(0.41, 0.61, 0.91));
-	hints["interface/theme/accent_color"] = PropertyInfo(Variant::COLOR, "interface/theme/accent_color", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT);
+	hints["interface/theme/accent_color"] = PropertyInfo(Variant::Type::COLOR, "interface/theme/accent_color", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT);
 	_initial_set("interface/theme/contrast", 0.25);
-	hints["interface/theme/contrast"] = PropertyInfo(Variant::FLOAT, "interface/theme/contrast", PROPERTY_HINT_RANGE, "0.01, 1, 0.01");
+	hints["interface/theme/contrast"] = PropertyInfo(Variant::Type::FLOAT, "interface/theme/contrast", PROPERTY_HINT_RANGE, "0.01, 1, 0.01");
 	_initial_set("interface/theme/relationship_line_opacity", 0.1);
-	hints["interface/theme/relationship_line_opacity"] = PropertyInfo(Variant::FLOAT, "interface/theme/relationship_line_opacity", PROPERTY_HINT_RANGE, "0.00, 1, 0.01");
+	hints["interface/theme/relationship_line_opacity"] = PropertyInfo(Variant::Type::FLOAT, "interface/theme/relationship_line_opacity", PROPERTY_HINT_RANGE, "0.00, 1, 0.01");
 	_initial_set("interface/theme/highlight_tabs", false);
 	_initial_set("interface/theme/border_size", 1);
 	_initial_set("interface/theme/use_graph_node_headers", false);
-	hints["interface/theme/border_size"] = PropertyInfo(Variant::INT, "interface/theme/border_size", PROPERTY_HINT_RANGE, "0,2,1", PROPERTY_USAGE_DEFAULT);
+	hints["interface/theme/border_size"] = PropertyInfo(Variant::Type::INT, "interface/theme/border_size", PROPERTY_HINT_RANGE, "0,2,1", PROPERTY_USAGE_DEFAULT);
 	_initial_set("interface/theme/additional_spacing", 0);
-	hints["interface/theme/additional_spacing"] = PropertyInfo(Variant::FLOAT, "interface/theme/additional_spacing", PROPERTY_HINT_RANGE, "0,5,0.1", PROPERTY_USAGE_DEFAULT);
+	hints["interface/theme/additional_spacing"] = PropertyInfo(Variant::Type::FLOAT, "interface/theme/additional_spacing", PROPERTY_HINT_RANGE, "0,5,0.1", PROPERTY_USAGE_DEFAULT);
 	_initial_set("interface/theme/custom_theme", "");
-	hints["interface/theme/custom_theme"] = PropertyInfo(Variant::STRING, "interface/theme/custom_theme", PROPERTY_HINT_GLOBAL_FILE, "*.res,*.tres,*.theme", PROPERTY_USAGE_DEFAULT);
+	hints["interface/theme/custom_theme"] = PropertyInfo(Variant::Type::STRING, "interface/theme/custom_theme", PROPERTY_HINT_GLOBAL_FILE, "*.res,*.tres,*.theme", PROPERTY_USAGE_DEFAULT);
 
 	// Scene tabs
 	_initial_set("interface/scene_tabs/show_extension", false);
 	_initial_set("interface/scene_tabs/show_thumbnail_on_hover", true);
 	_initial_set("interface/scene_tabs/resize_if_many_tabs", true);
 	_initial_set("interface/scene_tabs/minimum_width", 50);
-	hints["interface/scene_tabs/minimum_width"] = PropertyInfo(Variant::INT, "interface/scene_tabs/minimum_width", PROPERTY_HINT_RANGE, "50,500,1", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_RESTART_IF_CHANGED);
+	hints["interface/scene_tabs/minimum_width"] = PropertyInfo(Variant::Type::INT, "interface/scene_tabs/minimum_width", PROPERTY_HINT_RANGE, "50,500,1", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_RESTART_IF_CHANGED);
 	_initial_set("interface/scene_tabs/show_script_button", false);
 
 	/* Filesystem */
 
 	// Directories
 	_initial_set("filesystem/directories/autoscan_project_path", "");
-	hints["filesystem/directories/autoscan_project_path"] = PropertyInfo(Variant::STRING, "filesystem/directories/autoscan_project_path", PROPERTY_HINT_GLOBAL_DIR);
+	hints["filesystem/directories/autoscan_project_path"] = PropertyInfo(Variant::Type::STRING, "filesystem/directories/autoscan_project_path", PROPERTY_HINT_GLOBAL_DIR);
 	_initial_set("filesystem/directories/default_project_path", OS::get_singleton()->has_environment("HOME") ? OS::get_singleton()->get_environment("HOME") : OS::get_singleton()->get_system_dir(OS::SYSTEM_DIR_DOCUMENTS));
-	hints["filesystem/directories/default_project_path"] = PropertyInfo(Variant::STRING, "filesystem/directories/default_project_path", PROPERTY_HINT_GLOBAL_DIR);
+	hints["filesystem/directories/default_project_path"] = PropertyInfo(Variant::Type::STRING, "filesystem/directories/default_project_path", PROPERTY_HINT_GLOBAL_DIR);
 
 	// On save
 	_initial_set("filesystem/on_save/compress_binary_resources", true);
@@ -383,16 +383,16 @@ void EditorSettings::_load_defaults(Ref<ConfigFile> p_extra_config) {
 	// File dialog
 	_initial_set("filesystem/file_dialog/show_hidden_files", false);
 	_initial_set("filesystem/file_dialog/display_mode", 0);
-	hints["filesystem/file_dialog/display_mode"] = PropertyInfo(Variant::INT, "filesystem/file_dialog/display_mode", PROPERTY_HINT_ENUM, "Thumbnails,List");
+	hints["filesystem/file_dialog/display_mode"] = PropertyInfo(Variant::Type::INT, "filesystem/file_dialog/display_mode", PROPERTY_HINT_ENUM, "Thumbnails,List");
 	_initial_set("filesystem/file_dialog/thumbnail_size", 64);
-	hints["filesystem/file_dialog/thumbnail_size"] = PropertyInfo(Variant::INT, "filesystem/file_dialog/thumbnail_size", PROPERTY_HINT_RANGE, "32,128,16");
+	hints["filesystem/file_dialog/thumbnail_size"] = PropertyInfo(Variant::Type::INT, "filesystem/file_dialog/thumbnail_size", PROPERTY_HINT_RANGE, "32,128,16");
 
 	// Import
 	_initial_set("filesystem/import/pvrtc_texture_tool", "");
 #ifdef WINDOWS_ENABLED
-	hints["filesystem/import/pvrtc_texture_tool"] = PropertyInfo(Variant::STRING, "filesystem/import/pvrtc_texture_tool", PROPERTY_HINT_GLOBAL_FILE, "*.exe");
+	hints["filesystem/import/pvrtc_texture_tool"] = PropertyInfo(Variant::Type::STRING, "filesystem/import/pvrtc_texture_tool", PROPERTY_HINT_GLOBAL_FILE, "*.exe");
 #else
-	hints["filesystem/import/pvrtc_texture_tool"] = PropertyInfo(Variant::STRING, "filesystem/import/pvrtc_texture_tool", PROPERTY_HINT_GLOBAL_FILE, "");
+	hints["filesystem/import/pvrtc_texture_tool"] = PropertyInfo(Variant::Type::STRING, "filesystem/import/pvrtc_texture_tool", PROPERTY_HINT_GLOBAL_FILE, "");
 #endif
 	_initial_set("filesystem/import/pvrtc_fast_conversion", false);
 
@@ -403,7 +403,7 @@ void EditorSettings::_load_defaults(Ref<ConfigFile> p_extra_config) {
 
 	// FileSystem
 	_initial_set("docks/filesystem/thumbnail_size", 64);
-	hints["docks/filesystem/thumbnail_size"] = PropertyInfo(Variant::INT, "docks/filesystem/thumbnail_size", PROPERTY_HINT_RANGE, "32,128,16");
+	hints["docks/filesystem/thumbnail_size"] = PropertyInfo(Variant::Type::INT, "docks/filesystem/thumbnail_size", PROPERTY_HINT_RANGE, "32,128,16");
 	_initial_set("docks/filesystem/always_show_folders", true);
 
 	// Property editor
@@ -413,9 +413,9 @@ void EditorSettings::_load_defaults(Ref<ConfigFile> p_extra_config) {
 
 	// Theme
 	_initial_set("text_editor/theme/color_theme", "Adaptive");
-	hints["text_editor/theme/color_theme"] = PropertyInfo(Variant::STRING, "text_editor/theme/color_theme", PROPERTY_HINT_ENUM, "Adaptive,Default,Custom");
+	hints["text_editor/theme/color_theme"] = PropertyInfo(Variant::Type::STRING, "text_editor/theme/color_theme", PROPERTY_HINT_ENUM, "Adaptive,Default,Custom");
 	_initial_set("text_editor/theme/line_spacing", 6);
-	hints["text_editor/theme/line_spacing"] = PropertyInfo(Variant::INT, "text_editor/theme/line_spacing", PROPERTY_HINT_RANGE, "0,50,1");
+	hints["text_editor/theme/line_spacing"] = PropertyInfo(Variant::Type::INT, "text_editor/theme/line_spacing", PROPERTY_HINT_RANGE, "0,50,1");
 
 	_load_default_text_editor_theme();
 
@@ -427,9 +427,9 @@ void EditorSettings::_load_defaults(Ref<ConfigFile> p_extra_config) {
 
 	// Indent
 	_initial_set("text_editor/indent/type", 0);
-	hints["text_editor/indent/type"] = PropertyInfo(Variant::INT, "text_editor/indent/type", PROPERTY_HINT_ENUM, "Tabs,Spaces");
+	hints["text_editor/indent/type"] = PropertyInfo(Variant::Type::INT, "text_editor/indent/type", PROPERTY_HINT_ENUM, "Tabs,Spaces");
 	_initial_set("text_editor/indent/size", 4);
-	hints["text_editor/indent/size"] = PropertyInfo(Variant::INT, "text_editor/indent/size", PROPERTY_HINT_RANGE, "1, 64, 1"); // size of 0 crashes.
+	hints["text_editor/indent/size"] = PropertyInfo(Variant::Type::INT, "text_editor/indent/size", PROPERTY_HINT_RANGE, "1, 64, 1"); // size of 0 crashes.
 	_initial_set("text_editor/indent/auto_indent", true);
 	_initial_set("text_editor/indent/convert_indent_on_save", true);
 	_initial_set("text_editor/indent/draw_tabs", true);
@@ -440,7 +440,7 @@ void EditorSettings::_load_defaults(Ref<ConfigFile> p_extra_config) {
 	_initial_set("text_editor/navigation/v_scroll_speed", 80);
 	_initial_set("text_editor/navigation/show_minimap", true);
 	_initial_set("text_editor/navigation/minimap_width", 80);
-	hints["text_editor/navigation/minimap_width"] = PropertyInfo(Variant::INT, "text_editor/navigation/minimap_width", PROPERTY_HINT_RANGE, "50,250,1");
+	hints["text_editor/navigation/minimap_width"] = PropertyInfo(Variant::Type::INT, "text_editor/navigation/minimap_width", PROPERTY_HINT_RANGE, "50,250,1");
 
 	// Appearance
 	_initial_set("text_editor/appearance/show_line_numbers", true);
@@ -452,9 +452,9 @@ void EditorSettings::_load_defaults(Ref<ConfigFile> p_extra_config) {
 	_initial_set("text_editor/appearance/word_wrap", false);
 	_initial_set("text_editor/appearance/show_line_length_guidelines", true);
 	_initial_set("text_editor/appearance/line_length_guideline_soft_column", 80);
-	hints["text_editor/appearance/line_length_guideline_soft_column"] = PropertyInfo(Variant::INT, "text_editor/appearance/line_length_guideline_soft_column", PROPERTY_HINT_RANGE, "20, 160, 1");
+	hints["text_editor/appearance/line_length_guideline_soft_column"] = PropertyInfo(Variant::Type::INT, "text_editor/appearance/line_length_guideline_soft_column", PROPERTY_HINT_RANGE, "20, 160, 1");
 	_initial_set("text_editor/appearance/line_length_guideline_hard_column", 100);
-	hints["text_editor/appearance/line_length_guideline_hard_column"] = PropertyInfo(Variant::INT, "text_editor/appearance/line_length_guideline_hard_column", PROPERTY_HINT_RANGE, "20, 160, 1");
+	hints["text_editor/appearance/line_length_guideline_hard_column"] = PropertyInfo(Variant::Type::INT, "text_editor/appearance/line_length_guideline_hard_column", PROPERTY_HINT_RANGE, "20, 160, 1");
 
 	// Script list
 	_initial_set("text_editor/script_list/show_members_overview", true);
@@ -473,15 +473,15 @@ void EditorSettings::_load_defaults(Ref<ConfigFile> p_extra_config) {
 	_initial_set("text_editor/cursor/block_caret", false);
 	_initial_set("text_editor/cursor/caret_blink", true);
 	_initial_set("text_editor/cursor/caret_blink_speed", 0.5);
-	hints["text_editor/cursor/caret_blink_speed"] = PropertyInfo(Variant::FLOAT, "text_editor/cursor/caret_blink_speed", PROPERTY_HINT_RANGE, "0.1, 10, 0.01");
+	hints["text_editor/cursor/caret_blink_speed"] = PropertyInfo(Variant::Type::FLOAT, "text_editor/cursor/caret_blink_speed", PROPERTY_HINT_RANGE, "0.1, 10, 0.01");
 	_initial_set("text_editor/cursor/right_click_moves_caret", true);
 
 	// Completion
 	_initial_set("text_editor/completion/idle_parse_delay", 2.0);
-	hints["text_editor/completion/idle_parse_delay"] = PropertyInfo(Variant::FLOAT, "text_editor/completion/idle_parse_delay", PROPERTY_HINT_RANGE, "0.1, 10, 0.01");
+	hints["text_editor/completion/idle_parse_delay"] = PropertyInfo(Variant::Type::FLOAT, "text_editor/completion/idle_parse_delay", PROPERTY_HINT_RANGE, "0.1, 10, 0.01");
 	_initial_set("text_editor/completion/auto_brace_complete", true);
 	_initial_set("text_editor/completion/code_complete_delay", 0.3);
-	hints["text_editor/completion/code_complete_delay"] = PropertyInfo(Variant::FLOAT, "text_editor/completion/code_complete_delay", PROPERTY_HINT_RANGE, "0.01, 5, 0.01");
+	hints["text_editor/completion/code_complete_delay"] = PropertyInfo(Variant::Type::FLOAT, "text_editor/completion/code_complete_delay", PROPERTY_HINT_RANGE, "0.01, 5, 0.01");
 	_initial_set("text_editor/completion/put_callhint_tooltip_below_current_line", true);
 	_initial_set("text_editor/completion/callhint_tooltip_offset", Vector2());
 	_initial_set("text_editor/completion/complete_file_paths", true);
@@ -491,11 +491,11 @@ void EditorSettings::_load_defaults(Ref<ConfigFile> p_extra_config) {
 	// Help
 	_initial_set("text_editor/help/show_help_index", true);
 	_initial_set("text_editor/help/help_font_size", 15);
-	hints["text_editor/help/help_font_size"] = PropertyInfo(Variant::INT, "text_editor/help/help_font_size", PROPERTY_HINT_RANGE, "8,48,1");
+	hints["text_editor/help/help_font_size"] = PropertyInfo(Variant::Type::INT, "text_editor/help/help_font_size", PROPERTY_HINT_RANGE, "8,48,1");
 	_initial_set("text_editor/help/help_source_font_size", 14);
-	hints["text_editor/help/help_source_font_size"] = PropertyInfo(Variant::INT, "text_editor/help/help_source_font_size", PROPERTY_HINT_RANGE, "8,48,1");
+	hints["text_editor/help/help_source_font_size"] = PropertyInfo(Variant::Type::INT, "text_editor/help/help_source_font_size", PROPERTY_HINT_RANGE, "8,48,1");
 	_initial_set("text_editor/help/help_title_font_size", 23);
-	hints["text_editor/help/help_title_font_size"] = PropertyInfo(Variant::INT, "text_editor/help/help_title_font_size", PROPERTY_HINT_RANGE, "8,48,1");
+	hints["text_editor/help/help_title_font_size"] = PropertyInfo(Variant::Type::INT, "text_editor/help/help_title_font_size", PROPERTY_HINT_RANGE, "8,48,1");
 
 	/* Editors */
 
@@ -504,33 +504,33 @@ void EditorSettings::_load_defaults(Ref<ConfigFile> p_extra_config) {
 
 	// 3D
 	_initial_set("editors/3d/primary_grid_color", Color(0.56, 0.56, 0.56, 0.5));
-	hints["editors/3d/primary_grid_color"] = PropertyInfo(Variant::COLOR, "editors/3d/primary_grid_color", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT);
+	hints["editors/3d/primary_grid_color"] = PropertyInfo(Variant::Type::COLOR, "editors/3d/primary_grid_color", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT);
 
 	_initial_set("editors/3d/secondary_grid_color", Color(0.38, 0.38, 0.38, 0.5));
-	hints["editors/3d/secondary_grid_color"] = PropertyInfo(Variant::COLOR, "editors/3d/secondary_grid_color", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT);
+	hints["editors/3d/secondary_grid_color"] = PropertyInfo(Variant::Type::COLOR, "editors/3d/secondary_grid_color", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT);
 
 	// If a line is a multiple of this, it uses the primary grid color.
 	_initial_set("editors/3d/primary_grid_steps", 10);
-	hints["editors/3d/primary_grid_steps"] = PropertyInfo(Variant::INT, "editors/3d/primary_grid_steps", PROPERTY_HINT_RANGE, "1,100,1", PROPERTY_USAGE_DEFAULT);
+	hints["editors/3d/primary_grid_steps"] = PropertyInfo(Variant::Type::INT, "editors/3d/primary_grid_steps", PROPERTY_HINT_RANGE, "1,100,1", PROPERTY_USAGE_DEFAULT);
 
 	// At 1000, the grid mostly looks like it has no edge.
 	_initial_set("editors/3d/grid_size", 200);
-	hints["editors/3d/grid_size"] = PropertyInfo(Variant::INT, "editors/3d/grid_size", PROPERTY_HINT_RANGE, "1,2000,1", PROPERTY_USAGE_DEFAULT);
+	hints["editors/3d/grid_size"] = PropertyInfo(Variant::Type::INT, "editors/3d/grid_size", PROPERTY_HINT_RANGE, "1,2000,1", PROPERTY_USAGE_DEFAULT);
 
 	// Default largest grid size is 100m, 10^2 (primary grid lines are 1km apart when primary_grid_steps is 10).
 	_initial_set("editors/3d/grid_division_level_max", 2);
 	// Higher values produce graphical artifacts when far away unless View Z-Far
 	// is increased significantly more than it really should need to be.
-	hints["editors/3d/grid_division_level_max"] = PropertyInfo(Variant::INT, "editors/3d/grid_division_level_max", PROPERTY_HINT_RANGE, "-1,3,1", PROPERTY_USAGE_DEFAULT);
+	hints["editors/3d/grid_division_level_max"] = PropertyInfo(Variant::Type::INT, "editors/3d/grid_division_level_max", PROPERTY_HINT_RANGE, "-1,3,1", PROPERTY_USAGE_DEFAULT);
 
 	// Default smallest grid size is 1cm, 10^-2.
 	_initial_set("editors/3d/grid_division_level_min", -2);
 	// Lower values produce graphical artifacts regardless of view clipping planes, so limit to -2 as a lower bound.
-	hints["editors/3d/grid_division_level_min"] = PropertyInfo(Variant::INT, "editors/3d/grid_division_level_min", PROPERTY_HINT_RANGE, "-2,2,1", PROPERTY_USAGE_DEFAULT);
+	hints["editors/3d/grid_division_level_min"] = PropertyInfo(Variant::Type::INT, "editors/3d/grid_division_level_min", PROPERTY_HINT_RANGE, "-2,2,1", PROPERTY_USAGE_DEFAULT);
 
 	// -0.2 seems like a sensible default. -1.0 gives Blender-like behavior, 0.5 gives huge grids.
 	_initial_set("editors/3d/grid_division_level_bias", -0.2);
-	hints["editors/3d/grid_division_level_bias"] = PropertyInfo(Variant::FLOAT, "editors/3d/grid_division_level_bias", PROPERTY_HINT_RANGE, "-1.0,0.5,0.1", PROPERTY_USAGE_DEFAULT);
+	hints["editors/3d/grid_division_level_bias"] = PropertyInfo(Variant::Type::FLOAT, "editors/3d/grid_division_level_bias", PROPERTY_HINT_RANGE, "-1.0,0.5,0.1", PROPERTY_USAGE_DEFAULT);
 
 	_initial_set("editors/3d/grid_xz_plane", true);
 	_initial_set("editors/3d/grid_xy_plane", false);
@@ -543,44 +543,44 @@ void EditorSettings::_load_defaults(Ref<ConfigFile> p_extra_config) {
 	// 3D: Navigation
 	_initial_set("editors/3d/navigation/navigation_scheme", 0);
 	_initial_set("editors/3d/navigation/invert_y_axis", false);
-	hints["editors/3d/navigation/navigation_scheme"] = PropertyInfo(Variant::INT, "editors/3d/navigation/navigation_scheme", PROPERTY_HINT_ENUM, "Godot,Maya,Modo");
+	hints["editors/3d/navigation/navigation_scheme"] = PropertyInfo(Variant::Type::INT, "editors/3d/navigation/navigation_scheme", PROPERTY_HINT_ENUM, "Godot,Maya,Modo");
 	_initial_set("editors/3d/navigation/zoom_style", 0);
-	hints["editors/3d/navigation/zoom_style"] = PropertyInfo(Variant::INT, "editors/3d/navigation/zoom_style", PROPERTY_HINT_ENUM, "Vertical, Horizontal");
+	hints["editors/3d/navigation/zoom_style"] = PropertyInfo(Variant::Type::INT, "editors/3d/navigation/zoom_style", PROPERTY_HINT_ENUM, "Vertical, Horizontal");
 
 	_initial_set("editors/3d/navigation/emulate_3_button_mouse", false);
 	_initial_set("editors/3d/navigation/orbit_modifier", 0);
-	hints["editors/3d/navigation/orbit_modifier"] = PropertyInfo(Variant::INT, "editors/3d/navigation/orbit_modifier", PROPERTY_HINT_ENUM, "None,Shift,Alt,Meta,Ctrl");
+	hints["editors/3d/navigation/orbit_modifier"] = PropertyInfo(Variant::Type::INT, "editors/3d/navigation/orbit_modifier", PROPERTY_HINT_ENUM, "None,Shift,Alt,Meta,Ctrl");
 	_initial_set("editors/3d/navigation/pan_modifier", 1);
-	hints["editors/3d/navigation/pan_modifier"] = PropertyInfo(Variant::INT, "editors/3d/navigation/pan_modifier", PROPERTY_HINT_ENUM, "None,Shift,Alt,Meta,Ctrl");
+	hints["editors/3d/navigation/pan_modifier"] = PropertyInfo(Variant::Type::INT, "editors/3d/navigation/pan_modifier", PROPERTY_HINT_ENUM, "None,Shift,Alt,Meta,Ctrl");
 	_initial_set("editors/3d/navigation/zoom_modifier", 4);
-	hints["editors/3d/navigation/zoom_modifier"] = PropertyInfo(Variant::INT, "editors/3d/navigation/zoom_modifier", PROPERTY_HINT_ENUM, "None,Shift,Alt,Meta,Ctrl");
+	hints["editors/3d/navigation/zoom_modifier"] = PropertyInfo(Variant::Type::INT, "editors/3d/navigation/zoom_modifier", PROPERTY_HINT_ENUM, "None,Shift,Alt,Meta,Ctrl");
 	_initial_set("editors/3d/navigation/warped_mouse_panning", true);
 
 	// 3D: Navigation feel
 	_initial_set("editors/3d/navigation_feel/orbit_sensitivity", 0.4);
-	hints["editors/3d/navigation_feel/orbit_sensitivity"] = PropertyInfo(Variant::FLOAT, "editors/3d/navigation_feel/orbit_sensitivity", PROPERTY_HINT_RANGE, "0.0, 2, 0.01");
+	hints["editors/3d/navigation_feel/orbit_sensitivity"] = PropertyInfo(Variant::Type::FLOAT, "editors/3d/navigation_feel/orbit_sensitivity", PROPERTY_HINT_RANGE, "0.0, 2, 0.01");
 	_initial_set("editors/3d/navigation_feel/orbit_inertia", 0.05);
-	hints["editors/3d/navigation_feel/orbit_inertia"] = PropertyInfo(Variant::FLOAT, "editors/3d/navigation_feel/orbit_inertia", PROPERTY_HINT_RANGE, "0.0, 1, 0.01");
+	hints["editors/3d/navigation_feel/orbit_inertia"] = PropertyInfo(Variant::Type::FLOAT, "editors/3d/navigation_feel/orbit_inertia", PROPERTY_HINT_RANGE, "0.0, 1, 0.01");
 	_initial_set("editors/3d/navigation_feel/translation_inertia", 0.15);
-	hints["editors/3d/navigation_feel/translation_inertia"] = PropertyInfo(Variant::FLOAT, "editors/3d/navigation_feel/translation_inertia", PROPERTY_HINT_RANGE, "0.0, 1, 0.01");
+	hints["editors/3d/navigation_feel/translation_inertia"] = PropertyInfo(Variant::Type::FLOAT, "editors/3d/navigation_feel/translation_inertia", PROPERTY_HINT_RANGE, "0.0, 1, 0.01");
 	_initial_set("editors/3d/navigation_feel/zoom_inertia", 0.075);
-	hints["editors/3d/navigation_feel/zoom_inertia"] = PropertyInfo(Variant::FLOAT, "editors/3d/navigation_feel/zoom_inertia", PROPERTY_HINT_RANGE, "0.0, 1, 0.01");
+	hints["editors/3d/navigation_feel/zoom_inertia"] = PropertyInfo(Variant::Type::FLOAT, "editors/3d/navigation_feel/zoom_inertia", PROPERTY_HINT_RANGE, "0.0, 1, 0.01");
 	_initial_set("editors/3d/navigation_feel/manipulation_orbit_inertia", 0.075);
-	hints["editors/3d/navigation_feel/manipulation_orbit_inertia"] = PropertyInfo(Variant::FLOAT, "editors/3d/navigation_feel/manipulation_orbit_inertia", PROPERTY_HINT_RANGE, "0.0, 1, 0.01");
+	hints["editors/3d/navigation_feel/manipulation_orbit_inertia"] = PropertyInfo(Variant::Type::FLOAT, "editors/3d/navigation_feel/manipulation_orbit_inertia", PROPERTY_HINT_RANGE, "0.0, 1, 0.01");
 	_initial_set("editors/3d/navigation_feel/manipulation_translation_inertia", 0.075);
-	hints["editors/3d/navigation_feel/manipulation_translation_inertia"] = PropertyInfo(Variant::FLOAT, "editors/3d/navigation_feel/manipulation_translation_inertia", PROPERTY_HINT_RANGE, "0.0, 1, 0.01");
+	hints["editors/3d/navigation_feel/manipulation_translation_inertia"] = PropertyInfo(Variant::Type::FLOAT, "editors/3d/navigation_feel/manipulation_translation_inertia", PROPERTY_HINT_RANGE, "0.0, 1, 0.01");
 
 	// 3D: Freelook
 	_initial_set("editors/3d/freelook/freelook_navigation_scheme", false);
-	hints["editors/3d/freelook/freelook_navigation_scheme"] = PropertyInfo(Variant::INT, "editors/3d/freelook/freelook_navigation_scheme", PROPERTY_HINT_ENUM, "Default,Partially Axis-Locked (id Tech),Fully Axis-Locked (Minecraft)");
+	hints["editors/3d/freelook/freelook_navigation_scheme"] = PropertyInfo(Variant::Type::INT, "editors/3d/freelook/freelook_navigation_scheme", PROPERTY_HINT_ENUM, "Default,Partially Axis-Locked (id Tech),Fully Axis-Locked (Minecraft)");
 	_initial_set("editors/3d/freelook/freelook_sensitivity", 0.4);
-	hints["editors/3d/freelook/freelook_sensitivity"] = PropertyInfo(Variant::FLOAT, "editors/3d/freelook/freelook_sensitivity", PROPERTY_HINT_RANGE, "0.0, 2, 0.01");
+	hints["editors/3d/freelook/freelook_sensitivity"] = PropertyInfo(Variant::Type::FLOAT, "editors/3d/freelook/freelook_sensitivity", PROPERTY_HINT_RANGE, "0.0, 2, 0.01");
 	_initial_set("editors/3d/freelook/freelook_inertia", 0.1);
-	hints["editors/3d/freelook/freelook_inertia"] = PropertyInfo(Variant::FLOAT, "editors/3d/freelook/freelook_inertia", PROPERTY_HINT_RANGE, "0.0, 1, 0.01");
+	hints["editors/3d/freelook/freelook_inertia"] = PropertyInfo(Variant::Type::FLOAT, "editors/3d/freelook/freelook_inertia", PROPERTY_HINT_RANGE, "0.0, 1, 0.01");
 	_initial_set("editors/3d/freelook/freelook_base_speed", 5.0);
-	hints["editors/3d/freelook/freelook_base_speed"] = PropertyInfo(Variant::FLOAT, "editors/3d/freelook/freelook_base_speed", PROPERTY_HINT_RANGE, "0.0, 10, 0.01");
+	hints["editors/3d/freelook/freelook_base_speed"] = PropertyInfo(Variant::Type::FLOAT, "editors/3d/freelook/freelook_base_speed", PROPERTY_HINT_RANGE, "0.0, 10, 0.01");
 	_initial_set("editors/3d/freelook/freelook_activation_modifier", 0);
-	hints["editors/3d/freelook/freelook_activation_modifier"] = PropertyInfo(Variant::INT, "editors/3d/freelook/freelook_activation_modifier", PROPERTY_HINT_ENUM, "None,Shift,Alt,Meta,Ctrl");
+	hints["editors/3d/freelook/freelook_activation_modifier"] = PropertyInfo(Variant::Type::INT, "editors/3d/freelook/freelook_activation_modifier", PROPERTY_HINT_ENUM, "None,Shift,Alt,Meta,Ctrl");
 	_initial_set("editors/3d/freelook/freelook_speed_zoom_link", false);
 
 	// 2D
@@ -615,21 +615,21 @@ void EditorSettings::_load_defaults(Ref<ConfigFile> p_extra_config) {
 
 	// Window placement
 	_initial_set("run/window_placement/rect", 1);
-	hints["run/window_placement/rect"] = PropertyInfo(Variant::INT, "run/window_placement/rect", PROPERTY_HINT_ENUM, "Top Left,Centered,Custom Position,Force Maximized,Force Fullscreen");
+	hints["run/window_placement/rect"] = PropertyInfo(Variant::Type::INT, "run/window_placement/rect", PROPERTY_HINT_ENUM, "Top Left,Centered,Custom Position,Force Maximized,Force Fullscreen");
 	String screen_hints = "Same as Editor,Previous Monitor,Next Monitor";
 	for (int i = 0; i < DisplayServer::get_singleton()->get_screen_count(); i++) {
 		screen_hints += ",Monitor " + itos(i + 1);
 	}
 	_initial_set("run/window_placement/rect_custom_position", Vector2());
 	_initial_set("run/window_placement/screen", 0);
-	hints["run/window_placement/screen"] = PropertyInfo(Variant::INT, "run/window_placement/screen", PROPERTY_HINT_ENUM, screen_hints);
+	hints["run/window_placement/screen"] = PropertyInfo(Variant::Type::INT, "run/window_placement/screen", PROPERTY_HINT_ENUM, screen_hints);
 
 	// Auto save
 	_initial_set("run/auto_save/save_before_running", true);
 
 	// Output
 	_initial_set("run/output/font_size", 13);
-	hints["run/output/font_size"] = PropertyInfo(Variant::INT, "run/output/font_size", PROPERTY_HINT_RANGE, "8,48,1");
+	hints["run/output/font_size"] = PropertyInfo(Variant::Type::INT, "run/output/font_size", PROPERTY_HINT_RANGE, "8,48,1");
 	_initial_set("run/output/always_clear_output_on_play", true);
 	_initial_set("run/output/always_open_output_on_play", true);
 	_initial_set("run/output/always_close_output_on_stop", false);
@@ -640,16 +640,16 @@ void EditorSettings::_load_defaults(Ref<ConfigFile> p_extra_config) {
 	_initial_set("network/debug/remote_host", "127.0.0.1"); // Hints provided in setup_network
 
 	_initial_set("network/debug/remote_port", 6007);
-	hints["network/debug/remote_port"] = PropertyInfo(Variant::INT, "network/debug/remote_port", PROPERTY_HINT_RANGE, "1,65535,1");
+	hints["network/debug/remote_port"] = PropertyInfo(Variant::Type::INT, "network/debug/remote_port", PROPERTY_HINT_RANGE, "1,65535,1");
 
 	// SSL
 	_initial_set("network/ssl/editor_ssl_certificates", _SYSTEM_CERTS_PATH);
-	hints["network/ssl/editor_ssl_certificates"] = PropertyInfo(Variant::STRING, "network/ssl/editor_ssl_certificates", PROPERTY_HINT_GLOBAL_FILE, "*.crt,*.pem");
+	hints["network/ssl/editor_ssl_certificates"] = PropertyInfo(Variant::Type::STRING, "network/ssl/editor_ssl_certificates", PROPERTY_HINT_GLOBAL_FILE, "*.crt,*.pem");
 
 	/* Extra config */
 
 	_initial_set("project_manager/sorting_order", 0);
-	hints["project_manager/sorting_order"] = PropertyInfo(Variant::INT, "project_manager/sorting_order", PROPERTY_HINT_ENUM, "Name,Path,Last Edited");
+	hints["project_manager/sorting_order"] = PropertyInfo(Variant::Type::INT, "project_manager/sorting_order", PROPERTY_HINT_ENUM, "Name,Path,Last Edited");
 
 	if (p_extra_config.is_valid()) {
 		if (p_extra_config->has_section("init_projects") && p_extra_config->has_section_key("init_projects", "list")) {
@@ -1069,7 +1069,7 @@ void EditorSettings::setup_network() {
 	}
 
 	// Add hints with valid IP addresses to remote_host property.
-	add_property_hint(PropertyInfo(Variant::STRING, "network/debug/remote_host", PROPERTY_HINT_ENUM, hint));
+	add_property_hint(PropertyInfo(Variant::Type::STRING, "network/debug/remote_host", PROPERTY_HINT_ENUM, hint));
 	// Fix potentially invalid remote_host due to network change.
 	set("network/debug/remote_host", selected);
 }
@@ -1354,7 +1354,7 @@ void EditorSettings::list_text_editor_themes() {
 			themes += "," + E->get();
 		}
 	}
-	add_property_hint(PropertyInfo(Variant::STRING, "text_editor/theme/color_theme", PROPERTY_HINT_ENUM, themes));
+	add_property_hint(PropertyInfo(Variant::Type::STRING, "text_editor/theme/color_theme", PROPERTY_HINT_ENUM, themes));
 }
 
 void EditorSettings::load_text_editor_theme() {

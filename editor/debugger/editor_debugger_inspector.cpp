@@ -81,7 +81,7 @@ void EditorDebuggerRemoteObject::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("clear"), &EditorDebuggerRemoteObject::clear);
 	ClassDB::bind_method(D_METHOD("get_remote_object_id"), &EditorDebuggerRemoteObject::get_remote_object_id);
 
-	ADD_SIGNAL(MethodInfo("value_edited", PropertyInfo(Variant::INT, "object_id"), PropertyInfo(Variant::STRING, "property"), PropertyInfo("value")));
+	ADD_SIGNAL(MethodInfo("value_edited", PropertyInfo(Variant::Type::INT, "object_id"), PropertyInfo(Variant::Type::STRING, "property"), PropertyInfo("value")));
 }
 
 EditorDebuggerInspector::EditorDebuggerInspector() {
@@ -95,9 +95,9 @@ EditorDebuggerInspector::~EditorDebuggerInspector() {
 }
 
 void EditorDebuggerInspector::_bind_methods() {
-	ADD_SIGNAL(MethodInfo("object_selected", PropertyInfo(Variant::INT, "id")));
-	ADD_SIGNAL(MethodInfo("object_edited", PropertyInfo(Variant::INT, "id"), PropertyInfo(Variant::STRING, "property"), PropertyInfo("value")));
-	ADD_SIGNAL(MethodInfo("object_property_updated", PropertyInfo(Variant::INT, "id"), PropertyInfo(Variant::STRING, "property")));
+	ADD_SIGNAL(MethodInfo("object_selected", PropertyInfo(Variant::Type::INT, "id")));
+	ADD_SIGNAL(MethodInfo("object_edited", PropertyInfo(Variant::Type::INT, "id"), PropertyInfo(Variant::Type::STRING, "property"), PropertyInfo("value")));
+	ADD_SIGNAL(MethodInfo("object_property_updated", PropertyInfo(Variant::Type::INT, "id"), PropertyInfo(Variant::Type::STRING, "property")));
 }
 
 void EditorDebuggerInspector::_notification(int p_what) {
@@ -147,8 +147,8 @@ ObjectID EditorDebuggerInspector::add_object(const Array &p_arr) {
 		PropertyInfo &pinfo = obj.properties[i].first;
 		Variant &var = obj.properties[i].second;
 
-		if (pinfo.type == Variant::OBJECT) {
-			if (var.get_type() == Variant::STRING) {
+		if (pinfo.type == Variant::Type::OBJECT) {
+			if (var.get_type() == Variant::Type::STRING) {
 				String path = var;
 				if (path.find("::") != -1) {
 					// built-in resource
@@ -227,7 +227,7 @@ void EditorDebuggerInspector::add_stack_variable(const Array &p_array) {
 	PropertyHint h = PROPERTY_HINT_NONE;
 	String hs = String();
 
-	if (v.get_type() == Variant::OBJECT) {
+	if (v.get_type() == Variant::Type::OBJECT) {
 		v = Object::cast_to<EncodedObjectAsID>(v)->get_object_id();
 		h = PROPERTY_HINT_OBJECT_ID;
 		hs = "Object";

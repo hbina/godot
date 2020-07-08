@@ -66,7 +66,7 @@ void ShortCut::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("is_shortcut", "event"), &ShortCut::is_shortcut);
 	ClassDB::bind_method(D_METHOD("get_as_text"), &ShortCut::get_as_text);
 
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "shortcut", PROPERTY_HINT_RESOURCE_TYPE, "InputEvent"), "set_shortcut", "get_shortcut");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "shortcut", PROPERTY_HINT_RESOURCE_TYPE, "InputEvent"), "set_shortcut", "get_shortcut");
 }
 
 ShortCut::ShortCut() {

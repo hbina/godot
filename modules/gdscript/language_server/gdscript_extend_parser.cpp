@@ -115,7 +115,7 @@ void ExtendGDScriptParser::update_document_links(const String &p_code) {
 			break;
 		} else if (token == GDScriptTokenizer::TK_CONSTANT) {
 			const Variant &const_val = tokenizer.get_token_constant();
-			if (const_val.get_type() == Variant::STRING) {
+			if (const_val.get_type() == Variant::Type::STRING) {
 				String path = const_val;
 				bool exists = fs->file_exists(path);
 				if (!exists) {
@@ -171,14 +171,14 @@ void ExtendGDScriptParser::parse_class_symbol(const GDScriptParser::ClassNode *p
 		symbol.range.end.line = line;
 		symbol.range.end.character = lines[line].length();
 		symbol.selectionRange.start.line = symbol.range.start.line;
-		if (m._export.type != Variant::NIL) {
+		if (m._export.type != Variant::Type::NIL) {
 			symbol.detail += "export ";
 		}
 		symbol.detail += "var " + m.identifier;
 		if (m.data_type.kind != GDScriptParser::DataType::UNRESOLVED) {
 			symbol.detail += ": " + m.data_type.to_string();
 		}
-		if (m.default_value.get_type() != Variant::NIL) {
+		if (m.default_value.get_type() != Variant::Type::NIL) {
 			symbol.detail += " = " + JSON::print(m.default_value);
 		}
 
@@ -241,7 +241,7 @@ void ExtendGDScriptParser::parse_class_symbol(const GDScriptParser::ClassNode *p
 		}
 
 		String value_text;
-		if (node->value.get_type() == Variant::OBJECT) {
+		if (node->value.get_type() == Variant::Type::OBJECT) {
 			RES res = node->value;
 			if (res.is_valid() && !res->get_path().empty()) {
 				value_text = "preload(\"" + res->get_path() + "\")";
@@ -708,7 +708,7 @@ Dictionary ExtendGDScriptParser::dump_class_api(const GDScriptParser::ClassNode 
 		api["default_value"] = m.default_value;
 		api["setter"] = String(m.setter);
 		api["getter"] = String(m.getter);
-		api["export"] = m._export.type != Variant::NIL;
+		api["export"] = m._export.type != Variant::Type::NIL;
 		if (const lsp::DocumentSymbol *symbol = get_symbol_defined_at_line(LINE_NUMBER_TO_INDEX(m.line))) {
 			api["signature"] = symbol->detail;
 			api["description"] = symbol->documentation;

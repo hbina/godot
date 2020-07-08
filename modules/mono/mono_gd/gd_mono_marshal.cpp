@@ -40,100 +40,100 @@ namespace GDMonoMarshal {
 Variant::Type managed_to_variant_type(const ManagedType &p_type, bool *r_nil_is_variant) {
 	switch (p_type.type_encoding) {
 		case MONO_TYPE_BOOLEAN:
-			return Variant::BOOL;
+			return Variant::Type::BOOL;
 
 		case MONO_TYPE_I1:
-			return Variant::INT;
+			return Variant::Type::INT;
 		case MONO_TYPE_I2:
-			return Variant::INT;
+			return Variant::Type::INT;
 		case MONO_TYPE_I4:
-			return Variant::INT;
+			return Variant::Type::INT;
 		case MONO_TYPE_I8:
-			return Variant::INT;
+			return Variant::Type::INT;
 
 		case MONO_TYPE_U1:
-			return Variant::INT;
+			return Variant::Type::INT;
 		case MONO_TYPE_U2:
-			return Variant::INT;
+			return Variant::Type::INT;
 		case MONO_TYPE_U4:
-			return Variant::INT;
+			return Variant::Type::INT;
 		case MONO_TYPE_U8:
-			return Variant::INT;
+			return Variant::Type::INT;
 
 		case MONO_TYPE_R4:
-			return Variant::FLOAT;
+			return Variant::Type::FLOAT;
 		case MONO_TYPE_R8:
-			return Variant::FLOAT;
+			return Variant::Type::FLOAT;
 
 		case MONO_TYPE_STRING: {
-			return Variant::STRING;
+			return Variant::Type::STRING;
 		} break;
 
 		case MONO_TYPE_VALUETYPE: {
 			GDMonoClass *vtclass = p_type.type_class;
 
 			if (vtclass == CACHED_CLASS(Vector2)) {
-				return Variant::VECTOR2;
+				return Variant::Type::VECTOR2;
 			}
 
 			if (vtclass == CACHED_CLASS(Vector2i)) {
-				return Variant::VECTOR2I;
+				return Variant::Type::VECTOR2I;
 			}
 
 			if (vtclass == CACHED_CLASS(Rect2)) {
-				return Variant::RECT2;
+				return Variant::Type::RECT2;
 			}
 
 			if (vtclass == CACHED_CLASS(Rect2i)) {
-				return Variant::RECT2I;
+				return Variant::Type::RECT2I;
 			}
 
 			if (vtclass == CACHED_CLASS(Transform2D)) {
-				return Variant::TRANSFORM2D;
+				return Variant::Type::TRANSFORM2D;
 			}
 
 			if (vtclass == CACHED_CLASS(Vector3)) {
-				return Variant::VECTOR3;
+				return Variant::Type::VECTOR3;
 			}
 
 			if (vtclass == CACHED_CLASS(Vector3i)) {
-				return Variant::VECTOR3I;
+				return Variant::Type::VECTOR3I;
 			}
 
 			if (vtclass == CACHED_CLASS(Basis)) {
-				return Variant::BASIS;
+				return Variant::Type::BASIS;
 			}
 
 			if (vtclass == CACHED_CLASS(Quat)) {
-				return Variant::QUAT;
+				return Variant::Type::QUAT;
 			}
 
 			if (vtclass == CACHED_CLASS(Transform)) {
-				return Variant::TRANSFORM;
+				return Variant::Type::TRANSFORM;
 			}
 
 			if (vtclass == CACHED_CLASS(AABB)) {
-				return Variant::AABB;
+				return Variant::Type::AABB;
 			}
 
 			if (vtclass == CACHED_CLASS(Color)) {
-				return Variant::COLOR;
+				return Variant::Type::COLOR;
 			}
 
 			if (vtclass == CACHED_CLASS(Plane)) {
-				return Variant::PLANE;
+				return Variant::Type::PLANE;
 			}
 
 			if (vtclass == CACHED_CLASS(Callable)) {
-				return Variant::CALLABLE;
+				return Variant::Type::CALLABLE;
 			}
 
 			if (vtclass == CACHED_CLASS(SignalInfo)) {
-				return Variant::SIGNAL;
+				return Variant::Type::SIGNAL;
 			}
 
 			if (mono_class_is_enum(vtclass->get_mono_ptr())) {
-				return Variant::INT;
+				return Variant::Type::INT;
 			}
 		} break;
 
@@ -142,48 +142,48 @@ Variant::Type managed_to_variant_type(const ManagedType &p_type, bool *r_nil_is_
 			MonoArrayType *array_type = mono_type_get_array_type(p_type.type_class->get_mono_type());
 
 			if (array_type->eklass == CACHED_CLASS_RAW(MonoObject)) {
-				return Variant::ARRAY;
+				return Variant::Type::ARRAY;
 			}
 
 			if (array_type->eklass == CACHED_CLASS_RAW(uint8_t)) {
-				return Variant::PACKED_BYTE_ARRAY;
+				return Variant::Type::PACKED_BYTE_ARRAY;
 			}
 
 			if (array_type->eklass == CACHED_CLASS_RAW(int32_t)) {
-				return Variant::PACKED_INT32_ARRAY;
+				return Variant::Type::PACKED_INT32_ARRAY;
 			}
 
 			if (array_type->eklass == CACHED_CLASS_RAW(int64_t)) {
-				return Variant::PACKED_INT64_ARRAY;
+				return Variant::Type::PACKED_INT64_ARRAY;
 			}
 
 			if (array_type->eklass == CACHED_CLASS_RAW(float)) {
-				return Variant::PACKED_FLOAT32_ARRAY;
+				return Variant::Type::PACKED_FLOAT32_ARRAY;
 			}
 
 			if (array_type->eklass == CACHED_CLASS_RAW(double)) {
-				return Variant::PACKED_FLOAT64_ARRAY;
+				return Variant::Type::PACKED_FLOAT64_ARRAY;
 			}
 
 			if (array_type->eklass == CACHED_CLASS_RAW(String)) {
-				return Variant::PACKED_STRING_ARRAY;
+				return Variant::Type::PACKED_STRING_ARRAY;
 			}
 
 			if (array_type->eklass == CACHED_CLASS_RAW(Vector2)) {
-				return Variant::PACKED_VECTOR2_ARRAY;
+				return Variant::Type::PACKED_VECTOR2_ARRAY;
 			}
 
 			if (array_type->eklass == CACHED_CLASS_RAW(Vector3)) {
-				return Variant::PACKED_VECTOR3_ARRAY;
+				return Variant::Type::PACKED_VECTOR3_ARRAY;
 			}
 
 			if (array_type->eklass == CACHED_CLASS_RAW(Color)) {
-				return Variant::PACKED_COLOR_ARRAY;
+				return Variant::Type::PACKED_COLOR_ARRAY;
 			}
 
 			GDMonoClass *array_type_class = GDMono::get_singleton()->get_class(array_type->eklass);
 			if (CACHED_CLASS(GodotObject)->is_assignable_from(array_type_class)) {
-				return Variant::ARRAY;
+				return Variant::Type::ARRAY;
 			}
 		} break;
 
@@ -192,38 +192,38 @@ Variant::Type managed_to_variant_type(const ManagedType &p_type, bool *r_nil_is_
 
 			// GodotObject
 			if (CACHED_CLASS(GodotObject)->is_assignable_from(type_class)) {
-				return Variant::OBJECT;
+				return Variant::Type::OBJECT;
 			}
 
 			if (CACHED_CLASS(StringName) == type_class) {
-				return Variant::STRING_NAME;
+				return Variant::Type::STRING_NAME;
 			}
 
 			if (CACHED_CLASS(NodePath) == type_class) {
-				return Variant::NODE_PATH;
+				return Variant::Type::NODE_PATH;
 			}
 
 			if (CACHED_CLASS(RID) == type_class) {
-				return Variant::_RID;
+				return Variant::Type::_RID;
 			}
 
 			if (CACHED_CLASS(Dictionary) == type_class) {
-				return Variant::DICTIONARY;
+				return Variant::Type::DICTIONARY;
 			}
 
 			if (CACHED_CLASS(Array) == type_class) {
-				return Variant::ARRAY;
+				return Variant::Type::ARRAY;
 			}
 
 			// IDictionary
 			if (p_type.type_class == CACHED_CLASS(System_Collections_IDictionary)) {
-				return Variant::DICTIONARY;
+				return Variant::Type::DICTIONARY;
 			}
 
 			// ICollection or IEnumerable
 			if (p_type.type_class == CACHED_CLASS(System_Collections_ICollection) ||
 					p_type.type_class == CACHED_CLASS(System_Collections_IEnumerable)) {
-				return Variant::ARRAY;
+				return Variant::Type::ARRAY;
 			}
 		} break;
 
@@ -231,7 +231,7 @@ Variant::Type managed_to_variant_type(const ManagedType &p_type, bool *r_nil_is_
 			if (r_nil_is_variant) {
 				*r_nil_is_variant = true;
 			}
-			return Variant::NIL;
+			return Variant::Type::NIL;
 		} break;
 
 		case MONO_TYPE_GENERICINST: {
@@ -239,32 +239,32 @@ Variant::Type managed_to_variant_type(const ManagedType &p_type, bool *r_nil_is_
 
 			// Godot.Collections.Dictionary<TKey, TValue>
 			if (GDMonoUtils::Marshal::type_is_generic_dictionary(reftype)) {
-				return Variant::DICTIONARY;
+				return Variant::Type::DICTIONARY;
 			}
 
 			// Godot.Collections.Array<T>
 			if (GDMonoUtils::Marshal::type_is_generic_array(reftype)) {
-				return Variant::ARRAY;
+				return Variant::Type::ARRAY;
 			}
 
 			// System.Collections.Generic.Dictionary<TKey, TValue>
 			if (GDMonoUtils::Marshal::type_is_system_generic_dictionary(reftype)) {
-				return Variant::DICTIONARY;
+				return Variant::Type::DICTIONARY;
 			}
 
 			// System.Collections.Generic.List<T>
 			if (GDMonoUtils::Marshal::type_is_system_generic_list(reftype)) {
-				return Variant::ARRAY;
+				return Variant::Type::ARRAY;
 			}
 
 			// IDictionary<TKey, TValue>
 			if (GDMonoUtils::Marshal::type_is_generic_idictionary(reftype)) {
-				return Variant::DICTIONARY;
+				return Variant::Type::DICTIONARY;
 			}
 
 			// ICollection<T> or IEnumerable<T>
 			if (GDMonoUtils::Marshal::type_is_generic_icollection(reftype) || GDMonoUtils::Marshal::type_is_generic_ienumerable(reftype)) {
-				return Variant::ARRAY;
+				return Variant::Type::ARRAY;
 			}
 		} break;
 
@@ -277,7 +277,7 @@ Variant::Type managed_to_variant_type(const ManagedType &p_type, bool *r_nil_is_
 	}
 
 	// Unknown
-	return Variant::NIL;
+	return Variant::Type::NIL;
 }
 
 bool try_get_array_element_type(const ManagedType &p_array_type, ManagedType &r_elem_type) {
@@ -414,7 +414,7 @@ MonoObject *variant_to_mono_object(const Variant *p_var, const ManagedType &p_ty
 		}
 
 		case MONO_TYPE_STRING: {
-			if (p_var->get_type() == Variant::NIL) {
+			if (p_var->get_type() == Variant::Type::NIL) {
 				return nullptr; // Otherwise, Variant -> String would return the string "Null"
 			}
 			return (MonoObject *)mono_string_from_godot(p_var->operator String());
@@ -636,15 +636,15 @@ MonoObject *variant_to_mono_object(const Variant *p_var, const ManagedType &p_ty
 		case MONO_TYPE_OBJECT: {
 			// Variant
 			switch (p_var->get_type()) {
-				case Variant::BOOL: {
+				case Variant::Type::BOOL: {
 					MonoBoolean val = p_var->operator bool();
 					return BOX_BOOLEAN(val);
 				}
-				case Variant::INT: {
+				case Variant::Type::INT: {
 					int64_t val = p_var->operator int64_t();
 					return BOX_INT64(val);
 				}
-				case Variant::FLOAT: {
+				case Variant::Type::FLOAT: {
 #ifdef REAL_T_IS_DOUBLE
 					double val = p_var->operator double();
 					return BOX_DOUBLE(val);
@@ -653,97 +653,97 @@ MonoObject *variant_to_mono_object(const Variant *p_var, const ManagedType &p_ty
 					return BOX_FLOAT(val);
 #endif
 				}
-				case Variant::STRING:
+				case Variant::Type::STRING:
 					return (MonoObject *)mono_string_from_godot(p_var->operator String());
-				case Variant::VECTOR2: {
+				case Variant::Type::VECTOR2: {
 					GDMonoMarshal::M_Vector2 from = MARSHALLED_OUT(Vector2, p_var->operator ::Vector2());
 					return mono_value_box(mono_domain_get(), CACHED_CLASS_RAW(Vector2), &from);
 				}
-				case Variant::VECTOR2I: {
+				case Variant::Type::VECTOR2I: {
 					GDMonoMarshal::M_Vector2i from = MARSHALLED_OUT(Vector2i, p_var->operator ::Vector2i());
 					return mono_value_box(mono_domain_get(), CACHED_CLASS_RAW(Vector2i), &from);
 				}
-				case Variant::RECT2: {
+				case Variant::Type::RECT2: {
 					GDMonoMarshal::M_Rect2 from = MARSHALLED_OUT(Rect2, p_var->operator ::Rect2());
 					return mono_value_box(mono_domain_get(), CACHED_CLASS_RAW(Rect2), &from);
 				}
-				case Variant::RECT2I: {
+				case Variant::Type::RECT2I: {
 					GDMonoMarshal::M_Rect2i from = MARSHALLED_OUT(Rect2i, p_var->operator ::Rect2i());
 					return mono_value_box(mono_domain_get(), CACHED_CLASS_RAW(Rect2i), &from);
 				}
-				case Variant::VECTOR3: {
+				case Variant::Type::VECTOR3: {
 					GDMonoMarshal::M_Vector3 from = MARSHALLED_OUT(Vector3, p_var->operator ::Vector3());
 					return mono_value_box(mono_domain_get(), CACHED_CLASS_RAW(Vector3), &from);
 				}
-				case Variant::VECTOR3I: {
+				case Variant::Type::VECTOR3I: {
 					GDMonoMarshal::M_Vector3i from = MARSHALLED_OUT(Vector3i, p_var->operator ::Vector3i());
 					return mono_value_box(mono_domain_get(), CACHED_CLASS_RAW(Vector3i), &from);
 				}
-				case Variant::TRANSFORM2D: {
+				case Variant::Type::TRANSFORM2D: {
 					GDMonoMarshal::M_Transform2D from = MARSHALLED_OUT(Transform2D, p_var->operator ::Transform2D());
 					return mono_value_box(mono_domain_get(), CACHED_CLASS_RAW(Transform2D), &from);
 				}
-				case Variant::PLANE: {
+				case Variant::Type::PLANE: {
 					GDMonoMarshal::M_Plane from = MARSHALLED_OUT(Plane, p_var->operator ::Plane());
 					return mono_value_box(mono_domain_get(), CACHED_CLASS_RAW(Plane), &from);
 				}
-				case Variant::QUAT: {
+				case Variant::Type::QUAT: {
 					GDMonoMarshal::M_Quat from = MARSHALLED_OUT(Quat, p_var->operator ::Quat());
 					return mono_value_box(mono_domain_get(), CACHED_CLASS_RAW(Quat), &from);
 				}
-				case Variant::AABB: {
+				case Variant::Type::AABB: {
 					GDMonoMarshal::M_AABB from = MARSHALLED_OUT(AABB, p_var->operator ::AABB());
 					return mono_value_box(mono_domain_get(), CACHED_CLASS_RAW(AABB), &from);
 				}
-				case Variant::BASIS: {
+				case Variant::Type::BASIS: {
 					GDMonoMarshal::M_Basis from = MARSHALLED_OUT(Basis, p_var->operator ::Basis());
 					return mono_value_box(mono_domain_get(), CACHED_CLASS_RAW(Basis), &from);
 				}
-				case Variant::TRANSFORM: {
+				case Variant::Type::TRANSFORM: {
 					GDMonoMarshal::M_Transform from = MARSHALLED_OUT(Transform, p_var->operator ::Transform());
 					return mono_value_box(mono_domain_get(), CACHED_CLASS_RAW(Transform), &from);
 				}
-				case Variant::COLOR: {
+				case Variant::Type::COLOR: {
 					GDMonoMarshal::M_Color from = MARSHALLED_OUT(Color, p_var->operator ::Color());
 					return mono_value_box(mono_domain_get(), CACHED_CLASS_RAW(Color), &from);
 				}
-				case Variant::STRING_NAME:
+				case Variant::Type::STRING_NAME:
 					return GDMonoUtils::create_managed_from(p_var->operator StringName());
-				case Variant::NODE_PATH:
+				case Variant::Type::NODE_PATH:
 					return GDMonoUtils::create_managed_from(p_var->operator NodePath());
-				case Variant::_RID:
+				case Variant::Type::_RID:
 					return GDMonoUtils::create_managed_from(p_var->operator RID());
-				case Variant::OBJECT:
+				case Variant::Type::OBJECT:
 					return GDMonoUtils::unmanaged_get_managed(p_var->operator Object *());
-				case Variant::CALLABLE: {
+				case Variant::Type::CALLABLE: {
 					GDMonoMarshal::M_Callable from = GDMonoMarshal::callable_to_managed(p_var->operator Callable());
 					return mono_value_box(mono_domain_get(), CACHED_CLASS_RAW(Callable), &from);
 				}
-				case Variant::SIGNAL: {
+				case Variant::Type::SIGNAL: {
 					GDMonoMarshal::M_SignalInfo from = GDMonoMarshal::signal_info_to_managed(p_var->operator Signal());
 					return mono_value_box(mono_domain_get(), CACHED_CLASS_RAW(SignalInfo), &from);
 				}
-				case Variant::DICTIONARY:
+				case Variant::Type::DICTIONARY:
 					return GDMonoUtils::create_managed_from(p_var->operator Dictionary(), CACHED_CLASS(Dictionary));
-				case Variant::ARRAY:
+				case Variant::Type::ARRAY:
 					return GDMonoUtils::create_managed_from(p_var->operator Array(), CACHED_CLASS(Array));
-				case Variant::PACKED_BYTE_ARRAY:
+				case Variant::Type::PACKED_BYTE_ARRAY:
 					return (MonoObject *)PackedByteArray_to_mono_array(p_var->operator PackedByteArray());
-				case Variant::PACKED_INT32_ARRAY:
+				case Variant::Type::PACKED_INT32_ARRAY:
 					return (MonoObject *)PackedInt32Array_to_mono_array(p_var->operator PackedInt32Array());
-				case Variant::PACKED_INT64_ARRAY:
+				case Variant::Type::PACKED_INT64_ARRAY:
 					return (MonoObject *)PackedInt64Array_to_mono_array(p_var->operator PackedInt64Array());
-				case Variant::PACKED_FLOAT32_ARRAY:
+				case Variant::Type::PACKED_FLOAT32_ARRAY:
 					return (MonoObject *)PackedFloat32Array_to_mono_array(p_var->operator PackedFloat32Array());
-				case Variant::PACKED_FLOAT64_ARRAY:
+				case Variant::Type::PACKED_FLOAT64_ARRAY:
 					return (MonoObject *)PackedFloat64Array_to_mono_array(p_var->operator PackedFloat64Array());
-				case Variant::PACKED_STRING_ARRAY:
+				case Variant::Type::PACKED_STRING_ARRAY:
 					return (MonoObject *)PackedStringArray_to_mono_array(p_var->operator PackedStringArray());
-				case Variant::PACKED_VECTOR2_ARRAY:
+				case Variant::Type::PACKED_VECTOR2_ARRAY:
 					return (MonoObject *)PackedVector2Array_to_mono_array(p_var->operator PackedVector2Array());
-				case Variant::PACKED_VECTOR3_ARRAY:
+				case Variant::Type::PACKED_VECTOR3_ARRAY:
 					return (MonoObject *)PackedVector3Array_to_mono_array(p_var->operator PackedVector3Array());
-				case Variant::PACKED_COLOR_ARRAY:
+				case Variant::Type::PACKED_COLOR_ARRAY:
 					return (MonoObject *)PackedColorArray_to_mono_array(p_var->operator PackedColorArray());
 				default:
 					return nullptr;
@@ -1090,7 +1090,7 @@ String mono_object_to_variant_string(MonoObject *p_obj, MonoException **r_exc) {
 	ManagedType type = ManagedType::from_class(mono_object_get_class(p_obj));
 	Variant var = GDMonoMarshal::mono_object_to_variant_no_err(p_obj, type);
 
-	if (var.get_type() == Variant::NIL && p_obj != nullptr) {
+	if (var.get_type() == Variant::Type::NIL && p_obj != nullptr) {
 		// Cannot convert MonoObject* to Variant; fallback to 'ToString()'.
 		MonoException *exc = nullptr;
 		MonoString *mono_str = GDMonoUtils::object_to_string(p_obj, &exc);

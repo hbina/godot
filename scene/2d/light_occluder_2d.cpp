@@ -134,9 +134,9 @@ void OccluderPolygon2D::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_polygon", "polygon"), &OccluderPolygon2D::set_polygon);
 	ClassDB::bind_method(D_METHOD("get_polygon"), &OccluderPolygon2D::get_polygon);
 
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "closed"), "set_closed", "is_closed");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "cull_mode", PROPERTY_HINT_ENUM, "Disabled,ClockWise,CounterClockWise"), "set_cull_mode", "get_cull_mode");
-	ADD_PROPERTY(PropertyInfo(Variant::PACKED_VECTOR2_ARRAY, "polygon"), "set_polygon", "get_polygon");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "closed"), "set_closed", "is_closed");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "cull_mode", PROPERTY_HINT_ENUM, "Disabled,ClockWise,CounterClockWise"), "set_cull_mode", "get_cull_mode");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::PACKED_VECTOR2_ARRAY, "polygon"), "set_polygon", "get_polygon");
 
 	BIND_ENUM_CONSTANT(CULL_DISABLED);
 	BIND_ENUM_CONSTANT(CULL_CLOCKWISE);
@@ -264,8 +264,8 @@ void LightOccluder2D::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_occluder_light_mask", "mask"), &LightOccluder2D::set_occluder_light_mask);
 	ClassDB::bind_method(D_METHOD("get_occluder_light_mask"), &LightOccluder2D::get_occluder_light_mask);
 
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "occluder", PROPERTY_HINT_RESOURCE_TYPE, "OccluderPolygon2D"), "set_occluder_polygon", "get_occluder_polygon");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "light_mask", PROPERTY_HINT_LAYERS_2D_RENDER), "set_occluder_light_mask", "get_occluder_light_mask");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "occluder", PROPERTY_HINT_RESOURCE_TYPE, "OccluderPolygon2D"), "set_occluder_polygon", "get_occluder_polygon");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::INT, "light_mask", PROPERTY_HINT_LAYERS_2D_RENDER), "set_occluder_light_mask", "get_occluder_light_mask");
 }
 
 LightOccluder2D::LightOccluder2D() {

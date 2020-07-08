@@ -82,7 +82,7 @@ static String _parser_expr(const GDScriptParser::Node *p_expr) {
 		} break;
 		case GDScriptParser::Node::TYPE_CONSTANT: {
 			const GDScriptParser::ConstantNode *c_node = static_cast<const GDScriptParser::ConstantNode *>(p_expr);
-			if (c_node->value.get_type() == Variant::STRING) {
+			if (c_node->value.get_type() == Variant::Type::STRING) {
 				txt = "\"" + String(c_node->value) + "\"";
 			} else {
 				txt = c_node->value;
@@ -479,7 +479,7 @@ static String _disassemble_addr(const Ref<GDScript> &p_script, const GDScriptFun
 		case GDScriptFunction::ADDR_TYPE_LOCAL_CONSTANT: {
 			Variant v = func.get_constant(addr);
 			String txt;
-			if (v.get_type() == Variant::STRING || v.get_type() == Variant::NODE_PATH) {
+			if (v.get_type() == Variant::Type::STRING || v.get_type() == Variant::Type::NODE_PATH) {
 				txt = "\"" + String(v) + "\"";
 			} else {
 				txt = v;
@@ -928,7 +928,7 @@ MainLoop *test(TestType p_type) {
 				text = "'" + tk.get_token_identifier() + "' (identifier)";
 			} else if (tk.get_token() == GDScriptTokenizer::TK_CONSTANT) {
 				const Variant &c = tk.get_token_constant();
-				if (c.get_type() == Variant::STRING) {
+				if (c.get_type() == Variant::Type::STRING) {
 					text = "\"" + String(c) + "\"";
 				} else {
 					text = c;

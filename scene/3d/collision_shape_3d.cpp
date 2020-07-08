@@ -142,8 +142,8 @@ void CollisionShape3D::_bind_methods() {
 
 	ClassDB::bind_method(D_METHOD("_update_debug_shape"), &CollisionShape3D::_update_debug_shape);
 
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "shape", PROPERTY_HINT_RESOURCE_TYPE, "Shape3D"), "set_shape", "get_shape");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "disabled"), "set_disabled", "is_disabled");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "shape", PROPERTY_HINT_RESOURCE_TYPE, "Shape3D"), "set_shape", "get_shape");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::BOOL, "disabled"), "set_disabled", "is_disabled");
 }
 
 void CollisionShape3D::set_shape(const Ref<Shape3D> &p_shape) {

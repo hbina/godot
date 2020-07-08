@@ -74,26 +74,26 @@ Error EditorExportPlatformWindows::export_project(const Ref<EditorExportPreset> 
 void EditorExportPlatformWindows::get_export_options(List<ExportOption> *r_options) {
 	EditorExportPlatformPC::get_export_options(r_options);
 
-	r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "codesign/enable"), false));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::BOOL, "codesign/enable"), false));
 #ifdef WINDOWS_ENABLED
-	r_options->push_back(ExportOption(PropertyInfo(Variant::INT, "codesign/identity_type", PROPERTY_HINT_ENUM, "Select automatically,Use PKCS12 file (specify *.PFX/*.P12 file),Use certificate store (specify SHA1 hash)"), 0));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::INT, "codesign/identity_type", PROPERTY_HINT_ENUM, "Select automatically,Use PKCS12 file (specify *.PFX/*.P12 file),Use certificate store (specify SHA1 hash)"), 0));
 #endif
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "codesign/identity", PROPERTY_HINT_GLOBAL_FILE, "*.pfx,*.p12"), ""));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "codesign/password"), ""));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "codesign/timestamp"), true));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "codesign/timestamp_server_url"), ""));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::INT, "codesign/digest_algorithm", PROPERTY_HINT_ENUM, "SHA1,SHA256"), 1));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "codesign/description"), ""));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::PACKED_STRING_ARRAY, "codesign/custom_options"), PackedStringArray()));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "codesign/identity", PROPERTY_HINT_GLOBAL_FILE, "*.pfx,*.p12"), ""));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "codesign/password"), ""));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::BOOL, "codesign/timestamp"), true));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "codesign/timestamp_server_url"), ""));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::INT, "codesign/digest_algorithm", PROPERTY_HINT_ENUM, "SHA1,SHA256"), 1));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "codesign/description"), ""));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::PACKED_STRING_ARRAY, "codesign/custom_options"), PackedStringArray()));
 
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "application/icon", PROPERTY_HINT_FILE, "*.ico"), ""));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "application/file_version", PROPERTY_HINT_PLACEHOLDER_TEXT, "1.0.0"), ""));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "application/product_version", PROPERTY_HINT_PLACEHOLDER_TEXT, "1.0.0"), ""));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "application/company_name", PROPERTY_HINT_PLACEHOLDER_TEXT, "Company Name"), ""));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "application/product_name", PROPERTY_HINT_PLACEHOLDER_TEXT, "Game Name"), ""));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "application/file_description"), ""));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "application/copyright"), ""));
-	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "application/trademarks"), ""));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "application/icon", PROPERTY_HINT_FILE, "*.ico"), ""));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "application/file_version", PROPERTY_HINT_PLACEHOLDER_TEXT, "1.0.0"), ""));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "application/product_version", PROPERTY_HINT_PLACEHOLDER_TEXT, "1.0.0"), ""));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "application/company_name", PROPERTY_HINT_PLACEHOLDER_TEXT, "Company Name"), ""));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "application/product_name", PROPERTY_HINT_PLACEHOLDER_TEXT, "Game Name"), ""));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "application/file_description"), ""));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "application/copyright"), ""));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::Type::STRING, "application/trademarks"), ""));
 }
 
 void EditorExportPlatformWindows::_rcedit_add_data(const Ref<EditorExportPreset> &p_preset, const String &p_path) {
@@ -331,16 +331,16 @@ Error EditorExportPlatformWindows::_code_sign(const Ref<EditorExportPreset> &p_p
 
 void register_windows_exporter() {
 	EDITOR_DEF("export/windows/rcedit", "");
-	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(Variant::STRING, "export/windows/rcedit", PROPERTY_HINT_GLOBAL_FILE, "*.exe"));
+	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(Variant::Type::STRING, "export/windows/rcedit", PROPERTY_HINT_GLOBAL_FILE, "*.exe"));
 #ifdef WINDOWS_ENABLED
 	EDITOR_DEF("export/windows/signtool", "");
-	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(Variant::STRING, "export/windows/signtool", PROPERTY_HINT_GLOBAL_FILE, "*.exe"));
+	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(Variant::Type::STRING, "export/windows/signtool", PROPERTY_HINT_GLOBAL_FILE, "*.exe"));
 #else
 	EDITOR_DEF("export/windows/osslsigncode", "");
-	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(Variant::STRING, "export/windows/osslsigncode", PROPERTY_HINT_GLOBAL_FILE));
+	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(Variant::Type::STRING, "export/windows/osslsigncode", PROPERTY_HINT_GLOBAL_FILE));
 	// On non-Windows we need WINE to run rcedit
 	EDITOR_DEF("export/windows/wine", "");
-	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(Variant::STRING, "export/windows/wine", PROPERTY_HINT_GLOBAL_FILE));
+	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(Variant::Type::STRING, "export/windows/wine", PROPERTY_HINT_GLOBAL_FILE));
 #endif
 
 	Ref<EditorExportPlatformWindows> platform;

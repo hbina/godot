@@ -218,7 +218,7 @@ void Theme::_get_property_list(List<PropertyInfo> *p_list) const {
 		const StringName *key2 = nullptr;
 
 		while ((key2 = icon_map[*key].next(key2))) {
-			list.push_back(PropertyInfo(Variant::OBJECT, String() + *key + "/icons/" + *key2, PROPERTY_HINT_RESOURCE_TYPE, "Texture2D", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_STORE_IF_NULL));
+			list.push_back(PropertyInfo(Variant::Type::OBJECT, String() + *key + "/icons/" + *key2, PROPERTY_HINT_RESOURCE_TYPE, "Texture2D", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_STORE_IF_NULL));
 		}
 	}
 
@@ -228,7 +228,7 @@ void Theme::_get_property_list(List<PropertyInfo> *p_list) const {
 		const StringName *key2 = nullptr;
 
 		while ((key2 = style_map[*key].next(key2))) {
-			list.push_back(PropertyInfo(Variant::OBJECT, String() + *key + "/styles/" + *key2, PROPERTY_HINT_RESOURCE_TYPE, "StyleBox", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_STORE_IF_NULL));
+			list.push_back(PropertyInfo(Variant::Type::OBJECT, String() + *key + "/styles/" + *key2, PROPERTY_HINT_RESOURCE_TYPE, "StyleBox", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_STORE_IF_NULL));
 		}
 	}
 
@@ -238,7 +238,7 @@ void Theme::_get_property_list(List<PropertyInfo> *p_list) const {
 		const StringName *key2 = nullptr;
 
 		while ((key2 = font_map[*key].next(key2))) {
-			list.push_back(PropertyInfo(Variant::OBJECT, String() + *key + "/fonts/" + *key2, PROPERTY_HINT_RESOURCE_TYPE, "Font", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_STORE_IF_NULL));
+			list.push_back(PropertyInfo(Variant::Type::OBJECT, String() + *key + "/fonts/" + *key2, PROPERTY_HINT_RESOURCE_TYPE, "Font", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_STORE_IF_NULL));
 		}
 	}
 
@@ -248,7 +248,7 @@ void Theme::_get_property_list(List<PropertyInfo> *p_list) const {
 		const StringName *key2 = nullptr;
 
 		while ((key2 = color_map[*key].next(key2))) {
-			list.push_back(PropertyInfo(Variant::COLOR, String() + *key + "/colors/" + *key2));
+			list.push_back(PropertyInfo(Variant::Type::COLOR, String() + *key + "/colors/" + *key2));
 		}
 	}
 
@@ -258,7 +258,7 @@ void Theme::_get_property_list(List<PropertyInfo> *p_list) const {
 		const StringName *key2 = nullptr;
 
 		while ((key2 = constant_map[*key].next(key2))) {
-			list.push_back(PropertyInfo(Variant::INT, String() + *key + "/constants/" + *key2));
+			list.push_back(PropertyInfo(Variant::Type::INT, String() + *key + "/constants/" + *key2));
 		}
 	}
 
@@ -841,7 +841,7 @@ void Theme::_bind_methods() {
 	ClassDB::bind_method("copy_default_theme", &Theme::copy_default_theme);
 	ClassDB::bind_method(D_METHOD("copy_theme", "other"), &Theme::copy_theme);
 
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "default_font", PROPERTY_HINT_RESOURCE_TYPE, "Font"), "set_default_font", "get_default_font");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::OBJECT, "default_font", PROPERTY_HINT_RESOURCE_TYPE, "Font"), "set_default_font", "get_default_font");
 }
 
 Theme::Theme() {

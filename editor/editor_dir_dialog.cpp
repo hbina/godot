@@ -168,7 +168,7 @@ void EditorDirDialog::_make_dir_confirm() {
 }
 
 void EditorDirDialog::_bind_methods() {
-	ADD_SIGNAL(MethodInfo("dir_selected", PropertyInfo(Variant::STRING, "dir")));
+	ADD_SIGNAL(MethodInfo("dir_selected", PropertyInfo(Variant::Type::STRING, "dir")));
 }
 
 EditorDirDialog::EditorDirDialog() {

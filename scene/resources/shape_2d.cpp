@@ -102,7 +102,7 @@ void Shape2D::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("collide_with_motion_and_get_contacts", "local_xform", "local_motion", "with_shape", "shape_xform", "shape_motion"), &Shape2D::collide_with_motion_and_get_contacts);
 	ClassDB::bind_method(D_METHOD("draw", "canvas_item", "color"), &Shape2D::draw);
 
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "custom_solver_bias", PROPERTY_HINT_RANGE, "0,1,0.001"), "set_custom_solver_bias", "get_custom_solver_bias");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "custom_solver_bias", PROPERTY_HINT_RANGE, "0,1,0.001"), "set_custom_solver_bias", "get_custom_solver_bias");
 }
 
 Shape2D::Shape2D(const RID &p_rid) {

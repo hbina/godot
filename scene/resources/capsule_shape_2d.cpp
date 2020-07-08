@@ -105,8 +105,8 @@ void CapsuleShape2D::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_height", "height"), &CapsuleShape2D::set_height);
 	ClassDB::bind_method(D_METHOD("get_height"), &CapsuleShape2D::get_height);
 
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "radius"), "set_radius", "get_radius");
-	ADD_PROPERTY(PropertyInfo(Variant::FLOAT, "height"), "set_height", "get_height");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "radius"), "set_radius", "get_radius");
+	ADD_PROPERTY(PropertyInfo(Variant::Type::FLOAT, "height"), "set_height", "get_height");
 }
 
 CapsuleShape2D::CapsuleShape2D() :
