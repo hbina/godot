@@ -1443,7 +1443,7 @@ Variant::Type VisualScriptConstant::get_constant_type() const {
 }
 
 void VisualScriptConstant::set_constant_value(Variant p_value) {
-	if (value == p_value) {
+	if (Variant::equal(value, p_value)) {
 		return;
 	}
 

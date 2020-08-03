@@ -445,9 +445,9 @@ public:
 
 	//argsVariant call()
 
-	bool operator==(const Variant &p_variant) const;
-	bool operator!=(const Variant &p_variant) const;
-	bool operator<(const Variant &p_variant) const;
+	static bool equal(const Variant &p_lhs, const Variant &p_rhs);
+	static bool not_equal(const Variant &p_lhs, const Variant &p_rhs);
+	static bool less_than(const Variant &p_lhs, const Variant &p_rhs);
 	uint32_t hash() const;
 
 	bool hash_compare(const Variant &p_variant) const;

@@ -1247,7 +1247,7 @@ void DisplayServerWindows::cursor_set_custom_image(const RES &p_cursor, CursorSh
 		Map<CursorShape, Vector<Variant>>::Element *cursor_c = cursors_cache.find(p_shape);
 
 		if (cursor_c) {
-			if (cursor_c->get()[0] == p_cursor && cursor_c->get()[1] == p_hotspot) {
+			if (Variant::equal(cursor_c->get()[0], p_cursor) && Variant::equal(cursor_c->get()[1], p_hotspot)) {
 				cursor_set_shape(p_shape);
 				return;
 			}

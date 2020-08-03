@@ -609,7 +609,7 @@ public:
 		}
 
 		for (int i = 0; i < case_count; i++) {
-			if (*p_inputs[i] == *p_inputs[case_count]) {
+			if (Variant::equal(*p_inputs[i], *p_inputs[case_count])) {
 				return i | STEP_FLAG_PUSH_STACK_BIT;
 			}
 		}

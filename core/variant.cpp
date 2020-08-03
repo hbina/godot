@@ -784,33 +784,33 @@ bool Variant::can_convert_strict(Variant::Type p_type_from, Variant::Type p_type
 	return false;
 }
 
-bool Variant::operator==(const Variant &p_variant) const {
-	if (type != p_variant.type) { //evaluation of operator== needs to be more strict
+static bool Variant::equal(const Variant &p_lhs, const Variant &p_rhs) {
+	if (p_lhs.type != p_rhs.type) { //evaluation of operator== needs to be more strict
 		return false;
 	}
 	bool v;
 	Variant r;
-	evaluate(OP_EQUAL, *this, p_variant, r, v);
+	evaluate(OP_EQUAL, p_lhs, p_rhs, r, v);
 	return r;
 }
 
-bool Variant::operator!=(const Variant &p_variant) const {
-	if (type != p_variant.type) { //evaluation of operator== needs to be more strict
+static bool Variant::not_equal(const Variant &p_lhs, const Variant &p_rhs) {
+	if (p_lhs.type != p_rhs.type) { //evaluation of operator== needs to be more strict
 		return true;
 	}
 	bool v;
 	Variant r;
-	evaluate(OP_NOT_EQUAL, *this, p_variant, r, v);
+	evaluate(OP_NOT_EQUAL, p_lhs, p_rhs, r, v);
 	return r;
 }
 
-bool Variant::operator<(const Variant &p_variant) const {
-	if (type != p_variant.type) { //if types differ, then order by type first
-		return type < p_variant.type;
+static bool Variant::less_than(const Variant &p_lhs, const Variant &p_rhs) {
+	if (p_lhs.type != p_rhs.type) { //if types differ, then order by type first
+		return type < p_rhs.type;
 	}
 	bool v;
 	Variant r;
-	evaluate(OP_LESS, *this, p_variant, r, v);
+	evaluate(OP_LESS, p_lhs, p_rhs, r, v);
 	return r;
 }
 
