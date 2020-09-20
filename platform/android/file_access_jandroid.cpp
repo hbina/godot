@@ -192,6 +192,6 @@ FileAccessJAndroid::FileAccessJAndroid() {
 }
 
 FileAccessJAndroid::~FileAccessJAndroid() {
-	if (is_open())
-		close();
+	if (this->is_open())
+		this->close();
 }

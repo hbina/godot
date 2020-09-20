@@ -111,7 +111,7 @@ PackedStringArray MIDIDriverCoreMidi::get_connected_inputs() {
 MIDIDriverCoreMidi::MIDIDriverCoreMidi() {}
 
 MIDIDriverCoreMidi::~MIDIDriverCoreMidi() {
-	close();
+	this->close();
 }
 
 #endif // COREMIDI_ENABLED

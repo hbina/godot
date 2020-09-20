@@ -72,5 +72,5 @@ DTLSServerMbedTLS::DTLSServerMbedTLS() {
 }
 
 DTLSServerMbedTLS::~DTLSServerMbedTLS() {
-	stop();
+	this->stop();
 }

@@ -313,6 +313,6 @@ Error FileAccessEncrypted::_set_unix_permissions(const String &p_file, uint32_t 
 
 FileAccessEncrypted::~FileAccessEncrypted() {
 	if (file) {
-		close();
+		this->close();
 	}
 }

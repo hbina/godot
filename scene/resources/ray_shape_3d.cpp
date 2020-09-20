@@ -91,7 +91,7 @@ RayShape3D::RayShape3D() :
 	slips_on_slope = false;
 
 	/* Code copied from setters to prevent the use of uninitialized variables */
-	_update_shape();
+	this->_update_shape();
 	notify_change_to_owners();
 	_change_notify("length");
 	_change_notify("slips_on_slope");

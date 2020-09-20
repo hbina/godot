@@ -1805,7 +1805,7 @@ Object::~Object() {
 
 	if (_emitting) {
 		//@todo this may need to actually reach the debugger prioritarily somehow because it may crash before
-		ERR_PRINT("Object " + to_string() + " was freed or unreferenced while a signal is being emitted from it. Try connecting to the signal using 'CONNECT_DEFERRED' flag, or use queue_free() to free the object (if this object is a Node) to avoid this error and potential crashes.");
+		ERR_PRINT("Object " + this->to_string() + " was freed or unreferenced while a signal is being emitted from it. Try connecting to the signal using 'CONNECT_DEFERRED' flag, or use queue_free() to free the object (if this object is a Node) to avoid this error and potential crashes.");
 	}
 
 	while ((S = signal_map.next(nullptr))) {

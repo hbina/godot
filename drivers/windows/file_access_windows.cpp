@@ -340,7 +340,7 @@ Error FileAccessWindows::_set_unix_permissions(const String &p_file, uint32_t p_
 }
 
 FileAccessWindows::~FileAccessWindows() {
-	close();
+	this->close();
 }
 
 #endif // WINDOWS_ENABLED

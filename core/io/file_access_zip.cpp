@@ -341,11 +341,11 @@ bool FileAccessZip::file_exists(const String &p_name) {
 }
 
 FileAccessZip::FileAccessZip(const String &p_path, const PackedData::PackedFile &p_file) {
-	_open(p_path, FileAccess::READ);
+	this->_open(p_path, FileAccess::READ);
 }
 
 FileAccessZip::~FileAccessZip() {
-	close();
+	this->close();
 }
 
 #endif // MINIZIP_ENABLED

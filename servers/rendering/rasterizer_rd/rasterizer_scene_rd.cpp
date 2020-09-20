@@ -8307,8 +8307,8 @@ RasterizerSceneRD::RasterizerSceneRD(RasterizerStorageRD *p_storage) {
 		shadow_sampler = RD::get_singleton()->sampler_create(sampler);
 	}
 
-	camera_effects_set_dof_blur_bokeh_shape(RS::DOFBokehShape(int(GLOBAL_GET("rendering/quality/depth_of_field/depth_of_field_bokeh_shape"))));
-	camera_effects_set_dof_blur_quality(RS::DOFBlurQuality(int(GLOBAL_GET("rendering/quality/depth_of_field/depth_of_field_bokeh_quality"))), GLOBAL_GET("rendering/quality/depth_of_field/depth_of_field_use_jitter"));
+	this->camera_effects_set_dof_blur_bokeh_shape(RS::DOFBokehShape(int(GLOBAL_GET("rendering/quality/depth_of_field/depth_of_field_bokeh_shape"))));
+	this->camera_effects_set_dof_blur_quality(RS::DOFBlurQuality(int(GLOBAL_GET("rendering/quality/depth_of_field/depth_of_field_bokeh_quality"))), GLOBAL_GET("rendering/quality/depth_of_field/depth_of_field_use_jitter"));
 	environment_set_ssao_quality(RS::EnvironmentSSAOQuality(int(GLOBAL_GET("rendering/quality/ssao/quality"))), GLOBAL_GET("rendering/quality/ssao/half_size"));
 	screen_space_roughness_limiter = GLOBAL_GET("rendering/quality/screen_filters/screen_space_roughness_limiter_enabled");
 	screen_space_roughness_limiter_amount = GLOBAL_GET("rendering/quality/screen_filters/screen_space_roughness_limiter_amount");
@@ -8323,13 +8323,13 @@ RasterizerSceneRD::RasterizerSceneRD(RasterizerStorageRD *p_storage) {
 	directional_soft_shadow_kernel = memnew_arr(float, 128);
 	penumbra_shadow_kernel = memnew_arr(float, 128);
 	soft_shadow_kernel = memnew_arr(float, 128);
-	shadows_quality_set(RS::ShadowQuality(int(GLOBAL_GET("rendering/quality/shadows/soft_shadow_quality"))));
-	directional_shadow_quality_set(RS::ShadowQuality(int(GLOBAL_GET("rendering/quality/directional_shadow/soft_shadow_quality"))));
+	this->shadows_quality_set(RS::ShadowQuality(int(GLOBAL_GET("rendering/quality/shadows/soft_shadow_quality"))));
+	this->directional_shadow_quality_set(RS::ShadowQuality(int(GLOBAL_GET("rendering/quality/directional_shadow/soft_shadow_quality"))));
 
-	environment_set_volumetric_fog_volume_size(GLOBAL_GET("rendering/volumetric_fog/volume_size"), GLOBAL_GET("rendering/volumetric_fog/volume_depth"));
-	environment_set_volumetric_fog_filter_active(GLOBAL_GET("rendering/volumetric_fog/use_filter"));
-	environment_set_volumetric_fog_directional_shadow_shrink_size(GLOBAL_GET("rendering/volumetric_fog/directional_shadow_shrink"));
-	environment_set_volumetric_fog_positional_shadow_shrink_size(GLOBAL_GET("rendering/volumetric_fog/positional_shadow_shrink"));
+	this->environment_set_volumetric_fog_volume_size(GLOBAL_GET("rendering/volumetric_fog/volume_size"), GLOBAL_GET("rendering/volumetric_fog/volume_depth"));
+	this->environment_set_volumetric_fog_filter_active(GLOBAL_GET("rendering/volumetric_fog/use_filter"));
+	this->environment_set_volumetric_fog_directional_shadow_shrink_size(GLOBAL_GET("rendering/volumetric_fog/directional_shadow_shrink"));
+	this->environment_set_volumetric_fog_positional_shadow_shrink_size(GLOBAL_GET("rendering/volumetric_fog/positional_shadow_shrink"));
 }
 
 RasterizerSceneRD::~RasterizerSceneRD() {
@@ -8390,5 +8390,5 @@ RasterizerSceneRD::~RasterizerSceneRD() {
 
 	RD::get_singleton()->free(shadow_sampler);
 
-	directional_shadow_atlas_set_size(0);
+	this->directional_shadow_atlas_set_size(0);
 }

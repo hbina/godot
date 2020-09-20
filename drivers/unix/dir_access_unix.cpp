@@ -413,11 +413,11 @@ DirAccessUnix::DirAccessUnix() {
 		current_dir = real_current_dir_name;
 	}
 
-	change_dir(current_dir);
+	this->change_dir(current_dir);
 }
 
 DirAccessUnix::~DirAccessUnix() {
-	list_dir_end();
+	this->list_dir_end();
 }
 
 #endif //posix_enabled

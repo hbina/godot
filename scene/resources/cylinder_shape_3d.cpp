@@ -107,5 +107,5 @@ CylinderShape3D::CylinderShape3D() :
 		Shape3D(PhysicsServer3D::get_singleton()->shape_create(PhysicsServer3D::SHAPE_CYLINDER)) {
 	radius = 1.0;
 	height = 2.0;
-	_update_shape();
+	this->_update_shape();
 }

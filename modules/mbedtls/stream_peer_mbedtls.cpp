@@ -278,7 +278,7 @@ StreamPeerMbedTLS::StreamPeerMbedTLS() {
 }
 
 StreamPeerMbedTLS::~StreamPeerMbedTLS() {
-	disconnect_from_stream();
+	this->disconnect_from_stream();
 }
 
 void StreamPeerMbedTLS::disconnect_from_stream() {

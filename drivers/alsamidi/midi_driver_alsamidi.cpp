@@ -204,7 +204,7 @@ MIDIDriverALSAMidi::MIDIDriverALSAMidi() {
 }
 
 MIDIDriverALSAMidi::~MIDIDriverALSAMidi() {
-	close();
+	this->close();
 }
 
 #endif // ALSAMIDI_ENABLED

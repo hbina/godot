@@ -173,7 +173,7 @@ NetSocketPosix::NetSocketPosix() :
 }
 
 NetSocketPosix::~NetSocketPosix() {
-	close();
+	this->close();
 }
 
 // Silent a warning reported in #27594

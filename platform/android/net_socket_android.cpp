@@ -72,7 +72,7 @@ void NetSocketAndroid::make_default() {
 }
 
 NetSocketAndroid::~NetSocketAndroid() {
-	close();
+	this->close();
 }
 
 void NetSocketAndroid::close() {

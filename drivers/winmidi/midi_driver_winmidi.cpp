@@ -96,7 +96,7 @@ MIDIDriverWinMidi::MIDIDriverWinMidi() {
 }
 
 MIDIDriverWinMidi::~MIDIDriverWinMidi() {
-	close();
+	this->close();
 }
 
 #endif // WINMIDI_ENABLED

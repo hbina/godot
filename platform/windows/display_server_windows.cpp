@@ -3149,19 +3149,19 @@ DisplayServerWindows::DisplayServerWindows(const String &p_rendering_driver, Win
 	}
 #endif
 	Point2i window_position(
-			(screen_get_size(0).width - p_resolution.width) / 2,
-			(screen_get_size(0).height - p_resolution.height) / 2);
+			(this->screen_get_size(0).width - p_resolution.width) / 2,
+			(this->screen_get_size(0).height - p_resolution.height) / 2);
 
-	WindowID main_window = _create_window(p_mode, 0, Rect2i(window_position, p_resolution));
+	WindowID main_window = this->_create_window(p_mode, 0, Rect2i(window_position, p_resolution));
 	ERR_FAIL_COND_MSG(main_window == INVALID_WINDOW_ID, "Failed to create main window.");
 
 	for (int i = 0; i < WINDOW_FLAG_MAX; i++) {
 		if (p_flags & (1 << i)) {
-			window_set_flag(WindowFlags(i), true, main_window);
+			this->window_set_flag(WindowFlags(i), true, main_window);
 		}
 	}
 
-	show_window(MAIN_WINDOW_ID);
+	this->show_window(MAIN_WINDOW_ID);
 
 #if defined(VULKAN_ENABLED)
 

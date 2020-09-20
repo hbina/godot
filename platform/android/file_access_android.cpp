@@ -164,5 +164,5 @@ FileAccessAndroid::FileAccessAndroid() {
 }
 
 FileAccessAndroid::~FileAccessAndroid() {
-	close();
+	this->close();
 }

@@ -371,7 +371,7 @@ DirAccessWindows::DirAccessWindows() {
 
 #ifdef UWP_ENABLED
 	Windows::Storage::StorageFolder ^ install_folder = Windows::ApplicationModel::Package::Current->InstalledLocation;
-	change_dir(install_folder->Path->Data());
+	this->change_dir(install_folder->Path->Data());
 
 #else
 

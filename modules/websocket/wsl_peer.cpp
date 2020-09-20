@@ -336,7 +336,7 @@ WSLPeer::WSLPeer() {
 }
 
 WSLPeer::~WSLPeer() {
-	close();
+	this->close();
 	invalidate();
 	_wsl_destroy(&_data);
 	_data = nullptr;

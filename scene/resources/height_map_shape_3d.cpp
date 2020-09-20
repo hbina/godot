@@ -204,5 +204,5 @@ HeightMapShape3D::HeightMapShape3D() :
 	min_height = 0.0;
 	max_height = 0.0;
 
-	_update_shape();
+	this->_update_shape();
 }

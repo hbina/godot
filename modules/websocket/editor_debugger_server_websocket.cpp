@@ -84,7 +84,7 @@ EditorDebuggerServerWebSocket::EditorDebuggerServerWebSocket() {
 }
 
 EditorDebuggerServerWebSocket::~EditorDebuggerServerWebSocket() {
-	stop();
+	this->stop();
 }
 
 EditorDebuggerServer *EditorDebuggerServerWebSocket::create(const String &p_protocol) {

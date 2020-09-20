@@ -464,7 +464,7 @@ MobileVRInterface::MobileVRInterface() {
 
 MobileVRInterface::~MobileVRInterface() {
 	// and make sure we cleanup if we haven't already
-	if (is_initialized()) {
-		uninitialize();
+	if (this->is_initialized()) {
+		this->uninitialize();
 	};
 };

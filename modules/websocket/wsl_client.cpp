@@ -344,13 +344,13 @@ WSLClient::WSLClient() {
 
 	_peer.instance();
 	_tcp.instance();
-	disconnect_from_host();
+	this->disconnect_from_host();
 }
 
 WSLClient::~WSLClient() {
 	_peer->close_now();
 	_peer->invalidate();
-	disconnect_from_host();
+	this->disconnect_from_host();
 }
 
 #endif // JAVASCRIPT_ENABLED

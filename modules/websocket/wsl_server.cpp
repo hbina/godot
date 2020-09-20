@@ -318,7 +318,7 @@ WSLServer::WSLServer() {
 }
 
 WSLServer::~WSLServer() {
-	stop();
+	this->stop();
 }
 
 #endif // JAVASCRIPT_ENABLED

@@ -304,7 +304,7 @@ WebRTCPeerConnectionJS::WebRTCPeerConnectionJS() {
 }
 
 WebRTCPeerConnectionJS::~WebRTCPeerConnectionJS() {
-	close();
+	this->close();
 	/* clang-format off */
 	EM_ASM({
 		Module.IDHandler.remove($0);

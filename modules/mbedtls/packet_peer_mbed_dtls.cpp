@@ -250,7 +250,7 @@ PacketPeerMbedDTLS::PacketPeerMbedDTLS() {
 }
 
 PacketPeerMbedDTLS::~PacketPeerMbedDTLS() {
-	disconnect_from_peer();
+	this->disconnect_from_peer();
 }
 
 void PacketPeerMbedDTLS::disconnect_from_peer() {

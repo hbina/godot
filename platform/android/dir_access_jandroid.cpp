@@ -226,5 +226,5 @@ DirAccessJAndroid::DirAccessJAndroid() {
 }
 
 DirAccessJAndroid::~DirAccessJAndroid() {
-	list_dir_end();
+	this->list_dir_end();
 }

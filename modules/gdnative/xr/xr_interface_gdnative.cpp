@@ -50,8 +50,8 @@ XRInterfaceGDNative::XRInterfaceGDNative() {
 XRInterfaceGDNative::~XRInterfaceGDNative() {
 	print_verbose("Destruct gdnative interface\n");
 
-	if (interface != nullptr && is_initialized()) {
-		uninitialize();
+	if (interface != nullptr && this->is_initialized()) {
+		this->uninitialize();
 	};
 
 	// cleanup after ourselves

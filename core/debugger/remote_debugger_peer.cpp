@@ -93,7 +93,7 @@ RemoteDebuggerPeerTCP::RemoteDebuggerPeerTCP(Ref<StreamPeerTCP> p_tcp) {
 }
 
 RemoteDebuggerPeerTCP::~RemoteDebuggerPeerTCP() {
-	close();
+	this->close();
 }
 
 void RemoteDebuggerPeerTCP::_write_out() {

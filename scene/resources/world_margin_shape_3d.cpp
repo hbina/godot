@@ -85,5 +85,5 @@ void WorldMarginShape3D::_bind_methods() {
 
 WorldMarginShape3D::WorldMarginShape3D() :
 		Shape3D(PhysicsServer3D::get_singleton()->shape_create(PhysicsServer3D::SHAPE_PLANE)) {
-	set_plane(Plane(0, 1, 0, 0));
+	this->set_plane(Plane(0, 1, 0, 0));
 }

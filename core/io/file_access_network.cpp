@@ -487,7 +487,7 @@ FileAccessNetwork::FileAccessNetwork() {
 }
 
 FileAccessNetwork::~FileAccessNetwork() {
-	close();
+	this->close();
 
 	FileAccessNetworkClient *nc = FileAccessNetworkClient::singleton;
 	nc->lock_mutex();

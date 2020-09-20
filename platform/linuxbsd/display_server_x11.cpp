@@ -3740,15 +3740,15 @@ DisplayServerX11::DisplayServerX11(const String &p_rendering_driver, WindowMode 
 	}
 #endif
 	Point2i window_position(
-			(screen_get_size(0).width - p_resolution.width) / 2,
-			(screen_get_size(0).height - p_resolution.height) / 2);
-	WindowID main_window = _create_window(p_mode, p_flags, Rect2i(window_position, p_resolution));
+			(this->screen_get_size(0).width - p_resolution.width) / 2,
+			(this->screen_get_size(0).height - p_resolution.height) / 2);
+	WindowID main_window = this->_create_window(p_mode, p_flags, Rect2i(window_position, p_resolution));
 	for (int i = 0; i < WINDOW_FLAG_MAX; i++) {
 		if (p_flags & (1 << i)) {
-			window_set_flag(WindowFlags(i), true, main_window);
+			this->window_set_flag(WindowFlags(i), true, main_window);
 		}
 	}
-	show_window(main_window);
+	this->show_window(main_window);
 
 //create RenderingDevice if used
 #if defined(VULKAN_ENABLED)
@@ -3910,7 +3910,7 @@ DisplayServerX11::DisplayServerX11(const String &p_rendering_driver, WindowMode 
 
 		null_cursor = cursor;
 	}
-	cursor_set_shape(CURSOR_BUSY);
+	this->cursor_set_shape(CURSOR_BUSY);
 
 	requested = None;
 

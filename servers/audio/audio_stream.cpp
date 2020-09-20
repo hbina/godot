@@ -222,7 +222,7 @@ void AudioStreamPlaybackMicrophone::seek(float p_time) {
 
 AudioStreamPlaybackMicrophone::~AudioStreamPlaybackMicrophone() {
 	microphone->playbacks.erase(this);
-	stop();
+	this->stop();
 }
 
 AudioStreamPlaybackMicrophone::AudioStreamPlaybackMicrophone() {

@@ -373,6 +373,6 @@ Error FileAccessCompressed::_set_unix_permissions(const String &p_file, uint32_t
 
 FileAccessCompressed::~FileAccessCompressed() {
 	if (f) {
-		close();
+		this->close();
 	}
 }
