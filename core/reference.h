@@ -197,7 +197,7 @@ public:
 		}
 	}
 
-	Ref(const Variant &p_variant) {
+	 Ref(const Variant &p_variant) {
 		Object *object = p_variant.get_validated_object();
 
 		if (!object) {

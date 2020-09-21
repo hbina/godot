@@ -492,7 +492,7 @@ public:
 		unlock();
 	}
 
-	CommandQueueMT(bool p_sync);
+	explicit CommandQueueMT(const bool p_sync);
 	~CommandQueueMT();
 };
 

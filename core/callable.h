@@ -97,7 +97,7 @@ public:
 
 	Callable(const Object *p_object, const StringName &p_method);
 	Callable(ObjectID p_object, const StringName &p_method);
-	Callable(CallableCustom *p_custom);
+	explicit Callable(CallableCustom *p_custom);
 	Callable(const Callable &p_callable);
 	Callable() {}
 	~Callable();

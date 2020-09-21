@@ -1720,8 +1720,8 @@ void DisplayServerX11::cursor_set_custom_image(const RES &p_cursor, CursorShape 
 			cursors_cache.erase(p_shape);
 		}
 
-		Ref<Texture2D> texture = p_cursor;
-		Ref<AtlasTexture> atlas_texture = p_cursor;
+		Ref<Texture2D> texture = Ref<Texture2D>(p_cursor);
+		Ref<AtlasTexture> atlas_texture = Ref<AtlasTexture>(p_cursor);
 		Ref<Image> image;
 		Size2i texture_size;
 		Rect2i atlas_rect;

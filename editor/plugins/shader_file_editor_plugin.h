@@ -85,7 +85,7 @@ public:
 
 	ShaderFileEditor *get_shader_editor() const { return shader_editor; }
 
-	ShaderFileEditorPlugin(EditorNode *p_node);
+	explicit ShaderFileEditorPlugin(EditorNode *p_node);
 	~ShaderFileEditorPlugin();
 };
 
