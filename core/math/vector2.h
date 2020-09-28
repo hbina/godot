@@ -221,6 +221,8 @@ struct Vector2i {
 	Vector2i operator/(const Vector2i &p_v1) const;
 	void operator/=(const Vector2i &p_v);
 
+	// Might want to constraint the arithmetic types to just floating point.
+
 	template <typename T,
 			typename = std::enable_if_t<
 					std::is_arithmetic<T>::value>>
