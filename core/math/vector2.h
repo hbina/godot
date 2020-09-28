@@ -31,6 +31,8 @@
 #ifndef VECTOR2_H
 #define VECTOR2_H
 
+#include <type_traits>
+
 #include "core/math/math_funcs.h"
 #include "core/ustring.h"
 
@@ -51,12 +53,8 @@ struct Vector2 {
 		real_t height;
 	};
 
-	_FORCE_INLINE_ real_t &operator[](int p_idx) {
-		return p_idx ? y : x;
-	}
-	_FORCE_INLINE_ const real_t &operator[](int p_idx) const {
-		return p_idx ? y : x;
-	}
+	real_t &operator[](const int p_idx);
+	const real_t &operator[](const int p_idx) const;
 
 	void normalize();
 	Vector2 normalized() const;
@@ -69,7 +67,7 @@ struct Vector2 {
 	real_t distance_squared_to(const Vector2 &p_vector2) const;
 	real_t angle_to(const Vector2 &p_vector2) const;
 	real_t angle_to_point(const Vector2 &p_vector2) const;
-	_FORCE_INLINE_ Vector2 direction_to(const Vector2 &p_b) const;
+	Vector2 direction_to(const Vector2 &p_b) const;
 
 	real_t dot(const Vector2 &p_other) const;
 	real_t cross(const Vector2 &p_other) const;
@@ -81,8 +79,8 @@ struct Vector2 {
 
 	Vector2 clamped(real_t p_len) const;
 
-	_FORCE_INLINE_ Vector2 lerp(const Vector2 &p_b, real_t p_t) const;
-	_FORCE_INLINE_ Vector2 slerp(const Vector2 &p_b, real_t p_t) const;
+	Vector2 lerp(const Vector2 &p_b, real_t p_t) const;
+	Vector2 slerp(const Vector2 &p_b, real_t p_t) const;
 	Vector2 cubic_interpolate(const Vector2 &p_b, const Vector2 &p_pre_a, const Vector2 &p_post_b, real_t p_t) const;
 	Vector2 move_toward(const Vector2 &p_to, const real_t p_delta) const;
 
@@ -97,144 +95,102 @@ struct Vector2 {
 	Vector2 operator-(const Vector2 &p_v) const;
 	void operator-=(const Vector2 &p_v);
 	Vector2 operator*(const Vector2 &p_v1) const;
-
-	Vector2 operator*(const real_t &rvalue) const;
-	void operator*=(const real_t &rvalue);
-	void operator*=(const Vector2 &rvalue) { *this = *this * rvalue; }
-
+	void operator*=(const Vector2 &rvalue);
 	Vector2 operator/(const Vector2 &p_v1) const;
+	void operator/=(const Vector2 &rvalue);
 
-	Vector2 operator/(const real_t &rvalue) const;
+	template <typename T,
+			typename = std::enable_if_t<
+					std::is_arithmetic<T>::value>>
+	Vector2 operator+(const T &rvalue) const {
+		return Vector2(x + rvalue, y + rvalue);
+	};
 
-	void operator/=(const real_t &rvalue);
-	void operator/=(const Vector2 &rvalue) { *this = *this / rvalue; }
+	template <typename T,
+			typename = std::enable_if_t<
+					std::is_arithmetic<T>::value>>
+	void operator+=(const T &rvalue) {
+		x += rvalue;
+		y += rvalue;
+	}
+
+	template <typename T,
+			typename = std::enable_if_t<
+					std::is_arithmetic<T>::value>>
+	Vector2 operator-(const T &rvalue) const {
+		return Vector2(x - rvalue, y - rvalue);
+	};
+
+	template <typename T,
+			typename = std::enable_if_t<
+					std::is_arithmetic<T>::value>>
+	void operator-=(const T &rvalue) {
+		x -= rvalue;
+		y -= rvalue;
+	}
+
+	template <typename T,
+			typename = std::enable_if_t<
+					std::is_arithmetic<T>::value>>
+	Vector2 operator*(const T &rvalue) const {
+		return Vector2(x * rvalue, y * rvalue);
+	};
+
+	template <typename T,
+			typename = std::enable_if_t<
+					std::is_arithmetic<T>::value>>
+	void operator*=(const T &rvalue) {
+		x *= rvalue;
+		y *= rvalue;
+	}
+
+	template <typename T,
+			typename = std::enable_if_t<
+					std::is_arithmetic<T>::value>>
+	Vector2 operator/(const T &rvalue) const {
+		return Vector2(x / rvalue, y / rvalue);
+	};
+
+	template <typename T,
+			typename = std::enable_if_t<
+					std::is_arithmetic<T>::value>>
+	void operator/=(const T &rvalue) {
+		x /= rvalue;
+		y /= rvalue;
+	}
 
 	Vector2 operator-() const;
 
 	bool operator==(const Vector2 &p_vec2) const;
 	bool operator!=(const Vector2 &p_vec2) const;
 
-	bool operator<(const Vector2 &p_vec2) const { return x == p_vec2.x ? (y < p_vec2.y) : (x < p_vec2.x); }
-	bool operator>(const Vector2 &p_vec2) const { return x == p_vec2.x ? (y > p_vec2.y) : (x > p_vec2.x); }
-	bool operator<=(const Vector2 &p_vec2) const { return x == p_vec2.x ? (y <= p_vec2.y) : (x < p_vec2.x); }
-	bool operator>=(const Vector2 &p_vec2) const { return x == p_vec2.x ? (y >= p_vec2.y) : (x > p_vec2.x); }
+	bool operator<(const Vector2 &p_vec2) const;
+	bool operator>(const Vector2 &p_vec2) const;
+	bool operator<=(const Vector2 &p_vec2) const;
+	bool operator>=(const Vector2 &p_vec2) const;
 
 	real_t angle() const;
 
-	_FORCE_INLINE_ Vector2 abs() const {
-		return Vector2(Math::abs(x), Math::abs(y));
-	}
+	Vector2 abs() const;
 
 	Vector2 rotated(real_t p_by) const;
-	Vector2 tangent() const {
-		return Vector2(y, -x);
-	}
+	Vector2 tangent() const;
 
 	Vector2 sign() const;
 	Vector2 floor() const;
 	Vector2 ceil() const;
 	Vector2 round() const;
 	Vector2 snapped(const Vector2 &p_by) const;
-	real_t aspect() const { return width / height; }
+	real_t aspect() const;
 
-	operator String() const { return String::num(x) + ", " + String::num(y); }
+	operator String() const;
 
-	_FORCE_INLINE_ Vector2() {}
-	_FORCE_INLINE_ Vector2(real_t p_x, real_t p_y) {
-		x = p_x;
-		y = p_y;
-	}
+	Vector2();
+	Vector2(real_t p_x, real_t p_y);
 };
 
-_FORCE_INLINE_ Vector2 Vector2::plane_project(real_t p_d, const Vector2 &p_vec) const {
-	return p_vec - *this * (dot(p_vec) - p_d);
-}
-
-_FORCE_INLINE_ Vector2 operator*(real_t p_scalar, const Vector2 &p_vec) {
-	return p_vec * p_scalar;
-}
-
-_FORCE_INLINE_ Vector2 Vector2::operator+(const Vector2 &p_v) const {
-	return Vector2(x + p_v.x, y + p_v.y);
-}
-
-_FORCE_INLINE_ void Vector2::operator+=(const Vector2 &p_v) {
-	x += p_v.x;
-	y += p_v.y;
-}
-
-_FORCE_INLINE_ Vector2 Vector2::operator-(const Vector2 &p_v) const {
-	return Vector2(x - p_v.x, y - p_v.y);
-}
-
-_FORCE_INLINE_ void Vector2::operator-=(const Vector2 &p_v) {
-	x -= p_v.x;
-	y -= p_v.y;
-}
-
-_FORCE_INLINE_ Vector2 Vector2::operator*(const Vector2 &p_v1) const {
-	return Vector2(x * p_v1.x, y * p_v1.y);
-}
-
-_FORCE_INLINE_ Vector2 Vector2::operator*(const real_t &rvalue) const {
-	return Vector2(x * rvalue, y * rvalue);
-}
-
-_FORCE_INLINE_ void Vector2::operator*=(const real_t &rvalue) {
-	x *= rvalue;
-	y *= rvalue;
-}
-
-_FORCE_INLINE_ Vector2 Vector2::operator/(const Vector2 &p_v1) const {
-	return Vector2(x / p_v1.x, y / p_v1.y);
-}
-
-_FORCE_INLINE_ Vector2 Vector2::operator/(const real_t &rvalue) const {
-	return Vector2(x / rvalue, y / rvalue);
-}
-
-_FORCE_INLINE_ void Vector2::operator/=(const real_t &rvalue) {
-	x /= rvalue;
-	y /= rvalue;
-}
-
-_FORCE_INLINE_ Vector2 Vector2::operator-() const {
-	return Vector2(-x, -y);
-}
-
-_FORCE_INLINE_ bool Vector2::operator==(const Vector2 &p_vec2) const {
-	return x == p_vec2.x && y == p_vec2.y;
-}
-
-_FORCE_INLINE_ bool Vector2::operator!=(const Vector2 &p_vec2) const {
-	return x != p_vec2.x || y != p_vec2.y;
-}
-
-Vector2 Vector2::lerp(const Vector2 &p_b, real_t p_t) const {
-	Vector2 res = *this;
-
-	res.x += (p_t * (p_b.x - x));
-	res.y += (p_t * (p_b.y - y));
-
-	return res;
-}
-
-Vector2 Vector2::slerp(const Vector2 &p_b, real_t p_t) const {
-#ifdef MATH_CHECKS
-	ERR_FAIL_COND_V_MSG(!is_normalized(), Vector2(), "The start Vector2 must be normalized.");
-#endif
-	real_t theta = angle_to(p_b);
-	return rotated(theta * p_t);
-}
-
-Vector2 Vector2::direction_to(const Vector2 &p_b) const {
-	Vector2 ret(p_b.x - x, p_b.y - y);
-	ret.normalize();
-	return ret;
-}
-
-typedef Vector2 Size2;
-typedef Vector2 Point2;
+using Size2 = Vector2;
+using Point2 = Vector2;
 
 /* INTEGER STUFF */
 
@@ -253,58 +209,119 @@ struct Vector2i {
 		int height;
 	};
 
-	_FORCE_INLINE_ int &operator[](int p_idx) {
-		return p_idx ? y : x;
-	}
-	_FORCE_INLINE_ const int &operator[](int p_idx) const {
-		return p_idx ? y : x;
-	}
+	int &operator[](const int p_idx);
+	const int &operator[](const int p_idx) const;
 
 	Vector2i operator+(const Vector2i &p_v) const;
 	void operator+=(const Vector2i &p_v);
 	Vector2i operator-(const Vector2i &p_v) const;
 	void operator-=(const Vector2i &p_v);
 	Vector2i operator*(const Vector2i &p_v1) const;
-
-	Vector2i operator*(const int &rvalue) const;
-	void operator*=(const int &rvalue);
-
+	void operator*=(const Vector2i &p_v);
 	Vector2i operator/(const Vector2i &p_v1) const;
+	void operator/=(const Vector2i &p_v);
 
-	Vector2i operator/(const int &rvalue) const;
+	template <typename T,
+			typename = std::enable_if_t<
+					std::is_arithmetic<T>::value>>
+	Vector2i operator+(const T &rvalue) const {
+		return Vector2i(x + rvalue, y + rvalue);
+	}
 
-	void operator/=(const int &rvalue);
+	template <typename T,
+			typename = std::enable_if_t<
+					std::is_arithmetic<T>::value>>
+	void operator+=(const T &rvalue) {
+		x += rvalue;
+		y += rvalue;
+	}
+
+	template <typename T,
+			typename = std::enable_if_t<
+					std::is_arithmetic<T>::value>>
+	Vector2i operator-(const T &rvalue) const {
+		return Vector2i(x - rvalue, y - rvalue);
+	}
+
+	template <typename T,
+			typename = std::enable_if_t<
+					std::is_arithmetic<T>::value>>
+	void operator-=(const T &rvalue) {
+		x -= rvalue;
+		y -= rvalue;
+	}
+
+	template <typename T,
+			typename = std::enable_if_t<
+					std::is_arithmetic<T>::value>>
+	Vector2i operator*(const T &rvalue) const {
+		return Vector2i(x * rvalue, y * rvalue);
+	}
+
+	template <typename T,
+			typename = std::enable_if_t<
+					std::is_arithmetic<T>::value>>
+	void operator*=(const T &rvalue) {
+		x *= rvalue;
+		y *= rvalue;
+	}
+
+	template <typename T,
+			typename = std::enable_if_t<
+					std::is_arithmetic<T>::value>>
+	Vector2i operator/(const T &rvalue) const {
+		return Vector2i(x / rvalue, y / rvalue);
+	}
+
+	template <typename T,
+			typename = std::enable_if_t<
+					std::is_arithmetic<T>::value>>
+	void operator/=(const T &rvalue) {
+		x /= rvalue;
+		y /= rvalue;
+	}
 
 	Vector2i operator-() const;
-	bool operator<(const Vector2i &p_vec2) const { return (x == p_vec2.x) ? (y < p_vec2.y) : (x < p_vec2.x); }
-	bool operator>(const Vector2i &p_vec2) const { return (x == p_vec2.x) ? (y > p_vec2.y) : (x > p_vec2.x); }
+	bool operator<(const Vector2i &p_vec2) const;
+	bool operator>(const Vector2i &p_vec2) const;
 
-	bool operator<=(const Vector2i &p_vec2) const { return x == p_vec2.x ? (y <= p_vec2.y) : (x < p_vec2.x); }
-	bool operator>=(const Vector2i &p_vec2) const { return x == p_vec2.x ? (y >= p_vec2.y) : (x > p_vec2.x); }
+	bool operator<=(const Vector2i &p_vec2) const;
+	bool operator>=(const Vector2i &p_vec2) const;
 
 	bool operator==(const Vector2i &p_vec2) const;
 	bool operator!=(const Vector2i &p_vec2) const;
 
-	real_t aspect() const { return width / (real_t)height; }
-	Vector2i sign() const { return Vector2i(SGN(x), SGN(y)); }
-	Vector2i abs() const { return Vector2i(ABS(x), ABS(y)); }
+	real_t aspect() const;
+	Vector2i sign() const;
+	Vector2i abs() const;
 
-	operator String() const { return String::num(x) + ", " + String::num(y); }
+	operator String() const;
 
-	operator Vector2() const { return Vector2(x, y); }
+	operator Vector2() const;
 
-	inline Vector2i() {}
-	inline Vector2i(const Vector2 &p_vec2) {
-		x = (int)p_vec2.x;
-		y = (int)p_vec2.y;
-	}
-	inline Vector2i(int p_x, int p_y) {
-		x = p_x;
-		y = p_y;
-	}
+	Vector2 plane_project(real_t p_d, const Vector2 &p_vec) const;
+	Vector2 operator+(const Vector2 &p_v) const;
+	void operator+=(const Vector2 &p_v);
+	Vector2 operator-(const Vector2 &p_v) const;
+	void operator-=(const Vector2 &p_v);
+	Vector2 operator*(const Vector2 &p_v1) const;
+	void operator*=(const Vector2 &p_v);
+	Vector2 operator/(const Vector2 &p_v1) const;
+	void operator/=(const Vector2 &p_v);
+	bool operator==(const Vector2 &p_vec2) const;
+	bool operator!=(const Vector2 &p_vec2) const;
+	Vector2 lerp(const Vector2 &p_b, real_t p_t) const;
+	Vector2 slerp(const Vector2 &p_b, real_t p_t) const;
+	Vector2 direction_to(const Vector2 &p_b) const;
+
+	Vector2i();
+	Vector2i(const Vector2 &p_vec2);
+	Vector2i(int p_x, int p_y);
 };
 
-typedef Vector2i Size2i;
-typedef Vector2i Point2i;
+Vector2 operator*(real_t p_scalar, const Vector2 &p_vec);
+
+using Size2i = Vector2i;
+using Point2i = Vector2i;
 
 #endif // VECTOR2_H

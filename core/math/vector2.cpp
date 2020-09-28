@@ -187,13 +187,143 @@ bool Vector2::is_equal_approx(const Vector2 &p_v) const {
 	return Math::is_equal_approx(x, p_v.x) && Math::is_equal_approx(y, p_v.y);
 }
 
+bool Vector2::operator<(const Vector2 &p_vec2) const {
+	return x == p_vec2.x ? (y < p_vec2.y) : (x < p_vec2.x);
+}
+bool Vector2::operator>(const Vector2 &p_vec2) const {
+	return x == p_vec2.x ? (y > p_vec2.y) : (x > p_vec2.x);
+}
+bool Vector2::operator<=(const Vector2 &p_vec2) const {
+	return x == p_vec2.x ? (y <= p_vec2.y) : (x < p_vec2.x);
+}
+bool Vector2::operator>=(const Vector2 &p_vec2) const {
+	return x == p_vec2.x ? (y >= p_vec2.y) : (x > p_vec2.x);
+}
+
+Vector2 Vector2::abs() const {
+	return Vector2(Math::abs(x), Math::abs(y));
+}
+
+Vector2 Vector2::tangent() const {
+	return Vector2(y, -x);
+}
+
+real_t Vector2::aspect() const {
+	return width / height;
+}
+
+Vector2::operator String() const {
+	return String::num(x) + ", " + String::num(y);
+}
+
+Vector2 Vector2::plane_project(real_t p_d, const Vector2 &p_vec) const {
+	return p_vec - *this * (dot(p_vec) - p_d);
+}
+
+Vector2 operator*(real_t p_scalar, const Vector2 &p_vec) {
+	return p_vec * p_scalar;
+}
+
+Vector2 Vector2::operator+(const Vector2 &p_v) const {
+	return Vector2(x + p_v.x, y + p_v.y);
+}
+
+void Vector2::operator+=(const Vector2 &p_v) {
+	x += p_v.x;
+	y += p_v.y;
+}
+
+Vector2 Vector2::operator-(const Vector2 &p_v) const {
+	return Vector2(x - p_v.x, y - p_v.y);
+}
+
+void Vector2::operator-=(const Vector2 &p_v) {
+	x -= p_v.x;
+	y -= p_v.y;
+}
+
+Vector2 Vector2::operator*(const Vector2 &p_v1) const {
+	return Vector2(x * p_v1.x, y * p_v1.y);
+}
+
+void Vector2::operator*=(const Vector2 &rvalue) {
+	*this = *this * rvalue;
+}
+
+Vector2 Vector2::operator/(const Vector2 &p_v1) const {
+	return Vector2(x / p_v1.x, y / p_v1.y);
+}
+
+void Vector2::operator/=(const Vector2 &rvalue) {
+	*this = *this / rvalue;
+}
+
+Vector2 Vector2::operator-() const {
+	return Vector2(-x, -y);
+}
+
+bool Vector2::operator==(const Vector2 &p_vec2) const {
+	return x == p_vec2.x && y == p_vec2.y;
+}
+
+bool Vector2::operator!=(const Vector2 &p_vec2) const {
+	return x != p_vec2.x || y != p_vec2.y;
+}
+
+Vector2 Vector2::lerp(const Vector2 &p_b, real_t p_t) const {
+	Vector2 res = *this;
+
+	res.x += (p_t * (p_b.x - x));
+	res.y += (p_t * (p_b.y - y));
+
+	return res;
+}
+
+Vector2 Vector2::slerp(const Vector2 &p_b, real_t p_t) const {
+#ifdef MATH_CHECKS
+	ERR_FAIL_COND_V_MSG(!is_normalized(), Vector2(), "The start Vector2 must be normalized.");
+#endif
+	real_t theta = angle_to(p_b);
+	return rotated(theta * p_t);
+}
+
+Vector2 Vector2::direction_to(const Vector2 &p_b) const {
+	Vector2 ret(p_b.x - x, p_b.y - y);
+	ret.normalize();
+	return ret;
+}
+
+real_t &Vector2::operator[](const int p_idx) {
+	return p_idx ? y : x;
+}
+
+const real_t &Vector2::operator[](const int p_idx) const {
+	return p_idx ? y : x;
+}
+
+Vector2::Vector2() {}
+
+Vector2::Vector2(real_t p_x, real_t p_y) :
+		x(p_x),
+		y(p_y) {
+}
+
 /* Vector2i */
 
 Vector2i Vector2i::operator+(const Vector2i &p_v) const {
 	return Vector2i(x + p_v.x, y + p_v.y);
 }
 
+Vector2 Vector2i::operator+(const Vector2 &p_v) const {
+	return Vector2(x + p_v.x, y + p_v.y);
+}
+
 void Vector2i::operator+=(const Vector2i &p_v) {
+	x += p_v.x;
+	y += p_v.y;
+}
+
+void Vector2i::operator+=(const Vector2 &p_v) {
 	x += p_v.x;
 	y += p_v.y;
 }
@@ -202,7 +332,16 @@ Vector2i Vector2i::operator-(const Vector2i &p_v) const {
 	return Vector2i(x - p_v.x, y - p_v.y);
 }
 
+Vector2 Vector2i::operator-(const Vector2 &p_v) const {
+	return Vector2(x - p_v.x, y - p_v.y);
+}
+
 void Vector2i::operator-=(const Vector2i &p_v) {
+	x -= p_v.x;
+	y -= p_v.y;
+}
+
+void Vector2i::operator-=(const Vector2 &p_v) {
 	x -= p_v.x;
 	y -= p_v.y;
 }
@@ -211,26 +350,36 @@ Vector2i Vector2i::operator*(const Vector2i &p_v1) const {
 	return Vector2i(x * p_v1.x, y * p_v1.y);
 }
 
-Vector2i Vector2i::operator*(const int &rvalue) const {
-	return Vector2i(x * rvalue, y * rvalue);
+Vector2 Vector2i::operator*(const Vector2 &p_v) const {
+	return Vector2(x * p_v.x, y * p_v.y);
 }
 
-void Vector2i::operator*=(const int &rvalue) {
-	x *= rvalue;
-	y *= rvalue;
+void Vector2i::operator*=(const Vector2i &p_v) {
+	x *= p_v.x;
+	y *= p_v.y;
+}
+
+void Vector2i::operator*=(const Vector2 &p_v) {
+	x *= p_v.x;
+	y *= p_v.y;
 }
 
 Vector2i Vector2i::operator/(const Vector2i &p_v1) const {
 	return Vector2i(x / p_v1.x, y / p_v1.y);
 }
 
-Vector2i Vector2i::operator/(const int &rvalue) const {
-	return Vector2i(x / rvalue, y / rvalue);
+Vector2 Vector2i::operator/(const Vector2 &p_v) const {
+	return Vector2(x / p_v.x, y / p_v.y);
 }
 
-void Vector2i::operator/=(const int &rvalue) {
-	x /= rvalue;
-	y /= rvalue;
+void Vector2i::operator/=(const Vector2i &p_v) {
+	x /= p_v.x;
+	y /= p_v.y;
+}
+
+void Vector2i::operator/=(const Vector2 &p_v) {
+	x /= p_v.x;
+	y /= p_v.y;
 }
 
 Vector2i Vector2i::operator-() const {
@@ -243,4 +392,59 @@ bool Vector2i::operator==(const Vector2i &p_vec2) const {
 
 bool Vector2i::operator!=(const Vector2i &p_vec2) const {
 	return x != p_vec2.x || y != p_vec2.y;
+}
+
+int &Vector2i::operator[](int p_idx) {
+	return p_idx ? y : x;
+}
+
+const int &Vector2i::operator[](int p_idx) const {
+	return p_idx ? y : x;
+}
+
+bool Vector2i::operator<(const Vector2i &p_vec2) const {
+	return (x == p_vec2.x) ? (y < p_vec2.y) : (x < p_vec2.x);
+}
+
+bool Vector2i::operator>(const Vector2i &p_vec2) const {
+	return (x == p_vec2.x) ? (y > p_vec2.y) : (x > p_vec2.x);
+}
+
+bool Vector2i::operator<=(const Vector2i &p_vec2) const {
+	return x == p_vec2.x ? (y <= p_vec2.y) : (x < p_vec2.x);
+}
+
+bool Vector2i::operator>=(const Vector2i &p_vec2) const {
+	return x == p_vec2.x ? (y >= p_vec2.y) : (x > p_vec2.x);
+}
+
+real_t Vector2i::aspect() const {
+	return width / (real_t)height;
+}
+
+Vector2i Vector2i::sign() const {
+	return Vector2i(SGN(x), SGN(y));
+}
+
+Vector2i Vector2i::abs() const {
+	return Vector2i(ABS(x), ABS(y));
+}
+
+Vector2i::operator String() const {
+	return String::num(x) + ", " + String::num(y);
+}
+
+Vector2i::operator Vector2() const {
+	return Vector2(x, y);
+}
+
+Vector2i::Vector2i() {}
+
+Vector2i::Vector2i(const Vector2 &p_vec2) :
+		x(p_vec2.x),
+		y(p_vec2.y) {
+}
+
+Vector2i::Vector2i(int p_x, int p_y) :
+		x(p_x), y(p_y) {
 }

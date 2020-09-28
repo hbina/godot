@@ -403,8 +403,8 @@ Rect2 Sprite2D::get_rect() const {
 		ofs -= Size2(s) / 2;
 	}
 
-	if (s == Size2(0, 0)) {
-		s = Size2(1, 1);
+	if (s == Size2i(0, 0)) {
+		s = Size2i(1, 1);
 	}
 
 	return Rect2(ofs, s);
