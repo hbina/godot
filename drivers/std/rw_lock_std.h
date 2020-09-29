@@ -28,18 +28,18 @@
 /* SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                */
 /*************************************************************************/
 
-#ifndef RWLOCKPOSIX_H
-#define RWLOCKPOSIX_H
+#ifndef RWLOCKSTD_H
+#define RWLOCKSTD_H
 
-#if (defined(UNIX_ENABLED) || defined(PTHREAD_ENABLED)) && !defined(STD_RW_LOCK)
+#if defined(STD_RW_LOCK)
 
 #include "core/os/rw_lock.h"
 #include <pthread.h>
 
-class RWLockPosix : public RWLock {
+class RWLockStd : public RWLock {
 	pthread_rwlock_t rwlock;
 
-	static RWLock *create_func_posix();
+	static RWLock *create_func_std();
 
 public:
 	virtual void read_lock() override;
@@ -52,11 +52,11 @@ public:
 
 	static void make_default();
 
-	RWLockPosix();
+	RWLockStd();
 
-	~RWLockPosix();
+	~RWLockStd();
 };
 
 #endif
 
-#endif // RWLOCKPOSIX_H
+#endif // RWLOCKSTD_H

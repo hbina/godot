@@ -116,6 +116,7 @@ opts.Add(EnumVariable("optimize", "Optimization type", "speed", ("speed", "size"
 opts.Add(BoolVariable("tools", "Build the tools (a.k.a. the Godot editor)", True))
 opts.Add(BoolVariable("tests", "Build the unit tests", False))
 opts.Add(BoolVariable("use_lto", "Use link-time optimization", False))
+opts.Add(BoolVariable("use_std_lock", "Use standard C++ mutexes", False))
 opts.Add(BoolVariable("use_precise_math_checks", "Math checks use very precise epsilon (debug option)", False))
 
 # Components
@@ -258,6 +259,9 @@ if env_base["no_editor_splash"]:
 
 if not env_base["deprecated"]:
     env_base.Append(CPPDEFINES=["DISABLE_DEPRECATED"])
+
+if env_base["use_std_lock"]:
+    env_base.Append(CPPDEFINES=["STD_RW_LOCK"])
 
 env_base.platforms = {}
 

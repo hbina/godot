@@ -1,5 +1,5 @@
 /*************************************************************************/
-/*  rw_lock_posix.h                                                      */
+/*  rw_lock_posix.cpp                                                    */
 /*************************************************************************/
 /*                       This file is part of:                           */
 /*                           GODOT ENGINE                                */
@@ -28,35 +28,62 @@
 /* SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                */
 /*************************************************************************/
 
-#ifndef RWLOCKPOSIX_H
-#define RWLOCKPOSIX_H
+#if defined(STD_RW_LOCK)
 
-#if (defined(UNIX_ENABLED) || defined(PTHREAD_ENABLED)) && !defined(STD_RW_LOCK)
+#include "rw_lock_std.h"
 
-#include "core/os/rw_lock.h"
-#include <pthread.h>
+#include <mutex>
 
-class RWLockPosix : public RWLock {
-	pthread_rwlock_t rwlock;
+void RWLockStd::read_lock() {
+	int err = pthread_rwlock_rdlock(&rwlock);
+	if (err != 0) {
+		perror("Acquiring lock failed");
+	}
+}
 
-	static RWLock *create_func_posix();
+void RWLockStd::read_unlock() {
+	pthread_rwlock_unlock(&rwlock);
+}
 
-public:
-	virtual void read_lock() override;
-	virtual void read_unlock() override;
-	virtual Error read_try_lock() override;
+Error RWLockStd::read_try_lock() {
+	if (pthread_rwlock_tryrdlock(&rwlock) != 0) {
+		return ERR_BUSY;
+	} else {
+		return OK;
+	}
+}
 
-	virtual void write_lock() override;
-	virtual void write_unlock() override;
-	virtual Error write_try_lock() override;
+void RWLockStd::write_lock() {
+	int err = pthread_rwlock_wrlock(&rwlock);
+}
 
-	static void make_default();
+void RWLockStd::write_unlock() {
+	pthread_rwlock_unlock(&rwlock);
+}
 
-	RWLockPosix();
+Error RWLockStd::write_try_lock() {
+	if (pthread_rwlock_trywrlock(&rwlock) != 0) {
+		return ERR_BUSY;
+	} else {
+		return OK;
+	}
+}
 
-	~RWLockPosix();
-};
+RWLock *RWLockStd::create_func_std() {
+	return memnew(RWLockStd);
+}
+
+void RWLockStd::make_default() {
+	create_func = create_func_std;
+}
+
+RWLockStd::RWLockStd() {
+	//rwlock=PTHREAD_RWLOCK_INITIALIZER; fails on OSX
+	pthread_rwlock_init(&rwlock, nullptr);
+}
+
+RWLockStd::~RWLockStd() {
+	pthread_rwlock_destroy(&rwlock);
+}
 
 #endif
-
-#endif // RWLOCKPOSIX_H
